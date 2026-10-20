@@ -1,0 +1,20 @@
+link_label,link_rows,n_rows,link_d_cm,link_xo2_pct,link_colour_from_prefix,nasa_candidates,nasa_specimen,nasa_material,nasa_config,nasa_cal_o2_initial_final,flags
+B13a,S1-L01..S1-L04,4,1.27,20.7,black,P13a,203m,12.7-mm black rod,Opposed,20.7->19.1,
+B13b,S1-L05..S1-L06,2,1.27,20.6,black,P13b,203m,12.7-mm black rod,Opposed,20.6->20.2,SPECIMEN_REBURN_P13b(burn 2 of 203m; earlier: P13a)
+B5,S1-L07..S1-L08,2,1.27,19.3,black,P5,202m,12.7-mm black rod,Opposed,19.3->17.6,
+B9,S1-L09..S1-L12,4,1.27,17.6,black,P9,202m,12.7-mm black rod,Opposed,17.6->17.1,SPECIMEN_REBURN_P9(burn 2 of 202m; earlier: P5)
+C25,S1-L13..S1-L15,3,0.95,20.9,clear,P25,217m,9.525-mm clear rod,Opposed,20.9->20.2,SPECIMEN_PRIOR_USE_OUTSIDE_A3_P25(217m also appears as Olson test O12 (Table A.5 p.110 printed): stagnation; no sustained flame)
+B22,S1-L16..S1-L19,4,0.95,20.8,black,P22a;P22b,200m,9.525-mm black rod;9.525-mm black rod,Opposed;Opposed,20.8->0.6;20.0->39.1,AMBIGUOUS_MULTIPLE_NASA_TESTS | NASA_ROW_ANOMALY_P22a | O2_MISMATCH_P22b(Link 20.8 vs NASA cal-initial 20.0) | SPECIMEN_REBURN_P22b(burn 2 of 200m; earlier: P22a) | NASA_ROW_ANOMALY_P22b | DUPLICATE_VG_WITHIN_LABEL
+B4,S1-L20..S1-L22,3,0.95,18.5,black,P4,197m,9.525-mm black rod,Opposed,18.5->17.1,
+B12,S1-L23..S1-L26,4,0.95,17.5,black,P12,199m,9.525-mm black rod,Opposed,17.5->16.8,
+B6,S1-R01..S1-R03,3,0.64,18.9,black,P6,186m,6.35-mm black rod,Opposed,18.9->18.5,VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+B15,S1-R04,1,0.64,18.4,black,P15,190M,6.35-mm black rod,Opposed,18.0->17.5,O2_MISMATCH_P15(Link 18.4 vs NASA cal-initial 18.0) | VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+B14,S1-R05,1,0.64,18.4,black,P14,189M,6.35-mm black rod,Opposed,18.4->18.0,VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+B16,S1-R06..S1-R09,4,0.64,18.2,black,P16,191m,6.35-mm black rod,Concurrent,18.2->17.4,FLOW_CONFIG_CONFLICT_P16(NASA Concurrent vs Link opposed) | VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+B1,S1-R10..S1-R11,2,0.64,17.7,black,P1,185m,6.35-mm black rod,Opposed,17.7->17.5,VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+C3a,S1-R12..S1-R13,2,0.64,17.7,clear,P3a,215M,6.35-mm clear rod,Opposed,17.7->17.4,VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+B19,S1-R14..S1-R17,4,0.64,17.5,black,P19,194m,6.35-mm black rod,Concurrent,17.5->16.7,FLOW_CONFIG_CONFLICT_P19(NASA Concurrent vs Link opposed) | VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+B2,S1-R18..S1-R19,2,0.64,17.4,black,P2,188M,6.35-mm black rod,Opposed,17.4->17.2,VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+C3b,S1-R20,1,0.64,17.4,clear,P3b,215M,6.35-mm clear rod,Opposed,17.4->16.8,SPECIMEN_REBURN_P3b(burn 2 of 215M; earlier: P3a) | VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+B10,S1-R21..S1-R23,3,0.64,17.0,black,P10,187m,6.35-mm black rod,Opposed,17->16.4,VF_UNIT_LABEL_CONFLICT(right half printed mm/s)
+P17,S1-R24..S1-R26,3,0.64,16.8,undefined prefix,P17,192m,6.35-mm rod,Opposed,16.8->16.5,LINK_PREFIX_P_UNDEFINED_IN_CAPTION | NASA_COLOUR_NOT_STATED_P17 | VF_UNIT_LABEL_CONFLICT(right half printed mm/s)

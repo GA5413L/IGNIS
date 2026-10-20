@@ -1,0 +1,20 @@
+# Decisions log
+
+Newest last. Each entry: date, decision, basis, and how it could be reversed.
+
+| ID | Date | Decision | Basis | Reversible by |
+|---|---|---|---|---|
+| D-001 | 2026-10-20 | Operate in **pre-event research mode** only: no application, UI, demo assets or submission content | FAQ (13 Oct 2026): teams "are not allowed to begin working on the challenges prior to the hackathon"; Team Formation Guide (23 Sep 2026): "should NOT begin working on their project until … November 14, 2026 (9:00 a.m. local time)" | a written organizer ruling (U1) |
+| D-002 | 2026-10-20 | Keep raw third-party downloads in `_raw/` (gitignored); record URL, time, status, size and SHA-256 | rights differ per source; reproducibility | — |
+| D-003 | 2026-10-20 | Transcribe tables **as printed**: no unit fixes, no gap filling, dashes kept | brief §7 and §15 ("never silently repair") | — |
+| D-004 | 2026-10-20 | Verify transcriptions by a PDF text-layer multiset check + row-order check + visual check of merged cells, with a negative control | publisher text layer is exact characters; visual check covers spans | add an independent human review (B-07) |
+| D-005 | 2026-10-20 | Keep the first domain as black cast PMMA rods / μg / opposed flow / E-01. **Primary positive case: B4 (NASA P4)** | the only admitted burns with a clean provenance chain are in the cm/s-labelled half; B4 is a first burn, opposed in both sources, O₂ consistent, all Δt ≥ 131 s | new records (Rivera 2026, PSI) |
+| D-006 | 2026-10-20 | **Quarantine B16 and B19** for all flow-configuration-specific questions | NASA Table A.3 records P16/P19 as "Concurrent" (visually verified) vs Link's opposed (C-03) | author/NASA clarification or raw video |
+| D-007 | 2026-10-20 | Treat Table S1 right-half rows as **CONDITIONAL** (unit-free statements only); do not correct the "(mm/s)" label | C-02: internal evidence favours cm/s, but no erratum or author statement | author/publisher correction |
+| D-008 | 2026-10-20 | **No label-only joins.** Link ↔ NASA mapping is a scored candidate crosswalk | C-14: "B16" is a rod in Link and a 100-µm film in NASA Table A.1 | — |
+| D-009 | 2026-10-20 | **Independence group = NASA physical sample number.** Rows within a label are sequential segments of one burn; reburns are flagged | Table A.3 sample numbers (197m, 202m, 203m, 200m, 215M, 196M reused) | — |
+| D-010 | 2026-10-20 | Evidence Case 01 = auxiliary thin-sheet V_g,cr (now visually verified); Evidence Case 02 = the rod case | continuity with the 15 Oct packet; keep endpoints separate | — |
+| D-011 | 2026-10-20 | The **strongest fair baseline** is the curated spreadsheet (M1: tables + crosswalk + conflict register). Not raw tables, not BM25 | the comparison must isolate what software adds beyond curation | — |
+| D-012 | 2026-10-20 | Recommended event architecture: JSON records + TS rule engine + static Next.js + Vega-Lite; Streamlit fallback; LLM optional with no-key fallback. **Final choice deferred to gate D0** at the event | ~100 rows; no backend needed | team skills at D0 |
+| D-013 | 2026-10-20 | The assistant does **not** contact organizers, authors or NASA, and does not register accounts. These are listed as user actions | outward-facing actions need the user's decision | user instruction |
+| D-014 | 2026-10-20 | Freeze evaluation task set v1 (12 tasks) now, before any method exists, and ask a teammate to add held-out tasks | brief §11 (freeze before tuning) | new version with a dated changelog |

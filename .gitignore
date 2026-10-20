@@ -1,0 +1,8 @@
+# Raw third-party downloads (PDFs, HTML, renders). Kept locally for re-verification, never committed or
+# redistributed: rights differ per source (see manifests/rights_and_attribution.csv). Checksums are in
+# manifests/data_sources.csv so any copy can be re-identified.
+_raw/
+
+__pycache__/
+*.pyc
+.env

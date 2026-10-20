@@ -1,0 +1,53 @@
+# Source register
+
+Identity checks were done on 2026-10-20. "Inspected" means read in this session. Metadata-only records are labelled
+as such. Rights are in `manifests/rights_and_attribution.csv`. Retrieval details and checksums are in
+`manifests/data_sources.csv`.
+
+## Primary evidence (rod and thin-sheet cases)
+
+| Key | Identity (verified how) | What was inspected | Role | Notes |
+|---|---|---|---|---|
+| **L18** | Link S., Huang X., Fernandez-Pello C., Olson S., Ferkul P. "The Effect of Gravity on Flame Spread over PMMA Cylinders." *Sci. Rep.* **8**, 120 (2018). doi:10.1038/s41598-017-18398-4. Received 17 Aug 2017, published 9 Jan 2018. Verified via Crossref and the article page. PMCID PMC5760683, PMID 29317681 (NCBI ID converter) | full text (HTML) and PDF (9 pp.); Figs 5–7 viewed as page renders | rod μg/1 g spread; methods; claims | CC BY 4.0. Version of record 9 Jan 2018 |
+| **L18-ESM** | Supplementary Information to L18, Springer ESM `41598_2017_18398_MOESM1_ESM.pdf` (PDF metadata author "Xinyan", created 15 Aug 2017, Word 2016) | all 4 pages: Table S1 (μg, 52 rows), Table S2 (1 g, 46 rows), Figs S1–S3, refs | **primary numeric data** for Evidence Case 02 | Transcribed: `research/data/link2018_table*.csv` |
+| **TM** | Olson S.L., Ferkul P.V., Bhattacharjee S., Miller F.J., Fernandez-Pello C., Link S., et al. *Burning and Suppression of Solids–II (BASS–II) Summary Report.* NASA/TM-20210011385, E-19939. NTRS 20210011385; distribution date 2021-04-01, publication date 2021-10-01 (NTRS API) | §2.2 incl. Table 2.1 (PDF p.36 / printed p.28); Ch. 4 (PDF pp.55–62); App. A Tables A.1 (part), **A.3 (all)**, A.5 (part) | thin-sheet V_g,cr; **as-run test matrix**; rod chapter claims | 144 pp. NTRS copyright `GOV_PERMITTED`. Only the NTRS official PDF is used; the ResearchGate copy cited on 15 Oct is not needed |
+| **R2** | Bhattacharjee S., Simsek A., Olson S., Ferkul P. "The critical flow velocity for radiative extinction in opposed-flow flame spread in a microgravity environment: A comparison of experimental, computational, and theoretical results." *Combust. Flame* **163**, 472–477 (2016). doi:10.1016/j.combustflame.2015.10.023 (Crossref) | metadata only | same result as TM §2.2 (TM p.27 footnote: "Previously published as") | Not an independent confirmation of TM Table 2.1 |
+
+## Directly relevant, not yet accessible in full
+
+| Key | Identity (Crossref unless noted) | Relevance | Access |
+|---|---|---|---|
+| **RIV26** | Rivera J., Liveretou C., Fernandez-Pello C., Gollner M.J., Stocker D., Ferkul P., Olson S. "Opposed flame spread limit over PMMA rods in normal and micro gravity." *Fire Saf. J.* **162**, 104719 (Jul 2026). doi:10.1016/j.firesaf.2026.104719 | **same material, geometry and endpoint family** as the rod case; newer μg data likely | ScienceDirect 403; no abstract in Crossref. Must be read before the rod scope is finalised |
+| **LIV24** | Liveretou C., Scudiere C., Rivera J., Etzenbach L., Thomsen M., Fernandez-Pello C., Gollner M.J., Olson S., Ferkul P. "The limiting oxygen volume fraction for opposed flame spread extinction." PROCI, doi 10.1016/j.proci.2024.105224 (**NTRS record 44513796802494 only; DOI not resolved via Crossref this session**) | LOC for opposed spread (endpoint E-05) | NTRS record has no download |
+
+## Context-layer studies (identity verified via Crossref; contents not read)
+
+| Key | Identity | Why context only (for now) |
+|---|---|---|
+| **RIES24** | Ries H.-C., Eigenbrod C., Meyer F. "Effect of oxygen concentration, pressure, and opposed flow velocity on the flame spread along thin PMMA sheets." *Proc. Combust. Inst.* **40**, 105358 (2024) | thin sheets, not rods; pressure is a variable there and is absent in L18 |
+| **TIEN25** | T'ien J.S., Li C., Ferkul P.V., Olson S.L., Johnston M.C. "Experimental determination of diffusion flame extinction boundaries over a PMMA sphere: The effect of sub-surface solid heating." *Combust. Flame* **277**, 114244 (Jul 2025) | sphere geometry; extinction boundary endpoint; thermal-history evidence relevant to C-05/C-23 |
+| **TAK26** | Takahashi S., Kobayashi Y., Kikuchi M., Fujita O. "Flame spread over charring and non-charring materials in microgravity on ISS/Kibo." *Combust. Flame* **286**, 114803 (Apr 2026) | different facility (FLARE, Kibo) and materials; possible PMMA comparison data |
+| **OLS24** | Olson S.L., Neumann E.S., Valletta V.M., Ogorzaly A.L., Owens J.C. "Partial gravity flammability of cast PMMA rods in concurrent axial stagnation flow." *Fire Saf. J.* **150**, 104267 (Dec 2024) | PMMA rods, but **concurrent / stagnation** flow and partial g: a different configuration from Q1 |
+
+## Repositories
+
+| Key | Identity | Status |
+|---|---|---|
+| **PSI-25** | NASA Physical Sciences Informatics, BASS-II investigation | sign-in required (403); not inspected |
+| **PSI-26** | NASA PSI "Burning and Suppression of Solids" (BASS), ISS, 2009-10-01 → 2013-06-30; lists PSI-25 as related | public search-index metadata only; study endpoint 403 |
+
+## Prior art and methods (see `prior_art.md`)
+
+| Key | Identity (verified how) |
+|---|---|
+| NIST-MFD | "The NIST Material Flammability Database", IAFSS14 (Tsukuba), NIST pub_id 956810 (nist.gov page, 200) |
+| ONTO | Bai J., Geeson R., Farazi F., Mosbach S., Akroyd J., Bringley E.J., Kraft M. "Automated Calibration of a Poly(oxymethylene) Dimethyl Ether Oxidation Mechanism Using the Knowledge Graph Technology." *J. Chem. Inf. Model.* 2021; doi 10.1021/acs.jcim.0c01322; PMC8154252 (PubMed esummary + abstract). Introduces **OntoChemExp** |
+| AOA | Meyer H., Pebesma E. "Predicting into unknown space? Estimating the area of applicability of spatial prediction models." arXiv:2005.07939 (2020) (arXiv API) |
+| PRIME | Oreluk J., Needham C.D., Baskaran S., Sarathy S.M., Burke M.P., West R.H., Frenklach M., Westmoreland P.R. "Dynamic Chemical Model for H2/O2 Combustion Developed Through a Community Workflow." arXiv:1801.10093 (2018) (arXiv API). Uses PrIMe and Bound-to-Bound Data Collaboration |
+| CLLM | Yang Z., Mao R., Wu T., Li H., Zhou Q., Chen Z.X. "A unified foundational framework for knowledge injection and evaluation of Large Language Models in Combustion Science." arXiv:2603.04452 (27 Feb 2026) (arXiv API) |
+| STD-7009 | NASA-STD-7009, "Standard for Models and Simulations" (standards.nasa.gov page lists NASA-STD-7009B, file dated 2024-03-05, plus earlier revisions) |
+
+## Competition sources
+See `planning/competition_rules.md`. All were fetched on 2026-10-20 from spaceappschallenge.org: FAQ page dated
+13 Oct 2026; Team Formation Guide dated 23 Sep 2026; Participant Terms & Conditions updated 7 Aug 2026; the 2026
+home page; and the challenge page through the site's public GraphQL endpoint.
