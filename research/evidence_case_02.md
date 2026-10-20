@@ -84,7 +84,7 @@ These rules give eligibility only. They do **not** permit averaging, fitting, or
 | Sign | negative: the lower-flow segment, recorded later in the same burn, spread more slowly |
 | Independence | **not independent**: consecutive segments of one burn of one specimen, in time order |
 | Uncertainty propagation | **not justified**. No per-row uncertainty is reported. V_g accuracy is not quantified ([L18] p.4). The only quantifiable term is print resolution (±0.005 per value, so ≤ 0.01 units = 0.1 µm/s on the difference). That is a rounding bound, not a measurement uncertainty. |
-| Confounders inside the comparison | elapsed burn time and rod preheating; O₂ fall during the burn (calibrated 18.5 → 17.1, C-05); regression of the rod tip; flow-meter accuracy; combustion products building up (CO₂ 0.62 → 1.8 %, CO 64 → 493 ppm over the burn) |
+| Confounders inside the comparison | elapsed burn time and rod preheating; O₂ fall during the burn (calibrated 18.5 → 17.1, C-05); regression of the rod tip; flow-meter accuracy; combustion products building up (CO₂ 0.62 → 1.8 %, CO 64 → 493 ppm over the burn; the starting values equal P6's final readings, so the burn began in P6's atmosphere, C-26, added 21 Oct) |
 | Flow values | **nominal** per-setting values. B4, B6 and B10 (all 3 Jul 2014) carry identical 2.00 / 1.87 / 1.73 at pots 0.4 / 0.36 / 0.32 (C-24, inferred). The burn also ran at pots 0.308 and 0.3 before flow-off; those segments are not tabulated |
 
 **Other admitted and flagged burns** (same rule, first vs last tabulated row; `evidence_case_02.py` output):
@@ -126,6 +126,11 @@ follows from these rows.
   6. **Effective flow at the flame**: in 1 g the flame-induced buoyant flow (~30 cm/s, [L18] p.5) dominates any forced flow below it, so "V_g = 2 cm/s" does not mean the same flow in both rows.
 
   The near-equality of the two numbers is a coincidence of conditions. It is not evidence that gravity doesn't matter, and C-09 shows the two source documents themselves disagree on the μg-vs-1 g ordering.
+- **Under the corrected endpoint rules (21 Oct, D-021):**
+  - **Same measurand:** both rows measure M-01 (axial flame-front propagation rate). So display (U1) and the descriptive contrast above (U2) **are allowed**; "different endpoints" no longer forbids them.
+  - **Different everything else:** statistic (ST-01 vs ST-02), protocol (PR-01 vs PR-02) and context (effective flow, O₂ regime, starting atmosphere). So pooling (U3) and causal attribution (U4) **are not allowed**.
+  - **Correct statement:** *"These observations may be displayed and arithmetically contrasted, with their distinct protocols shown, but they cannot identify gravity's isolated causal effect."*
+  - **Add to the list above:** P4 began in P6's residual atmosphere (C-26).
 
 ### N2: endpoint substitution, thin-sheet extinction velocity vs rod spread
 A query for "the critical opposed-flow velocity for PMMA" could retrieve [TM] Table 2.1 (V_g,cr = 10 ± 5 mm/s at
@@ -195,3 +200,4 @@ arithmetic was also checked by hand: 2.69 − 3.25 = −0.56; −0.56 / 3.25 = �
 - Raw BASS-II video/overlay data (NASA PSI) were **not** accessed (sign-in required), so no rate was re-measured.
 - These are internal worked-case decisions, not adjudicated scientific findings, and not a material-safety assessment.
 - For a fire-safety-relevant descriptive result that survives source reconciliation (lowest tabulated O₂ with spread, μg vs 1 g, at matched diameter; specimen history matters at 1.27 cm), see `adversarial_source_audit.md` §5 (F-9).
+- **21 Oct:** that result is now **Evidence Case 03** (`evidence_case_03.md`), the primary demonstration (D-022). It was re-read with atmosphere history and the corrected endpoint rules.

@@ -18,18 +18,31 @@ different things, under different protocols, on different specimens, or even the
 - All 19 sample labels map to **NASA's BASS-II as-run test log** (NASA/TM-20210011385, Table A.3), with specimen IDs and burn order.
 - **Positive result:** in NASA burn P4 (black PMMA rod, 9.525 mm, 18.5 % O₂), spread rate 32.5 → 26.9 µm/s as opposed flow went 2.00 → 1.73 cm/s (descriptive, within one burn).
 - **Open conflict, kept in quarantine:** NASA's appendix log lists the paper's headline series (B16/B19) as **"Concurrent"**. The article, NASA's own Chapter 4 and the published photographs present them as opposed. The adversarial audit (second 20 Oct session) classifies this as a genuine unresolved conflict with the evidence favouring opposed (`research/b16_b19_discrepancy_review.md`). It is **not** a headline finding.
-- **Specimen identity can change a fire-safety reading.** Link's tables record μg flame spread at ≥ 1 O₂ point below any recorded 1 g spread for 0.95- and 0.64-cm rods. For 1.27-cm rods, the only such record comes from a reburned specimen (`research/adversarial_source_audit.md` §5).
+- **Primary demonstration: burn history changes a fire-safety reading** (`research/evidence_case_03.md`, 21 Oct).
+  - **0.95- and 0.64-cm rods:** Link's tables record μg flame spread from fresh rods at ≥ 1 O₂ point below any recorded 1 g spread.
+  - **1.27-cm rods:** the only such record (B9) is the second ignition of rod 202m, in the unrenewed atmosphere left by its first burn.
+  - **Fresh 1.27-cm rods:** the answer is undetermined.
+  - **Not claimed:** no limiting oxygen value.
+- **Endpoint specification corrected** (`research/endpoint_dictionary.md`). The measured quantity (measurand) is now separated from method, statistic, context and protocol. The same measurand under different protocols may be displayed and contrasted, but not pooled or read causally.
 - A spreadsheet reproduces all the arithmetic. The contribution so far is **curation and conflict detection**, not algorithms. A public competitor (MicroFire Atlas) already does page-level provenance and reused-sample flags for other BASS-II materials (`research/prior_art_comparison.md`).
 
 **Audit status (20 Oct, second session):** see `research/adversarial_source_audit.md` for which earlier findings
 survived (PASS), were qualified, or failed. Still **no independent human review** (B-07).
 
+**Third session (21 Oct):**
+- The endpoint specification was corrected; Evidence Case 03 was written; the shared-atmosphere pattern was recorded (C-26).
+- A value hypothesis, an evaluation repair note, a human-review checklist and a revised (unsent) organizer email were added.
+- Readiness decision: **do not build** (`planning/competition_readiness.md` §0).
+
 ## Layout
 | Path | Contents |
 |---|---|
-| `research/evidence_case_02.md` | **primary rod case**: question, rules, admitted result, negative cases |
+| `research/evidence_case_03.md` | **primary demonstration**: lowest O₂ with recorded spread, μg vs 1 g, and what burn history changes |
+| `research/evidence_case_02.md` | rod case: question, admission rules, within-burn result (P4), negative cases |
+| `planning/researcher_workflow.md`, `planning/value_hypothesis.md` | one-page user task; falsifiable value hypothesis and spreadsheet comparator |
+| `planning/future_evaluation_plan.md`, `planning/human_review_checklist.md` | evaluation repair note and future plan; ≈ 90-min checklist for a human reviewer |
 | `research/evidence_case_01.md` | auxiliary thin-sheet critical-velocity case (re-verified) |
-| `research/source_conflicts.md` | 25 conflicts with exact locations and treatments |
+| `research/source_conflicts.md` | 27 conflicts and definition gaps, with exact locations and treatments |
 | `research/adversarial_source_audit.md` | second-session audit: approval decisions, surviving/failed findings |
 | `research/b16_b19_discrepancy_review.md`, `research/p4_independent_recheck.md`, `research/prior_art_comparison.md` | focused audit reviews |
 | `planning/competition_readiness.md`, `planning/evaluation_audit.md`, `planning/independent_reviewer_instructions.md` | rules status, strategy, evaluation audit, reviewer brief |

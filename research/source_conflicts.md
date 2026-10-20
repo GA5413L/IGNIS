@@ -38,6 +38,8 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
 | C-23 | Flow histories not monotonic as Methods imply | medium | B16, B19, P17 | open |
 | C-24 | What V_g in Table S1 is: identical V_g sequences recur across burns on the same day (nominal per-setting calibration values?) | medium (definition gap) | all Table S1 rows; cross-day V_g comparisons | inferred; no source statement |
 | C-25 | NASA TM Fig. 4.1 x-axis labelled "Flame velocity, cm/s"; caption says "opposed-flow velocity" | low | figure only (never digitised) | noted |
+| C-26 | Shared atmosphere: some burns start exactly at the previous burn's final O₂/CO₂/CO readings (sealed work volume), while [L18] says O₂ was kept "constant" | **high** for cross-burn and O₂-limit questions | P4, P9 (B9), P17, P15, P2, P3b and others (list in details) | added 21 Oct; observed pattern + NASA statement; carry-over itself inferred |
+| C-27 | [L18] Fig. 8(c) 1.27-cm μg curve below the 1 g limit passes through a symbol at B9's O₂; the reburn is not mentioned in the article or ESM | medium (traceability) | B9; Fig. 8(c) | added 21 Oct; visual only, never digitised |
 
 ## Details
 
@@ -209,3 +211,36 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
 
 ### C-25: TM Fig. 4.1 axis label (added 20 Oct, audit)
 - [TM] p.57/49: the x-axes read "Flame velocity, cm/s", while the caption reads "Flame spread rate versus opposed-flow velocity". This only matters if anyone digitises the figure, which this project does not do.
+
+### C-26: shared atmosphere between consecutive burns (added 21 Oct, third session)
+- **Sources:**
+  - [TM] p.14/6: "The sensor data provided initial and final conditions for repeated tests in a sealed working volume and allowed us to determine when the working volume needed to be purged. The O2 decreased during each burn and the CO and CO2 increased accordingly." Also: "Sensor readings were taken before and after each BASS–II test", and dilution "typically took 1 to 3 h".
+  - [L18] pp.3–4: "Keeping the flow oxygen concentration constant, each PMMA sample was ignited …"; "Multiple tests were conducted for each PMMA sample by keeping the airflow of constant oxygen concentration."
+- **Pattern** in [TM] Table A.3 (pp.114–115 / 106–107; text layer and 150/220-dpi renders). For burns with adjacent as-run numbers, the second burn's initial calibrated O₂, uncalibrated O₂, CO₂ and CO equal the first burn's final values:
+  - **4 of 4 equal:** P6→P4 (18.5 / 17.6 / 0.62 / 64); P10→P8; **P5→P9 (17.6 / 16.7 / 1.67 / 525)**; P12→P17; P14→P15; P21a→P21b; P18→P24; P20→P23.
+  - **3 of 3 comparable:** P3a→P3b.
+  - **3 of 4:** P1→P2 (calibrated O₂ differs by 0.1).
+  - **Not carried over:** P2→P3a; P15→P21a; P4→P10 (O₂ similar, but CO₂ 1.8 → 0.29 and CO 493 → 2); P9→P13a; P13a→P13b; P22b→P25; P24→P20.
+  - **Near, not equal:** P16→P19.
+  - **Cannot assess:** P22a→P22b (C-16).
+- **Confirmed:** the equalities as printed, and NASA's statement on sealed, repeated tests.
+- **Inferred:** in the 4-of-4 cases the work volume was not purged or re-diluted between burns, so the later burn began in the earlier burn's residual atmosphere. If the initial cells were copied from the previous final cells, the inference is the same.
+- **Unknown:** what happened between burns that were not carried over (purge, dilution, or both).
+- **Effect:**
+  - "Constant oxygen" holds neither within a burn (C-05) nor necessarily between burns.
+  - Burns sharing an atmosphere are not independent in their starting conditions.
+  - The independence group stays the specimen (D-009). A shared-atmosphere annotation is added (D-023).
+  - B9 is a reburn **and** began in its own first burn's atmosphere (Evidence Case 03).
+  - CO₂ and CO are **not** in `bass2_TM20210011385_tableA3_rods.csv`; the as-printed CSV is unchanged.
+
+### C-27: Fig. 8(c) and specimen history (added 21 Oct, third session)
+- **Sources:**
+  - [L18] Fig. 8(c) (p.7; 1.27 cm) shows μg symbols at about 17.6, 19.3 and 20.6–20.7 % O₂, plus a zero-rate symbol near 16.5 %. The fitted μg curve crosses below the 1 g "Blow off" band through the ≈17.6 % symbol (render `_raw/audit_2026-10-20c/L18_fig8c_400dpi.png`).
+  - Table S1's only 1.27-cm burn at 17.6 % is B9, the second burn of specimen 202m ([TM] A.3).
+  - The article and supplement do not mention a reburn.
+- **Confirmed:** the symbol's approximate position (visual); B9's history (A.3).
+- **Inferred:** the ≈17.6 % symbol represents B9.
+- **Unknown:** the source of the zero-rate symbol near 16.5 %; how the plotted value was formed (it does not equal any single B9 row; not digitised).
+- **Effect:**
+  - The 1.27-cm μg curve below 18.5 % rests on a reburned specimen, as far as the tables show.
+  - This is a traceability note, **not** a claim that the figure is wrong. The authors describe their μg data as "not systematically taken".

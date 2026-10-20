@@ -63,7 +63,7 @@ cm/s magnitude, which is consistent. **Units: PASS.**
 |---|---|---|
 | Elapsed time and rod heating | segments are sequential in one burn | later segments run on a pre-heated rod |
 | O₂ | calibrated 18.5 → 17.1 % over the **whole burn**; values at each segment not recorded (C-05) | O₂ was lower during B than during A |
-| Combustion products | CO₂ 0.62 → 1.8 %, CO 64 → 493 ppm over the burn ([TM] A.3 P4 row) | product build-up in the working volume |
+| Combustion products | CO₂ 0.62 → 1.8 %, CO 64 → 493 ppm over the burn ([TM] A.3 P4 row). **Added 21 Oct:** P4's starting O₂, CO₂ and CO equal P6's final readings, so the burn began in P6's atmosphere (C-26) | product build-up in the working volume |
 | Position along the rod | opposed spread moves the flame toward the mounted (upstream) end | possible change in heat loss near the holder (physical consideration only, not established for this burn) |
 | Flow accuracy | nominal per-setting values; transducer response ~1 min | ΔV_g is nominal |
 

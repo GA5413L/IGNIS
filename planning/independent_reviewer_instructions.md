@@ -6,6 +6,10 @@
 - **Who should do it:** someone who has **not** worked on the IGNIS rules or the v1 evaluation keys.
 - **Time:** about 2–3 hours in total. Parts A–C can be done in separate sittings.
 
+**Added 21 Oct:**
+- **Tick sheet:** use `human_review_checklist.md` (≈ 90 min). It also covers the burn-history case (`research/evidence_case_03.md`).
+- **Order:** if you will write held-out tasks (Part D), do Part D **first**, before reading any notes. The current Part D requirements are in `future_evaluation_plan.md` §3b; they add a required derived multi-record question.
+
 **Ground rules**
 - Never edit files in `research/data/`. Record everything in your own review log (Part E).
 - Work from the **original PDFs**, not from our notes. Our notes tell you *where* to look, never *what* is true.

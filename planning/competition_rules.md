@@ -3,6 +3,8 @@
 Checked 2026-10-20 against official pages on spaceappschallenge.org. Page bodies are saved locally under
 `_raw/spaceapps/`. **Re-check on 28 Oct (challenge statement) and 13 Nov (submission + judging guides).**
 
+**Re-checked 2026-10-20, 19:04 UTC (21 Oct local; third session).** The FAQ, Team Formation Guide and T&C text is identical to the 16:53 UTC copies, and the challenge page GraphQL response is byte-identical. Copies are in `_raw/spaceapps_2026-10-21/`. Reading: the rules remain **ambiguous, not clearly prohibitive**, for research and documentation (U1). Email A was revised and is **not sent**.
+
 **Re-checked 2026-10-20, 16:53–16:56 UTC (second session).**
 - **Unchanged:** the FAQ, Team Formation Guide, T&C and home page text; the challenge page (identical GraphQL response; resources tab still empty).
 - **New:** the Awards page lists 10 Global Award categories (e.g. "Best Use of Science: the project that makes the best and most valid use of science and/or the scientific method"). These are award categories, **not** the 2026 scoring rubric (U5 stays open).

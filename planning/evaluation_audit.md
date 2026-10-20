@@ -80,6 +80,8 @@ If curation value is positive but algorithmic and UI value are zero or negative,
 - **If no independent person is available,** blocker B-07 stands. The evaluation can then only be reported as an *internal consistency check*.
 
 ## 7. Candidate task (assistant-written, so **not** held-out; for v1.1 if approved)
+> **21 Oct:** the draft key below is superseded by `research/evidence_case_03.md` §5. Further repairs (T01, T04, T05, T06, T12) are in `future_evaluation_plan.md` §2. All of these remain development cases (D-025).
+
 - **T13 (utility, not a trap).** "For black PMMA rods, at which diameters do Link et al.'s tables record μg flame spread at lower O₂ than any recorded 1 g spread, and does specimen history affect that?"
 - **Draft key:** `research/adversarial_source_audit.md` §5:
   - 0.95 cm and 0.64 cm: yes, by ≥ 1.0 point;

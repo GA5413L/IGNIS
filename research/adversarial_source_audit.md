@@ -191,6 +191,11 @@ This supports both the P17-is-black and the B22-is-two-burns readings. It is **i
 ---
 
 ## 5. A fire-safety-relevant descriptive result that survives source reconciliation (F-9)
+> **Refined 21 Oct (third session): see `evidence_case_03.md`.** The values below are unchanged. The re-read adds:
+> - P9 began in P5's unrenewed atmosphere (O₂ 17.6 %, CO₂ 1.67 %, CO 525 ppm all carried over, C-26).
+> - The fresh rod's flame in P5 persisted while O₂ fell to 17.6 %, untabulated. So "fresh 1.27-cm rods were not tabulated below 19.3 %" stays true, but the fresh-rod answer is **undetermined**, not "no".
+> - The μg-vs-1 g ordering also relies on the authors' 1 g non-spread statements, because the "-" entries are undefined.
+
 **Question.** At matched rod diameter, is flame spread recorded at lower O₂ in the ISS low-flow tests than in the
 1 g tests? This is the practical point both sources make: [L18] p.6, "LOC is lower (or the fire risk is higher) in
 microgravity"; [TM] p.58/50, "as low as 17.5 percent" vs "not observed below 19 percent".

@@ -2,6 +2,54 @@
 
 This file covers three things: the status of the rules (re-checked today), what this session was and was not allowed to do, and an honest strategy assessment. It contains **no submission content**.
 
+## 0. Readiness decision (21 Oct 2026, third session; supersedes §4–§5 where they differ)
+**Decision: do not build.** Until a written organizer ruling and the 28 Oct challenge statement arrive, limit work to source review, scientific documentation and planning. All of it stays subject to the ruling for reuse.
+
+**Rule check.**
+- **Re-fetched** 2026-10-20 19:04 UTC (21 Oct local): the FAQ, Team Formation Guide and Terms & Conditions. Their text is identical to the 16:53 UTC copies. The challenge page is byte-identical, and its resources tab is still empty.
+- **Reading:** no official text *clearly* prohibits reading or documentation. "Working on the challenges / project" is undefined, so the situation is **ambiguous, not clearly prohibitive** (U1).
+- **Caveat:** a strict reading could cover this repository's work. That is exactly what Email A asks.
+
+| Gate | Status | Change since 20 Oct |
+|---|---|---|
+| Rules: may pre-event work be reused? | **UNKNOWN** | Email A revised; **not sent** |
+| Team and event registration | **UNKNOWN** | — |
+| Challenge-statement fit | **UNKNOWN** until 28 Oct | — |
+| Data integrity | **PASS (assistant-checked)**; CONDITIONAL until a person reviews it | `human_review_checklist.md` ready |
+| Measurand / protocol specification | **PASS** (specification level) | new: `research/endpoint_dictionary.md` (D-021) |
+| Primary demonstration (burn history, `research/evidence_case_03.md`) | **CONDITIONAL**: strongest available case; assistant-checked | new (D-022) |
+| Secondary demonstration (matched μg/1 g pair) | **PASS** for display and contrast; **FAIL** for any causal reading | reframed under the measurand rules |
+| Software value over a curated spreadsheet | **UNKNOWN (untested)**. H1 and its decision rule are defined | new: `value_hypothesis.md` (D-024) |
+| Evaluation readiness | **FAIL.** Development cases only; held-out tasks need a person | repair note: `future_evaluation_plan.md` (D-025) |
+| Judging criteria | **UNKNOWN** until 13 Nov | — |
+
+**Can be done now, by people (no building):**
+1. The user sends Email A and records the reply.
+2. A reviewer runs `human_review_checklist.md`. Separately, a person writes and seals ≥ 4 held-out tasks.
+3. The user decides on a PSI account (B-03), library access to Rivera 2026 (B-04) and Email B (B-05).
+4. On 28 Oct, read the challenge statement and record a scope decision.
+5. Ask 2–4 people whether they could take part in a short pilot during the event (B-10). Send no materials.
+
+**Must wait until 14 Nov 09:00 local, and the ruling:**
+- all code: application, UI, dashboard, rule engine, record bundle;
+- any dataset or transcription made for the submission, including the A.3 gas columns (D-023);
+- demo assets, video, submission text;
+- every evaluation run and the user study.
+
+**Next authorized implementation step (defined precisely).**
+- **Preconditions:**
+  - (i) the organizer ruling is recorded, or its absence is recorded and the re-derive path is chosen;
+  - (ii) the 28 Oct statement has been reconciled with the Evidence Case 03 scope, in `DECISIONS.md`;
+  - (iii) it is 14 Nov, 09:00 local or later.
+- **Step 1, event hours 0.5–3: build the record set for the primary and secondary demonstrations.**
+  - **Inputs:** freshly downloaded, hash-checked ESM and TM PDFs. If reuse is not permitted, Tables S1, S2 and A.3 (including the CO₂/CO columns) are re-transcribed during the event.
+  - **Fields per record:** source row ID, measurand, legacy endpoint, method, statistic, protocol, the context fields of `endpoint_dictionary.md` §5, specimen burn number, and atmosphere predecessor.
+  - **Acceptance:**
+    - the transcription check passes on the fresh PDFs;
+    - an automated test reproduces exactly the Evidence Case 03 §2 table, D2 and D5, and the +0.08 contrast of §10;
+    - **no UI work starts before this passes.**
+- **After Step 1:** follow `implementation_blueprint.md` §4, scoped to `researcher_workflow.md`.
+
 ## 1. Rule status
 All pages were re-fetched 2026-10-20 between 16:53 and 16:56 UTC.
 - **FAQ, Team Formation Guide, T&C, home page:** text unchanged from the morning copies.
@@ -110,6 +158,8 @@ U1 and U2, plus reuse of scripts, the format for disclosing AI-assisted preparat
 | Judging criteria known | **UNKNOWN** | 13 Nov |
 
 ## 5. Next permitted action (single most useful)
+*(Still current on 21 Oct; Email A was revised and is still unsent.)*
+
 **The user sends Email A to their Local Lead, or via the Contact Us page, now.**
 - Every other path (reusing the data and scripts, or the 2-hour re-transcription budget at gate D0) depends on that answer.
 - The answer has to arrive before 14 Nov to be useful.

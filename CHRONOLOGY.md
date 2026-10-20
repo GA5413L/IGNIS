@@ -67,6 +67,42 @@ Four short Python helpers in the session scratchpad, reading local PDFs or CSVs:
 
 None is an application or part of a submission. The existing `verify_transcriptions.py` and `evidence_case_02.py` were re-run unchanged.
 
+## 2026-10-20/21, third session (scientific closure; Claude Code, model Claude Opus 5.5, acting on the user's brief)
+Times are UTC on 20 Oct (local date 21 Oct, UTC+5). **All work below is pre-event and subject to the organizer ruling for any reuse (B-01).**
+
+| Time (UTC, approx.) | Work |
+|---|---|
+| ~18:56 | Read the brief and the repository (working tree clean at `1550c07`) |
+| ~19:00–19:03 | Re-hashed the three source PDFs (match the manifest). Re-read [L18] pp.3–7 and the ESM captions. Re-read [TM] pp.13–16 (work-volume procedure) and the full Table A.3 text, including the CO₂/CO columns. Rendered Table A.3 gas columns (pp.114–115) and [L18] Fig. 8(a, c) into `_raw/audit_2026-10-20c/` (local, gitignored) |
+| 19:04 | Re-fetched the FAQ, Team Formation Guide and T&C (text identical) and the challenge page (byte-identical) into `_raw/spaceapps_2026-10-21/` |
+| ~19:05–19:20 | Wrote and updated the documents below |
+
+### Files written or changed in the third session (documents only)
+- **New:**
+  - `research/evidence_case_03.md`
+  - `planning/researcher_workflow.md`
+  - `planning/value_hypothesis.md`
+  - `planning/future_evaluation_plan.md`
+  - `planning/human_review_checklist.md`
+- **Rewritten in place:**
+  - `research/endpoint_dictionary.md`: layered model; original E-01…E-08 table kept with its meaning.
+  - `planning/organizer_clarification_email.md`: still a draft, **not sent**.
+- **Updated:**
+  - `research/source_conflicts.md` (new C-26, C-27; earlier entries unchanged)
+  - `DECISIONS.md` (D-021–D-026), `BLOCKERS.md` (B-01, B-07, new B-10), this file
+  - `README.md`, `planning/competition_readiness.md` (§0 decision), `planning/competition_rules.md`
+  - one-line pointers or notes in: `research/evidence_case_02.md`, `research/adversarial_source_audit.md`, `research/p4_independent_recheck.md`, `research/experiment_inventory.md`, `planning/evaluation_plan.md` (frozen v1 tasks unchanged), `planning/evaluation_audit.md`, `planning/independent_reviewer_instructions.md`, `planning/implementation_blueprint.md`, `planning/scientific_scope.md`
+- **No data file in `research/data/` and no repository script was changed or added.**
+
+### Code run in the third session (scratch only, outside the repository)
+- `render_clip.py` (existing helper): PDF region renders.
+- `burn_history.py`, new, in the session scratchpad. It:
+  - checks the hand-typed Table A.3 gas readings against the repository's O₂ columns;
+  - lists the adjacent-burn carry-over;
+  - recomputes the per-diameter minima and the B5/B9 and B13a/B13b contrasts from the CSVs.
+
+Neither is an application or part of a submission.
+
 ## Reused third-party resources
 - Python 3.14.0 with pre-installed PyMuPDF (fitz), BeautifulSoup4 and requests; Windows `curl.exe`. No third-party code was copied into this repository.
 - Data: see `manifests/data_sources.csv` and `manifests/rights_and_attribution.csv`.
@@ -76,4 +112,6 @@ An AI assistant (Claude, via Claude Code) carried out the source retrieval, tran
 scripting, cross-source analysis and the writing of these notes, following the user's written brief. Every number
 in `research/data/` is checked mechanically against the publisher or NASA PDF text layer. In a second session the
 same kind of assistant also checked every cell visually against the PDF renders, as an adversarial audit. **No human
-has yet independently reviewed them** (B-07). An assistant re-check is not independent verification.
+has yet independently reviewed them** (B-07). An assistant re-check is not independent verification. A third
+session (21 Oct local) re-read the records behind Evidence Case 03 and wrote the specification and planning
+documents listed above. It, too, was the same kind of assistant.

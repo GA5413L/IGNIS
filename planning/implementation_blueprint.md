@@ -40,6 +40,7 @@ Entities are written `Name{fields}`. `?` marks fields that are known to be absen
 - **Conflict**{id (C-01…), values[{source, location, value}], status, affected_records[], treatment}
 - **Comparison**{question, A, B, difference_B_minus_A, units, sign, independence, uncertainty_status, confounders[], rule_version}
 - Model and ValidationRecord exist only to state that **no model is used**. Reserved for later.
+- **21 Oct (D-021, D-023):** a Measurement additionally carries `measurand_id`, `method_id`, `statistic_id` and `protocol_id`. A PhysicalRun carries `burn_index` and `atmosphere_predecessor`. Field meanings are in `research/endpoint_dictionary.md` §1 and §5. This is a specification change only, not an implementation.
 
 Derived variables are always marked derived: O₂ fraction = % / 100; µm/s = printed × 10 (cm/s reading). O₂
 partial pressure is **not derivable**, because pressure is unknown.
@@ -60,6 +61,12 @@ partial pressure is **not derivable**, because pressure is unknown.
 | 32–36 | Buffer | — |
 
 ## 5. Demo storyline (≈ 2 min)
+> **21 Oct:** the demonstration order is now in `researcher_workflow.md`:
+> - **primary:** burn history changes the 1.27-cm reading (Evidence Case 03);
+> - **secondary:** the matched μg/1 g pair.
+>
+> Where they differ, it supersedes the steps below.
+
 1. **Result:** "In NASA's BASS-II ISS burn P4 (black PMMA rod, 9.5 mm, 18.5 % O₂), the spread rate fell from 32.5 to 26.9 µm/s as opposed flow was stepped from 2.00 to 1.73 cm/s." Show the actual rows.
 2. **Distinction:** "That's one burn, in time order, and O₂ fell from 18.5 % to 17.1 % during it. It's a description, not a flow effect."
 3. **Consequential limit:** (revised 20 Oct audit, D-017) show where **specimen identity changes a fire-safety reading**. μg spread is recorded at lower O₂ than any 1 g spread for 0.95- and 0.64-cm rods, but for 1.27-cm rods only through a reburned specimen (`research/adversarial_source_audit.md` §5). Then the gravity comparison: the numbers look equal, but the verdict is indeterminate, with the reasons. B16/B19 may appear only as one example of an open documentary conflict, with its evidence balance (the evidence favours opposed). **Never** say "NASA records show the headline series was concurrent".

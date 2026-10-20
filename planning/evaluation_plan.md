@@ -24,6 +24,8 @@ software**, and say so in the submission.
 >
 > See `evaluation_audit.md` for the proposed v2 rubric and metrics, and D-018. Until a person approves v2, treat v1 as
 > an internal consistency suite, not an evaluation.
+>
+> **21 Oct:** v1 is still unchanged. The repair note and the future evaluation plan are in `future_evaluation_plan.md`, which calls v1 **development cases** (D-025). The primary value hypothesis is in `value_hypothesis.md` (D-024).
 
 ## Frozen task set (v1, frozen 2026-10-20, before any IGNIS method exists)
 Answer keys are derived only from the sources. Each key lists the required decision, numbers and citations.

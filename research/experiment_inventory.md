@@ -16,6 +16,7 @@ source this session. Everything else is listed so it isn't forgotten, not becaus
 | Not in Table S1 | P8 (would not stay lit), P18/P20/P23/P24 (alternating-flow time-constant tests), P21a/b (self-extinguished at 16.3 % O₂ / igniter broke) | [TM] Table A.3 |
 | Physical specimens reused | 197m (P4→P8), 200m (P22a→P22b), 202m (P5→P9), 203m (P13a→P13b), 215M (P3a→P3b), 196M (P21a→P21b); 217m (Olson O12 → P25) | [TM] Tables A.3, A.5 |
 | NASA's own counts | black: 47 test conditions, 17 samples; clear: 7 conditions, 3 samples | [TM] Table 4.1 (does not reconcile exactly with S1, C-18) |
+| Shared atmosphere (added 21 Oct) | tests ran "in a sealed working volume". In 9 pairs of adjacent burns, every comparable starting reading (O₂, CO₂, CO) of the later burn equals the earlier burn's final reading, e.g. P5→P9 and P6→P4 | [TM] p.14/6; Table A.3 (C-26) |
 | Raw data | video + 35 mm stills + overlay telemetry exist per [TM]; **not accessed** (PSI sign-in) | — |
 
 ## 2. Normal-gravity companion tests (UC Berkeley, Link et al.)

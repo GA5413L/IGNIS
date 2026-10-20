@@ -1,67 +1,69 @@
 # EMAIL A (draft): rules clarification for the Space Apps organizers
 
-**Status: DRAFT for the user's review. Not sent.**
+**Status: DRAFT for the user's review. NOT SENT.**
 - The assistant does not contact anyone (D-013).
-- Fill in the bracketed fields, check every statement against `CHRONOLOGY.md`, then send it yourself.
+- **Revised 21 Oct 2026** (third session): shorter, with the questions numbered so they can be answered one per line. Rule quotes were re-checked against the official pages today (text unchanged since 20 Oct).
+- Fill in the brackets, check every statement against `CHRONOLOGY.md`, then send it yourself.
 
-## Where to send it (from the official FAQ, re-read 2026-10-20)
-1. **Your Local Lead first.** The FAQ says: "Local Leads are the organizers of NASA Space Apps Challenge Local Events. They are available to answer questions … You may find their contact information on your Local Event's page." If you are in the **Universal Event**, go straight to option 2.
-2. **The Space Apps Contact Us page**, https://www.spaceappschallenge.org/contact-us/. The FAQ says: "If you have a question not answered in the guides, reach out on our Contact Us page."
-   - The FAQ page also publishes the address `info@spaceappschallenge.org` (in its page source).
-   - Ask the Local Lead to forward the question to the Global Organizing (GO) Team if they can't rule on it.
-3. **Space Apps Connect** opens 3 Nov. A public post there would reveal the project idea, so prefer a private channel.
+## Where to send it (official FAQ, re-read 20–21 Oct)
+1. **Your Local Lead.** "Local Leads … are available to answer questions … You may find their contact information on your Local Event's page." Universal Event participants go straight to option 2.
+2. **The Contact Us page**, https://www.spaceappschallenge.org/contact-us/ ("If you have a question not answered in the guides, reach out on our Contact Us page"). Ask the Local Lead to forward the question to the Global Organizing Team if they can't rule.
+3. **Avoid a public post on Space Apps Connect** (opens 3 Nov): it would disclose the project idea.
 
-Keep the reply verbatim, with its date and sender, in `planning/competition_rules.md` (U1/U2).
+Save the reply verbatim, with date and sender, in `planning/competition_rules.md` (U1/U2) and `CHRONOLOGY.md`.
 
 ---
 
-**Subject:** Pre-event research and AI-assisted preparation: what may be reused? (Flame in Freefall, 2026)
+**Subject:** Rules question: may pre-event research be reused? (Flame in Freefall, 2026)
 
 Dear [Local Lead name / Space Apps Global Organizing Team],
 
-I am registered for the 2026 NASA Space Apps Challenge at [Local Event name / the Universal Event], and my team
-[team name, if formed] intends to take on **"Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity
-Combustion Data."**
+I am registered for the 2026 NASA Space Apps Challenge at [Local Event name / the Universal Event]. I plan to
+work on "Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity Combustion Data."
 
-The Participant FAQ says that teams "are not allowed to begin working on the challenges prior to the hackathon",
-and the Team Formation Guide says participants "should NOT begin working on their project until the hackathon
-begins on November 14, 2026 (9:00 a.m. local time)". I want to make sure we comply, so I am telling you plainly
-what has already been done and asking how we should treat it.
+The Participant FAQ says teams "are not allowed to begin working on the challenges prior to the hackathon". The
+Team Formation Guide says participants "should NOT begin working on their project until the hackathon begins on
+November 14, 2026 (9:00 a.m. local time)". I have already done some preparation, so I would like to disclose it and
+follow your ruling.
 
-**What exists already (all before 14 November):**
-- **Before 15 October:** informal concept reviews of the project idea (text documents).
-- **15 October:** a short research packet that checked one published NASA table. It was accompanied by a small analysis script, a local database and a chart. Those files are **not** in our project repository.
-- **20 October:** a private, local Git repository (never published) containing:
-  - **Research notes** on public sources: NASA/TM-20210011385 (BASS-II Summary Report) and Link et al. 2018, *Scientific Reports* 8:120, with its supplementary tables.
-  - **Manual transcriptions** of four published tables into CSV files (127 rows in total), each recording its source page.
-  - **Python scripts** that check those transcriptions against the publisher's PDF text, and that cross-reference the journal's sample labels with NASA's test log.
-  - A **register of disagreements** between the sources, and written **plans**: intended scope, an evaluation plan with test questions, and an outline of the software architecture we would build.
-  - **No application, user interface, dashboard or demo has been built.**
-- **AI use:** most of this preparation was carried out with an AI assistant (Anthropic's Claude, via Claude Code), working from our written instructions. We have kept a dated log of what was done.
+**What exists** (kept in a private, unpublished folder, with a dated log):
+1. **Literature research:** notes on public sources, mainly a NASA technical report (NASA/TM-20210011385) and a journal article (Link et al. 2018, *Scientific Reports* 8:120) with its supplementary tables. I also read, without running or copying, a few public GitHub projects that other participants have posted for this challenge.
+2. **Transcriptions:** four published data tables (127 rows) typed into spreadsheet files, each with its source page.
+3. **Verification scripts:** small Python scripts that check the transcriptions against the PDFs and match the article's sample labels to NASA's test log, plus download and PDF-reading helpers.
+4. **Research notes and plans:** a list of disagreements between the sources, an outline of what we might build, and an evaluation plan.
+5. **AI assistance:** almost all of this was produced with an AI assistant (Anthropic's Claude, via Claude Code), following my written instructions.
+6. **Not built:** no application, user interface, dashboard, demo, video or submission text.
 
-**Our questions:**
-1. Is **pre-event reading and review of public scientific literature** related to a challenge allowed?
-2. May we **reuse the manually transcribed measurements** (made before the event from public NASA and journal sources) in our submission? Or must we re-transcribe them during the event?
-3. May we **reuse the pre-event verification scripts**? Or must any code be written during the event?
-4. May **pre-existing preparation files** (research notes, the source-disagreement register, planning documents) be included in our project repository, if they are clearly dated and disclosed?
-5. How should **AI-assisted preparation** be disclosed, beyond the required description of how SI tools were used during development?
-6. Does the **existence of this pre-event repository** affect our eligibility in any way? If so, what should we do now (for example, set it aside entirely and start from the public sources on 14 November)?
+Dates: concept notes before 15 October; on 15 October, a short research packet checking one NASA table, with a
+small analysis script, a local database and a chart (kept outside the folder above); the rest on 20–21 October.
 
-**Our default:** unless you advise otherwise, we will not copy any pre-event file into the submission. We will
-re-derive anything we need from the public sources during the event, and we will disclose the pre-event research
-in the submission. I'm happy to share our dated chronology if useful.
+**Could you answer each question (yes / no / with conditions)?**
+1. Is reading and taking notes on public scientific literature related to the challenge allowed before 14 November?
+2. May we use our pre-event **transcriptions** of published data in the project, or must we redo them during the event?
+3. May we use the pre-event **verification scripts**, or must all code be written during the event?
+4. May pre-event **research notes and plans** be used or included in the project, if dated and disclosed?
+5. In general, may any **pre-event work be reused**? If so, how should we disclose it in the submission?
+6. Is **AI-assisted preparation** before the event treated differently from AI use during it? How should we describe it, beyond the required statement on SI-tool use?
+7. Does any of this affect our **eligibility**? Should we stop all further preparation until 14 November?
 
-Thank you for your help.
+Until we hear from you, we will:
+- do no further project work beyond reading public sources;
+- not copy any pre-event file into the project;
+- re-derive anything we need from the public sources during the event;
+- disclose this preparation in the submission.
+
+Thank you.
 
 Kind regards,
 [Name]
-[Team name, Local Event]
+[Team name, if formed; Local Event]
 [Space Apps registration e-mail]
 
 ---
 
 ## Pre-send checklist
-- [ ] Every factual statement matches `CHRONOLOGY.md`. Update the counts if anything has changed.
-- [ ] The Local Event (or Universal Event) is correct. Team size and members are stated only if true.
-- [ ] Nothing is attached that contains third-party PDFs.
-- [ ] After sending: record the date, channel and recipient in `CHRONOLOGY.md` and `planning/competition_rules.md`.
+- [ ] **Facts.** Every statement matches `CHRONOLOGY.md` (counts, dates, "not built"). Remove item 1's second sentence if you prefer not to mention other teams' repositories; it is there for full disclosure.
+- [ ] **The default paragraph.** Send it only if you will actually keep to it. If you plan more preparation before a reply, change that paragraph to say so.
+- [ ] **Your details.** The Local Event (or Universal Event) is correct. Team details are stated only if true.
+- [ ] **No attachments.** Offer the chronology on request instead.
+- [ ] **After sending.** Record the date, channel and recipient in `CHRONOLOGY.md` and `planning/competition_rules.md`.

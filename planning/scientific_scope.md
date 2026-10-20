@@ -1,5 +1,10 @@
 # Scientific scope (based on the data actually found, 20 Oct 2026)
 
+> **21 Oct:**
+> - The primary demonstration is now Evidence Case 03, on burn history and the lowest O₂ with recorded spread (D-022). The researcher task is in `researcher_workflow.md`.
+> - Query type 3 below is the secondary, negative demonstration, restated under the corrected endpoint rules (`research/endpoint_dictionary.md` §4).
+
+
 ## First domain: confirmed as feasible
 **Black cast PMMA rods, microgravity (ISS BASS-II), forced opposed flow, endpoint E-01 (axial flame-leading-edge
 spread rate).** The numbers exist and can be traced to NASA's as-run record: [L18-ESM] Table S1 crosswalked to
