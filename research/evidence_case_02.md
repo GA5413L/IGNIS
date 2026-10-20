@@ -3,8 +3,13 @@
 **Date:** 20 October 2026 (pre-event research; not a submission artifact)
 **Status:** Source measurements **recovered and transcription-checked**. One positive descriptive comparison is
 admitted (primary: sample B4 / NASA test P4). Five further burns are computed with flags. Link et al.'s headline
-microgravity series (B16, B19) is **quarantined** because of a cross-source flow-configuration conflict. No model,
-prediction, significance test, or safety verdict is produced.
+microgravity series (B16, B19) is **quarantined** because of a cross-source flow-configuration conflict. That conflict
+is between NASA's appendix log on one side, and the article plus NASA's own Chapter 4 on the other. The weight of
+evidence favours opposed (see `b16_b19_discrepancy_review.md`). No model, prediction, significance test, or safety
+verdict is produced.
+**Audit, 20 Oct (second session):** values and arithmetic re-checked: PASS (`p4_independent_recheck.md`). Wording
+qualified: V_g values are nominal settings, and "B" is the last *tabulated* segment. N3 is reworded. Summary in
+`adversarial_source_audit.md`.
 **Supersedes:** the rod part of "IGNIS Evidence Case 01" (15 Oct 2026), which recorded Tables S1/S2 as unobtainable.
 They were downloaded today from the publisher (see `research/data_access_audit.md`).
 
@@ -79,7 +84,8 @@ These rules give eligibility only. They do **not** permit averaging, fitting, or
 | Sign | negative: the lower-flow segment, recorded later in the same burn, spread more slowly |
 | Independence | **not independent**: consecutive segments of one burn of one specimen, in time order |
 | Uncertainty propagation | **not justified**. No per-row uncertainty is reported. V_g accuracy is not quantified ([L18] p.4). The only quantifiable term is print resolution (±0.005 per value, so ≤ 0.01 units = 0.1 µm/s on the difference). That is a rounding bound, not a measurement uncertainty. |
-| Confounders inside the comparison | elapsed burn time and rod preheating; O₂ fall during the burn (calibrated 18.5 → 17.1, C-05); regression of the rod tip; flow-meter accuracy |
+| Confounders inside the comparison | elapsed burn time and rod preheating; O₂ fall during the burn (calibrated 18.5 → 17.1, C-05); regression of the rod tip; flow-meter accuracy; combustion products building up (CO₂ 0.62 → 1.8 %, CO 64 → 493 ppm over the burn) |
+| Flow values | **nominal** per-setting values. B4, B6 and B10 (all 3 Jul 2014) carry identical 2.00 / 1.87 / 1.73 at pots 0.4 / 0.36 / 0.32 (C-24, inferred). The burn also ran at pots 0.308 and 0.3 before flow-off; those segments are not tabulated |
 
 **Other admitted and flagged burns** (same rule, first vs last tabulated row; `evidence_case_02.py` output):
 
@@ -135,8 +141,14 @@ B16 and B19 underlie Link's "first increases, and then decreases" result (Fig. 6
 (B16: 7.55, 1.67, 0.83, 0.72 cm/s → 6.78, 7.62, 6.99, 5.68; B19: 4.69, 6.52, 6.25, 5.44), but NASA's as-run
 matrix records both burns as **Concurrent** (C-03), and they sit in the mm/s-labelled half (C-02). IGNIS may
 display them only as a **source-reported result with an open conflict**, never as a verified opposed-flow
-observation and never as model support. This is the most consequential distinction found in this pass: the
-literature's headline result depends on the two records whose flow configuration is in dispute between sources.
+observation and never as model support.
+**Reworded 20 Oct (audit).** The first pass called this "the most consequential distinction found", saying "the
+literature's headline result depends on the two records whose flow configuration is in dispute". That framing
+**failed** the audit: it omitted that NASA's own Chapter 4 (Tables 4.1 and 4.2, Fig. 4.1) treats the same burns as
+opposed-flow data, and that Link's photographs show the opposed-rod geometry. Accurate statement: *"NASA's appendix
+log lists these two burns as concurrent. The article, NASA's Chapter 4 summary and the published photographs present
+them as opposed. The conflict is unresolved; the weight of accessible evidence favours opposed."*
+Both the C-02 cm/s reading and the opposed reading now look likely, but neither is settled.
 
 ### N4: "limiting oxygen concentration" is not one number
 For rods the sources give μg minima of 17 % and 17.5 %, and 1 g minima of 18 %, 18.5 % (1.27 cm) and 19 %.
@@ -182,3 +194,4 @@ arithmetic was also checked by hand: 2.69 − 3.25 = −0.56; −0.56 / 3.25 = �
 - Pressure, specimen initial temperature, and the exact segment times are not reported. Δt is undefined.
 - Raw BASS-II video/overlay data (NASA PSI) were **not** accessed (sign-in required), so no rate was re-measured.
 - These are internal worked-case decisions, not adjudicated scientific findings, and not a material-safety assessment.
+- For a fire-safety-relevant descriptive result that survives source reconciliation (lowest tabulated O₂ with spread, μg vs 1 g, at matched diameter; specimen history matters at 1.27 cm), see `adversarial_source_audit.md` §5 (F-9).

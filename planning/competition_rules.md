@@ -3,6 +3,11 @@
 Checked 2026-10-20 against official pages on spaceappschallenge.org. Page bodies are saved locally under
 `_raw/spaceapps/`. **Re-check on 28 Oct (challenge statement) and 13 Nov (submission + judging guides).**
 
+**Re-checked 2026-10-20, 16:53–16:56 UTC (second session).**
+- **Unchanged:** the FAQ, Team Formation Guide, T&C and home page text; the challenge page (identical GraphQL response; resources tab still empty).
+- **New:** the Awards page lists 10 Global Award categories (e.g. "Best Use of Science: the project that makes the best and most valid use of science and/or the scientific method"). These are award categories, **not** the 2026 scoring rubric (U5 stays open).
+- **Where the full status lives now:** CONFIRMED / UNRESOLVED / EVENT-SPECIFIC / REQUIRES CLARIFICATION, plus strategy, are in `competition_readiness.md`. The clarification request is drafted in `organizer_clarification_email.md` (**not sent**).
+
 ## Confirmed (quoted)
 
 | Topic | Exact wording | Source (as dated on the page) |
@@ -32,6 +37,8 @@ Project rule (ours, not an organizer quote): IGNIS never describes itself as aff
 | U5 | 2026 judging criteria | Judging & Awards Guide due 13 Nov | Unknown. Do not optimise to 2025 criteria (Impact, Creativity, Validity, Relevance, Presentation per the brief; not re-verified) |
 | U6 | User's registration, Local Event vs Universal Event, team size | Not known to this assistant | Unknown. A Universal Event team needs ≥ 2 members for global judging |
 | U7 | Rights to show figures or tables from Elsevier sources | Proprietary | Cite only. Do not reproduce |
+| U8 | Full challenge statement (requirements, resources, any mandated data) | due 28 Oct | Unknown. Do not anticipate its requirements |
+| U9 | Many other teams have public pre-event "Flame in Freefall" repositories (≥ 20 found on 20 Oct) | not an organizer statement | **Not** evidence of what is permitted. Do not infer authorization from it |
 
 ## Implication for the next actions
 Until U1/U2 are ruled on, permitted pre-event work is limited to: reading public sources, verifying records,

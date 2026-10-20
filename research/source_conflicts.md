@@ -14,9 +14,9 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
 | ID | Topic | Severity for the rod case | Affected records | Status |
 |---|---|---|---|---|
 | C-01 | Rod diameter written as "0.64 mm" once | low | B16, B19 | open (likely typographic) |
-| C-02 | V_f unit label cm/s vs mm/s within Table S1 | **high** for absolute values | all 26 right-half rows (d = 0.64 cm) | open |
-| C-03 | Flow configuration of B16/B19: opposed (Link) vs **Concurrent** (NASA as-run matrix) | **critical** | B16, B19 (Link's headline Fig. 6a series) | open |
-| C-04 | O₂ for B15: 18.4 vs 18.0 | medium | B15 | open |
+| C-02 | V_f unit label cm/s vs mm/s within Table S1 | **high** for absolute values | all 26 right-half rows (d = 0.64 cm) | open; **cm/s reading now also supported by NASA TM Fig. 4.1** (audit 20 Oct b) |
+| C-03 | Flow configuration of B16/B19: opposed (Link; NASA Ch. 4 by inference) vs **Concurrent** (NASA Table A.3 only) | high (was "critical") | B16, B19 (Link's headline Fig. 6a series) | **GENUINE UNRESOLVED CONFLICT; evidence favours opposed** (`b16_b19_discrepancy_review.md`) |
+| C-04 | O₂ for B15: 18.4 vs 18.0 | medium | B15 | open (merged-cell hypothesis added) |
 | C-05 | One O₂ per burn vs recorded O₂ drift during the burn | medium (confounder) | all μg rows | definition gap |
 | C-06 | Low-flow limit for spread: 0.6 cm/s vs ≈4 mm/s vs tabulated 0.41–0.48 cm/s | high for any "limit" query | rod low-flow claims | open |
 | C-07 | Lowest μg O₂ with spread: 17% vs 17.5% | high for LOC queries | LOC claims | open |
@@ -26,16 +26,18 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
 | C-11 | 1 g diameters "3.2-cm and 1.9-cm" vs Table S2 0.32 cm | low | Table S2 metadata | open |
 | C-12 | Dwell per flow step: "about 30 s" vs "at least 1 min" vs Δt = 23–33 s rows | medium | Δt semantics; B1, B2, C3a | open |
 | C-13 | Abstract O₂ range "15% to 21%" vs Methods "16% and 21%" | low | metadata | open |
-| C-14 | Label schemes; cross-source label collision (B16 = rod in Link, thin film in NASA A.1) | **high** for joins | all labels | mitigated by rule: no label-only joins |
-| C-15 | B22 = one label, two NASA burns? | high for B22 | B22 (4 rows) | open |
+| C-14 | Label schemes; cross-source label collisions (**B16 and B19** = rods in Link, thin films in NASA A.1) | **high** for joins | all labels | mitigated by rule: no label-only joins |
+| C-15 | B22 = one label, two NASA burns? | high for B22 | B22 (4 rows) | open; hypothesis strengthened (same-day V_g pattern; Table 4.1 burn count) |
 | C-16 | Implausible O₂ cells in NASA rows P22a/P22b | medium | P22a, P22b | open (source data quality) |
 | C-17 | NASA Table 4.2 flow range for 9.525 mm rods | low | metadata | open |
-| C-18 | Test-condition counts: NASA Table 4.1 vs Table S1 | low | completeness | open |
+| C-18 | Test-condition counts: NASA Table 4.1 vs Table S1 | low | completeness | partly reconciled (3 of 5 groups match exactly; 2 off by one condition) |
 | C-19 | Rod size given as radius without saying so (NASA Fig. 4.4 caption) | medium for geometry fields | NASA Fig. 4.4 | inferred |
 | C-20 | Pooled thicknesses / wording of agreement in Table 2.1 context | low | auxiliary case | noted |
 | C-21 | Duplicate conditions with different values | medium | S2-L20/L21; B22 rows | open |
 | C-22 | Figure-to-table traceability (Figs 6b, 7) | medium | figure data | not reproducible from tables |
 | C-23 | Flow histories not monotonic as Methods imply | medium | B16, B19, P17 | open |
+| C-24 | What V_g in Table S1 is: identical V_g sequences recur across burns on the same day (nominal per-setting calibration values?) | medium (definition gap) | all Table S1 rows; cross-day V_g comparisons | inferred; no source statement |
+| C-25 | NASA TM Fig. 4.1 x-axis labelled "Flame velocity, cm/s"; caption says "opposed-flow velocity" | low | figure only (never digitised) | noted |
 
 ## Details
 
@@ -55,17 +57,30 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
   3. [L18-ESM] Fig. S1 (B16, U_g = 1.7 cm/s): the leading edge moves roughly 12 mm in roughly 160 s. That is about 0.08 mm/s, i.e. about 8 × 10⁻³ cm/s, which matches 7.62 under the cm/s reading and not under the mm/s reading (which would mean about 1 mm in that time). This is an approximate visual reading for an order-of-magnitude check only; it is never used as data.
   4. [L18] p.4: "flame spread over thin 0.64-cm sample is clearly faster than thick samples". Under the mm/s label, the 0.64 cm rods would be ten times *slower*.
 - Treatment: right-half rows are **CONDITIONAL**. Ratios and signs *within* a right-half burn are allowed, since they don't depend on the unit. Absolute values must be shown under both readings (×10 µm/s or ×1 µm/s per printed unit) and are never pooled with left-half values without the flag. The likely typo has not been "fixed" in the data.
+- **Update, 20 Oct (audit):** a second document now supports the cm/s reading. [TM] PDF p.57 / printed p.49, Fig. 4.1, 0.635-cm panel, plots these points on a "Flame spread rate, cm/s" axis at about 0.002–0.010 (e.g. about 0.010 for B6's 10.00, and about 0.0068 at about 7.6 cm/s for B16's 6.78). That matches the cm/s reading; under the printed mm/s label they would sit ten times lower. This is a visual reading, not digitised. Proposed (D-019): a separate, **human-reviewed** normalised record. The as-printed CSV stays unchanged. D-007 stands until that review.
 
 ### C-03: flow configuration of B16 and B19
 - [L18] p.4: Fig. 4 is "a sequence of photos from an **opposed** flame spread in microgravity" for X_O₂ 17.5% and 18.2% (Samples B16, B19). Fig. 6a presents both as opposed-flow data, and the headline non-monotonic finding (abstract, p.1; p.5) rests on these two series. Link selected them "because they were tested under a larger range of the flow velocities and their measurements are more consistent" (p.5).
 - [TM] PDF p.114 / printed p.106, Table A.3: P16 (sample 191m, 6.35-mm black rod, cal. O₂ 18.2 → 17.4) and P19 (sample 194m, 6.35-mm black rod, cal. O₂ 17.5 → 16.7) both carry **"Concurrent"** in the configuration column. **Visually verified** on a 150-dpi render on 2026-10-20. Every other black-rod test in Table A.3 shows "Opposed". The column header reads "Sample distance"; see `research/data/README.md`.
 - Matching evidence for B16↔P16 and B19↔P19: same number, same nominal diameter, black in both, Link O₂ = NASA calibrated initial O₂ (18.2; 17.5), and NASA air-display sequences ("5, 8, 2, low"; "5, 8, 2, maximum, 0") consistent with Link's V_g values (7.55, 1.67, 0.83, 0.72).
 - Treatment: B16 and B19 are **QUARANTINED** for any opposed-flow question, and also for any concurrent-flow question. We don't know which source is wrong. Link's non-monotonic trend is kept as a **source-reported result** and is not reproduced as a verified opposed-flow observation. Resolution path: contact the authors or NASA GRC, or inspect PSI BASS-II video/overlay data if access is obtained (see BLOCKERS.md B-03).
+- **Update, 20 Oct (adversarial audit; full detail in `b16_b19_discrepancy_review.md`):**
+  - **Evidence the burns were opposed:**
+    - [TM] Ch. 4 is the opposed-flow task. Its Table 4.1 (23 conditions, 9 burns for black 6.35 mm) and Table 4.2 (6.35-mm range up to 0.075 m/s) reconcile with Table S1 only if B16/B19 are included.
+    - [TM] Fig. 4.1 ("versus opposed-flow velocity") shows two 0.635-cm points near 7.6 cm/s. Only B16/B19 have that flow.
+    - Link's Fig. 4 photographs match NASA's labelled "opposed rod" images ([TM] Fig. 1.2 c, g), not its "concurrent rod" image (f).
+    - P16/P19 used igniter –36, as did the PI's opposed burns; the same-day Olson concurrent tests used –29 and –31.
+    - Olson's concurrent-rod chapter reports only two black rods, O11 and O14 ([TM] p.75/67; Table A.5), not P16/P19.
+  - **Evidence the burns were concurrent:** the A.3 entries themselves. Also, P16/P19 (as-run 93–94) sit inside a block of Olson concurrent tests (as-run 89–92 on 21 Jul, 95–96 on 22 Jul).
+  - **Crosswalk:** B16↔P16 and B19↔P19 are established by diameter, colour, unique initial O₂, the unique 8-cm/s step and the burn ending.
+  - **Classification:** **GENUINE UNRESOLVED CONFLICT, evidence favours opposed.** The quarantine is kept. Severity is lowered from "critical", because the dispute rests on one appendix column against converging documents.
+  - **Framing correction:** the earlier statement that "the literature's headline result depends on the two records whose flow configuration is in dispute" omitted the contrary NASA evidence. It must not be used without that context (D-016, D-017).
 
 ### C-04: oxygen for B15
 - [L18-ESM] Table S1: B15 and B14 share one merged X_O₂ cell, "18.4".
 - [TM] Table A.3: P14 cal. initial **18.4** (final 18.0); P15 cal. initial **18.0** (final 17.5).
 - Treatment: B15 (one row) is QUARANTINED. B14 is consistent.
+- **Update, 20 Oct (audit):** in the 220-dpi render, "18.4" is a single merged cell spanning the B15 and B14 rows. Hypothesis (unverified): a typesetting merge gave B15 its neighbour's O₂. The PSI-25 table copy gives P15 = 18 and P14 = 18.4, agreeing with [TM].
 
 ### C-05: one O₂ per burn vs O₂ drift within a burn
 - [L18-ESM] Table S1 gives one X_O₂ per sample. For 17 of 19 labels it equals the NASA **calibrated initial** O₂ exactly; B15 (C-04) and B22 (C-15) are the exceptions.
@@ -117,14 +132,22 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
 - [TM] Table A.3 uses **test numbers** P1…P25 and separate **sample numbers** (physical specimens: 185m, 191m, 819L, …). Link's "Sample No." matches NASA's *test* number, not NASA's *sample* number.
 - [TM] PDF p.111/103, Table A.1 (Bhattacharjee thin-film matrix): test **B16** is sample 150m, "2-cm 100-µm-thick PMMA" film, opposed. B1 and B10–B22 there are also thin films. **Same tokens, different experiments.**
 - Treatment: joins on label strings alone are forbidden. The Link↔NASA crosswalk (`research/data/crosswalk_link2018_S1_to_bass2_A3.csv`) is a candidate mapping scored on diameter, colour, O₂ and configuration.
+- **Update, 20 Oct (audit):**
+  - **B19 collides too.** [TM] Table A.1 B19 = as-run 52, 7/2/14, sample 151m, "2-cm, 100-µm-thick PMMA", Opposed; B20 = 152m film ([TM] p.111/103). Both of Link's headline labels therefore name thin-film tests in NASA's appendix.
+  - **The hazard is live.** The public competitor tool MicroFire Atlas uses NASA's film B16/B19/B20 (`research/prior_art_comparison.md`).
 
 ### C-15: B22 identity
 - [L18-ESM] B22: one label, X_O₂ 20.8, four rows, V_g 1.58 **twice** (6.45 and 8.31).
 - [TM] P22a (cal. O₂ 20.8) and P22b (cal. O₂ 20.0) are two burns of the **same specimen 200m**. P22a: "Extinguished at higher flow, possibly rod not preheated enough"; P22b: "Extinguished at lower flow than P22a".
 - Hypothesis (unverified): B22 merges P22a and P22b. Treatment: B22 is **INDETERMINATE**.
+- **Update, 20 Oct (audit):** the hypothesis is strengthened, though still inferred.
+  1. On 7/8/14, P25 (pots 0.36, 0.34, 0.33) maps to C25's 1.58, 1.52, 1.48. That fits pot 0.36 → 1.58 that day. P22a (pots 5, 0.36, 0.32) and P22b (5, 0.36, 0.34, 0.33, …) would then give exactly B22's 1.58, 1.58, 1.52, 1.48.
+  2. [TM] Table 4.1 lists 4 black 9.525-mm burns. Table S1 has 4 only if B22 counts as two.
+  The two 1.58 rows probably come from **different burns of one specimen**, so they must never be averaged.
 
 ### C-16: NASA row anomalies P22a/P22b
 - [TM] PDF p.115/107: P22a calibrated final O₂ printed "0.6"; P22b calibrated final O₂ "39.1", with its calibrated initial "20.0" printed in **red**; neighbouring CO₂/CO cells are blank or shifted. Visually verified. Treatment: these O₂ values are unreliable and are not used.
+- **Update, 20 Oct (audit):** the PSI-25 table copy (third-party; see `prior_art_comparison.md`) carries the same 0.6 and 39.1. So the anomaly sits in the underlying log, not in the TM typesetting.
 
 ### C-17: NASA Table 4.2 flow range for 9.525 mm rods
 - [TM] p.56/48, Table 4.2: flow velocity "0.043 to 0.02" m/s for 0.009525 m rods. Table S1 0.95 cm rows span 0.48–2.00 cm/s (0.0048–0.020 m/s). The 6.35 mm range (0.0041–0.075) and the 12.7 mm range (0.0137–0.0164) are consistent with Table S1.
@@ -133,6 +156,17 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
 - [TM] p.55/47, Table 4.1: black PMMA test conditions 23 / 12 / 12 (6.35 / 9.525 / 12.7 mm), total 47; samples burnt 9 / 4 / 4. Clear: 4 / 3 / 0 conditions.
 - [L18-ESM] Table S1: B-prefixed rows 20 / 11 / 12 (43), plus P17 3 rows at 0.64 cm. C-prefixed rows 3 / 3 / 0.
 - If P17 is counted as black, 6.35 mm matches (23) and nine labels match nine samples. Then 9.525 mm black (11 vs 12) and 6.35 mm clear (3 vs 4) are each one short. Not reconciled.
+- **Update, 20 Oct (audit):** reading "samples burnt" as **burns**, with B22 counted as two burns:
+
+  | Group | Burns | Conditions |
+  |---|---|---|
+  | black 6.35 mm | 9 = 9 | 23 = 23 |
+  | black 12.7 mm | 4 = 4 | 12 = 12 |
+  | clear 9.525 mm | 1 = 1 | 3 = 3 |
+  | black 9.525 mm | 4 = 4 | 12 vs 11 |
+  | clear 6.35 mm | 2 = 2 | 4 vs 3 |
+
+  So the table is partly reconciled. This supports P17 = black and B22 = two burns, both still inferred. The PSI-25 table copy also lists P17 as `1/4"  black rod` (unverified against PSI).
 
 ### C-19: radius vs diameter in NASA figure captions
 - [TM] p.60/52, Fig. 4.4 caption: "Black PMMA rod, **4.76 mm**… (f) Black PMMA rod, **3.18 mm**, 16.3 percent O₂, at 5 cm/s". These are half of 9.525 and 6.35 mm. The caption does not say radius. Chapter 6 (PDF p.75) states radii explicitly ("r = 0.318 cm").
@@ -157,3 +191,21 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
 - [TM] Table A.3 air-display sequences: P16 "5, 8, 2, low"; P19 "5, 8, 2, maximum, 0" ("Tried blowoff, did not blowoff"); P17 "5, 3, 2, 22, 2, low" ("tried blowoff without success, turned back down"). P18, P20, P23 and P24 alternated flow between settings.
 - [L18] p.4: B16/B19 flow "was initially 7.6 cm/s". NASA's air display starts at 5.
 - Treatment: flow history (thermal history) is a protocol variable. Rows from burns with flow excursions carry a `protocol_deviation` flag.
+
+### C-24: what V_g in Table S1 represents (added 20 Oct, audit)
+- **Sources:**
+  - [L18] p.3: "The fan voltage was calibrated with the hot wire reading at the end of every ops day."
+  - [TM] p.12/4: the airspeed transducer "had a response time of approximately 1 minute."
+- **Pattern** (Table S1 against the Table A.3 dates): burns on the same day carry identical V_g sequences.
+  - 3 Jul: B4, B6, B10 at 2.00 / 1.87 / 1.73, all at pots 0.4 / 0.36 / 0.32.
+  - 14 Jul: B13a, B13b, B5, B9 at 1.64 / 1.54 / 1.43 / 1.38.
+  - 8 Jul: B22, C25 at 1.58 / 1.52 / 1.48.
+  - 22 Jul: B16, B19 at 7.55 / 1.67 / 0.83 / 0.72.
+- **Inferred:** V_g is a nominal per-setting value from the daily calibration, not an independent measurement in each segment. The same pot appears to map to different V_g on different days.
+- **Treatment:**
+  - Within-burn ΔV_g is reported as a **nominal** difference.
+  - Any cross-day comparison of V_g carries an unquantified calibration term.
+  - No source states this, so it stays a definition gap.
+
+### C-25: TM Fig. 4.1 axis label (added 20 Oct, audit)
+- [TM] p.57/49: the x-axes read "Flame velocity, cm/s", while the caption reads "Flame spread rate versus opposed-flow velocity". This only matters if anyone digitises the figure, which this project does not do.

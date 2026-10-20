@@ -32,6 +32,9 @@ get local issuer certificate", so all retrieval used `curl.exe` (Windows certifi
 | 10 | Other priority DOIs (PROCI 2024 thin sheets; SoFIE-GEL 2025; FLARE 2026; partial-g PMMA 2024; Bhattacharjee 2016) | Crossref | **200** for all; identity confirmed (`source_register.md`) | Elsevier full text not attempted beyond metadata (subscription; no rights to redistribute) |
 | 11 | NTRS searches for rod flame-spread reports | NTRS API | 0 hits for `"opposed flame spread" PMMA rods`; 3 hits for `PMMA rod flame spread microgravity` (blow-off and outreach items, not rod opposed-spread data) | NTRS full-text search coverage is unknown. Absence of hits is **not** evidence of absence |
 | 12 | Competition pages | spaceappschallenge.org HTML + public GraphQL used by the site | **200** | See `planning/competition_rules.md` |
+| 13 | (2nd session) Competition pages re-check + Awards page | same | **200**; text unchanged | `planning/competition_readiness.md` |
+| 14 | (2nd session) Competitor repositories: MicroFire Atlas, Fotia, FLARENEXUS | GitHub public API + raw URLs (search, README, tree, selected data files) | **200** | read only; no code run. `research/prior_art_comparison.md` |
+| 15 | (2nd session) **PSI-25 BASS-II test table, third-party copy** | `raw.githubusercontent.com/AnteurAbderraouf/Fotia/main/combustion_science/microgravity_investigation/PSI-25/csv/BASS-II.csv` | **200**, 16 590 B, SHA-256 `71e792bf…c042` | 129 rows, all PIs. **No flow-configuration column; no spread rates.** Agrees with TM A.3 on the P-test dates, samples, displays and O₂; lists P17 as `1/4"  black rod`. **Lead only; not verified against PSI** (D-020). Suggests PSI tables are obtainable, perhaps with a free account |
 
 ## What the recovered records contain (variables actually available)
 

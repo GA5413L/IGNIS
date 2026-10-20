@@ -1,5 +1,10 @@
 # Prior art: what already exists and what IGNIS must not claim as new
 
+> **20 Oct, second session:** competitor repositories (MicroFire Atlas, Fotia, FLARENEXUS) were inspected, and each
+> proposed differentiator was tested. See `prior_art_comparison.md`. In short, provenance labels, reused-sample flags
+> and comparability or abstention logic already exist in MicroFire Atlas for other BASS-II material families.
+> Only the cross-document rod reconciliation was not found there.
+
 Identities are verified in `source_register.md`. Except for the abstracts quoted below, the contents of these works
 were **not** read in this session. Statements are limited to what the retrieved abstracts and pages say.
 

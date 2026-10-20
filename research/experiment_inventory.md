@@ -11,7 +11,7 @@ source this session. Everything else is listed so it isn't forgotten, not becaus
 | Working-volume O₂ | set by N₂ dilution of the MSG work volume, using a perfectly-stirred-reactor model calibrated against CSA-CP readings | [TM] abstract (NTRS) |
 | Test dates | 16 Jun – 30 Jul 2014 (as-run numbers 25–110) | [TM] Table A.3 |
 | Tests in the PI matrix | **27** (P1 … P25, with a/b repeats), all rods at 6.35 / 9.525 / 12.7 mm: 23 black, 1 colour-unstated (P17), 3 clear (P3a, P3b, P25) | [TM] Table A.3 (transcribed) |
-| Configuration | 25 "Opposed", **2 "Concurrent" (P16, P19)** | [TM] Table A.3 |
+| Configuration | 25 "Opposed", **2 "Concurrent" (P16, P19)** as printed. NASA's own Ch. 4 appears to treat P16/P19 as opposed; this is unresolved, with the evidence favouring opposed (`b16_b19_discrepancy_review.md`) | [TM] Table A.3; Ch. 4 |
 | Reported in Link 2018 Table S1 | 19 labels → 20 NASA tests (B22 ↔ P22a+P22b?), **52 rate rows** | crosswalk |
 | Not in Table S1 | P8 (would not stay lit), P18/P20/P23/P24 (alternating-flow time-constant tests), P21a/b (self-extinguished at 16.3 % O₂ / igniter broke) | [TM] Table A.3 |
 | Physical specimens reused | 197m (P4→P8), 200m (P22a→P22b), 202m (P5→P9), 203m (P13a→P13b), 215M (P3a→P3b), 196M (P21a→P21b); 217m (Olson O12 → P25) | [TM] Tables A.3, A.5 |

@@ -29,6 +29,44 @@ known.
 None contains UI, dashboard, retrieval or LLM code. Whether even these count as "working on the project" is open
 (U1). They are disclosed here either way.
 
+## 2026-10-20, second session (adversarial audit; Claude Code, model Claude Opus 5.5, acting on the user's audit brief)
+| Time (UTC, approx.) | Work |
+|---|---|
+| ~16:40 | Read the audit brief and the whole repository (working tree clean at `bc662b7`) |
+| ~16:42–16:50 | Re-hashed the ESM and TM PDFs (match the manifest). Rendered and read [L18] Fig. 4, ESM Tables S1/S2 (every cell, 200–220 dpi), ESM Fig. S1, TM Fig. 1.2, Fig. 4.1 and the Table A.3 header/P16/P19 rows. Read TM text pp.12–17, 55–62, 72–82, 109–121 |
+| 16:50–16:53 | GitHub public API searches and reads (README, file tree, selected data files) of competitor repositories MicroFire Atlas, Fotia and FLARENEXUS; read a third-party copy of the PSI-25 test table. **No third-party code was run** |
+| 16:53–16:56 | Re-fetched the Space Apps FAQ, Team Formation Guide, T&C, home and challenge pages (text unchanged); fetched the Awards page |
+| ~16:56–17:30 | Wrote the audit documents (below); updated the registers |
+
+### Files written or changed in the second session (documents only)
+- **New:**
+  - `research/adversarial_source_audit.md`
+  - `research/b16_b19_discrepancy_review.md`
+  - `research/p4_independent_recheck.md`
+  - `research/prior_art_comparison.md`
+  - `planning/evaluation_audit.md`
+  - `planning/independent_reviewer_instructions.md`
+  - `planning/organizer_clarification_email.md` (draft, **not sent**)
+  - `planning/author_clarification_email.md` (draft, **not sent**)
+  - `planning/competition_readiness.md`
+- **Updated:**
+  - `research/source_conflicts.md` (C-02, C-03, C-04, C-14, C-15, C-16, C-18 updates; new C-24, C-25)
+  - `research/evidence_case_02.md` (N3 reworded; nominal V_g; confounders)
+  - `DECISIONS.md` (D-015–D-020), `BLOCKERS.md`, this file
+  - `README.md`, `planning/competition_rules.md`, `planning/evaluation_plan.md` (pointer only; v1 unchanged), `planning/implementation_blueprint.md` (§5 demo framing)
+  - `research/data_access_audit.md`, `research/source_register.md`, `research/experiment_inventory.md`, `research/session_report_2026-10-20.md` (superseded-in-part note)
+  - `manifests/data_sources.csv`
+- **No data file in `research/data/` was changed.** No script in the repository was changed or added.
+
+### Code run in the second session (scratch only, outside the repository)
+Four short Python helpers in the session scratchpad, reading local PDFs or CSVs:
+- `render_clip.py`: render a PDF region to PNG.
+- `appendix_rows.py`: list the appendix test rows from the extracted text.
+- `lowest_o2.py`: a filter over the two Link CSVs.
+- `cf_contacts.py`: list the contact addresses published in the saved FAQ HTML.
+
+None is an application or part of a submission. The existing `verify_transcriptions.py` and `evidence_case_02.py` were re-run unchanged.
+
 ## Reused third-party resources
 - Python 3.14.0 with pre-installed PyMuPDF (fitz), BeautifulSoup4 and requests; Windows `curl.exe`. No third-party code was copied into this repository.
 - Data: see `manifests/data_sources.csv` and `manifests/rights_and_attribution.csv`.
@@ -36,5 +74,6 @@ None contains UI, dashboard, retrieval or LLM code. Whether even these count as 
 ## SI (AI) usage, for the mandatory submission statement
 An AI assistant (Claude, via Claude Code) carried out the source retrieval, transcription, verification
 scripting, cross-source analysis and the writing of these notes, following the user's written brief. Every number
-in `research/data/` is checked mechanically against the publisher or NASA PDF text layer. **No human has yet
-independently reviewed them** (B-07).
+in `research/data/` is checked mechanically against the publisher or NASA PDF text layer. In a second session the
+same kind of assistant also checked every cell visually against the PDF renders, as an adversarial audit. **No human
+has yet independently reviewed them** (B-07). An assistant re-check is not independent verification.

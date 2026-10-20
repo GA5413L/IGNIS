@@ -47,6 +47,15 @@ as such. Rights are in `manifests/rights_and_attribution.csv`. Retrieval details
 | CLLM | Yang Z., Mao R., Wu T., Li H., Zhou Q., Chen Z.X. "A unified foundational framework for knowledge injection and evaluation of Large Language Models in Combustion Science." arXiv:2603.04452 (27 Feb 2026) (arXiv API) |
 | STD-7009 | NASA-STD-7009, "Standard for Models and Simulations" (standards.nasa.gov page lists NASA-STD-7009B, file dated 2024-03-05, plus earlier revisions) |
 
+## Third-party copies and competitor repositories (2nd session, 20 Oct; leads and prior art, not evidence)
+
+| Key | Identity | Inspected | Role |
+|---|---|---|---|
+| **PSI25-COPY** | NASA PSI-25 BASS-II test table, as redistributed in the GitHub repo `AnteurAbderraouf/Fotia` (`…/PSI-25/csv/BASS-II.csv`, SHA-256 `71e792bf…c042`) | all 129 rows (P and selected O rows read) | corroborates A.3 fields. **Not** verified against PSI (D-020) |
+| **MFA** | MicroFire Atlas, `github.com/A-K-M-Asifuzzaman/MicroFire-Atlas` (MIT), README and `apps/web/data/{experiments,findings,sources}.json` | README; data fields and families | prior art / competitor |
+| **FOTIA** | `github.com/AnteurAbderraouf/Fotia` (MIT code), README and tree | README; tree; PSI-25 CSV | prior art / competitor |
+| **FLARENEXUS** | `github.com/KhalidHasan03/Flame-in-Freefall` ("Team Cosmic Nexus"), README and tree | README; tree | prior art / competitor (synthetic data, per its README) |
+
 ## Competition sources
 See `planning/competition_rules.md`. All were fetched on 2026-10-20 from spaceappschallenge.org: FAQ page dated
 13 Oct 2026; Team Formation Guide dated 23 Sep 2026; Participant Terms & Conditions updated 7 Aug 2026; the 2026

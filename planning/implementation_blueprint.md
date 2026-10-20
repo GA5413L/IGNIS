@@ -62,7 +62,7 @@ partial pressure is **not derivable**, because pressure is unknown.
 ## 5. Demo storyline (≈ 2 min)
 1. **Result:** "In NASA's BASS-II ISS burn P4 (black PMMA rod, 9.5 mm, 18.5 % O₂), the spread rate fell from 32.5 to 26.9 µm/s as opposed flow was stepped from 2.00 to 1.73 cm/s." Show the actual rows.
 2. **Distinction:** "That's one burn, in time order, and O₂ fell from 18.5 % to 17.1 % during it. It's a description, not a flow effect."
-3. **Consequential limit:** the paper's headline series (B16/B19) is shown quarantined, because NASA's own test log records those burns as *concurrent*. Then the gravity comparison: the numbers look equal, but the verdict is indeterminate, with the reasons.
+3. **Consequential limit:** (revised 20 Oct audit, D-017) show where **specimen identity changes a fire-safety reading**. μg spread is recorded at lower O₂ than any 1 g spread for 0.95- and 0.64-cm rods, but for 1.27-cm rods only through a reburned specimen (`research/adversarial_source_audit.md` §5). Then the gravity comparison: the numbers look equal, but the verdict is indeterminate, with the reasons. B16/B19 may appear only as one example of an open documentary conflict, with its evidence balance (the evidence favours opposed). **Never** say "NASA records show the headline series was concurrent".
 4. **Output:** export the dossier and show it reproduces every number with page-level provenance.
 
 Do not open with a list of AI technologies.

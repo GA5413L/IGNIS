@@ -16,6 +16,15 @@
 in Evidence Case 02 §6. If M2 is no better than M1, we report that **the value is in the curation, not the
 software**, and say so in the submission.
 
+> **Audit note (20 Oct, second session):** v1 below is unchanged. Problems found:
+> - T03 and T07 are CONTESTED.
+> - T10's key is outdated: TM Fig. 4.1 supports the cm/s reading.
+> - The keys use method vocabulary, which biases the comparison.
+> - The set is circular: the same assistant wrote the rules and the keys.
+>
+> See `evaluation_audit.md` for the proposed v2 rubric and metrics, and D-018. Until a person approves v2, treat v1 as
+> an internal consistency suite, not an evaluation.
+
 ## Frozen task set (v1, frozen 2026-10-20, before any IGNIS method exists)
 Answer keys are derived only from the sources. Each key lists the required decision, numbers and citations.
 

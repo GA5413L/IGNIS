@@ -1,5 +1,11 @@
 # Session report: 20 October 2026 (pre-event research)
 
+> **Superseded in part (20 Oct, second session: adversarial audit).**
+> - Finding 4 below ("Consequential distinction") **failed** as framed. It omitted that NASA's own Chapter 4 and Link's photographs present B16/B19 as opposed; C-03 is now classified as a genuine unresolved conflict with the evidence favouring opposed.
+> - Other findings survived or were qualified.
+>
+> See `adversarial_source_audit.md`. This report is kept unedited below for traceability.
+
 ## Verified sources
 - **Link et al. 2018**, *Sci. Rep.* 8:120 (doi 10.1038/s41598-017-18398-4), CC BY 4.0. Full text read, and its **Supplementary Information** (Tables S1, S2; Figs S1–S3) downloaded from the publisher (SHA-256 `e17c9511…1b23`).
 - **NASA/TM-20210011385** BASS-II Summary Report, official NTRS PDF (SHA-256 `5ffa911f…f770`, 144 pp.). Read: Table 2.1, Ch. 4 (rod opposed-flow task), and Appendix Tables A.1, A.3, A.5 (parts).
