@@ -1,5 +1,11 @@
 # Instructions for an independent reviewer (teammate)
 
+> **Superseded on 22 Oct 2026 by `planning/review_packet/` (D-028). Don't use this file for a review.**
+> - Its Part A has the reviewer read our CSV next to the PDF, so the check is not blind.
+> - Its Part D sends the task author into the repository (`future_evaluation_plan.md` §3b) and keeps them away from only some files.
+>
+> It is kept as a record of the earlier plan.
+
 **Why this exists.**
 - Every transcription, crosswalk decision and evaluation key in this repository was produced by one AI assistant.
 - Nothing has been checked by a person. Until someone does, the project may say only "assistant-checked", never "independently verified" (blocker B-07).

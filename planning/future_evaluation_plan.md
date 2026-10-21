@@ -25,7 +25,7 @@ Items already recorded in `evaluation_audit.md` (S1–S7; T03, T07 and T10 conte
 | **T01** | key omits that P4 began in P6's residual atmosphere (CO₂ 0.62 %, CO 64 ppm) | optional element | C-26 | stable |
 | **T05** | reason given as "different endpoint" | Reason: same measurand M-02 as rod statements (E-04), but different geometry (thin vs thick) and E-04 has no defined value, so substitution (U6) is not allowed | corrected rules | stable; reason reworded |
 | **All tasks** | **Leakage.** Every task, including any future held-out task, draws on the same 52 + 46 + 27 rows. "Held-out" means *unseen by the method designers*, not out-of-distribution | state this in every report | — | — |
-| **All tasks** | **Independence.** Shared burns and conflicts (S5), and now shared **atmospheres**: P6→P4, P10→P8, P5→P9, P12→P17, P14→P15, P3a→P3b, P18→P24, P20→P23 (C-26) | report per task; annotate the atmosphere sequence; never pool | — | — |
+| **All tasks** | **Independence.** Shared burns and conflicts (S5), and now shared **atmospheres**: P6→P4, P10→P8, P5→P9, P12→P17, P14→P15, P21a→P21b, P3a→P3b, P18→P24, P20→P23 (C-26; P21a→P21b added 22 Oct, it was missing here) | report per task; annotate the atmosphere sequence; never pool | — | — |
 | **All tasks** | **Unresolved metadata** affects answerability: pressure unknown; Δt undefined (C-12); V_g nominal (C-24); "-" undefined | a key may not require a value for these. "Unknown" is a correct answer | — | — |
 
 ## 3. Future evaluation plan
@@ -33,12 +33,14 @@ Four activities, **kept separate**. None of them is done by the assistant.
 
 ### (a) Human review of transcriptions and records
 - **What it checks:** whether the data are right. **It is not an evaluation of any software.**
-- **How:** `human_review_checklist.md` (≈ 90 min), with `independent_reviewer_instructions.md` for detail.
+- **How:** the human review packet `review_packet/` (Activities A and B, ≈ 2¼ h; D-028). It replaces `human_review_checklist.md` and `independent_reviewer_instructions.md`.
 - **Output:** a dated reviewer log. Only after it may the project say "transcriptions reviewed by [name]".
 
 ### (b) Held-out task creation (a person who did not write the rules or the keys)
+> **22 Oct (D-028):** give the task author **only** `review_packet/C_task_author_brief.md` and the two source documents. That brief is the standalone version of the instructions below. The earlier step 1 let the author read the checklist, which contained our conclusions.
+
 Instructions for that person:
-1. **Do this first, before reading anything under `research/` or `planning/`** except this section and the checklist. Work only from the two PDFs.
+1. **Do this first, before reading anything under `research/` or `planning/`.** Work only from the two PDFs.
 2. Write **at least 4** questions a fire-safety researcher might really ask, with your own answer keys:
    - ≥ 1 **derived multi-record** question (a minimum, ranking or comparison across burns or across gravity);
    - ≥ 1 with a clear numeric answer;

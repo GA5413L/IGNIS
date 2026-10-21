@@ -58,7 +58,15 @@ If only curation value is found, the submission says: *"the contribution is the 
    - **Primary:** incorrectly admitted records.
    - **Guard:** wrongly excluded records.
    - **Secondary:** minutes per task, and a second person's minutes to verify the answer against the sources.
-4. **Reporting:** per task and per participant counts, with n stated. No pooled percentage, no significance test. The result is called a *pilot*.
+   - **Secondary (added 22 Oct, before any data; the decision rule in §6 is unchanged):**
+     - *correctly supported answers:* every required key element present, and no unsupported claim;
+     - *correct task completion:* answered, or correctly declined, within the time limit;
+     - *traceability:* yes / partly / no. Can each number and admitted record in the final answer be traced to a source page and row?
+     - *time spent correcting:* minutes the participant spends revising an answer after a self-check, if any.
+4. **Effort accounting.** Report two kinds of effort separately, never summed:
+   - **Curation effort:** the one-off hours to build the shared records, crosswalk and conflict register. Both conditions get the result, so it is not charged to either. Any **extra** curation IGNIS needs beyond M1, such as encoding the rules, is reported as IGNIS's own cost.
+   - **Per-task effort:** the participant's minutes and the verifier's minutes, per task and condition.
+5. **Reporting:** per task and per participant counts, with n stated. No pooled percentage, no significance test. The result is called a *pilot*.
 
 ## 6. Decision rule (fixed now, before any data)
 - **H1 is supported (pilot)** only if all of the following hold:
@@ -70,3 +78,5 @@ If only curation value is found, the submission says: *"the contribution is the 
 - **Language limits:**
   - Whatever the outcome, no claim beyond "in a small pilot".
   - With no participants at all (B-10), the submission says the software value is **untested**.
+  - One participant, or participants without research experience, say nothing about professional use or deployment readiness. Report who took part (role, experience), not just n.
+- **Invitation:** `planning/researcher_invitation.md` (unsent) asks a researcher whether they would take part once a permitted prototype exists.

@@ -46,6 +46,9 @@ Derived variables are always marked derived: O₂ fraction = % / 100; µm/s = pr
 partial pressure is **not derivable**, because pressure is unknown.
 
 ## 4. Build order with time boxes (≈ 36 working hours; cut lines marked ✂)
+> **22 Oct (D-029):** `implementation_gate.md` governs the build order and acceptance tests:
+> records → validation → applicability policies → deterministic EC03 (milestone M1) → visualization → dossier → AI → evaluation → polish.
+> It also requires three alternative queries, so the app is not a single prepared answer. The time boxes below remain a rough guide.
 | Hours | Step | Done when |
 |---|---|---|
 | 0–0.5 | D0 gate; read the statement; assign roles | written decision in DECISIONS.md |

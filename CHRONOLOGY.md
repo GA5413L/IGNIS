@@ -103,6 +103,36 @@ Times are UTC on 20 Oct (local date 21 Oct, UTC+5). **All work below is pre-even
 
 Neither is an application or part of a submission.
 
+## 2026-10-21 UTC / 22 Oct local, fourth session (handoff preparation; Claude Code, model Claude Opus 5.5, acting on the user's brief)
+**Pre-event and subject to the organizer ruling (B-01).** No application code; no data file or repository script changed.
+
+| Time (UTC, approx.) | Work |
+|---|---|
+| ~19:40 | Read the brief and the repository (working tree clean at `7a2e277`) |
+| 19:45–19:47 | Re-fetched the FAQ, Team Formation Guide, T&C, home, Awards and Contact Us pages, and the challenge page (by GraphQL page ID) into `_raw/spaceapps_2026-10-22/`. Rule text unchanged; the challenge resources tab now reads "Resources coming soon." Re-hashed the three source PDFs: they match |
+| ~19:50–20:30 | Wrote and updated the documents below |
+
+### Files written or changed in the fourth session (documents only)
+- **New:**
+  - `planning/review_packet/`: `README.md`, `A_source_reading.md`, `B_interpretation_check.md`, `C_task_author_brief.md`, `review_form.md`
+  - `planning/researcher_invitation.md` (draft, **not sent**)
+  - `planning/implementation_gate.md`
+- **Rewritten in place:** `planning/organizer_clarification_email.md` (final draft, **not sent**)
+- **Marked superseded:** `planning/human_review_checklist.md` (replaced by a pointer), `planning/independent_reviewer_instructions.md` (banner)
+- **Updated:**
+  - `planning/value_hypothesis.md`: secondary outcomes, effort accounting; the decision rule is unchanged
+  - `planning/future_evaluation_plan.md`: packet pointers, and the missing P21a→P21b pair added
+  - `planning/competition_rules.md`, `planning/competition_readiness.md`, `planning/implementation_blueprint.md`: pointers and re-check
+  - `DECISIONS.md` (D-027–D-029), `BLOCKERS.md`, `README.md`, `manifests/data_sources.csv`, this file
+
+### Code run in the fourth session (scratch only, outside the repository)
+Three helpers in the session scratchpad:
+- `gql_probe.py`: read-only GraphQL queries for the challenge page;
+- `cf_contacts.py`: lists the e-mail addresses published, obfuscated, on a saved page;
+- `find_pages.py`: finds the PDF page of a quoted phrase.
+
+None is an application or part of a submission.
+
 ## Reused third-party resources
 - Python 3.14.0 with pre-installed PyMuPDF (fitz), BeautifulSoup4 and requests; Windows `curl.exe`. No third-party code was copied into this repository.
 - Data: see `manifests/data_sources.csv` and `manifests/rights_and_attribution.csv`.
@@ -114,4 +144,6 @@ in `research/data/` is checked mechanically against the publisher or NASA PDF te
 same kind of assistant also checked every cell visually against the PDF renders, as an adversarial audit. **No human
 has yet independently reviewed them** (B-07). An assistant re-check is not independent verification. A third
 session (21 Oct local) re-read the records behind Evidence Case 03 and wrote the specification and planning
-documents listed above. It, too, was the same kind of assistant.
+documents listed above. It, too, was the same kind of assistant. A fourth session (22 Oct local) prepared the
+organizer e-mail, the human review packet, a researcher invitation and the implementation gate. It performed no
+review itself.

@@ -3,6 +3,24 @@
 Checked 2026-10-20 against official pages on spaceappschallenge.org. Page bodies are saved locally under
 `_raw/spaceapps/`. **Re-check on 28 Oct (challenge statement) and 13 Nov (submission + judging guides).**
 
+**Re-checked 2026-10-21, 19:45 UTC (22 Oct local; fourth session).** Copies are in `_raw/spaceapps_2026-10-22/`.
+- **Unchanged text:** FAQ (page dated 13 Oct 2026), Team Formation Guide (23 Sep 2026), T&C ("Updated August 7, 2026"), home and Awards pages. All the quotes below were re-found word for word. All are on the **global** spaceappschallenge.org site, not a Local Event page.
+- **Challenge page:**
+  - Title, summary and details are unchanged.
+  - The resources tab now reads "*Resources coming soon.*" (it was empty before).
+  - The old `pageByPath` lookup now returns 404. The page is read by its ID (`aWQ6NTUxMjE=`) instead.
+- **Contact routes** (`/contact-us/`, the menu's "Contact Us" page):
+  - "For a question about your Local Event, please contact your Local Lead."
+  - "For questions about the Universal Event, please email info@spaceappschallenge.org and include 'Universal Event' in the subject line."
+  - "For all other questions or inquiries: please email info@spaceappschallenge.org."
+  - The FAQ's in-text "Contact Us page" link goes to `/contact-space-apps/`, which returned no readable text.
+- **Still pending:**
+  - challenge statements, "which include the full details, resources, and requirements" (28 Oct);
+  - Space Apps Connect (3 Nov);
+  - the Project Submission Guide and the Judging and Awards Guide (13 Nov).
+  - Judging criteria: Impact, Creativity, Validity, Relevance and Presentation are the **prior-year** criteria quoted in the user's brief. They are unconfirmed for 2026 (U5).
+- **Reading:** unchanged. **Ambiguous, not clearly prohibitive** (U1). Email A finalised, **not sent**.
+
 **Re-checked 2026-10-20, 19:04 UTC (21 Oct local; third session).** The FAQ, Team Formation Guide and T&C text is identical to the 16:53 UTC copies, and the challenge page GraphQL response is byte-identical. Copies are in `_raw/spaceapps_2026-10-21/`. Reading: the rules remain **ambiguous, not clearly prohibitive**, for research and documentation (U1). Email A was revised and is **not sent**.
 
 **Re-checked 2026-10-20, 16:53–16:56 UTC (second session).**

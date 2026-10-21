@@ -34,18 +34,25 @@ survived (PASS), were qualified, or failed. Still **no independent human review*
 - A value hypothesis, an evaluation repair note, a human-review checklist and a revised (unsent) organizer email were added.
 - Readiness decision: **do not build** (`planning/competition_readiness.md` §0).
 
+**Fourth session (22 Oct): handoff, nothing built.**
+- **Ready for the user to send** (unsent): the final organizer e-mail and one researcher invitation.
+- **Ready for a person:** the human review packet `planning/review_packet/`.
+- **Build gate:** `planning/implementation_gate.md`. **NO-GO** until the ruling, 14 Nov and an explicit instruction.
+
 ## Layout
 | Path | Contents |
 |---|---|
 | `research/evidence_case_03.md` | **primary demonstration**: lowest O₂ with recorded spread, μg vs 1 g, and what burn history changes |
 | `research/evidence_case_02.md` | rod case: question, admission rules, within-burn result (P4), negative cases |
 | `planning/researcher_workflow.md`, `planning/value_hypothesis.md` | one-page user task; falsifiable value hypothesis and spreadsheet comparator |
-| `planning/future_evaluation_plan.md`, `planning/human_review_checklist.md` | evaluation repair note and future plan; ≈ 90-min checklist for a human reviewer |
+| `planning/review_packet/` | **human review packet**: blind source reading (A), interpretation check (B), held-out task brief (C), review form |
+| `planning/implementation_gate.md`, `planning/researcher_invitation.md` | GO/NO-GO handoff for the first authorized build; unsent pilot invitation |
+| `planning/future_evaluation_plan.md` | evaluation repair note and future plan (`human_review_checklist.md` is superseded) |
 | `research/evidence_case_01.md` | auxiliary thin-sheet critical-velocity case (re-verified) |
 | `research/source_conflicts.md` | 27 conflicts and definition gaps, with exact locations and treatments |
 | `research/adversarial_source_audit.md` | second-session audit: approval decisions, surviving/failed findings |
 | `research/b16_b19_discrepancy_review.md`, `research/p4_independent_recheck.md`, `research/prior_art_comparison.md` | focused audit reviews |
-| `planning/competition_readiness.md`, `planning/evaluation_audit.md`, `planning/independent_reviewer_instructions.md` | rules status, strategy, evaluation audit, reviewer brief |
+| `planning/competition_readiness.md`, `planning/evaluation_audit.md`, `planning/independent_reviewer_instructions.md` | rules status, strategy, evaluation audit, reviewer brief (superseded by `review_packet/`) |
 | `planning/organizer_clarification_email.md`, `planning/author_clarification_email.md` | **drafts, not sent** |
 | `research/data/` | as-printed transcriptions + crosswalk + verification results |
 | `research/analysis/` | verification, crosswalk and evidence-case scripts |

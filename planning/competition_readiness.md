@@ -15,7 +15,7 @@ This file covers three things: the status of the rules (re-checked today), what 
 | Rules: may pre-event work be reused? | **UNKNOWN** | Email A revised; **not sent** |
 | Team and event registration | **UNKNOWN** | — |
 | Challenge-statement fit | **UNKNOWN** until 28 Oct | — |
-| Data integrity | **PASS (assistant-checked)**; CONDITIONAL until a person reviews it | `human_review_checklist.md` ready |
+| Data integrity | **PASS (assistant-checked)**; CONDITIONAL until a person reviews it | review packet `review_packet/` ready (22 Oct; replaces the checklist) |
 | Measurand / protocol specification | **PASS** (specification level) | new: `research/endpoint_dictionary.md` (D-021) |
 | Primary demonstration (burn history, `research/evidence_case_03.md`) | **CONDITIONAL**: strongest available case; assistant-checked | new (D-022) |
 | Secondary demonstration (matched μg/1 g pair) | **PASS** for display and contrast; **FAIL** for any causal reading | reframed under the measurand rules |
@@ -25,7 +25,7 @@ This file covers three things: the status of the rules (re-checked today), what 
 
 **Can be done now, by people (no building):**
 1. The user sends Email A and records the reply.
-2. A reviewer runs `human_review_checklist.md`. Separately, a person writes and seals ≥ 4 held-out tasks.
+2. A reviewer runs Activities A and B of `review_packet/`. Separately, a person who receives only `review_packet/C_task_author_brief.md` writes and seals ≥ 4 held-out tasks.
 3. The user decides on a PSI account (B-03), library access to Rivera 2026 (B-04) and Email B (B-05).
 4. On 28 Oct, read the challenge statement and record a scope decision.
 5. Ask 2–4 people whether they could take part in a short pilot during the event (B-10). Send no materials.
@@ -36,7 +36,9 @@ This file covers three things: the status of the rules (re-checked today), what 
 - demo assets, video, submission text;
 - every evaluation run and the user study.
 
-**Next authorized implementation step (defined precisely).**
+> **22 Oct (fourth session):** the GO/NO-GO handoff for the first development session is now `implementation_gate.md` (D-029). It supersedes the step definition below, which is kept as the earlier version. Rules re-checked 21 Oct 19:45 UTC: unchanged (`competition_rules.md`).
+
+**Next authorized implementation step (defined precisely; superseded by `implementation_gate.md`).**
 - **Preconditions:**
   - (i) the organizer ruling is recorded, or its absence is recorded and the re-derive path is chosen;
   - (ii) the 28 Oct statement has been reconciled with the Evidence Case 03 scope, in `DECISIONS.md`;
