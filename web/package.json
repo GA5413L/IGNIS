@@ -2,6 +2,7 @@
   "name": "ignis-web",
   "version": "0.1.0",
   "private": true,
+  "license": "Apache-2.0",
   "description": "IGNIS: NASA microgravity fire research workspace (Emberfall, NASA Space Apps 2026). Research, data curation, design and code developed with Claude Code and OpenAI Codex assistance; see docs/AI_DISCLOSURE.md. Not affiliated with or endorsed by NASA.",
   "engines": { "node": ">=22.13.0 <23" },
   "scripts": {

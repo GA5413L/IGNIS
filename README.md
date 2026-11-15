@@ -111,3 +111,7 @@ NASA PSI and NTRS records, NIST publications and cited combustion literature sup
 Pre-event research and AI assistance are disclosed in the [project record](PROJECT_RECORD.md) and [AI-use statement](web/docs/AI_DISCLOSURE.md). The 16 November repository cleanup changes documentation and README images only; application code, data, tests, public assets, configuration and dependencies are preserved. Screenshots were captured after submission from that unchanged application.
 
 IGNIS is an independent research prototype by team Emberfall, without NASA affiliation or endorsement. It presents evidence and descriptive analyses; it does not certify fire safety or provide a validated physical predictor.
+
+## License
+
+Original IGNIS code and documentation are licensed under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for attribution. Third-party dependencies, datasets, source quotations and source figures retain their own terms, as recorded in [source rights](web/docs/SOURCE_RIGHTS.md) and the individual source records.

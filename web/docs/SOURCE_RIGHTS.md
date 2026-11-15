@@ -1,8 +1,8 @@
 # Source rights and use
 
-Updated 15 November 2026. **Local application contents:** original application code, short source quotations with locators, attributed catalog metadata, selected factual table transcriptions, stored detector-cell readings, units, provenance and links. Curated data now ships with the application; the earlier statement that no third-party dataset was bundled is superseded.
+Updated 16 November 2026 for the owner-authorized Apache 2.0 license. **Local application contents:** original application code, short source quotations with locators, attributed catalog metadata, selected factual table transcriptions, stored detector-cell readings, units, provenance and links. Curated data now ships with the application; the earlier statement that no third-party dataset was bundled is superseded.
 
-Publisher PDFs, source figures, full XLSX files, raw acquisition logs, private documents and credentials are excluded from the application/public-package allowlist. Raw sources stay in the local `_raw/` archive. Public access is not a blanket redistribution license. The source was shared to GA5413L/IGNIS on 15 November 2026. Hosting is managed separately by the team; no blanket original-code license is implied.
+Publisher PDFs, source figures, full XLSX files, raw acquisition logs, private documents and credentials are excluded from the application/public-package allowlist. Raw sources stay in the local `_raw/` archive. Public access is not a blanket redistribution license. The source was shared to GA5413L/IGNIS on 15 November 2026. Original IGNIS code and documentation are licensed under the [Apache License 2.0](../../LICENSE) as of 16 November 2026. Hosting is managed separately by the team.
 
 | Source | Use | Rights note |
 |---|---|---|
@@ -16,4 +16,4 @@ Publisher PDFs, source figures, full XLSX files, raw acquisition logs, private d
 
 The project documentation and assessment exports identify the project as independent and not endorsed by NASA. New dataset exports carry their original source/review fields; they are records of curation, not NASA certification.
 
-Original-code licensing is a release decision for the owner; no repository-wide license is presumed. Dependency licenses remain applicable. The seven-slide deck cites the source papers and acknowledges AI assistance. Source URLs and attribution are retained in the [registry](../data/sources.json) and [rights manifest](../../manifests/rights_and_attribution.csv). Preparation reuse is disclosed in the [project record](../../PROJECT_RECORD.md).
+The Apache 2.0 license covers original IGNIS code and documentation; it does not relicense third-party dependencies, datasets, source quotations or source figures. Their original terms remain applicable. See [NOTICE](../../NOTICE) for project attribution. The seven-slide deck cites the source papers and acknowledges AI assistance. Source URLs and attribution are retained in the [registry](../data/sources.json) and [rights manifest](../../manifests/rights_and_attribution.csv). Preparation reuse is disclosed in the [project record](../../PROJECT_RECORD.md).

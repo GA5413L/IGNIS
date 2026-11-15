@@ -1,0 +1,14 @@
+IGNIS
+Copyright 2026 IGNIS contributors (team Emberfall).
+
+Original IGNIS software and documentation are licensed under the
+Apache License, Version 2.0. See LICENSE for the full license text.
+
+Third-party dependencies, datasets, source quotations and source figures
+retain their own copyright, license and attribution terms. The IGNIS
+license does not relicense those materials. Source-specific notices and
+provenance are recorded in web/docs/SOURCE_RIGHTS.md,
+manifests/rights_and_attribution.csv and the individual data records.
+
+Contributor acknowledgements are recorded in CONTRIBUTORS.md. Source
+citations are collected in CITATIONS.md.

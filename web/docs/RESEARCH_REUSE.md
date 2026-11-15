@@ -4,6 +4,8 @@ The retained application supports source inspection, descriptive comparisons and
 
 **15 November 2026.** IGNIS is the working name for a local, AI-assisted research workbench. Its present contribution is measurable evidence exploration: inspect sources, compare stated coordinates, recount selected readings and revise an assessment. It provides no field certification, predictive SOTA result or NASA adoption/endorsement. No final public URL or original-code license is implied.
 
+**Licensing update, 16 November 2026:** original IGNIS code and documentation are now licensed under the [Apache License 2.0](../../LICENSE). Third-party data and source material retain their own terms. This supersedes the original-code licensing status in the dated introduction above.
+
 ## Run the local application
 
 Use Node **22.13.0 or later within 22.x**, npm, the committed lockfile and matching application source. From the repository root:
@@ -72,7 +74,7 @@ Both use the standard library. **The exact local `_raw/` archive is required**, 
 
 The retained source baseline is recorded in [PROJECT_RECORD.md](../../PROJECT_RECORD.md). When citing a reproduced result, record the actual commit and lockfile, dataset/source versions, catalogue digest and exported request/results. A schema identifier alone is not a content version.
 
-Rights remain item-specific: 23 PSI records state CC0-1.0; PSI-10's license is unknown. NTRS 20260001992 is public but marked `MAY_INCLUDE_COPYRIGHT_MATERIAL`. Full PDFs, figures and workbooks are excluded from the proposed public package. Original-code licensing remains a release decision. Retain attribution and [AI/pre-event disclosure](AI_DISCLOSURE.md); consult [source rights](SOURCE_RIGHTS.md).
+Rights remain item-specific: 23 PSI records state CC0-1.0; PSI-10's license is unknown. NTRS 20260001992 is public but marked `MAY_INCLUDE_COPYRIGHT_MATERIAL`. Full PDFs, figures and workbooks are excluded from the proposed public package. Original IGNIS code and documentation use the [Apache License 2.0](../../LICENSE). Retain attribution and [AI/pre-event disclosure](AI_DISCLOSURE.md); consult [source rights](SOURCE_RIGHTS.md).
 
 ## Three further validation stages
 
