@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "ignis-channel-differences-1",
+  "methodRevision": "paired-channel-differences-2026-11-15.2",
+  "source": {
+    "schemaVersion": "ignis-local-data-1",
+    "methodRevision": "csv-inspection-2026-11-15.1",
+    "integrityMeaning": "checksum_not_signature",
+    "file": {
+      "name": "hypothetical-pairs.csv",
+      "byteCount": 50,
+      "sha256": "a42b77c33782581d037a07f149d9bc634de1d34bee65480b9f063a9e5c130f73",
+      "rawUtf8": "﻿time,run,left,right\r\n0,a,1,0\r\n1,a,2,4\r\n2,a,,3\r\n"
+    },
+    "spec": {
+      "delimiter": ",",
+      "headerRecord": 1,
+      "firstDataRecord": 2,
+      "lastDataRecord": null,
+      "origin": "hypothetical",
+      "sourceDescription": "Invented software demonstration; not observations or solver output.",
+      "context": "One synthetic run on one clock.",
+      "timeOrigin": "Common synthetic zero",
+      "timeColumn": 0,
+      "timeUnit": "s",
+      "run": {
+        "kind": "column",
+        "column": 1
+      },
+      "phase": {
+        "kind": "constant",
+        "value": "example"
+      },
+      "channels": [
+        {
+          "column": 2,
+          "quantity": "Coordinate",
+          "unit": "mm",
+          "operator": "Same invented coordinate",
+          "missingTokens": []
+        },
+        {
+          "column": 3,
+          "quantity": "Coordinate",
+          "unit": "mm",
+          "operator": "Same invented coordinate",
+          "missingTokens": []
+        }
+      ],
+      "timeMissingTokens": []
+    },
+    "recipe": {
+      "run": "a",
+      "phase": "example",
+      "timeMin": null,
+      "timeMax": null,
+      "channels": [
+        2,
+        3
+      ],
+      "selectedRecord": null
+    },
+    "result": {
+      "methodRevision": "csv-inspection-2026-11-15.1",
+      "sourceSha256": "a42b77c33782581d037a07f149d9bc634de1d34bee65480b9f063a9e5c130f73",
+      "specDigest": "88690783e0d1b4a092e326199234a1854c85eb065776c1e598cb63af8dd8f81e",
+      "recipeDigest": "e76f802813c7fd4b06a4a6674388361aa993e59e6bc470ab9abbfcdad4d7737c",
+      "origin": "hypothetical",
+      "metadataVerified": false,
+      "measurementValidated": false,
+      "unitConversion": "none",
+      "precision": "IEEE-754 binary64; raw decimal text retained",
+      "skippedRecords": [
+        1
+      ],
+      "rows": [
+        {
+          "record": 2,
+          "lineStart": 2,
+          "lineEnd": 2,
+          "byteStart": 24,
+          "byteEnd": 31,
+          "run": "a",
+          "phase": "example",
+          "time": {
+            "raw": "0",
+            "value": 0,
+            "status": "finite",
+            "reason": null
+          },
+          "values": [
+            {
+              "column": 2,
+              "cell": {
+                "raw": "1",
+                "value": 1,
+                "status": "finite",
+                "reason": null
+              }
+            },
+            {
+              "column": 3,
+              "cell": {
+                "raw": "0",
+                "value": 0,
+                "status": "finite",
+                "reason": null
+              }
+            }
+          ],
+          "included": true,
+          "exclusions": [],
+          "timeFlags": []
+        },
+        {
+          "record": 3,
+          "lineStart": 3,
+          "lineEnd": 3,
+          "byteStart": 33,
+          "byteEnd": 40,
+          "run": "a",
+          "phase": "example",
+          "time": {
+            "raw": "1",
+            "value": 1,
+            "status": "finite",
+            "reason": null
+          },
+          "values": [
+            {
+              "column": 2,
+              "cell": {
+                "raw": "2",
+                "value": 2,
+                "status": "finite",
+                "reason": null
+              }
+            },
+            {
+              "column": 3,
+              "cell": {
+                "raw": "4",
+                "value": 4,
+                "status": "finite",
+                "reason": null
+              }
+            }
+          ],
+          "included": true,
+          "exclusions": [],
+          "timeFlags": []
+        },
+        {
+          "record": 4,
+          "lineStart": 4,
+          "lineEnd": 4,
+          "byteStart": 42,
+          "byteEnd": 48,
+          "run": "a",
+          "phase": "example",
+          "time": {
+            "raw": "2",
+            "value": 2,
+            "status": "finite",
+            "reason": null
+          },
+          "values": [
+            {
+              "column": 2,
+              "cell": {
+                "raw": "",
+                "value": null,
+                "status": "blank",
+                "reason": "Blank or whitespace-only cell"
+              }
+            },
+            {
+              "column": 3,
+              "cell": {
+                "raw": "3",
+                "value": 3,
+                "status": "finite",
+                "reason": null
+              }
+            }
+          ],
+          "included": true,
+          "exclusions": [],
+          "timeFlags": []
+        }
+      ],
+      "groups": [
+        {
+          "run": "a",
+          "phase": "example",
+          "records": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "channels": [
+        {
+          "column": 2,
+          "quantity": "Coordinate",
+          "unit": "mm",
+          "operator": "Same invented coordinate",
+          "finite": 2,
+          "unavailable": 1,
+          "minimum": 1,
+          "maximum": 2,
+          "minRecords": [
+            2
+          ],
+          "maxRecords": [
+            3
+          ]
+        },
+        {
+          "column": 3,
+          "quantity": "Coordinate",
+          "unit": "mm",
+          "operator": "Same invented coordinate",
+          "finite": 3,
+          "unavailable": 0,
+          "minimum": 0,
+          "maximum": 4,
+          "minRecords": [
+            2
+          ],
+          "maxRecords": [
+            3
+          ]
+        }
+      ],
+      "includedRecords": [
+        2,
+        3,
+        4
+      ],
+      "excludedRecords": [],
+      "warnings": [
+        "Origin, identities, units, operator and context are user assertions, not verified metadata. Hashes identify the supplied bytes, not an instrument original.",
+        "Numeric coordinates use IEEE-754 binary64. Distinct decimal texts can round to the same value. Raw strings are retained. Window boundaries use these same coordinates in supplied units.",
+        "All units remain as supplied. No conversion, clock synchronization, smoothing, imputation or physical prediction is performed.",
+        "Record counts are not counts of independent experiments. Separate runs/phases are plotted separately; matching IDs do not prove independence or comparability.",
+        "Unknown measurement uncertainty stays unknown. Extrema describe selected finite cells and are not uncertainty limits or safety thresholds.",
+        "No sentinel tokens declared. Finite values such as -9999 or zero remain numeric."
+      ]
+    },
+    "resultDigest": "94460f2ad6aa87c861954ee43af61c6e1343e529a9e0d9a95df268a9835c4945",
+    "checksum": "37307277c73b8466a9d3c3ac3fa50ab3fe7f40df71f0a37f76af138bd95edf58"
+  },
+  "pairing": {
+    "leftColumn": 2,
+    "rightColumn": 3,
+    "alignedByRecord": true,
+    "linearAdditiveQuantity": true,
+    "sharedReferenceDatum": true,
+    "referenceDatum": "Same synthetic coordinate origin and axis",
+    "upstreamProcessing": "Invented values; no fitting, resampling or synchronization."
+  },
+  "result": {
+    "methodRevision": "paired-channel-differences-2026-11-15.2",
+    "sourceSha256": "a42b77c33782581d037a07f149d9bc634de1d34bee65480b9f063a9e5c130f73",
+    "specDigest": "88690783e0d1b4a092e326199234a1854c85eb065776c1e598cb63af8dd8f81e",
+    "recipeDigest": "e76f802813c7fd4b06a4a6674388361aa993e59e6bc470ab9abbfcdad4d7737c",
+    "pairingDigest": "7f1cfa2603b9e81d703a1a09d44174e2b665b9dcd94a82cf197d99ad2c05a7bf",
+    "run": "a",
+    "phase": "example",
+    "origin": "hypothetical",
+    "quantity": "Coordinate",
+    "unit": "mm",
+    "operator": "Same invented coordinate",
+    "sign": "left_minus_right",
+    "blockers": [],
+    "pairs": [
+      {
+        "record": 2,
+        "lineStart": 2,
+        "lineEnd": 2,
+        "byteStart": 24,
+        "byteEnd": 31,
+        "time": 0,
+        "leftRaw": "1",
+        "rightRaw": "0",
+        "left": 1,
+        "right": 0,
+        "leftStatus": "finite",
+        "leftReason": null,
+        "rightStatus": "finite",
+        "rightReason": null,
+        "difference": 1,
+        "state": "paired"
+      },
+      {
+        "record": 3,
+        "lineStart": 3,
+        "lineEnd": 3,
+        "byteStart": 33,
+        "byteEnd": 40,
+        "time": 1,
+        "leftRaw": "2",
+        "rightRaw": "4",
+        "left": 2,
+        "right": 4,
+        "leftStatus": "finite",
+        "leftReason": null,
+        "rightStatus": "finite",
+        "rightReason": null,
+        "difference": -2,
+        "state": "paired"
+      },
+      {
+        "record": 4,
+        "lineStart": 4,
+        "lineEnd": 4,
+        "byteStart": 42,
+        "byteEnd": 48,
+        "time": 2,
+        "leftRaw": "",
+        "rightRaw": "3",
+        "left": null,
+        "right": 3,
+        "leftStatus": "blank",
+        "leftReason": "Blank or whitespace-only cell",
+        "rightStatus": "finite",
+        "rightReason": null,
+        "difference": null,
+        "state": "unavailable_pair"
+      }
+    ],
+    "metrics": {
+      "meanDifference": -0.5,
+      "meanAbsoluteDifference": 1.5,
+      "rootMeanSquareDifference": 1.5811388300841898,
+      "maximumAbsoluteDifference": 2,
+      "maximumRecords": [
+        3
+      ]
+    },
+    "numericalWarnings": [],
+    "counts": {
+      "selected": 3,
+      "paired": 2,
+      "unavailablePairs": 1,
+      "arithmeticOverflow": 0,
+      "excludedRecords": 0
+    },
+    "assumptions": {
+      "linearAdditiveQuantity": "Ordinary subtraction on a linear, additive scale; no circular wrapping or logarithmic subtraction.",
+      "referenceDatum": "Same synthetic coordinate origin and axis",
+      "upstreamProcessing": "Invented values; no fitting, resampling or synchronization."
+    },
+    "interpretation": "Equal weight per available row within one selected run/phase, not time weighting. Dense sampling contributes more rows. Missing pairs change the represented population; these summaries describe available pairs, not all selected records. Counts are paired records, not independent experiments. No fit, offset correction, interpolation, correlation test, uncertainty interval or acceptance threshold.",
+    "declarationStatus": "User assertions about linear/additive quantities, shared reference/datum, row alignment, measurement operators and context; none are independently verified.",
+    "alignmentCaveat": "A common row or clock does not verify sensor-response alignment. Relative lag, filtering, resampling, calibration, shared processing or fitted offsets can change differences; none are estimated or corrected here. Results do not validate upstream processing or its independence.",
+    "scope": "These differences do not establish measurement agreement, causal effects, physical-model validity, alarm performance or safety. Unknown uncertainty stays unknown."
+  },
+  "resultDigest": "74a8cf27a23e706d470e9289a1017bba3fd524cb617fd3e495f7a97220178a30",
+  "checksum": "b66c65a5ca538daa925158c8e140804a47851c4f14b71506fb945a5ba70e153b"
+}

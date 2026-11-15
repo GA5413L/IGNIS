@@ -6,6 +6,8 @@ import { MAX_CSV_BYTES, MAX_WORKBENCH_PACKAGE_BYTES, WORKBENCH_METHOD, defaultRe
   parseCsv, replayWorkbenchPackage, serializeWorkbenchPackage, validateImportSpec,
   type CsvDocument, type ImportSpec, type InspectionResult, type ViewRecipe } from '../core/workbench';
 import { download, short } from './lib';
+import { replayDifferencePackage, type Pairing } from '../core/channelDifferences';
+import ChannelDifferences from './ChannelDifferences';
 
 const ORIGINS = { user_observation: 'Observation · user supplied, unverified', user_solver_output: 'Solver output · user supplied, unverified', hypothetical: 'Hypothetical example · not an experiment' };
 const emptySpec = (): ImportSpec => ({ delimiter: ',', headerRecord: 1, firstDataRecord: 2, lastDataRecord: null,
@@ -26,6 +28,7 @@ export default function LocalData() {
   const [recipe, setRecipe] = useState<ViewRecipe | null>(null), [message, setMessage] = useState(''), [error, setError] = useState('');
   const [exportConsent, setExportConsent] = useState(false), [windowMin, setWindowMin] = useState(''), [windowMax, setWindowMax] = useState('');
   const [page, setPage] = useState(0);
+  const [pairing, setPairing] = useState<Pairing | null>(null);
   const readGeneration = useRef(0);
   const resultState = useMemo(() => {
     if (!document || !spec || !recipe) return { result: null, error: '' };
@@ -34,7 +37,7 @@ export default function LocalData() {
   }, [document, spec, recipe]);
   const result = resultState.result;
   const headers = document?.records[draft.headerRecord - 1]?.cells ?? [];
-  const update = (patch: Partial<ImportSpec>) => { setDraft((d) => ({ ...d, ...patch })); setSpec(null); setRecipe(null); setExportConsent(false); setMessage('Mapping changed. Confirm it again to inspect.'); setError(''); };
+  const update = (patch: Partial<ImportSpec>) => { setDraft((d) => ({ ...d, ...patch })); setSpec(null); setRecipe(null); setPairing(null); setExportConsent(false); setMessage('Mapping changed. Confirm it again to inspect.'); setError(''); };
   const confirm = (doc = document, next = draft) => {
     if (!doc) return;
     try {
@@ -49,18 +52,20 @@ export default function LocalData() {
     const generation = ++readGeneration.current;
     setError(''); setMessage('Reading locally…'); setExportConsent(false);
     // Clear previous conclusions before any asynchronous read completes.
-    setDocument(null); setSpec(null); setRecipe(null); setName('');
+    setDocument(null); setSpec(null); setRecipe(null); setPairing(null); setName('');
     try {
       if (file.size > (replay ? MAX_WORKBENCH_PACKAGE_BYTES : MAX_CSV_BYTES)) throw new Error(replay ? 'Package exceeds 8 MiB.' : 'CSV exceeds 1 MiB.');
       const bytes = new Uint8Array(await file.arrayBuffer());
       if (generation !== readGeneration.current) return;
       if (replay) {
         const raw = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(bytes);
-        const checked = replayWorkbenchPackage(raw);
+        const comparison = JSON.parse(raw)?.schemaVersion === 'ignis-channel-differences-1' ? replayDifferencePackage(raw) : null;
+        const checked = comparison ? { packet: comparison.source, document: comparison.document } : replayWorkbenchPackage(raw);
         setDocument(checked.document); setName(checked.packet.file.name); setDraft(checked.packet.spec); setSpec(checked.packet.spec); setRecipe(checked.packet.recipe);
         setWindowMin(checked.packet.recipe.timeMin === null ? '' : String(checked.packet.recipe.timeMin));
         setWindowMax(checked.packet.recipe.timeMax === null ? '' : String(checked.packet.recipe.timeMax));
-        setMessage(`Recomputed identically. Result checksum ${checked.packet.resultDigest}. This checks software replay, not measurement accuracy.`);
+        setPairing(comparison?.packet.pairing ?? null);
+        setMessage(`Recomputed identically${comparison ? ', including channel differences' : ''}. Result checksum ${checked.packet.resultDigest}. This checks software replay, not measurement accuracy.`);
       } else {
         const doc = parseCsv(bytes, draft.delimiter);
         setDocument(doc); setName(file.name); setDraft({ ...emptySpec(), delimiter: draft.delimiter });
@@ -97,9 +102,9 @@ export default function LocalData() {
         <label className="field"><span>Replay package · JSON, up to 8 MiB</span><input type="file" accept=".json,application/json" onChange={(e) => { const file = e.target.files?.[0]; e.target.value = ''; if (file) void load(file, true); }} /></label>
       </div>
       <div className="btn-row"><button type="button" className="btn ghost" onClick={() => {
-        ++readGeneration.current; const doc = parseCsv(new TextEncoder().encode(EXAMPLE), ','); setDocument(doc); setName('hypothetical-example.csv'); setDraft(EXAMPLE_SPEC); setExportConsent(false); confirm(doc, EXAMPLE_SPEC);
+        ++readGeneration.current; const doc = parseCsv(new TextEncoder().encode(EXAMPLE), ','); setDocument(doc); setName('hypothetical-example.csv'); setDraft(EXAMPLE_SPEC); setPairing(null); setExportConsent(false); confirm(doc, EXAMPLE_SPEC);
       }}>Load hypothetical example</button>
-        <button type="button" className="btn ghost" onClick={() => { ++readGeneration.current; setDocument(null); setSpec(null); setRecipe(null); setDraft(emptySpec()); setName(''); setMessage('Local data cleared from this workspace.'); setError(''); }}>Clear local data</button></div>
+        <button type="button" className="btn ghost" onClick={() => { ++readGeneration.current; setDocument(null); setSpec(null); setRecipe(null); setPairing(null); setDraft(emptySpec()); setName(''); setMessage('Local data cleared from this workspace.'); setError(''); }}>Clear local data</button></div>
       {message && <p role="status" className="muted local-message">{message}</p>}
       {(error || resultState.error) && <p role="alert" className="error">{error || resultState.error}</p>}
       <p className="muted">Your data stay in this browser. Reloading clears them. A replay package includes the raw CSV, filename and your declarations; inspect them before sharing.</p>
@@ -171,6 +176,7 @@ export default function LocalData() {
           <p>{[...selected.exclusions, ...selected.timeFlags].join(' · ') || 'Included; no time-order flag.'}</p>
         </article>}
       </section>
+      {spec.channels.length >= 2 && <ChannelDifferences key={`${document.sha256}:${digestOf(spec)}`} document={document} name={name} spec={spec} recipe={recipe} pairing={pairing} setPairing={setPairing} consent={exportConsent} select={(record) => setRecipe({ ...recipe, selectedRecord: record })} />}
       <section className="section" aria-labelledby="ledger-title"><h2 id="ledger-title">Complete row ledger</h2><p>Every declared data record remains here, including invalid times, missing values and excluded runs. No rows are sorted or silently removed.</p>
         <div className="table-wrap"><table><thead><tr><th>Record</th><th>Run / phase</th><th>Raw time</th><th>Selection</th><th>Channel states</th><th>Time flags</th></tr></thead><tbody>
           {result.rows.slice(page * 25, (page + 1) * 25).map((r) => <tr key={r.record}><th><button className="link-btn" onClick={() => setRecipe({ ...recipe, selectedRecord: r.record })}>Record {r.record}</button></th><td>{JSON.stringify(r.run)} / {JSON.stringify(r.phase)}</td><td><code>{JSON.stringify(r.time.raw)}</code></td><td>{r.included ? 'Included' : r.exclusions.join('; ')}</td><td>{r.values.map((v) => `${v.column + 1}: ${v.cell.status}`).join('; ')}</td><td>{r.timeFlags.join('; ') || '—'}</td></tr>)}

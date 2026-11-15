@@ -1,0 +1,9 @@
+{
+  "leftColumn": 2,
+  "rightColumn": 3,
+  "alignedByRecord": true,
+  "linearAdditiveQuantity": true,
+  "sharedReferenceDatum": true,
+  "referenceDatum": "Same synthetic coordinate origin and axis",
+  "upstreamProcessing": "Invented values; no fitting, resampling or synchronization."
+}

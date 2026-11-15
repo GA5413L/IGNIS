@@ -1,0 +1,2436 @@
+{
+  "scope": "21 priority/discovered public repository heads; changed/new trees and bounded README/delta acquisition. No competitor code or model executed. Semantic inspection is recorded separately.",
+  "repositories": [
+    {
+      "repository": "itzjk/vesta",
+      "previousHead": "c5ca71deb825e97c7eb5b9d9dd3c090a6c660330",
+      "retrievedAtUtc": "2026-11-15T15:46:43.848712+00:00",
+      "head": "7e7b6f7d65e73388ed6d3b27d853b3e4aa1dc946",
+      "changed": true,
+      "headReceiptSha256": "4e543f7b12de076285032366ff7a5262eeac044f34645e37f75d46dd9df9dbb0",
+      "sourceUrl": "https://github.com/itzjk/vesta/tree/7e7b6f7d65e73388ed6d3b27d853b3e4aa1dc946",
+      "commitMessage": "Make evidence traceable and locally reproducible",
+      "readmeSha256": "7badca4d9ef52390e5ac40172239ba60a3a49f600f3e264590a80ab5b42c5230",
+      "totalCommits": 1,
+      "changedFiles": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "tests/core/reproduction.test.mjs",
+          "status": "added",
+          "changes": 158
+        },
+        {
+          "filename": "tests/core/source-locator.test.mjs",
+          "status": "added",
+          "changes": 110
+        },
+        {
+          "filename": "tools/source-locators.mjs",
+          "status": "added",
+          "changes": 69
+        },
+        {
+          "filename": "web/css/coverage.css",
+          "status": "modified",
+          "changes": 5
+        },
+        {
+          "filename": "web/css/world.css",
+          "status": "modified",
+          "changes": 11
+        },
+        {
+          "filename": "web/data/rejected-excerpts.json",
+          "status": "added",
+          "changes": 48
+        },
+        {
+          "filename": "web/data/source-locators.json",
+          "status": "added",
+          "changes": 10873
+        },
+        {
+          "filename": "web/index.html",
+          "status": "modified",
+          "changes": 4
+        },
+        {
+          "filename": "web/js/app.js",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "web/js/core/reproduction.js",
+          "status": "added",
+          "changes": 89
+        },
+        {
+          "filename": "web/js/core/source-locator.js",
+          "status": "added",
+          "changes": 79
+        },
+        {
+          "filename": "web/js/scene/field.js",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "web/js/ui/drawer.js",
+          "status": "modified",
+          "changes": 5
+        },
+        {
+          "filename": "web/js/ui/receipt.js",
+          "status": "modified",
+          "changes": 106
+        },
+        {
+          "filename": "web/js/ui/source-locator.js",
+          "status": "added",
+          "changes": 35
+        },
+        {
+          "filename": "web/js/views/brief.js",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "web/js/views/design-map.js",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "web/js/views/design.js",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "web/js/views/open.js",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "web/js/world/act-evidence.js",
+          "status": "modified",
+          "changes": 10
+        },
+        {
+          "filename": "web/js/world/act-trust.js",
+          "status": "modified",
+          "changes": 58
+        },
+        {
+          "filename": "web/js/world/cite.js",
+          "status": "modified",
+          "changes": 9
+        },
+        {
+          "filename": "web/js/world/coverage.js",
+          "status": "modified",
+          "changes": 5
+        },
+        {
+          "filename": "web/js/world/world.js",
+          "status": "modified",
+          "changes": 4
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repository": "Lucyyngceo/pyrion",
+      "previousHead": "6a0667e3ca04fa2b81be7caf104b5037db0e479f",
+      "retrievedAtUtc": "2026-11-15T15:46:43.849329+00:00",
+      "head": "154bed361089ac9a18e64e9d41ab4ca5653e1d77",
+      "changed": true,
+      "headReceiptSha256": "54fe757a1379b6ad35514a68143a6af713fabd119f48b24d1f46f8c2358efddf",
+      "sourceUrl": "https://github.com/Lucyyngceo/pyrion/tree/154bed361089ac9a18e64e9d41ab4ca5653e1d77",
+      "commitMessage": "Landing hero says what PYRION does (has NASA tested fire in your cabin air, where the evidence ends) with two clear actions; the Moon Base finding moves to its own section right below",
+      "readmeSha256": "415478332ba157269aed165fee512e70d3e704bf24b7060b9dde6cac6f805402",
+      "totalCommits": 2,
+      "changedFiles": [
+        {
+          "filename": "data/conditions/PSI-25.csv",
+          "status": "modified",
+          "changes": 61
+        },
+        {
+          "filename": "data/conditions/PSI-26.csv",
+          "status": "modified",
+          "changes": 14
+        },
+        {
+          "filename": "data/conditions/REVIEW.md",
+          "status": "modified",
+          "changes": 660
+        },
+        {
+          "filename": "data/conditions/SUMMARY.md",
+          "status": "modified",
+          "changes": 34
+        },
+        {
+          "filename": "data/derived/investigation_profiles.json",
+          "status": "modified",
+          "changes": 69
+        },
+        {
+          "filename": "data/derived/materials.json",
+          "status": "modified",
+          "changes": 810
+        },
+        {
+          "filename": "data/derived/unified/data_dictionary.md",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "data/derived/unified/pyrion_psi_combustion.csv",
+          "status": "modified",
+          "changes": 75
+        },
+        {
+          "filename": "data/derived/unified/pyrion_psi_combustion.json",
+          "status": "modified",
+          "changes": 1275
+        },
+        {
+          "filename": "extraction/documents/review/PSI-25.extractor.json",
+          "status": "modified",
+          "changes": 1153
+        },
+        {
+          "filename": "extraction/documents/review/PSI-25.verificador.json",
+          "status": "modified",
+          "changes": 296
+        },
+        {
+          "filename": "extraction/documents/review/PSI-26.extractor.json",
+          "status": "modified",
+          "changes": 1007
+        },
+        {
+          "filename": "extraction/documents/review/PSI-26.verificador.json",
+          "status": "modified",
+          "changes": 346
+        },
+        {
+          "filename": "extraction/documents/review/draft-BASS-flow.extractor.json",
+          "status": "added",
+          "changes": 725
+        },
+        {
+          "filename": "extraction/documents/review/draft-CFI-gravity-SAFFIRE-pressure.extractor.json",
+          "status": "added",
+          "changes": 97
+        },
+        {
+          "filename": "validation/run_all.py",
+          "status": "modified",
+          "changes": 975
+        },
+        {
+          "filename": "web/app/page.tsx",
+          "status": "modified",
+          "changes": 50
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repository": "maitriramkumar08-ui/nasa-hackthon-flames-in-freefall-",
+      "previousHead": "255cf2524388c868b47cf15dfbd2bd04c2cd857b",
+      "retrievedAtUtc": "2026-11-15T15:46:43.849533+00:00",
+      "head": "255cf2524388c868b47cf15dfbd2bd04c2cd857b",
+      "changed": false,
+      "headReceiptSha256": "09f702649adf9b27a8d3521e16a73cbf655a7ff01475d34fc4784d5bcf2ddbc3",
+      "sourceUrl": "https://github.com/maitriramkumar08-ui/nasa-hackthon-flames-in-freefall-/tree/255cf2524388c868b47cf15dfbd2bd04c2cd857b",
+      "commitMessage": "warn not to copy the expected output line into a script",
+      "readmeSha256": "26a74b375936cba3a6d6339b37659f5b42630f6909a59dd7f0b2cfe2840dd7f3"
+    },
+    {
+      "repository": "igeorgegabriel/Nasa_Space_Challenge",
+      "previousHead": "6069d5f3724b51c7704b00661b72ba7beccd0193",
+      "retrievedAtUtc": "2026-11-15T15:46:43.849701+00:00",
+      "head": "6069d5f3724b51c7704b00661b72ba7beccd0193",
+      "changed": false,
+      "headReceiptSha256": "63f47eedcb8ea1ffa395ecefab8259edac407fe5abc8c696f29f8c406cfb2be0",
+      "sourceUrl": "https://github.com/igeorgegabriel/Nasa_Space_Challenge/tree/6069d5f3724b51c7704b00661b72ba7beccd0193",
+      "commitMessage": "Rework guided tour to six steps: 3D view, flight planner game, cached finding answer",
+      "readmeSha256": "b327c14ee533227839bd56f94b31d6fd343a635b97846140eb16ccd41bee4665"
+    },
+    {
+      "repository": "A-K-M-Asifuzzaman/MicroFire-Atlas",
+      "previousHead": "acb9aaa69486154da657c61469d3a1886e4c12b1",
+      "retrievedAtUtc": "2026-11-15T15:46:45.898932+00:00",
+      "head": "acb9aaa69486154da657c61469d3a1886e4c12b1",
+      "changed": false,
+      "headReceiptSha256": "a9752b2b616b89ce1f48b52d9623aff923d74586a84ac94f37b8097459dea027",
+      "sourceUrl": "https://github.com/A-K-M-Asifuzzaman/MicroFire-Atlas/tree/acb9aaa69486154da657c61469d3a1886e4c12b1",
+      "commitMessage": "README: new team pitch video and thumbnail",
+      "readmeSha256": "63e837ead8beb07eb98180a04bcd5d4339f9d29c7dba70942e7c9a2e2e347743"
+    },
+    {
+      "repository": "ADAI-ALEX/margin",
+      "previousHead": "8d9d6f70f8c9d56c89b54f78d4b6ba4f504c65d9",
+      "retrievedAtUtc": "2026-11-15T15:46:46.334382+00:00",
+      "head": "0a5d6dc9efe53f4e9f2285413383434645e38f91",
+      "changed": true,
+      "headReceiptSha256": "a994f5f9c624dcb6383bfe4b56ae7905c0597ef9995bfd1fc88e63f63bf49f3f",
+      "sourceUrl": "https://github.com/ADAI-ALEX/margin/tree/0a5d6dc9efe53f4e9f2285413383434645e38f91",
+      "commitMessage": "Team logo: the MARGIN mark and wordmark from the site header, rendered as 1024 px square PNGs",
+      "readmeSha256": "32251ecc58682906161151cc23746ebc7f42b700c56991f61e2d358905276d00",
+      "totalCommits": 22,
+      "changedFiles": [
+        {
+          "filename": ".github/workflows/ci.yml",
+          "status": "added",
+          "changes": 90
+        },
+        {
+          "filename": ".gitignore",
+          "status": "modified",
+          "changes": 5
+        },
+        {
+          "filename": "LICENSE",
+          "status": "added",
+          "changes": 201
+        },
+        {
+          "filename": "NOTICE",
+          "status": "added",
+          "changes": 137
+        },
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "changes": 251
+        },
+        {
+          "filename": "app/globals.css",
+          "status": "modified",
+          "changes": 210
+        },
+        {
+          "filename": "app/guide/page.tsx",
+          "status": "added",
+          "changes": 233
+        },
+        {
+          "filename": "app/icon.svg",
+          "status": "modified",
+          "changes": 12
+        },
+        {
+          "filename": "app/investigations/[id]/page.tsx",
+          "status": "added",
+          "changes": 50
+        },
+        {
+          "filename": "app/investigations/page.tsx",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "app/layout.tsx",
+          "status": "modified",
+          "changes": 29
+        },
+        {
+          "filename": "app/method/page.tsx",
+          "status": "modified",
+          "changes": 395
+        },
+        {
+          "filename": "app/not-found.tsx",
+          "status": "added",
+          "changes": 29
+        },
+        {
+          "filename": "app/opengraph-image.alt.txt",
+          "status": "added",
+          "changes": 1
+        },
+        {
+          "filename": "app/opengraph-image.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "app/sources/page.tsx",
+          "status": "modified",
+          "changes": 318
+        },
+        {
+          "filename": "components/atlas/AtlasApp.tsx",
+          "status": "modified",
+          "changes": 526
+        },
+        {
+          "filename": "components/atlas/AxisGaps.tsx",
+          "status": "removed",
+          "changes": 56
+        },
+        {
+          "filename": "components/atlas/Console.tsx",
+          "status": "added",
+          "changes": 45
+        },
+        {
+          "filename": "components/atlas/CoverageMap.tsx",
+          "status": "removed",
+          "changes": 349
+        },
+        {
+          "filename": "components/atlas/EvidenceField.tsx",
+          "status": "added",
+          "changes": 414
+        },
+        {
+          "filename": "components/atlas/Expeditions.tsx",
+          "status": "added",
+          "changes": 43
+        },
+        {
+          "filename": "components/atlas/FieldNotes.tsx",
+          "status": "removed",
+          "changes": 264
+        },
+        {
+          "filename": "components/atlas/GravitySheets.tsx",
+          "status": "removed",
+          "changes": 117
+        },
+        {
+          "filename": "components/atlas/Inspector.tsx",
+          "status": "added",
+          "changes": 328
+        },
+        {
+          "filename": "components/atlas/Overview.tsx",
+          "status": "added",
+          "changes": 95
+        },
+        {
+          "filename": "components/atlas/RegimeStrip.tsx",
+          "status": "added",
+          "changes": 68
+        },
+        {
+          "filename": "components/atlas/SpecimenCard.tsx",
+          "status": "removed",
+          "changes": 108
+        },
+        {
+          "filename": "components/atlas/ToolRail.tsx",
+          "status": "added",
+          "changes": 124
+        },
+        {
+          "filename": "components/atlas/Toolbar.tsx",
+          "status": "removed",
+          "changes": 143
+        },
+        {
+          "filename": "components/atlas/VerdictScale.tsx",
+          "status": "added",
+          "changes": 34
+        },
+        {
+          "filename": "components/atlas/atlas.css",
+          "status": "modified",
+          "changes": 700
+        },
+        {
+          "filename": "components/atlas/geo.ts",
+          "status": "modified",
+          "changes": 39
+        },
+        {
+          "filename": "components/atlas/marks.tsx",
+          "status": "modified",
+          "changes": 78
+        },
+        {
+          "filename": "components/casefile/CasefileApp.tsx",
+          "status": "modified",
+          "changes": 142
+        },
+        {
+          "filename": "components/casefile/ClaimLedger.tsx",
+          "status": "modified",
+          "changes": 454
+        },
+        {
+          "filename": "components/casefile/CompareTray.tsx",
+          "status": "modified",
+          "changes": 311
+        },
+        {
+          "filename": "components/casefile/Finding.tsx",
+          "status": "added",
+          "changes": 95
+        },
+        {
+          "filename": "components/casefile/Footprint.tsx",
+          "status": "added",
+          "changes": 99
+        },
+        {
+          "filename": "components/casefile/Ladder.tsx",
+          "status": "modified",
+          "changes": 536
+        },
+        {
+          "filename": "components/casefile/PartialG.tsx",
+          "status": "modified",
+          "changes": 187
+        },
+        {
+          "filename": "components/casefile/Provenance.tsx",
+          "status": "modified",
+          "changes": 122
+        },
+        {
+          "filename": "components/casefile/ScenarioSentence.tsx",
+          "status": "modified",
+          "changes": 223
+        },
+        {
+          "filename": "components/casefile/casefile.module.css",
+          "status": "modified",
+          "changes": 828
+        },
+        {
+          "filename": "components/casefile/derive.ts",
+          "status": "modified",
+          "changes": 580
+        },
+        {
+          "filename": "components/casefile/field.module.css",
+          "status": "added",
+          "changes": 11
+        },
+        {
+          "filename": "components/casefile/field.tsx",
+          "status": "added",
+          "changes": 120
+        },
+        {
+          "filename": "components/casefile/fonts.ts",
+          "status": "removed",
+          "changes": 8
+        },
+        {
+          "filename": "components/casefile/pinStore.ts",
+          "status": "added",
+          "changes": 21
+        },
+        {
+          "filename": "components/casefile/ui.tsx",
+          "status": "added",
+          "changes": 54
+        },
+        {
+          "filename": "components/docs/DistanceIllustration.tsx",
+          "status": "added",
+          "changes": 124
+        },
+        {
+          "filename": "components/docs/doc.tsx",
+          "status": "added",
+          "changes": 112
+        },
+        {
+          "filename": "components/docs/docs.css",
+          "status": "modified",
+          "changes": 255
+        },
+        {
+          "filename": "components/docs/illustrationData.ts",
+          "status": "added",
+          "changes": 104
+        },
+        {
+          "filename": "components/dossier/Dossier.tsx",
+          "status": "added",
+          "changes": 207
+        },
+        {
+          "filename": "components/dossier/DossierChart.tsx",
+          "status": "added",
+          "changes": 127
+        },
+        {
+          "filename": "components/dossier/DossierLinks.tsx",
+          "status": "added",
+          "changes": 31
+        },
+        {
+          "filename": "components/dossier/DossierStage.tsx",
+          "status": "added",
+          "changes": 82
+        },
+        {
+          "filename": "components/dossier/RunTable.tsx",
+          "status": "added",
+          "changes": 91
+        },
+        {
+          "filename": "components/dossier/dossier.module.css",
+          "status": "added",
+          "changes": 97
+        },
+        {
+          "filename": "components/dossier/useCarriedScenario.ts",
+          "status": "added",
+          "changes": 15
+        },
+        {
+          "filename": "components/guide/Tour.tsx",
+          "status": "added",
+          "changes": 130
+        },
+        {
+          "filename": "components/guide/Welcome.tsx",
+          "status": "added",
+          "changes": 29
+        },
+        {
+          "filename": "components/guide/guide.css",
+          "status": "added",
+          "changes": 226
+        },
+        {
+          "filename": "components/run/RunInspector.tsx",
+          "status": "added",
+          "changes": 203
+        },
+        {
+          "filename": "components/run/run.css",
+          "status": "added",
+          "changes": 52
+        },
+        {
+          "filename": "components/site/BrandMark.tsx",
+          "status": "added",
+          "changes": 26
+        },
+        {
+          "filename": "components/site/SiteFooter.tsx",
+          "status": "modified",
+          "changes": 33
+        },
+        {
+          "filename": "components/site/SiteHeader.tsx",
+          "status": "modified",
+          "changes": 40
+        },
+        {
+          "filename": "components/site/site.css",
+          "status": "added",
+          "changes": 78
+        },
+        {
+          "filename": "components/ui/CommandSearch.tsx",
+          "status": "added",
+          "changes": 107
+        },
+        {
+          "filename": "components/ui/Drawer.tsx",
+          "status": "added",
+          "changes": 71
+        },
+        {
+          "filename": "components/ui/IconButton.tsx",
+          "status": "added",
+          "changes": 30
+        },
+        {
+          "filename": "components/ui/Panel.tsx",
+          "status": "added",
+          "changes": 47
+        },
+        {
+          "filename": "components/ui/Tabs.tsx",
+          "status": "added",
+          "changes": 37
+        },
+        {
+          "filename": "components/ui/Toast.tsx",
+          "status": "added",
+          "changes": 36
+        },
+        {
+          "filename": "components/ui/controls.tsx",
+          "status": "added",
+          "changes": 126
+        },
+        {
+          "filename": "components/ui/icons.tsx",
+          "status": "added",
+          "changes": 41
+        },
+        {
+          "filename": "components/ui/misc.tsx",
+          "status": "added",
+          "changes": 54
+        },
+        {
+          "filename": "components/ui/ui.css",
+          "status": "added",
+          "changes": 255
+        },
+        {
+          "filename": "content/curated.ts",
+          "status": "modified",
+          "changes": 7
+        },
+        {
+          "filename": "content/references.ts",
+          "status": "modified",
+          "changes": 3
+        },
+        {
+          "filename": "content/verification.ts",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "docs/ARCHITECTURE.md",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "docs/BUILD_LOG.md",
+          "status": "modified",
+          "changes": 69
+        },
+        {
+          "filename": "docs/assets/branding/margin-banner.svg",
+          "status": "added",
+          "changes": 35
+        },
+        {
+          "filename": "docs/assets/branding/margin-mark.svg",
+          "status": "added",
+          "changes": 9
+        },
+        {
+          "filename": "docs/assets/branding/margin-team-logo.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/branding/margin-team-mark.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/atlas-hero.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/atlas-mobile.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/atlas-moon-partial-gravity.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/atlas-regimes-overview.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/atlas-run-inspector.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/dossier-bass-ii.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/guide.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/investigations-compare.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/investigations-provenance.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/assets/screenshots/method.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/compliance/publication-checklist.md",
+          "status": "added",
+          "changes": 101
+        },
+        {
+          "filename": "docs/compliance/si-usage-log.md",
+          "status": "added",
+          "changes": 74
+        },
+        {
+          "filename": "docs/design-brief.md",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "docs/design/DESIGN_RESEARCH.md",
+          "status": "added",
+          "changes": 299
+        },
+        {
+          "filename": "docs/design/DESIGN_SYSTEM.md",
+          "status": "added",
+          "changes": 143
+        },
+        {
+          "filename": "docs/design/qa/BEFORE_AFTER.md",
+          "status": "added",
+          "changes": 64
+        },
+        {
+          "filename": "docs/design/qa/after/atlas-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/atlas-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/atlas-moon-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/atlas-moon-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/dossier-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/dossier-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/investigations-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/investigations-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/method-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/method-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/sources-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/after/sources-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/atlas-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/atlas-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/atlas-moon-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/atlas-moon-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/dossier-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/dossier-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/investigations-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/investigations-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/method-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/method-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/sources-1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/before/sources-390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/01-url-flash-lunar-shows-micro-direct_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/02-mars-empty-state-covers-probe_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/03-mars-empty-state-covers-probe_390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/04-field-head-overlaps-plot_390@2x.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/05-run-selected-head-overlap_390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/06-section-bar-hidden-under-header_390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/07-evidence-anchor-under-header_390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/08-prehydration-desktop-layout_390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/09-inspector-covers-field-head_768.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/10-atlas-ea-pub_1280.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/11-label-over-limit-mark_1440@2x.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/12-pressure-tag-over-axis-title_1440@2x.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/13-run-selected-no-field-label_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/14-run-selected-hides-iss-label_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/15-psi20-dossier-full_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/16-psi25-dossier-footprint-labels_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/17-investigations-compare_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/18-investigations-compare_390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/19-provenance-drawer_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/20-investigations-scenario_390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/21-focus-unlabelled-landmark_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/22-hover-tooltip_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/23-regimes-overview_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/24-layers-popover_1440.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/25-regimes-overview_390.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/qa/review/QA_REPORT.md",
+          "status": "added",
+          "changes": 130
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/assemble.mjs",
+          "status": "added",
+          "changes": 51
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/css.mjs",
+          "status": "added",
+          "changes": 20
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/d1.mjs",
+          "status": "added",
+          "changes": 44
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/d2.mjs",
+          "status": "added",
+          "changes": 40
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/d3.mjs",
+          "status": "added",
+          "changes": 120
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/d4.mjs",
+          "status": "added",
+          "changes": 68
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/d5.mjs",
+          "status": "added",
+          "changes": 21
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/lib.mjs",
+          "status": "added",
+          "changes": 65
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/m0.mjs",
+          "status": "added",
+          "changes": 12
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/m1.mjs",
+          "status": "added",
+          "changes": 66
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/m2.mjs",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/recode.mjs",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/capture/sheet2.mjs",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/research/eyes-deep/measurements.json",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/research/measurements-extra.json",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/design/research/measurements.json",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/reviews/methodology-review.md",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "docs/reviews/science-review-prototype.md",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "docs/submission/demo-script-30s.md",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/submission/project-page.md",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/submission/references.md",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/verification/source-verification.md",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "eslint.config.mjs",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "lib/engine/gate.ts",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "lib/fonts.ts",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "lib/schema/index.ts",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "lib/state/useMargin.ts",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "lib/state/viewQuery.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "lib/view/expeditions.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "lib/view/labels.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "lib/view/regimes.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "lib/view/searchBus.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "lib/view/searchIndex.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "next.config.ts",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "package.json",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "pipeline/README.md",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "pipeline/build-data.mjs",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "pipeline/mappings/materials.mjs",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "playwright.config.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "public/demo/margin-demo-30s.mp4",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "public/demo/margin-demo-poster.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "public/guide/atlas.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "public/guide/flame-sphere.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "public/guide/habitat.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "public/guide/orbit.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "public/guide/sample-burn.jpg",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/capture-readme.mjs",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/capture-references.mjs",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/capture-routes.mjs",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/check-build-css.mjs",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/claims-allowlist.json",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/narrate.py",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/synth_audio.py",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/ea.flac",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/end.flac",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/flow.flac",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/gap.flac",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/inv.flac",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/lines.json",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/moon.flac",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/pub.flac",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/src.flac",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/demo/voice/title.flac",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/lint-claims.mjs",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "scripts/record-demo.mjs",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/data/snapshot.test.ts",
+          "status": "modified",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/a11y.spec.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/atlas-eyes.spec.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/content-rules.spec.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/guide-tour.spec.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/helpers/engine.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/helpers/fixtures.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/hero-flow.spec.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/investigations.spec.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/routes.spec.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/e2e/url-state.spec.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/unit/state/scenarioQuery.test.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/unit/state/viewQuery.test.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "tests/unit/view/labels.test.ts",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "vitest.config.mts",
+          "status": "modified",
+          "changes": 0
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repository": "ZOGWORK/flamefall-analytics",
+      "previousHead": "79a6701426857b15dba72e67add777b5bc469413",
+      "retrievedAtUtc": "2026-11-15T15:46:50.011315+00:00",
+      "head": "79a6701426857b15dba72e67add777b5bc469413",
+      "changed": false,
+      "headReceiptSha256": "1f1a83f8a6da96c5997fd29a9b2dc9e0a6a918ec857d846846b035ad972cbdb7",
+      "sourceUrl": "https://github.com/ZOGWORK/flamefall-analytics/tree/79a6701426857b15dba72e67add777b5bc469413",
+      "commitMessage": "Merge pull request #9 from ZOGWORK/deck/pptx",
+      "readmeSha256": "e7f3a6f2519d06ebf37f089e0793564f82b472af5370919ef366db7d4845982c"
+    },
+    {
+      "repository": "SoyebuzamanNaim/ALPINE_IBEX",
+      "previousHead": "b113fa688d5b85f74ecf17d56f92f85f6af04649",
+      "retrievedAtUtc": "2026-11-15T15:46:53.077837+00:00",
+      "head": "b113fa688d5b85f74ecf17d56f92f85f6af04649",
+      "changed": false,
+      "headReceiptSha256": "429555b74bbce4d260270a80cb159c3b25ae5fe8dfe98b4c0f90282f49126809",
+      "sourceUrl": "https://github.com/SoyebuzamanNaim/ALPINE_IBEX/tree/b113fa688d5b85f74ecf17d56f92f85f6af04649",
+      "commitMessage": "Harden evidence workflow and fix oxygen sweep presentation",
+      "readmeSha256": "9989db432700d3b16becf011f339aac20520dc4cac06d94b393c770666436fd5"
+    },
+    {
+      "repository": "Laythraad/mors-aegis-flame-in-freefall-2026",
+      "previousHead": "55b7fff08faa01bc5b694a70e8a4e5ebea2735af",
+      "retrievedAtUtc": "2026-11-15T15:46:56.573441+00:00",
+      "head": "a8640e12f0a107d9b3681171864611c0e90c2dc0",
+      "changed": true,
+      "headReceiptSha256": "cfe8b6e683ddf7b9da3a588cc7ae2809c2290b7d93d1b778eacc5abeb30d19fc",
+      "sourceUrl": "https://github.com/Laythraad/mors-aegis-flame-in-freefall-2026/tree/a8640e12f0a107d9b3681171864611c0e90c2dc0",
+      "commitMessage": "Add scientific safety guidance and competition deck",
+      "readmeSha256": "38c7af3ff94832c9c3f25ee2d21a594be314c6e039f72b10b6c94643772d5faf",
+      "totalCommits": 4,
+      "changedFiles": [
+        {
+          "filename": "CHANGELOG.md",
+          "status": "modified",
+          "changes": 19
+        },
+        {
+          "filename": "deliverables/presentation/releases/MORS_AEGIS_NASA_Space_Apps_Submission_7_Slides_AI_alpha23_science_safety_final.pptx",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/SCIENTIFIC_SCOPE.md",
+          "status": "modified",
+          "changes": 3
+        },
+        {
+          "filename": "package-lock.json",
+          "status": "modified",
+          "changes": 4
+        },
+        {
+          "filename": "package.json",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "public/3d-experience.css",
+          "status": "modified",
+          "changes": 1
+        },
+        {
+          "filename": "public/app.bundle.js",
+          "status": "modified",
+          "changes": 63
+        },
+        {
+          "filename": "public/app.js",
+          "status": "modified",
+          "changes": 55
+        },
+        {
+          "filename": "public/index.html",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "public/lib/model-gallery.js",
+          "status": "modified",
+          "changes": 5
+        },
+        {
+          "filename": "public/theme-customization.css",
+          "status": "modified",
+          "changes": 26
+        },
+        {
+          "filename": "src/server/routes/copilot.mjs",
+          "status": "modified",
+          "changes": 79
+        },
+        {
+          "filename": "tests/ai-interpretation.test.mjs",
+          "status": "modified",
+          "changes": 26
+        },
+        {
+          "filename": "tests/backend.test.mjs",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "tests/theme-contrast.test.mjs",
+          "status": "modified",
+          "changes": 16
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repository": "vaidehi-snk/fireline-atlas",
+      "previousHead": "965ea32e8d0184267de723345ba91b0cd53a617c",
+      "retrievedAtUtc": "2026-11-15T15:46:56.688233+00:00",
+      "head": "965ea32e8d0184267de723345ba91b0cd53a617c",
+      "changed": false,
+      "headReceiptSha256": "743d6a76962933b89f838bccc659069e49317b6336fd847264b25b4dee1575be",
+      "sourceUrl": "https://github.com/vaidehi-snk/fireline-atlas/tree/965ea32e8d0184267de723345ba91b0cd53a617c",
+      "commitMessage": "Update README for current demo and remove obsolete document references",
+      "readmeSha256": "50dc54a36f6bd74eea54093e7353a959fad03ba5592a344331b4c0d550d0bac8"
+    },
+    {
+      "repository": "Kaszioq/fire-readiness",
+      "previousHead": "d709d4be2e9d2463d2091aab74fe378a571953bf",
+      "retrievedAtUtc": "2026-11-15T15:46:57.514971+00:00",
+      "head": "d709d4be2e9d2463d2091aab74fe378a571953bf",
+      "changed": false,
+      "headReceiptSha256": "ca37550cd17e38d381201739efd80fd5a5de1f1cada4ed701705026b44035925",
+      "sourceUrl": "https://github.com/Kaszioq/fire-readiness/tree/d709d4be2e9d2463d2091aab74fe378a571953bf",
+      "commitMessage": "Merge pull request #10 from Kaszioq/c/models",
+      "readmeSha256": "96ba453c6c0629894e946459fe428531a823b3fe9319332a48517bfb82159f14"
+    },
+    {
+      "repository": "Supermatrix-AI/aegis-mug-spaceapps-2026",
+      "previousHead": "d2118bd377f06bd85fa67eb22eae8c4c51d5ec50",
+      "retrievedAtUtc": "2026-11-15T15:46:57.633086+00:00",
+      "head": "e63d82290db37778770a6238b5b08b556fa1c584",
+      "changed": true,
+      "headReceiptSha256": "ebe862407660f4d9f49551ce73d3e38bb707bbbc2c94bb03b858fc2b1be79d07",
+      "sourceUrl": "https://github.com/Supermatrix-AI/aegis-mug-spaceapps-2026/tree/e63d82290db37778770a6238b5b08b556fa1c584",
+      "commitMessage": "chore: finalize release verification and documentation",
+      "readmeSha256": "f0a043a4906f60740e824a03873ce662745fcefcf394b36e6d7b74b1cc234755",
+      "totalCommits": 2,
+      "changedFiles": [
+        {
+          "filename": "DEMO_GUIDE.md",
+          "status": "modified",
+          "changes": 34
+        },
+        {
+          "filename": "DIGITAL_TWIN_METHOD.md",
+          "status": "modified",
+          "changes": 10
+        },
+        {
+          "filename": "FINAL_SPACEAPPS_2026_SUBMISSION_PACK.md",
+          "status": "modified",
+          "changes": 63
+        },
+        {
+          "filename": "JUDGING_EVIDENCE_MATRIX.md",
+          "status": "modified",
+          "changes": 8
+        },
+        {
+          "filename": "JUDGING_READINESS_CHECKLIST.md",
+          "status": "modified",
+          "changes": 28
+        },
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "changes": 13
+        },
+        {
+          "filename": "RELEASE_VERIFICATION_2026-11-15.md",
+          "status": "modified",
+          "changes": 40
+        },
+        {
+          "filename": "SUBMISSION.md",
+          "status": "modified",
+          "changes": 32
+        },
+        {
+          "filename": "src/App.tsx",
+          "status": "modified",
+          "changes": 203
+        },
+        {
+          "filename": "src/components/AboutAndExport.tsx",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "src/components/DataImport.tsx",
+          "status": "modified",
+          "changes": 16
+        },
+        {
+          "filename": "src/components/DigitalTwin.tsx",
+          "status": "modified",
+          "changes": 100
+        },
+        {
+          "filename": "src/components/EvidenceExplorer.tsx",
+          "status": "modified",
+          "changes": 44
+        },
+        {
+          "filename": "src/components/MissionOverview.tsx",
+          "status": "modified",
+          "changes": 43
+        },
+        {
+          "filename": "src/components/SpeculatronIntelligence.tsx",
+          "status": "modified",
+          "changes": 71
+        },
+        {
+          "filename": "src/index.css",
+          "status": "modified",
+          "changes": 10
+        },
+        {
+          "filename": "src/tests/digitalTwin.test.ts",
+          "status": "modified",
+          "changes": 46
+        },
+        {
+          "filename": "src/tests/evidencePlatform.test.ts",
+          "status": "modified",
+          "changes": 10
+        },
+        {
+          "filename": "src/tests/releaseValidation.test.ts",
+          "status": "modified",
+          "changes": 17
+        },
+        {
+          "filename": "src/tests/scientific.test.ts",
+          "status": "modified",
+          "changes": 27
+        },
+        {
+          "filename": "src/utils/bass2Insights.ts",
+          "status": "modified",
+          "changes": 56
+        },
+        {
+          "filename": "src/utils/comparator.ts",
+          "status": "modified",
+          "changes": 30
+        },
+        {
+          "filename": "src/utils/digitalTwin.ts",
+          "status": "modified",
+          "changes": 59
+        },
+        {
+          "filename": "src/utils/evidenceEngine.ts",
+          "status": "modified",
+          "changes": 13
+        },
+        {
+          "filename": "src/utils/importExport.ts",
+          "status": "modified",
+          "changes": 55
+        },
+        {
+          "filename": "submission/FINAL_NASA_PORTAL_COPY_PASTE.md",
+          "status": "added",
+          "changes": 130
+        },
+        {
+          "filename": "submission/OWNER_FINAL_FIVE_ACTIONS.md",
+          "status": "added",
+          "changes": 26
+        },
+        {
+          "filename": "submission/README.md",
+          "status": "modified",
+          "changes": 25
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repository": "WitherStormOS/AstroLab-NASA-2026",
+      "previousHead": "f6b6449a8c24119914fbb144678cf0dde2ae51d0",
+      "retrievedAtUtc": "2026-11-15T15:46:59.029729+00:00",
+      "head": "f6b6449a8c24119914fbb144678cf0dde2ae51d0",
+      "changed": false,
+      "headReceiptSha256": "5f3403965624653931c3a331eb489d46926ae53c4ce660853f58e4f99c973462",
+      "sourceUrl": "https://github.com/WitherStormOS/AstroLab-NASA-2026/tree/f6b6449a8c24119914fbb144678cf0dde2ae51d0",
+      "commitMessage": "Add scientific transparency disclaimer to README",
+      "readmeSha256": "9f60879e264dc777172fa1c9075d9683a7e8c5ce1d22e285a52a6f2520e67acd"
+    },
+    {
+      "repository": "Niki824/nasa-flame-in-freefall",
+      "previousHead": "152a0878dfd225ea16befc43ab2948671cab1281",
+      "retrievedAtUtc": "2026-11-15T15:46:59.435590+00:00",
+      "head": "152a0878dfd225ea16befc43ab2948671cab1281",
+      "changed": false,
+      "headReceiptSha256": "e6163f93ab08e3504b1118755d543f0e80f4f800ca24df51152fdb93a7902ca7",
+      "sourceUrl": "https://github.com/Niki824/nasa-flame-in-freefall/tree/152a0878dfd225ea16befc43ab2948671cab1281",
+      "commitMessage": "Nuance NOVA microgravity flame statement to reflect airflow and geometry dependency",
+      "readmeSha256": "be1b7d7ccc8c91f071d538811a1b260c86888ab384dbd0f5e5d4ed32d4c8a75c"
+    },
+    {
+      "repository": "Huarada/FLAMSA",
+      "previousHead": "6ecb816a08b1398d7f73a9430ddf108825d1d700",
+      "retrievedAtUtc": "2026-11-15T15:47:01.752693+00:00",
+      "head": "dbf5f4483bfaf2e25a175fdbf5c1e7a62e0f2aa0",
+      "changed": true,
+      "headReceiptSha256": "539601282d6867db9e8bfc79506107d383dd34b398970bb71c45d122e02dde56",
+      "sourceUrl": "https://github.com/Huarada/FLAMSA/tree/dbf5f4483bfaf2e25a175fdbf5c1e7a62e0f2aa0",
+      "commitMessage": "Improve research workspace, copilot reliability and evidence validation",
+      "readmeSha256": "4e574555e7fe11ab8f6ddc58d76f16927b395cf783454e404c6b187eeafe4671",
+      "totalCommits": 1,
+      "changedFiles": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "changes": 4
+        },
+        {
+          "filename": "data/eval/stress_cases.json",
+          "status": "added",
+          "changes": 54
+        },
+        {
+          "filename": "docs/ADR.md",
+          "status": "modified",
+          "changes": 217
+        },
+        {
+          "filename": "docs/copilot-first-click-after.json",
+          "status": "added",
+          "changes": 353
+        },
+        {
+          "filename": "docs/copilot-first-click-before.json",
+          "status": "added",
+          "changes": 1578
+        },
+        {
+          "filename": "docs/copilot-first-click-fix.md",
+          "status": "added",
+          "changes": 31
+        },
+        {
+          "filename": "docs/copilot-interrupted-before.json",
+          "status": "added",
+          "changes": 66
+        },
+        {
+          "filename": "docs/dashboard.md",
+          "status": "modified",
+          "changes": 26
+        },
+        {
+          "filename": "docs/fire-behavior-focused-validation.json",
+          "status": "added",
+          "changes": 28
+        },
+        {
+          "filename": "docs/header-spacing-validation.json",
+          "status": "added",
+          "changes": 207
+        },
+        {
+          "filename": "docs/investigations-focused-validation.json",
+          "status": "added",
+          "changes": 28
+        },
+        {
+          "filename": "docs/performance-audit.md",
+          "status": "added",
+          "changes": 65
+        },
+        {
+          "filename": "docs/rag-stress-report-live.md",
+          "status": "added",
+          "changes": 166
+        },
+        {
+          "filename": "docs/rag-stress-report-live2.md",
+          "status": "added",
+          "changes": 199
+        },
+        {
+          "filename": "docs/rag-stress-report.md",
+          "status": "added",
+          "changes": 153
+        },
+        {
+          "filename": "docs/research-filter-browser-after-fixes.json",
+          "status": "added",
+          "changes": 879
+        },
+        {
+          "filename": "docs/research-filter-browser-audit.json",
+          "status": "added",
+          "changes": 323
+        },
+        {
+          "filename": "docs/research-filter-engine-after-fixes.json",
+          "status": "added",
+          "changes": 175570
+        },
+        {
+          "filename": "docs/research-filter-engine-audit.json",
+          "status": "added",
+          "changes": 175569
+        },
+        {
+          "filename": "docs/research-filter-final-code-hashes.json",
+          "status": "added",
+          "changes": 14
+        },
+        {
+          "filename": "docs/research-filter-remediation-2026-11-15.md",
+          "status": "added",
+          "changes": 33
+        },
+        {
+          "filename": "docs/research-filter-ui-after-fixes.json",
+          "status": "added",
+          "changes": 12531
+        },
+        {
+          "filename": "docs/research-filter-ui-audit.json",
+          "status": "added",
+          "changes": 11992
+        },
+        {
+          "filename": "docs/research-filter-validation-2026-11-15.md",
+          "status": "added",
+          "changes": 111
+        },
+        {
+          "filename": "docs/screenshots/copilot-first-click-fixed.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/copilot-friendly-desktop.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/copilot-friendly-mobile.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/copilot-speech-desktop.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/copilot-speech-mobile.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-audit-bass-restored-via-existing-chart-control.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-audit-flex-to-bass-empty.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-audit-reviewed-empty.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-audit-solid.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-audit-stream-basis-aligned.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-audit-stream-basis-conflict.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-fixed-bass-retained-after-rerun.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-fixed-flex-to-bass-reconciled.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-fixed-reviewed-empty.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-fixed-solid.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-fixed-stream-basis-aligned.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-fixed-stream-basis-synchronized.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/filter-fixed-summary-only-disabled-partner.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/fire-behavior-focused-1440.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/fire-behavior-focused-390.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/header-spaced-1024.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/header-spaced-1280.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/header-spaced-1440.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/header-spaced-1920.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/header-spaced-390.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/investigations-focused-1440.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/investigations-focused-390.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/screenshots/navigation-dashboard-optimized.png",
+          "status": "added",
+          "changes": 0
+        },
+        {
+          "filename": "docs/specs/streamlit-explorer-tasks.md",
+          "status": "modified",
+          "changes": 35
+        },
+        {
+          "filename": "docs/specs/streamlit-explorer.md",
+          "status": "modified",
+          "changes": 74
+        },
+        {
+          "filename": "scripts/audit_research_filter_ui.py",
+          "status": "added",
+          "changes": 209
+        },
+        {
+          "filename": "scripts/audit_research_filters.py",
+          "status": "added",
+          "changes": 220
+        },
+        {
+          "filename": "scripts/benchmark_workspace.py",
+          "status": "added",
+          "changes": 48
+        },
+        {
+          "filename": "scripts/stress_rag.py",
+          "status": "added",
+          "changes": 238
+        },
+        {
+          "filename": "src/psi_fire/application/answer_validation.py",
+          "status": "modified",
+          "changes": 74
+        },
+        {
+          "filename": "src/psi_fire/application/answering.py",
+          "status": "modified",
+          "changes": 60
+        },
+        {
+          "filename": "src/psi_fire/application/chart_data.py",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "src/psi_fire/domain/answering.py",
+          "status": "modified",
+          "changes": 4
+        },
+        {
+          "filename": "src/psi_fire/infrastructure/langchain_narrator.py",
+          "status": "modified",
+          "changes": 18
+        },
+        {
+          "filename": "src/psi_fire/interface/analytics_views.py",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "src/psi_fire/interface/app.py",
+          "status": "modified",
+          "changes": 97
+        },
+        {
+          "filename": "src/psi_fire/interface/assets/flamsa-copilot.svg",
+          "status": "added",
+          "changes": 24
+        },
+        {
+          "filename": "src/psi_fire/interface/chart_controls.py",
+          "status": "added",
+          "changes": 55
+        },
+        {
+          "filename": "src/psi_fire/interface/copilot_job.py",
+          "status": "added",
+          "changes": 41
+        },
+        {
+          "filename": "src/psi_fire/interface/copilot_panel.py",
+          "status": "modified",
+          "changes": 95
+        },
+        {
+          "filename": "src/psi_fire/interface/dashboard_cache.py",
+          "status": "added",
+          "changes": 32
+        },
+        {
+          "filename": "src/psi_fire/interface/deferred_pipeline.py",
+          "status": "added",
+          "changes": 40
+        },
+        {
+          "filename": "src/psi_fire/interface/explorer_views.py",
+          "status": "modified",
+          "changes": 17
+        },
+        {
+          "filename": "src/psi_fire/interface/fire_behavior_views.py",
+          "status": "modified",
+          "changes": 66
+        },
+        {
+          "filename": "src/psi_fire/interface/home_view.py",
+          "status": "modified",
+          "changes": 13
+        },
+        {
+          "filename": "src/psi_fire/interface/reference_dashboard.py",
+          "status": "modified",
+          "changes": 111
+        },
+        {
+          "filename": "src/psi_fire/interface/workspace_navigation.py",
+          "status": "modified",
+          "changes": 10
+        },
+        {
+          "filename": "src/psi_fire/interface/workspace_style.py",
+          "status": "modified",
+          "changes": 29
+        },
+        {
+          "filename": "tests/application/test_citation_traceability.py",
+          "status": "modified",
+          "changes": 75
+        },
+        {
+          "filename": "tests/application/test_rag_stress_smoke.py",
+          "status": "added",
+          "changes": 23
+        },
+        {
+          "filename": "tests/infrastructure/test_dashboard_performance_contracts.py",
+          "status": "added",
+          "changes": 66
+        },
+        {
+          "filename": "tests/interface/test_copilot_request_lifecycle.py",
+          "status": "added",
+          "changes": 139
+        },
+        {
+          "filename": "tests/interface/test_deferred_pipeline.py",
+          "status": "added",
+          "changes": 35
+        },
+        {
+          "filename": "tests/interface/test_explorer_app.py",
+          "status": "modified",
+          "changes": 53
+        },
+        {
+          "filename": "tests/interface/test_filter_chart_regressions.py",
+          "status": "added",
+          "changes": 92
+        },
+        {
+          "filename": "tests/interface/test_fire_behavior_app.py",
+          "status": "modified",
+          "changes": 30
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repository": "vlo0d/flame-atlas",
+      "previousHead": "d6e1e33e22a800f5768e32e227eebc877ed21034",
+      "retrievedAtUtc": "2026-11-15T15:47:02.998929+00:00",
+      "head": "d6e1e33e22a800f5768e32e227eebc877ed21034",
+      "changed": false,
+      "headReceiptSha256": "4c10ed66135b23fbd11225de956e21a3fa7aa959334cee66b15ad45d7c101e5c",
+      "sourceUrl": "https://github.com/vlo0d/flame-atlas/tree/d6e1e33e22a800f5768e32e227eebc877ed21034",
+      "commitMessage": "Add the submission kit: demo slides, screenshots and form texts",
+      "readmeSha256": "660dedecb99a07b397537cd7375870f1ea648a1822e5822b845674502cbbc015"
+    },
+    {
+      "repository": "Hamna-Munir/Flare-Intelligence",
+      "previousHead": "335ddd0410a5e18ef20735ffafcf713e31f7cb65",
+      "retrievedAtUtc": "2026-11-15T15:47:04.168140+00:00",
+      "head": "335ddd0410a5e18ef20735ffafcf713e31f7cb65",
+      "changed": false,
+      "headReceiptSha256": "36bdf1eeae76ea11eed6cea953da39f851ace67d5df0923a62c39694c41a6ed4",
+      "sourceUrl": "https://github.com/Hamna-Munir/Flare-Intelligence/tree/335ddd0410a5e18ef20735ffafcf713e31f7cb65",
+      "commitMessage": "Create config.toml",
+      "readmeSha256": "dc45a771f19c618a7aff9dfa1bbb4d04005739375867526ff2128d9a9049372a"
+    },
+    {
+      "repository": "Samra761/The-Blueprint-67",
+      "previousHead": null,
+      "retrievedAtUtc": "2026-11-15T15:47:04.406174+00:00",
+      "head": "d2e60fcc46f1de4bcb88b6dfa4e68e9aba4314f8",
+      "changed": true,
+      "headReceiptSha256": "4189943d2e6afc3a63e24556fffe75b554466012956055486dfa3f5ffd6612c3",
+      "sourceUrl": "https://github.com/Samra761/The-Blueprint-67/tree/d2e60fcc46f1de4bcb88b6dfa4e68e9aba4314f8",
+      "commitMessage": "Delete docs/reports/Early_Fire_Prediction_Progress_Report.docx",
+      "readmeSha256": "c14481a8424b1df742e21954a146b0813acae5488601e5e1a77c3a9d3b43f27c",
+      "treeTruncated": false
+    },
+    {
+      "repository": "prattaybanik03/flamebound-flame-in-freefall",
+      "previousHead": null,
+      "retrievedAtUtc": "2026-11-15T15:47:09.299973+00:00",
+      "head": "484e62080a311e0fe4dbef3dae399f4e10c74afc",
+      "changed": true,
+      "headReceiptSha256": "d1e3879256700d52217da13866c8568ce1e4782994bdae2df1d2baddb6fd5def",
+      "sourceUrl": "https://github.com/prattaybanik03/flamebound-flame-in-freefall/tree/484e62080a311e0fe4dbef3dae399f4e10c74afc",
+      "commitMessage": "Add self-audit and baseline check: source audit, 64-cell baseline CSV, scripts",
+      "readmeSha256": "847a91cff06a199d92b2b9ebb3cfe2761b48f915467533302d658661c752b5ed",
+      "treeTruncated": false
+    },
+    {
+      "repository": "Optimus1o1/fireline",
+      "previousHead": null,
+      "retrievedAtUtc": "2026-11-15T15:47:09.542661+00:00",
+      "head": "d018b6bccf1027a4655aec064761191d0b32aa05",
+      "changed": true,
+      "headReceiptSha256": "b9f1704f57c3a9314e2818d6a6a09384144fd42c18344c9bcf5d0b6e91f5444f",
+      "sourceUrl": "https://github.com/Optimus1o1/fireline/tree/d018b6bccf1027a4655aec064761191d0b32aa05",
+      "commitMessage": "test(qa): add Playwright automated browser test suite and final release acceptance documentation",
+      "readmeSha256": "03e2b3dfa95b0af907a7ea554960a7488fc98ac257ae747d5bab26dc275743af",
+      "treeTruncated": false
+    },
+    {
+      "repository": "muneer-ul-hassan/flame-in-freefall",
+      "previousHead": null,
+      "retrievedAtUtc": "2026-11-15T15:47:12.077757+00:00",
+      "head": "d0b80adc6c58ae6addcfb3986d4da52872b68b21",
+      "changed": true,
+      "headReceiptSha256": "ecfb1dd7fcd8f359b0bab1ca2cf0d3a470f89f9045d2d242ea768d608fc240b7",
+      "sourceUrl": "https://github.com/muneer-ul-hassan/flame-in-freefall/tree/d0b80adc6c58ae6addcfb3986d4da52872b68b21",
+      "commitMessage": "Update README.md",
+      "readmeSha256": "446516a839e4573c1591cdcd3ff24367735edd40a113f94132d1f2cfab2ba0ed",
+      "treeTruncated": false
+    }
+  ],
+  "selectedFiles": [
+    {
+      "repository": "itzjk/vesta",
+      "head": "7e7b6f7d65e73388ed6d3b27d853b3e4aa1dc946",
+      "file": "web/js/core/reproduction.js",
+      "url": "https://github.com/itzjk/vesta/blob/7e7b6f7d65e73388ed6d3b27d853b3e4aa1dc946/web/js/core/reproduction.js",
+      "bytes": 5821,
+      "sha256": "09bfe882b9da94075feba2000caefc5ea88d291190dc78711f85bc548d9eb106"
+    },
+    {
+      "repository": "itzjk/vesta",
+      "head": "7e7b6f7d65e73388ed6d3b27d853b3e4aa1dc946",
+      "file": "web/js/core/source-locator.js",
+      "url": "https://github.com/itzjk/vesta/blob/7e7b6f7d65e73388ed6d3b27d853b3e4aa1dc946/web/js/core/source-locator.js",
+      "bytes": 5109,
+      "sha256": "a1cfe5996551cb311993f55c9968a7348ad803ce0b2bb8a1b4ecfda3376db45e"
+    },
+    {
+      "repository": "ADAI-ALEX/margin",
+      "head": "0a5d6dc9efe53f4e9f2285413383434645e38f91",
+      "file": "lib/engine/gate.ts",
+      "url": "https://github.com/ADAI-ALEX/margin/blob/0a5d6dc9efe53f4e9f2285413383434645e38f91/lib/engine/gate.ts",
+      "bytes": 3037,
+      "sha256": "c0557923fe0d838cc08804a9d2a8804dba40041a6ac064dcee2001996871e0b4"
+    },
+    {
+      "repository": "ADAI-ALEX/margin",
+      "head": "0a5d6dc9efe53f4e9f2285413383434645e38f91",
+      "file": "components/casefile/derive.ts",
+      "url": "https://github.com/ADAI-ALEX/margin/blob/0a5d6dc9efe53f4e9f2285413383434645e38f91/components/casefile/derive.ts",
+      "bytes": 26529,
+      "sha256": "6b3e9d8dec8c60758e89d6dc9be59b96d8a65d64992d90852d70c8f2d35d6928"
+    },
+    {
+      "repository": "Huarada/FLAMSA",
+      "head": "dbf5f4483bfaf2e25a175fdbf5c1e7a62e0f2aa0",
+      "file": "src/psi_fire/application/answer_validation.py",
+      "url": "https://github.com/Huarada/FLAMSA/blob/dbf5f4483bfaf2e25a175fdbf5c1e7a62e0f2aa0/src/psi_fire/application/answer_validation.py",
+      "bytes": 12244,
+      "sha256": "a2dcbfaeb710222320f1dc46abd1a4013290e85fa800b0a30a45d6d5c464a3c3"
+    },
+    {
+      "repository": "Huarada/FLAMSA",
+      "head": "dbf5f4483bfaf2e25a175fdbf5c1e7a62e0f2aa0",
+      "file": "docs/rag-stress-report-live2.md",
+      "url": "https://github.com/Huarada/FLAMSA/blob/dbf5f4483bfaf2e25a175fdbf5c1e7a62e0f2aa0/docs/rag-stress-report-live2.md",
+      "bytes": 13297,
+      "sha256": "89b7ec7dbdcb4bc855f3a454f771a95cd53983ad604ab68f865e0346758ac659"
+    },
+    {
+      "repository": "Supermatrix-AI/aegis-mug-spaceapps-2026",
+      "head": "e63d82290db37778770a6238b5b08b556fa1c584",
+      "file": "src/utils/comparator.ts",
+      "url": "https://github.com/Supermatrix-AI/aegis-mug-spaceapps-2026/blob/e63d82290db37778770a6238b5b08b556fa1c584/src/utils/comparator.ts",
+      "bytes": 8932,
+      "sha256": "5f0262977195c2a8980f71d8b47874e59ed53a0848baa2503f1046cacb890f86"
+    },
+    {
+      "repository": "Supermatrix-AI/aegis-mug-spaceapps-2026",
+      "head": "e63d82290db37778770a6238b5b08b556fa1c584",
+      "file": "src/utils/digitalTwin.ts",
+      "url": "https://github.com/Supermatrix-AI/aegis-mug-spaceapps-2026/blob/e63d82290db37778770a6238b5b08b556fa1c584/src/utils/digitalTwin.ts",
+      "bytes": 11039,
+      "sha256": "1b0b85d6e54f25ce503f7a391915cfc4a2980340d1bede746d0248ba0d375119"
+    },
+    {
+      "repository": "Supermatrix-AI/aegis-mug-spaceapps-2026",
+      "head": "e63d82290db37778770a6238b5b08b556fa1c584",
+      "file": "DIGITAL_TWIN_METHOD.md",
+      "url": "https://github.com/Supermatrix-AI/aegis-mug-spaceapps-2026/blob/e63d82290db37778770a6238b5b08b556fa1c584/DIGITAL_TWIN_METHOD.md",
+      "bytes": 6141,
+      "sha256": "99b45889c09b0e523b729a961274fb01f9cb48463119ac9ba2317ec8cadc0b76"
+    },
+    {
+      "repository": "Laythraad/mors-aegis-flame-in-freefall-2026",
+      "head": "a8640e12f0a107d9b3681171864611c0e90c2dc0",
+      "file": "src/server/routes/copilot.mjs",
+      "url": "https://github.com/Laythraad/mors-aegis-flame-in-freefall-2026/blob/a8640e12f0a107d9b3681171864611c0e90c2dc0/src/server/routes/copilot.mjs",
+      "bytes": 29286,
+      "sha256": "5d0f7bd7840832a39fe03607aec00723653e9526c2a34263c9b17845dc901585"
+    },
+    {
+      "repository": "Laythraad/mors-aegis-flame-in-freefall-2026",
+      "head": "a8640e12f0a107d9b3681171864611c0e90c2dc0",
+      "file": "docs/SCIENTIFIC_SCOPE.md",
+      "url": "https://github.com/Laythraad/mors-aegis-flame-in-freefall-2026/blob/a8640e12f0a107d9b3681171864611c0e90c2dc0/docs/SCIENTIFIC_SCOPE.md",
+      "bytes": 7166,
+      "sha256": "83e7a22c257ef8d7106d89d97ecacb1fd11ae334b967f74d51712c176effe66c"
+    },
+    {
+      "repository": "Optimus1o1/fireline",
+      "head": "d018b6bccf1027a4655aec064761191d0b32aa05",
+      "file": "src/lib/physicalComparabilityEngine.ts",
+      "url": "https://github.com/Optimus1o1/fireline/blob/d018b6bccf1027a4655aec064761191d0b32aa05/src/lib/physicalComparabilityEngine.ts",
+      "bytes": 9068,
+      "sha256": "39ca6e984577cbe111e9e118970e9f29c4ec3c1160a0b8a5e241b6ca0f2aa377"
+    },
+    {
+      "repository": "Optimus1o1/fireline",
+      "head": "d018b6bccf1027a4655aec064761191d0b32aa05",
+      "file": "src/lib/assessor/engine.ts",
+      "url": "https://github.com/Optimus1o1/fireline/blob/d018b6bccf1027a4655aec064761191d0b32aa05/src/lib/assessor/engine.ts",
+      "bytes": 31862,
+      "sha256": "60a33ea2ecfc54bbfee8f2946ca1f465582aed4451f4edb5fda69f2f58105593"
+    },
+    {
+      "repository": "Optimus1o1/fireline",
+      "head": "d018b6bccf1027a4655aec064761191d0b32aa05",
+      "file": "docs/submission/scientific_validation_and_limitations.md",
+      "url": "https://github.com/Optimus1o1/fireline/blob/d018b6bccf1027a4655aec064761191d0b32aa05/docs/submission/scientific_validation_and_limitations.md",
+      "bytes": 7404,
+      "sha256": "00a789647780f3dee7420118c85b0fa7996ea1052f11b6a90b05064327ac9ade"
+    },
+    {
+      "repository": "prattaybanik03/flamebound-flame-in-freefall",
+      "head": "484e62080a311e0fe4dbef3dae399f4e10c74afc",
+      "file": "docs/audit/README.md",
+      "url": "https://github.com/prattaybanik03/flamebound-flame-in-freefall/blob/484e62080a311e0fe4dbef3dae399f4e10c74afc/docs/audit/README.md",
+      "bytes": 1854,
+      "sha256": "b0d6e88f48376a0a540040e6d9ea14e8f9e5eb356bfd11594145c49f099ffb74"
+    },
+    {
+      "repository": "prattaybanik03/flamebound-flame-in-freefall",
+      "head": "484e62080a311e0fe4dbef3dae399f4e10c74afc",
+      "file": "web/src/lib/validation.ts",
+      "url": "https://github.com/prattaybanik03/flamebound-flame-in-freefall/blob/484e62080a311e0fe4dbef3dae399f4e10c74afc/web/src/lib/validation.ts",
+      "bytes": 4152,
+      "sha256": "e0ef26442dd9483ae48d53aa33dee4d991fcf1571e7fb9de8e3411033848f595"
+    },
+    {
+      "repository": "Samra761/The-Blueprint-67",
+      "head": "d2e60fcc46f1de4bcb88b6dfa4e68e9aba4314f8",
+      "file": "models/README.md",
+      "url": "https://github.com/Samra761/The-Blueprint-67/blob/d2e60fcc46f1de4bcb88b6dfa4e68e9aba4314f8/models/README.md",
+      "bytes": 601,
+      "sha256": "5d2954ae7933ab91f4fd1e6f1db96e4d910ed1d5b53203427bb2c9203a5ea808"
+    },
+    {
+      "repository": "muneer-ul-hassan/flame-in-freefall",
+      "head": "d0b80adc6c58ae6addcfb3986d4da52872b68b21",
+      "file": "train_model.py",
+      "url": "https://github.com/muneer-ul-hassan/flame-in-freefall/blob/d0b80adc6c58ae6addcfb3986d4da52872b68b21/train_model.py",
+      "bytes": 5267,
+      "sha256": "e50fc440afe0ba09cfcbc5b01821687704704d2687d522670d12f347f82e7d02"
+    }
+  ],
+  "reviewLimits": "Read-only public GitHub retrieval and bounded source/document inspection. No competitor code, model or benchmark executed. Downloaded files are not all line-by-line audits. Earlier screenshots and audits remain dated evidence."
+}

@@ -1,0 +1,43 @@
+{
+  "completedCalls": 10,
+  "plannedCalls": 42,
+  "notRun": 32,
+  "stopped": "no_eligible_free_route",
+  "coreCorrect": 4,
+  "coreRun": 10,
+  "structureValid": 9,
+  "inputTokens": 28627,
+  "outputTokens": 2883,
+  "latencyP50ms": 1598.112300000037,
+  "latencyP95ms": 2045.4067,
+  "conservativeAccountedUsd": 0.008392651000000001,
+  "expectedChargeUsd": 0,
+  "billedCharge": "NOT VERIFIED",
+  "gate": "NOT_ACCEPTED",
+  "scoring": "Assistant-authored keys; not independent validation.",
+  "activation": "NOT RUN",
+  "criticalRuleFailures": 0,
+  "transportFailures": 1,
+  "schemaInvalidReturnedCompletions": 0,
+  "actualModel": "openai/gpt-oss-120b",
+  "gatewayRevision": "cf-si-2026-11-15.1",
+  "outputTokenCap": 512,
+  "timeoutMs": 10000,
+  "meaningReview": {
+    "staleInvestigationAfterModelReplacement": 1,
+    "modelAssessmentRoutedAsEvidenceComparison": 1,
+    "applicationExclusionHandlingDiffersFromFrozenExpectedHandling": 3
+  },
+  "successLatencyP50ms": 1762.9860999999946,
+  "otherRoutes": "OpenRouter/free and Gemini NOT RUN",
+  "testMaterial": "Questions, local answer keys and individual case outputs omitted from this team-source receipt.",
+  "compatibilityProbe": {
+    "calls": 1,
+    "latencyMs": 1788.7253,
+    "inputTokens": 3151,
+    "outputTokens": 213,
+    "conservativeAccountedUsd": 0.00060045,
+    "billedCharge": "NOT VERIFIED"
+  },
+  "accountingNote": "Conservative Groq list-rate equivalent, including a retained $0.0023688 reservation for the transport failure; not an invoice. Expected charge $0 under owner-confirmed free controls."
+}

@@ -1,5 +1,13 @@
 # IGNIS current build status
 
+## Current technical refinement — web-2026-11-15.13
+
+The landing remains `/`; the research dashboard is `/console`. Material legends now isolate or combine visible rows with stable axes, visible-view SVG/JSON exports and distinct analytical populations. Hosting preparation includes Node 22.x and a 4 MiB HTTP/package transfer cap; the owner is discussing hosting for ignisatlas.earth. New capabilities are the SAME-R statistical-relationship/deletion workflow with Python figure code, local paired-channel differences and replay, seven API citation-identity receipts, and a protected Cloudflare SI transport with authenticated confirmation. The accepted-runtime list remains empty after the partial live evaluation exposed errors. [Research and comparison](RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [statistical method](DETECTOR_ASSOCIATION_METHOD_2026-11-15.md), [actual SI outcome](SI_PREPARATION.md).
+
+**Verification: 565 shared offline checks (28 files), all 70 production Chromium desktop/mobile checks, lint, TypeScript and webpack build PASS.** The eight affected association browser checks also pass after the final keyboard/ARIA adjustment. Eighteen captured states at 1366/375/320 pixels have zero page errors and whole-page overflow. Source/server/browser values and all 20 curated collection bytes match their pinned inputs. The separate Python checker reproduced 281 association coefficients; CLI replay matches the source-bound package. These are software/arithmetic checks, not independent scientific validation. [Machine-readable receipt](../artifacts/refinement/verification.json), [visual captures](../artifacts/previews/refinement/).
+
+The previous 20 curated collections and r2 digest are unchanged. New methods/metadata are separate; no trained physical predictor or scientific confidence interval was added. Public runtime activation, deployment, independent researcher validation, competition submission and NASA adoption are not complete. Older sections below retain their dated verification scope.
+
 ## Current routing and presentation — web-2026-11-15.12
 
 The landing page is at `/`; the research dashboard is at `/console`. The owner requested the missing landing page after the complete teammate push. Rechecking the latest remote branch, repository history and the known local checkout found only saved landing screenshots and `Flame.tsx`. The page and scoped styles were recreated from that design, with server-rendered worked examples using the existing scientific core. Counts are current (24 profiles, 16 findings/context records, 7 atmosphere cases, 154 detector rows, 12 registry sources); the workflow distinguishes 10 ranked investigations from 24 searchable profiles.

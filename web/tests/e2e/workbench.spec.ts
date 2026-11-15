@@ -9,7 +9,7 @@ import { digestOf } from '../../src/core/canonicalize';
 
 const open = async (page: Page, view = 'local-data') => {
   await page.goto(`/console#${view}`);
-  expect((await (await page.request.get('/api/health')).json()).buildRevision).toBe('web-2026-11-15.12');
+  expect((await (await page.request.get('/api/health')).json()).buildRevision).toBe('web-2026-11-15.13');
   await page.waitForLoadState('networkidle');
 };
 const downloadedText = async (page: Page, button: string) => {
@@ -95,6 +95,17 @@ test('notebook rechecks originals separately, preserves imported bytes and reloa
   await page.getByRole('button', { name: 'Load rechecked workspace' }).click();
   await expect(page.getByText('Rechecked workspace loaded.', { exact: true })).toBeVisible();
   await expect(page.getByText(/1 of 16 notebook places used/)).toBeVisible();
+});
+
+test('notebook rejects imports over the hosted limit before sending any request', async ({ page }) => {
+  await open(page, 'sources');
+  const requests: string[] = [];
+  await page.route('**/api/**', (route) => { requests.push(route.request().url()); return route.abort(); });
+  await page.getByLabel('Session JSON file').setInputFiles({ name: 'oversize.json', mimeType: 'application/json', buffer: Buffer.alloc(4 * 1024 * 1024 + 1, 0x20) });
+  await expect(page.getByRole('status').filter({ hasText: 'Nothing loaded:' })).toContainText('4 MiB hosted HTTP limit');
+  await expect(page.getByRole('status').filter({ hasText: 'Nothing loaded:' })).toContainText('Nothing was sent or truncated');
+  await expect(page.getByRole('status').filter({ hasText: 'Nothing loaded:' })).toContainText('8 MiB');
+  expect(requests).toEqual([]);
 });
 
 test('an in-flight filtered brief never appears under a different selection', async ({ page }) => {

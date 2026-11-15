@@ -1,0 +1,108 @@
+import { expect, test } from '@playwright/test';
+import { readFile } from 'node:fs/promises';
+import { replayAssociationPackage } from '../../src/core/detectorAssociation';
+import { digestOf } from '../../src/core/canonicalize';
+
+test('legend isolates and combines materials without changing statistics, axes or rank coordinates', async ({ page }) => {
+  await page.goto('/console#smoke');
+  await page.getByRole('tab', { name: 'Statistical relationships' }).click();
+  const legend = page.getByRole('group', { name: 'Association material visibility', exact: true });
+  const plot = page.getByTestId('association-scatter');
+  await expect(plot.locator('[data-record-id]')).toHaveCount(108);
+  const original = await plot.locator('[data-record-id]').evaluateAll((nodes) => nodes.map((node) => ({ id: node.getAttribute('data-record-id'), material: node.getAttribute('data-material'), x: node.getAttribute('data-point-x'), y: node.getAttribute('data-point-y') })));
+  const domains = [await plot.getAttribute('data-x-domain'), await plot.getAttribute('data-y-domain')];
+  const teflon = original.filter((point) => point.material === 'Teflon');
+  await legend.getByRole('button', { name: /^Teflon,/ }).click();
+  await expect(plot.locator('[data-record-id]')).toHaveCount(teflon.length);
+  expect(await plot.locator('[data-record-id]').evaluateAll((nodes) => nodes.map((node) => ({ id: node.getAttribute('data-record-id'), material: node.getAttribute('data-material'), x: node.getAttribute('data-point-x'), y: node.getAttribute('data-point-y') })))).toEqual(teflon);
+  expect([await plot.getAttribute('data-x-domain'), await plot.getAttribute('data-y-domain')]).toEqual(domains);
+  await legend.getByRole('button', { name: /^Kapton,/ }).click();
+  const expected = original.filter((point) => ['Teflon', 'Kapton'].includes(point.material!));
+  await expect(plot.locator('[data-record-id]')).toHaveCount(expected.length);
+  await expect(page.getByTestId('association-rho')).toHaveText('+0.4436');
+  await page.getByRole('button', { name: 'Average ranks', exact: true }).click();
+  const filteredRanks = await plot.locator('[data-record-id]').evaluateAll((nodes) => nodes.map((node) => ({ id: node.getAttribute('data-record-id'), x: node.getAttribute('data-point-x'), y: node.getAttribute('data-point-y') })));
+  const event = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Download visible plot data', exact: true }).click();
+  const packet = JSON.parse(await readFile((await (await event).path())!, 'utf8'));
+  const { checksum, ...body } = packet;
+  expect(digestOf(body)).toBe(checksum);
+  expect(packet.visibleRecordIds).toEqual(expected.map((point) => point.id));
+  expect(packet.recipe.coordinates).toBe('average-ranks');
+  expect(replayAssociationPackage(JSON.stringify(packet.analysis)).result.summary.pairedFiniteRows).toBe(108);
+  expect(packet.visiblePoints).toEqual(packet.analysis.result.rows.filter((row: { record: { id: string } }) => packet.visibleRecordIds.includes(row.record.id)).map((row: { record: { id: string; material: string }; rankA: number; rankB: number }) => ({ recordId: row.record.id, material: row.record.material, a: row.rankA, b: row.rankB })));
+  await legend.getByRole('button', { name: 'Show all', exact: true }).click();
+  await expect(plot.locator('[data-record-id]')).toHaveCount(108);
+  const allRanks = await plot.locator('[data-record-id]').evaluateAll((nodes) => nodes.map((node) => ({ id: node.getAttribute('data-record-id'), x: node.getAttribute('data-point-x'), y: node.getAttribute('data-point-y') })));
+  expect(allRanks.filter((point) => expected.some((entry) => entry.id === point.id))).toEqual(filteredRanks);
+  await legend.getByRole('button', { name: 'Hide all', exact: true }).click();
+  await expect(plot.locator('[data-record-id]')).toHaveCount(0);
+  await expect(page.getByTestId('association-visible-count')).toContainText('Showing 0 of 108');
+  await expect(page.getByTestId('association-rho')).toHaveText('+0.4436');
+  await legend.getByRole('button', { name: /^Teflon,/ }).click();
+  await expect(plot.locator('[data-record-id]')).toHaveCount(teflon.length);
+  await page.getByRole('combobox', { name: 'Flight', exact: true }).selectOption('1');
+  await expect(plot.locator('[data-record-id]')).toHaveCount(25);
+  await page.getByRole('combobox', { name: 'Flight', exact: true }).selectOption('2');
+  await expect(plot.locator('[data-record-id]')).toHaveCount(108);
+  await expect(legend.getByRole('button', { name: 'Show all', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(0);
+});
+
+test('statistical relationships expose material reversal, source cells and reproducible offline export', async ({ page }) => {
+  const errors: string[] = []; page.on('pageerror', (e) => errors.push(e.message));
+  await page.goto('/console#smoke'); await page.waitForLoadState('networkidle');
+  const network: string[] = [];
+  await page.route('**/*', (route) => { network.push(route.request().url()); return route.abort(); });
+  await page.getByRole('tab', { name: 'Statistical relationships' }).click();
+  await expect(page.getByRole('heading', { name: 'Material-specific associations point in different directions' })).toBeVisible();
+  await expect(page.getByTestId('association-rho')).toHaveText('+0.4436');
+  await expect(page.getByRole('combobox', { name: 'Flight', exact: true })).toHaveValue('2');
+  const materialTable = page.getByRole('table', { name: 'Association by material' });
+  await expect(materialTable.getByRole('row', { name: /Silicone/ })).toContainText('−0.6185');
+  await expect(materialTable.getByRole('row', { name: /Silicone/ })).toContainText('−0.6677 to −0.5461');
+  await expect(materialTable.getByRole('row', { name: /Kapton/ })).toContainText('sign changes');
+  // Coincident scatter points overlap; each original remains individually keyboard-accessible.
+  await page.getByRole('button', { name: /^Inspect AW\d+ and BK\d+$/ }).first().press('Enter');
+  await expect(page.getByRole('article', { name: 'Association source cells' })).toContainText('workbook row');
+  await page.getByRole('button', { name: 'Average ranks', exact: true }).click();
+  await expect(page.getByRole('group', { name: /^Paired average ranks/ })).toBeVisible();
+  const event = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Download statistical analysis', exact: true }).click();
+  const raw = await readFile((await (await event).path())!, 'utf8'), packet = replayAssociationPackage(raw);
+  expect(packet.result.summary.pairedFiniteRows).toBe(108);
+  expect(packet.result.summary.deletion.identifiedGroups).toBe(65);
+  expect(packet.result.summary.association.rho).toBeCloseTo(0.44358233, 5);
+  await page.getByLabel('Recheck statistical analysis · JSON, up to 2 MiB').setInputFiles({ name: 'analysis.json', mimeType: 'application/json', buffer: Buffer.from(raw) });
+  await expect(page.getByRole('status').filter({ hasText: 'Recomputed identically' })).toBeVisible();
+  expect(network).toEqual([]); expect(errors).toEqual([]);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(0);
+});
+
+test('constant channels and unknown group labels are not given a numerical association or deletion interval', async ({ page }) => {
+  await page.goto('/console#smoke');
+  await page.getByRole('tab', { name: 'Statistical relationships' }).click();
+  await page.getByRole('combobox', { name: 'Channel B', exact: true }).selectOption('issObscurationV');
+  await expect(page.getByTestId('association-rho')).toHaveText('Undefined');
+  await expect(page.getByText('Channel B is constant', { exact: true }).first()).toBeVisible();
+  await page.getByRole('combobox', { name: 'Channel B', exact: true }).selectOption('ionDeltaV');
+  await page.getByRole('combobox', { name: 'Flight', exact: true }).selectOption('1');
+  await expect(page.getByRole('table', { name: 'Association by material' }).getByRole('row', { name: /^All selected rows/ })).toContainText('25 rows lack a sample ID');
+  await page.getByRole('combobox', { name: 'Channel B', exact: true }).selectOption('issScatterV');
+  await expect(page.locator('p[role="alert"]')).toHaveText('Choose two distinct channels.');
+  await expect(page.getByTestId('association-rho')).toHaveCount(0);
+});
+
+test('replay rejects altered statistics and the separate analysis script is downloadable', async ({ page }) => {
+  await page.goto('/console#smoke');
+  await page.getByRole('tab', { name: 'Statistical relationships' }).click();
+  const event = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Download statistical analysis', exact: true }).click();
+  const packet = JSON.parse(await readFile((await (await event).path())!, 'utf8'));
+  packet.result.summary.association.rho = 0.99;
+  await page.getByLabel('Recheck statistical analysis · JSON, up to 2 MiB').setInputFiles({ name: 'changed.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(packet)) });
+  await expect(page.getByRole('status').filter({ hasText: 'checksum mismatch' })).toBeVisible();
+  await expect(page.getByTestId('association-rho')).toHaveText('+0.4436');
+  const script = await page.request.get('/figures/code/plot-detector-association.py');
+  expect(script.status()).toBe(200); expect(await script.text()).toContain('def spearman(rows):');
+});

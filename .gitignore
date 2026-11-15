@@ -12,6 +12,10 @@ __pycache__/
 *.pem
 *.key
 .secrets/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal
 
 # Third-party source downloads and private evaluation state remain local.
 DOCS/*.pdf

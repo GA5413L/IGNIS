@@ -1,10 +1,10 @@
 # Working on IGNIS
 
-The shared application is in `web/`, build **web-2026-11-15.12**. The landing page is at `/`; the integrated teammate dashboard is at `/console`. Components live in `web/src/ui/`. See the [workbench/competitor report](web/docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [SI handoff](web/docs/SI_PREPARATION.md), [build status](web/docs/BUILD_STATUS.md) and [scientific rules](CLAUDE.md).
+The shared application is in `web/`, build **web-2026-11-15.13**. The landing page is at `/`; the integrated teammate dashboard is at `/console`. Components live in `web/src/ui/`. See the [workbench/competitor report](web/docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [SI handoff](web/docs/SI_PREPARATION.md), [build status](web/docs/BUILD_STATUS.md), [hosting setup](web/docs/HOSTING_HANDOFF_2026-11-15.md) and [scientific rules](CLAUDE.md).
 
 ## Clone and run
 
-Install Node.js **22.13.0 or later** and Git. These commands work from a fresh clone on Windows, macOS or Linux:
+Install Node.js **22.13.0 or later within 22.x** and Git. These commands work from a fresh clone on Windows, macOS or Linux:
 
 ```sh
 git clone https://github.com/GA5413L/IGNIS.git

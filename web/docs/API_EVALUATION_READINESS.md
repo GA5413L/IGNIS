@@ -1,5 +1,7 @@
 # IE-1 evaluation readiness — 15 November 2026
 
+> **Current status, 15 November 2026, build .13:** the owner designated a Cloudflare gateway token and verified free-only/BYOK/no-logging account settings. One Groq compatibility probe succeeded. A separately recorded Cloudflare configuration attempted 10/42 frozen evaluation calls: nine schema-valid responses, two actual interpretation errors, three application/reference handling mismatches and one transport failure. Four reference passes; 32 calls NOT RUN. No configuration is accepted and runtime interpretation stays disabled. See [current SI handoff](SI_PREPARATION.md) and [sanitized receipt](../artifacts/refinement/gateway-evaluation.json). Earlier prices, candidate rankings, account states and “NOT RUN” statements below are dated historical records, not the current outcome. Frozen questions/keys and cumulative accounting were preserved.
+
 The runner now enforces the existing D051/D054 combined **$5 authorization** across configurations and invocations. No inference, credential check, account action or runtime enablement was performed for this audit. The checks below use canned transports and do not establish model quality, account access or live schema compatibility.
 
 ## Existing history and remaining limits

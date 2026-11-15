@@ -7,13 +7,15 @@ import { analyzeCutoffEnvelope, type CutoffEnvelopeSummary, type CutoffStability
 import type { Shared } from './Dashboard';
 import { download, pct, plural, short, signedInt } from './lib';
 import { IntervalChart, StripChart, type StripPoint } from './charts';
+import DetectorAssociation from './DetectorAssociation';
 
-type Mode = 'single' | 'paired' | 'range';
+type Mode = 'single' | 'paired' | 'range' | 'association';
 type Flight = 'all' | '1' | '2';
 const MODES: { id: Mode; label: string; question: string }[] = [
   { id: 'single', label: 'One channel', question: 'How many readings fall below a cutoff?' },
-  { id: 'paired', label: 'Two channels', question: 'Do two channels agree on the same smoke?' },
+  { id: 'paired', label: 'Two channels', question: 'How do two cutoff results differ on the same rows?' },
   { id: 'range', label: 'Cutoff range', question: 'Does the answer survive a different cutoff?' },
+  { id: 'association', label: 'Statistical relationships', question: 'Does a pooled relationship hold within each material?' },
 ];
 const STABILITY: Record<CutoffStability, string> = {
   strictly_positive: 'Positive for every cutoff in the range', strictly_negative: 'Negative for every cutoff in the range',
@@ -77,13 +79,16 @@ export default function SmokeLab({ shared }: { shared: Shared }) {
       <header className="page-head">
         <span className="crumb">04 · Smoke detection</span>
         <h1>Smoke detector readings from the SAME and SAME-R experiments</h1>
-        <p>{detectorDataset.records.length} workbook rows of detector voltages for five spacecraft materials and one reference liquid. Pick a cutoff and count readings; every count traces to a spreadsheet cell.</p>
+        <p>{detectorDataset.records.length} workbook rows of detector voltages for five spacecraft materials and one reference liquid. Explore cutoff sensitivity and statistical relationships; inspect the source cells behind each result.</p>
       </header>
 
       <section className="section" aria-label="Analysis settings">
         <div className="row between">
           <div className="seg" role="tablist" aria-label="Analysis type">
-            {MODES.map((item) => <button key={item.id} type="button" role="tab" aria-selected={mode === item.id} onClick={() => setMode(item.id)}>{item.label}</button>)}
+            {MODES.map((item) => <button key={item.id} type="button" role="tab" aria-selected={mode === item.id} onClick={() => {
+              setMode(item.id);
+              if (item.id === 'association') { setFlight('2'); setMaterial('all'); setReference(false); setChannel('issScatterV'); setChannelB('ionDeltaV'); }
+            }}>{item.label}</button>)}
           </div>
           <p className="muted">{MODES.find((item) => item.id === mode)!.question}</p>
         </div>
@@ -110,7 +115,7 @@ export default function SmokeLab({ shared }: { shared: Shared }) {
         </div>
         <div className="row">
           <label className="check"><input type="checkbox" checked={includeReference} disabled={material === 'DBP'} onChange={(event) => setReference(event.target.checked)} />Include the 20 DBP reference rows</label>
-          {mode !== 'single' && <label className="check"><input type="checkbox" checked={fan} onChange={(event) => setFan(event.target.checked)} />Keep only rows recorded with no fan problem</label>}
+          {(mode === 'paired' || mode === 'range') && <label className="check"><input type="checkbox" checked={fan} onChange={(event) => setFan(event.target.checked)} />Keep only rows recorded with no fan problem</label>}
           {mode === 'range' && (
             <span className="chips" role="group" aria-label="Range presets">
               <button type="button" className="chip" aria-pressed={range.aMin === '1' && range.aMax === '3' && range.bMin === '1' && range.bMax === '3'} onClick={() => setRange({ aMin: '1', aMax: '3', bMin: '1', bMax: '3' })}>1 to 3 V</button>
@@ -119,6 +124,8 @@ export default function SmokeLab({ shared }: { shared: Shared }) {
           )}
         </div>
       </section>
+
+      {mode === 'association' && <DetectorAssociation key={`${flight}|${material}|${includeReference}|${channel}|${channelB}`} selection={{ ...base, channelA: channel, channelB }} palette={shared.palette} />}
 
       {mode === 'single' && ('error' in single ? <p className="error" role="alert">{single.error}</p> : (() => {
         const a = single.ok!, c = a.counts, gaps = c.missing + c.error + c.nonNumeric;

@@ -1,0 +1,104 @@
+{
+  "checkedAt": "2026-11-15T17:24:01.469784+00:00",
+  "build": "web-2026-11-15.13",
+  "node": "22.13.1",
+  "buildBundler": "webpack",
+  "offline": {
+    "passed": 565,
+    "files": 28,
+    "scope": "Shared unit, integration and export suites; private provider fixtures excluded."
+  },
+  "productionBrowser": {
+    "passed": 70,
+    "projects": [
+      "Chromium 1366x768",
+      "Chromium 375x812"
+    ],
+    "finalAccessibilityFollowupPassed": 8,
+    "scope": "Full production suite then affected association suite after scroll-region/ARIA refinement. No provider inference in these checks."
+  },
+  "lint": "PASS (full tree and final affected files)",
+  "typescript": "PASS",
+  "productionBuild": "PASS",
+  "sourceServerBrowserIdentity": "PASS",
+  "curatedCollectionsUnchanged": 20,
+  "registryDigest": "37ad29b82a13f06d79d392ae21f99003dab36b2a421043f18b9ab0bf844242a2",
+  "citationMetadataIdentityMatches": 7,
+  "visualStates": 18,
+  "visualWidths": [
+    1366,
+    375,
+    320
+  ],
+  "pageErrors": 0,
+  "pageOverflowPx": 0,
+  "association": {
+    "pythonCoefficientChecks": 281,
+    "cliSourceBoundReplay": "PASS",
+    "resultSha256": "5d7b10b5f2c8722a85b92e29f59c4ecd7fe973840be56e69ed1bef656a2289cf",
+    "selectedRows": 109,
+    "pairedRows": 108,
+    "recordedGroups": 65,
+    "rho": 0.4435817129467917,
+    "scope": "Separate arithmetic recomputation from exported cells; not independent scientific validation."
+  },
+  "channelComparisonCliReplay": "PASS: original bytes and result matched",
+  "siRuntime": "NOT_ACCEPTED; partial measured evaluation in gateway-evaluation.json",
+  "notRun": [
+    "Hosted-origin/deployment verification",
+    "Firefox browser suite",
+    "Remaining 32 frozen SI evaluation calls",
+    "OpenRouter/free inference",
+    "Gemini inference",
+    "Independent researcher validation",
+    "Competition submission",
+    "NASA adoption"
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/refinement/competitor-review.json",
+      "bytes": 79355,
+      "sha256": "fc27d162cf223836aeb053d518e45ca49e6c662afa0bae73b1a2538899da5e54"
+    },
+    {
+      "path": "artifacts/refinement/detector-association.json",
+      "bytes": 1103005,
+      "sha256": "a1dc717e05eadf4b2565b3d2b6b7698a57d2cdf833d7e79073b9cad259dbc0bc"
+    },
+    {
+      "path": "artifacts/refinement/detector-association.png",
+      "bytes": 193436,
+      "sha256": "3a21e43c446e5eded6744a1bf7459335fb7325171a4051215a982b9b850bc0a2"
+    },
+    {
+      "path": "artifacts/refinement/detector-association.svg",
+      "bytes": 82810,
+      "sha256": "74da9cda3d60099089e6d47981f87e372ec6db791b399478f043c6506787f441"
+    },
+    {
+      "path": "artifacts/refinement/gateway-evaluation.json",
+      "bytes": 1607,
+      "sha256": "800e8107576decb8618b86ea47b963c2d22f19791015855ce3480d958e810367"
+    },
+    {
+      "path": "artifacts/refinement/hypothetical-channel-comparison.json",
+      "bytes": 11398,
+      "sha256": "55844cd72ca17a7f461f56572411804b594c8be95d835525c9a353f304d02d0d"
+    },
+    {
+      "path": "artifacts/refinement/hypothetical-paired-source.json",
+      "bytes": 6520,
+      "sha256": "17dc4b5d48c4f07df0dd210975357cdbab23b2d94bb235571e06f209978c3003"
+    },
+    {
+      "path": "artifacts/refinement/hypothetical-pairing.json",
+      "bytes": 286,
+      "sha256": "8de60eb83d628ffe0f111924a01c54e11e9ba381cb75357b77109b8654f10b1b"
+    },
+    {
+      "path": "artifacts/refinement/source-handoff-check.json",
+      "bytes": 3513,
+      "sha256": "37db94e820f000b300afbb143156d7ae901e435569a0a2e083620939726eb73d"
+    }
+  ]
+}

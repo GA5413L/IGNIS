@@ -4,15 +4,16 @@
  */
 import { z } from 'zod';
 import { ConfirmedRequest } from '../core/schemas';
-import { getCatalog, requireCatalog } from '../core/registry';
+import { getCatalog, requireCatalog, type CatalogSnapshot } from '../core/registry';
 import { assess, AssessError, type Assessment } from '../core/assess';
 import { verifyAssessment, ExportIntegrityError } from '../core/export';
 import { InterpretRequest, MAX_INTERPRET_BODY_BYTES } from '../core/interpretation';
 import { runtimeStatus } from './runtime';
-import { ResearchSelectionsSchema } from '../core/researchSelections';
+import { gatewayConfig, gatewayReadiness } from './gateway/policy';
+import { ResearchSelectionsSchema, type ResearchSelection } from '../core/researchSelections';
 import { RevisionParentSchema } from '../core/revisionParent';
 
-export const BUILD_REVISION = 'web-2026-11-15.12';
+export const BUILD_REVISION = 'web-2026-11-15.13';
 // A revision carries one immutable parent with up to four source-bound analyses.
 // The all-analysis source snapshot can exceed 1 MiB; retain a finite 2 MiB local-only cap.
 // This does not change interpreter/provider input, output, probe or spend limits.
@@ -26,10 +27,12 @@ const err = (status: number, code: string, message: string, fieldErrors: string[
 export function handleHealth(): Reply {
   const { snapshot, errors } = getCatalog();
   const rt = runtimeStatus();
+  const gateway = gatewayReadiness(gatewayConfig());
   return { status: snapshot ? 200 : 503, body: {
     status: snapshot ? 'ok' : 'registry_invalid', catalogRevision: snapshot?.revision ?? null, catalogDigest: snapshot?.digest ?? null,
-    buildRevision: BUILD_REVISION, siAvailable: rt.aiAvailable, siReason: rt.reason, aiAvailable: rt.aiAvailable, acceptedConfiguration: rt.label, aiReason: rt.reason,
-    featureFlags: { liveInterpretation: false, synthesisCall: false, nistModule: false, rodControl: false, transferMethods: false },
+    buildRevision: BUILD_REVISION, siAvailable: rt.aiAvailable || gateway.ready, siReason: gateway.ready ? 'Accepted gateway interpretation available' : rt.reason,
+    aiAvailable: rt.aiAvailable || gateway.ready, acceptedConfiguration: gateway.ready ? gateway.routes.map((r) => r.model).join(', ') : rt.label, aiReason: gateway.ready ? 'Accepted gateway interpretation available' : rt.reason,
+    featureFlags: { liveInterpretation: gateway.ready, synthesisCall: false, nistModule: false, rodControl: false, transferMethods: false },
     registryErrors: snapshot ? 0 : errors.length,
   } };
 }
@@ -82,19 +85,33 @@ export function handleAssess(rawText: string, now?: string): Reply {
   try { json = JSON.parse(rawText); } catch { return err(400, 'bad_json', 'Body is not valid JSON.'); }
   const parsed = AssessBody.safeParse(json);
   if (!parsed.success) return err(400, 'invalid_request', 'Invalid assessment request.', parsed.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`));
-  const s = requireCatalog();
-  if (parsed.data.catalogRevision !== s.revision) return err(409, 'stale_catalog', 'Catalogue revision changed; reconfirm the request.');
+  if (parsed.data.request.inputMode === 'ai_assisted' || parsed.data.request.runtimeProvenanceRef !== null)
+    return err(403, 'unverified_ai_provenance', 'SI-assisted requests must be confirmed with their signed interpretation receipt. Use the SI confirmation endpoint or structured mode.');
+  return assessConfirmed(parsed.data, requireCatalog(), now);
+}
+
+/** Server-only entry point: the gateway verifies a visitor-bound receipt before constructing this request.
+ * It is deliberately separate from handleAssess; no JSON flag can enable trusted provenance.
+ */
+export function handleVerifiedGatewayAssess(request: ConfirmedRequest, s: CatalogSnapshot, researchSelections?: ResearchSelection[], now?: string): Reply {
+  if (request.inputMode !== 'ai_assisted' || request.runtimeProvenanceRef === null)
+    return err(400, 'invalid_gateway_confirmation', 'The verified SI request is incomplete.');
+  return assessConfirmed({ request, catalogRevision: s.revision, researchSelections }, s, now);
+}
+
+function assessConfirmed(data: z.infer<typeof AssessBody>, s: CatalogSnapshot, now?: string): Reply {
+  if (data.catalogRevision !== s.revision) return err(409, 'stale_catalog', 'Catalogue revision changed; reconfirm the request.');
   let parent: Assessment | null = null;
-  if (parsed.data.parent !== null && parsed.data.parent !== undefined) {
-    if (!RevisionParentSchema.safeParse(parsed.data.parent).success) return err(409, 'parent_structure', 'Previous assessment has malformed revision fields; load a valid notebook or start a new assessment.');
-    parent = parsed.data.parent as Assessment;
+  if (data.parent !== null && data.parent !== undefined) {
+    if (!RevisionParentSchema.safeParse(data.parent).success) return err(409, 'parent_structure', 'Previous assessment has malformed revision fields; load a valid notebook or start a new assessment.');
+    parent = data.parent as Assessment;
     try { verifyAssessment(parent); } catch (e) {
       return err(409, 'parent_integrity', e instanceof ExportIntegrityError ? `Previous assessment failed its checksum: ${e.message}` : 'Previous assessment is malformed.');
     }
     if (parent.catalogDigest !== s.digest) return err(409, 'parent_catalog_changed', 'The previous assessment used a different catalogue; it stays historical.');
   }
   try {
-    return { status: 200, body: assess(parsed.data.request, s, { parent, now, researchSelections: parsed.data.researchSelections }) };
+    return { status: 200, body: assess(data.request, s, { parent, now, researchSelections: data.researchSelections }) };
   } catch (e) {
     if (e instanceof AssessError) return err(e.status, e.code, e.message);
     throw e;

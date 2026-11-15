@@ -10,6 +10,7 @@ import type { Shared } from './Dashboard';
 import { short } from './lib';
 import SessionControls from './SessionControls';
 import ScientificTools from './ScientificTools';
+import CitationChecks from './CitationChecks';
 
 export default function Sources({ shared }: { shared: Shared }) {
   const { catalog, history, selections } = shared;
@@ -74,6 +75,7 @@ export default function Sources({ shared }: { shared: Shared }) {
         ) : <div className="skeleton" style={{ height: 120 }} aria-busy="true" />}
       </section>
 
+      <CitationChecks />
       <section className="section" aria-labelledby="next-data">
         <div className="section-head"><h2 id="next-data">{opportunities.opportunities.length} datasets worth adding next</h2><p>{opportunities.admissionPolicy}</p></div>
         <div className="grid-2">

@@ -1,5 +1,7 @@
 # IGNIS SI (AI) selection: research, frozen evaluation plan and recommendation
 
+> **Current status, 15 November 2026, build .13:** the owner designated a Cloudflare gateway token and verified free-only/BYOK/no-logging account settings. One Groq compatibility probe succeeded. A separately recorded Cloudflare configuration attempted 10/42 frozen evaluation calls: nine schema-valid responses, two actual interpretation errors, three application/reference handling mismatches and one transport failure. Four reference passes; 32 calls NOT RUN. No configuration is accepted and runtime interpretation stays disabled. See [current SI handoff](SI_PREPARATION.md) and [sanitized receipt](../artifacts/refinement/gateway-evaluation.json). Earlier prices, candidate rankings, account states and “NOT RUN” statements below are dated historical records, not the current outcome. Frozen questions/keys and cumulative accounting were preserved.
+
 **Date:** 14 Nov 2026, ≈19:00 PKT (event day 1).
 **Status:** research and offline engineering only. **No inference has been run.** Every price or capability below is either *checked today* (with its source) or marked *as recorded 8 Nov, not rechecked*. Costs are **estimates** from stated assumptions, not measurements.
 

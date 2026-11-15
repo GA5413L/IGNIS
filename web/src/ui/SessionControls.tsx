@@ -8,10 +8,12 @@ function downloadBlob(name: string, blob: Blob) {
   anchor.href = url; anchor.download = name; document.body.appendChild(anchor); anchor.click(); anchor.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
-import { MAX_PACKAGE_BYTES, PACKAGE_SCHEMA, type PackageReview } from '../core/evidencePackage';
+import { PACKAGE_SCHEMA, type PackageReview } from '../core/evidencePackage';
+import { MAX_HTTP_PAYLOAD_BYTES } from '../server/http';
 import type { Assessment } from '../core/assess';
 
 const STORAGE_KEY = 'ignis-research-session-v1';
+const HOSTED_LIMIT_MESSAGE = 'This operation exceeds the 4 MiB hosted HTTP limit. Nothing was sent or truncated. The local package library and browser-only data workbench retain their 8 MiB package limits.';
 export default function SessionControls({ makePacket, getOriginals, onLoad }: { makePacket: () => ResearchSession; getOriginals: () => Assessment[]; onLoad: (r: RecheckedSession) => void }) {
   const file = useRef<HTMLInputElement>(null);
   const [message, setMessage] = useState('');
@@ -23,6 +25,7 @@ export default function SessionControls({ makePacket, getOriginals, onLoad }: { 
   const activeRequest = useRef<AbortController | null>(null);
   useEffect(() => () => { operation.current += 1; activeRequest.current?.abort(); }, []);
   async function post(url: string, text: string) {
+    if (new TextEncoder().encode(text).length > MAX_HTTP_PAYLOAD_BYTES) throw new Error(HOSTED_LIMIT_MESSAGE);
     const controller = new AbortController(); activeRequest.current = controller;
     const timeout = window.setTimeout(() => controller.abort(), 30_000);
     try {
@@ -60,12 +63,12 @@ export default function SessionControls({ makePacket, getOriginals, onLoad }: { 
     setBusy(true); setMessage('Packaging original assessments and normalized source collections…');
     try {
       const input = JSON.stringify({ session: makePacket(), originals: getOriginals() });
-      if (new TextEncoder().encode(input).length > MAX_PACKAGE_BYTES) throw new Error('Evidence package exceeds 8 MiB; nothing was truncated.');
       const { response, body } = await post('/api/package', input);
       if (id !== operation.current) return;
       if (!response.ok) throw new Error(body.message ?? 'Evidence package could not be saved.');
-      const text = JSON.stringify(body, null, 2) + '\n';
-      if (new TextEncoder().encode(text).length > MAX_PACKAGE_BYTES) throw new Error('Evidence package exceeds 8 MiB; nothing was truncated.');
+      // Compact JSON keeps a hosted response within the same limit on later reimport.
+      const text = JSON.stringify(body);
+      if (new TextEncoder().encode(text).length > MAX_HTTP_PAYLOAD_BYTES) throw new Error('The downloaded result exceeds the 4 MiB hosted limit. Nothing was truncated or downloaded.');
       downloadBlob('ignis-evidence-package.json', new Blob([text], { type: 'application/json' }));
       setMessage('Evidence package downloaded: original assessments, recipes and normalized collections in one file. Original source binaries and historical engine code are not included.');
     } catch (e) { if (id === operation.current) setMessage(`Save stopped: ${(e as Error).message}`); }
@@ -75,7 +78,7 @@ export default function SessionControls({ makePacket, getOriginals, onLoad }: { 
     if (id !== operation.current) return;
     setMessage('Recomputing the saved recipes against this installation…');
     try {
-      if (new TextEncoder().encode(text).length > MAX_PACKAGE_BYTES) throw new Error('Evidence package exceeds 8 MiB.');
+      if (new TextEncoder().encode(text).length > MAX_HTTP_PAYLOAD_BYTES) throw new Error(HOSTED_LIMIT_MESSAGE);
       const original: unknown = JSON.parse(text);
       const isPackage = original !== null && typeof original === 'object' && 'schemaVersion' in original && original.schemaVersion === PACKAGE_SCHEMA;
       if (!isPackage && new TextEncoder().encode(text).length > MAX_SESSION_BYTES) throw new Error('session exceeds 2 MiB.');
@@ -106,7 +109,7 @@ export default function SessionControls({ makePacket, getOriginals, onLoad }: { 
         const selected = e.currentTarget.files?.[0]; e.currentTarget.value = '';
         if (!selected) return;
         const id = beginImport(); setMessage('Reading the selected session…');
-        if (selected.size > MAX_PACKAGE_BYTES) { stopImport(id, 'Nothing loaded: evidence package exceeds 8 MiB.'); return; }
+        if (selected.size > MAX_HTTP_PAYLOAD_BYTES) { stopImport(id, `Nothing loaded: ${HOSTED_LIMIT_MESSAGE}`); return; }
         try { await recheck(await selected.text(), id, selected); } catch { stopImport(id, 'The file could not be read. Nothing was loaded.'); }
       }} />
     </div>
@@ -147,6 +150,6 @@ export default function SessionControls({ makePacket, getOriginals, onLoad }: { 
         <button className="btn" onClick={() => downloadResearch('ignis-session-recheck.json', { savedChecksum: pending.session.checksum, checks: pending.checks, notice: pending.notice })}>Download recheck report</button>
         <button className="btn ghost" onClick={clearReview}>Keep current workspace</button></div>
     </div>}
-    <p className="hint">Up to 16 assessments. Packages: 8 MiB maximum, downloaded only. Sessions: 2 MiB maximum; browser saving is manual. Oversize work is never truncated. Checksums are not signatures.</p>
+    <p className="hint">Up to 16 assessments. Hosted package requests and responses: 4 MiB maximum. The local package library and browser-only data workbench support 8 MiB packages. Sessions: 2 MiB maximum; browser saving is manual. Oversize work is never truncated. Checksums are not signatures.</p>
   </section>;
 }

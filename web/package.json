@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "IGNIS: NASA microgravity fire research workspace (Emberfall, NASA Space Apps 2026). Research, data curation, design and code developed with Claude Code and OpenAI Codex assistance; see docs/AI_DISCLOSURE.md. Not affiliated with or endorsed by NASA.",
-  "engines": { "node": ">=22.13.0" },
+  "engines": { "node": ">=22.13.0 <23" },
   "scripts": {
     "dev": "next dev --webpack",
     "typecheck": "tsc --noEmit",
@@ -13,6 +13,9 @@
     "audit:endpoints": "tsx scripts/audit-endpoints.ts",
     "calculate:trajectory": "tsx scripts/calculate-trajectory.ts",
     "inspect:local": "tsx scripts/inspect-local-data.ts",
+    "compare:channels": "tsx scripts/compare-channels.ts",
+    "analyze:association": "tsx scripts/analyze-association.ts",
+    "check:citations": "tsx scripts/check-citations.ts",
     "test:unit": "vitest run tests/unit",
     "test:integration": "vitest run tests/integration",
     "test:exports": "vitest run tests/exports",
