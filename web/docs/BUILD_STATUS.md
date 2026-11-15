@@ -1,5 +1,9 @@
 # IGNIS current build status
 
+## Staging token security follow-up
+
+The owner requested a simple server environment-file handoff. The private file is ignored and supplied separately; the application has no Windows credential dependency. The backend withholds diagnostic prose and configured-secret echoes before observer logs or receipts, retaining accounting. **568 shared offline tests, affected-file lint, TypeScript and webpack build PASS.** No UI or scientific-data changes; the earlier browser checks below retain their scope. The exact designated token was absent from locally reachable Git history, changed public files and rebuilt browser assets. [Security receipt](../artifacts/refinement/token-security-check.json), [staging handoff](STAGING_TOKEN_HANDOFF.md). Deployment and host storage protections remain unverified.
+
 ## Current technical refinement — web-2026-11-15.13
 
 The landing remains `/`; the research dashboard is `/console`. Material legends now isolate or combine visible rows with stable axes, visible-view SVG/JSON exports and distinct analytical populations. Hosting preparation includes Node 22.x and a 4 MiB HTTP/package transfer cap; the owner is discussing hosting for ignisatlas.earth. New capabilities are the SAME-R statistical-relationship/deletion workflow with Python figure code, local paired-channel differences and replay, seven API citation-identity receipts, and a protected Cloudflare SI transport with authenticated confirmation. The accepted-runtime list remains empty after the partial live evaluation exposed errors. [Research and comparison](RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [statistical method](DETECTOR_ASSOCIATION_METHOD_2026-11-15.md), [actual SI outcome](SI_PREPARATION.md).

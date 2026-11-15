@@ -230,6 +230,33 @@ describe('bounded provider transport and durable quota', () => {
     const h = new Headers(args[1].headers); expect(h.has('authorization')).toBe(false);
     expect(h.get('cf-aig-no-wholesale')).toBe('true'); expect(h.get('cf-aig-collect-log')).toBe('false'); expect(h.get('cf-aig-skip-cache')).toBe('true'); expect(h.get('cf-aig-max-attempts')).toBe('1');
     const body = JSON.parse(args[1].body as string); expect(body.max_completion_tokens).toBe(512); expect(body.messages).toHaveLength(2);
+    expect(args[0]).not.toContain(c.token); expect(args[1].body).not.toContain(c.token);
+    expect(h.get('cf-aig-authorization')).toBe(`Bearer ${c.token}`);
+  });
+  it('withholds reflected credentials in provider metadata and errors before observers or HTTP receipts', async () => {
+    for (const response of [ok(undefined, { model: c.token }), Response.json({ error: { message: c.token }, usage: { prompt_tokens: 7, completion_tokens: 3 } }, { status: 401 }),
+      new Response(JSON.stringify(completion()), { headers: { 'x-request-id': c.signingKey } })]) {
+      const db = started(), observed = vi.fn(), transport = vi.fn(async () => response);
+      await expect(gatewayInterpret(c, GATEWAY_ROUTES, input, db, 'test', transport, undefined, observed)).rejects.toThrow('provider_response_invalid');
+      expect(transport).toHaveBeenCalledTimes(1); expect(observed).toHaveBeenCalledTimes(1);
+      const saved = observed.mock.calls[0][0];
+      expect(JSON.stringify(saved)).not.toContain(c.token); expect(JSON.stringify(saved)).not.toContain(c.signingKey);
+      expect(saved.json).toBeNull(); expect(saved.text).toBeNull(); expect(saved.modelReturned).toBeNull();
+      if (saved.httpStatus === 401) expect(saved.usage).toMatchObject({ inputTokens: 7, outputTokens: 3 });
+      expect(() => db.begin('another', 'different', 'binding', 100)).toThrow('gateway_halted');
+    }
+  });
+  it('removes token-bearing transport exception text while retaining the unresolved reservation', async () => {
+    const db = started(), observed = vi.fn(), transport = vi.fn(async () => { throw new Error(`Header rejected: Bearer ${c.token}`); });
+    await expect(gatewayInterpret(c, GATEWAY_ROUTES, input, db, 'test', transport, undefined, observed)).rejects.toThrow('provider_response_invalid');
+    expect(transport).toHaveBeenCalledTimes(1); expect(JSON.stringify(observed.mock.calls)).not.toContain(c.token);
+    expect(observed.mock.calls[0][0].failure).toBe('transport');
+    db.finish('test', false); expect(db.counts().held).toBe(1);
+  });
+  it('does not forward ordinary upstream diagnostic prose to research observers', async () => {
+    const db = started(), observed = vi.fn();
+    await expect(gatewayInterpret(c, [GATEWAY_ROUTES[0]], input, db, 'test', async () => Response.json({ error: { message: 'PRIVATE_UPSTREAM_DIAGNOSTIC' } }, { status: 400 }), undefined, observed)).rejects.toThrow();
+    expect(JSON.stringify(observed.mock.calls)).not.toContain('PRIVATE_UPSTREAM_DIAGNOSTIC');
   });
   it('allows at most two attempts on 429/503, respects cooldown, and never silently selects a paid model', async () => {
     const db = started(), transport = vi.fn(async () => Response.json({ error: 'busy' }, { status: 429, headers: { 'Retry-After': '300' } }));

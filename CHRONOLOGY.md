@@ -527,3 +527,8 @@ The user's 14 Nov brief ("We are moving IGNIS from specification into implementa
 - Reviewed three owner-named local research repositories read-only. Applied general lessons about display versus analysis populations, canonical artifacts and testing the actual rendered figure. No private content was copied into this repository or sent to Claude/Fable.
 - Found and repaired the hosting payload mismatch: shared HTTP/package transfer limit 4 MiB, source/local formats unchanged. Added exact-boundary/UTF-8/normal-package tests and a browser check proving oversized imports make no API request. Pinned Node 22.x.
 - Domain designated as ignisatlas.earth. Owner is discussing hosting and explicitly asked to wait. Hosting handoff is concrete; no external deployment, DNS change, purchase or submission has occurred.
+
+### 15 November 2026 — Private staging token handoff
+- Owner assigned deployment to a teammate, requested token protection, then clarified a simple server-only environment upload. Prepared the ignored staging file; removed the temporary Windows-specific mechanism and encrypted duplicate, preserving the original designated source.
+- Added exact configured-secret echo suppression and generic upstream diagnostics before research observers or HTTP receipts, preserving usage and unresolved reservations. Three added fake-secret security tests pass within the 568-test shared offline suite; no new live API call or runtime acceptance.
+- Checked the designated token against 1,047 locally reachable Git objects and 55 browser assets: zero occurrences. Hosting settings, server-disk encryption and external copies were not inspected. See the staging token handoff and security receipt.

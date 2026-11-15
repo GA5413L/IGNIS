@@ -1,0 +1,18 @@
+{
+  "gitObjectsChecked": 1047,
+  "gitTokenOccurrences": 0,
+  "clientAssetsChecked": 55,
+  "clientTokenOccurrences": 0,
+  "stagingEnvIgnored": true,
+  "scope": "Exact designated token, locally available Git refs and current client assets. Hosting settings and external copies not inspected.",
+  "checkedAt": "2026-11-15T17:41:38.632321+00:00",
+  "changedPublicFilesChecked": 9,
+  "offlineTestsPassed": 568,
+  "newFakeSecretTestsPassed": 3,
+  "lint": "PASS",
+  "typescript": "PASS",
+  "webpackBuild": "PASS",
+  "liveInference": "NOT RUN",
+  "stagingDeployment": "NOT RUN",
+  "windowsCredentialDependency": false
+}

@@ -1,5 +1,7 @@
 # Hosting handoff — 15 November 2026
 
+The owner has assigned deployment to a teammate and requested a simple server environment file for staging. See [staging token handoff](STAGING_TOKEN_HANDOFF.md). No Windows credential mechanism is required. Host settings and the deployed staging origin remain unverified here.
+
 **Recommended first attempt: Vercel Hobby, using the existing Next.js application with SI disabled.** This avoids a new runtime adapter and uses the Node 22 family already tested locally. Hobby is free within its limits; its terms restrict use to personal or non-commercial projects. This recommendation assumes the owner can use an eligible account and authorize access to the repository. No hosting account, deployment, custom domain or public URL was created or verified by this review. [Hobby plan](https://vercel.com/docs/plans/hobby), [Hobby terms, section 4](https://vercel.com/legal/terms).
 
 ## Exact Vercel import settings

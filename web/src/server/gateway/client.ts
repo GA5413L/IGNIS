@@ -54,7 +54,7 @@ export async function gatewayInterpret(c: GatewayConfig, routes: readonly Gatewa
     attempts++;
     let delay = 0, responseTooLarge = false, effectiveStatus: number | null = null;
     const cfg = routeConfig(route);
-    const result: ProviderCallResult = await callOpenAiCompatible(cfg, input, 'unused-by-gateway-transport', async (_url, init): Promise<TransportResponse> => {
+    const rawResult: ProviderCallResult = await callOpenAiCompatible(cfg, input, 'unused-by-gateway-transport', async (_url, init): Promise<TransportResponse> => {
       const url = `https://gateway.ai.cloudflare.com/v1/${c.account}/${c.gateway}/${route.path}`;
       // Never forward the direct-provider Authorization header. Only this fixed Cloudflare host receives the token.
       const signal = callerSignal ? AbortSignal.any([init.signal, callerSignal]) : init.signal;
@@ -76,11 +76,25 @@ export async function gatewayInterpret(c: GatewayConfig, routes: readonly Gatewa
         } catch (error) { if (error instanceof GatewayError) responseTooLarge = true; throw error; }
       } };
     });
+    // An upstream service/exception must not reflect our credentials into receipts or research logs.
+    // Preserve numeric accounting and unresolved transport classification while withholding text.
+    const serialized = JSON.stringify(rawResult);
+    const secretEcho = [c.token, c.signingKey, c.turnstileSecret].filter(Boolean)
+      .some((secret) => serialized.includes(JSON.stringify(secret).slice(1, -1)));
+    const result: ProviderCallResult = secretEcho ? { ...rawResult, ok: false, retryable: false,
+      failure: rawResult.failure ?? 'incomplete', json: null, text: null, modelReturned: null, providerReturned: null,
+      requestId: null, stopReason: null, errorText: 'Sensitive upstream details withheld.' }
+      : { ...rawResult, errorText: rawResult.errorText === null ? null : 'Upstream diagnostic withheld.' };
     store.settle(attemptId, result.ok ? 'success' : result.failure ?? 'invalid', result.usage.inputTokens, result.usage.outputTokens, result.usage.reportedCostUsd);
     observeAttempt?.(result);
     if (result.usage.reportedCostUsd !== null && result.usage.reportedCostUsd > 0) throw new GatewayError('unexpected_reported_cost');
     if (result.usage.outputTokens !== null && result.usage.outputTokens > LIMIT.outputTokens) {
       store.halt('output_budget_violation'); throw new GatewayError('upstream_output_limit');
+    }
+    if (secretEcho) {
+      if ([401, 402, 403].includes(effectiveStatus ?? 0)) store.fail(route.id, effectiveStatus, delay);
+      store.halt('sensitive_upstream_response');
+      throw new GatewayError('provider_response_invalid', 502);
     }
     if (responseTooLarge) throw new GatewayError('upstream_response_too_large', 502);
     if (callerSignal?.aborted) throw new GatewayError('request_cancelled', 499);
