@@ -1,5 +1,9 @@
 # IGNIS current build status
 
+**Current patch: web-2026-11-15.7.** [Competitive strategy and visual refinement](COMPETITIVE_STRATEGY_AND_VISUAL_REFINEMENT_2026-11-15.md) records 14 refreshed public heads, six live views, official award fit and a critical Claude discussion. The story now exposes the computed insight immediately, pooled/flight views and both preset outcomes. Thirty affected browser checks, TypeScript, lint and webpack build pass; 17 curated files remain byte-identical. Engine .5, renderer .5 and descriptive method .2 are unchanged. The .6 verification below is a prior baseline, not a new full-suite run. Runtime interpretation and website deployment remain held.
+
+## Prior functional patch
+
 **Current patch: web-2026-11-15.6.** [Claude-assisted walkthrough and evidence handoff](EVIDENCE_HANDOFF_AND_GUIDED_EXAMPLE_2026-11-15.md): computed `/example`, original assessments plus normalized collections in one file, historical/current separation, exact imported-file downloads, request cancellation/timeouts, Markdown structure protection and catalogue-readiness repair. **327 team checks and 61 browser checks pass**, one intentional duplicate skipped; affected tests were rerun after fixes. Production build/TypeScript/lint pass; six new visual states are clean. Engine .5, renderer .5, descriptive method .2 and unchanged catalogue r2. Two authorized Fable helper calls were development review; live application interpretation remains unavailable. The detailed .5 audit below is the preceding baseline.
 
 **Team handoff:** the owner authorized pushing the reviewed source to `GA5413L/IGNIS` on 15 November 2026. [Contributor setup](../../CONTRIBUTING.md) covers portable installation and the 316-check team suite. The prior local review ZIP remains a dated audit artifact; the shared checkout additionally contains handoff documentation, exclusion rules and the team test command. Website deployment and runtime acceptance remain held.

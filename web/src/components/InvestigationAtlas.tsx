@@ -11,8 +11,8 @@ export function ResearchLanding({ onConditions, onDetectors, onRobustness, onBri
         <p className="eyebrow"><span className="live-dot" /> NASA evidence · Independent research workspace</p>
         <h1 id="hero-title">Understand fire.<br /><em>Beyond Earth.</em></h1>
         <p>Trace experiments, compare their conditions, and build research briefs with sources you can inspect.</p>
-        <div className="row"><button className="btn primary" onClick={onConditions}>Compare atmospheres <span aria-hidden="true">↗</span></button><button className="btn hero-secondary" onClick={onBrief}>Build a research brief</button></div>
-        <button className="linkbtn hero-anchor" onClick={onExample}>New here? Follow a worked example <span aria-hidden="true">↗</span></button>
+        <div className="row"><button className="btn primary" onClick={onExample}>See a finding change <span aria-hidden="true">↗</span></button><button className="btn hero-secondary" onClick={onBrief}>Build a research brief</button></div>
+        <button className="linkbtn hero-anchor" onClick={onConditions}>Compare the published atmosphere cases <span aria-hidden="true">↗</span></button>
       </div>
       <div className="hero-figure">
         <div className="figure-label"><span>SAFFIRE IV–VI</span><span>07 published cases</span></div>

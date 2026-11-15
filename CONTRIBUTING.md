@@ -1,6 +1,6 @@
 # Working on IGNIS
 
-The shared application is in `web/`. Current interaction build: **web-2026-11-15.6**. Start with [the evidence-handoff patch](web/docs/EVIDENCE_HANDOFF_AND_GUIDED_EXAMPLE_2026-11-15.md), [the scientific audit](web/docs/CODEBASE_AUDIT_AND_COMPETITOR_DELTA_2026-11-15.md), [build status](web/docs/BUILD_STATUS.md) and [scientific working rules](CLAUDE.md).
+The shared application is in `web/`. Current interaction build: **web-2026-11-15.7**. Start with [the competitive strategy and visual refinement](web/docs/COMPETITIVE_STRATEGY_AND_VISUAL_REFINEMENT_2026-11-15.md), [the evidence-handoff patch](web/docs/EVIDENCE_HANDOFF_AND_GUIDED_EXAMPLE_2026-11-15.md), [build status](web/docs/BUILD_STATUS.md) and [scientific working rules](CLAUDE.md).
 
 ## Clone and run
 

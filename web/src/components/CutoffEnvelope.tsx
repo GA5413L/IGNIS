@@ -13,19 +13,19 @@ const signLabel: Record<CutoffStability, string> = {
 };
 const bounds = (b: CutoffDifferenceEnvelope) => b.denominator ? `[${b.lowerNumerator}, ${b.upperNumerator}] / ${b.denominator}` : 'Undefined';
 
-export function EnvelopePlot({ result }: { result: CutoffEnvelopeResult }) {
+export function EnvelopePlot({ result, pooledOnly = false }: { result: CutoffEnvelopeResult; pooledOnly?: boolean }) {
   const plotId = useId();
-  const groups = [{ label: 'Pooled', summary: result.summary }, ...result.byFlight.map((f) => ({ label: `Flight ${f.flight}`, summary: f.summary }))];
+  const groups = [{ label: 'Pooled', summary: result.summary }, ...(pooledOnly ? [] : result.byFlight.map((f) => ({ label: `Flight ${f.flight}`, summary: f.summary })))];
   const x = (n: number) => 360 + n * 220;
   return <svg className="scientific-chart" viewBox="0 0 670 260" role="img" aria-labelledby={`${plotId}-title ${plotId}-desc`}>
-    <title id={`${plotId}-title`}>Exact difference ranges over the declared cutoff rectangle</title>
+    <title id={`${plotId}-title`}>{pooledOnly ? 'Pooled range only; flight ranges hidden in this view' : 'Exact difference ranges over the declared cutoff rectangle'}</title>
     <desc id={`${plotId}-desc`}>Solid intervals show the minimum and maximum A-minus-B at-or-above fractions on jointly finite source rows. Faint intervals include unrestricted completions of unavailable readings, on a different denominator. Neither interval is a confidence interval.</desc>
     {[-1, -.5, 0, .5, 1].map((n) => <g key={n}><line x1={x(n)} x2={x(n)} y1="22" y2="190" className={n === 0 ? 'target-line' : 'plot-grid'} /><text x={x(n)} y="215" textAnchor="middle">{n > 0 ? '+' : ''}{n}</text></g>)}
     {groups.map((g, i) => {
       const b = g.summary.pairedDifferenceEnvelope, c = g.summary.completionDifferenceEnvelope, y = 54 + i * 54;
       return <g key={g.label}><text x="118" y={y + 5} textAnchor="end">{g.label}</text>
-        {c.lowerFraction !== null && c.upperFraction !== null && <line x1={x(c.lowerFraction)} x2={x(c.upperFraction)} y1={y + 11} y2={y + 11} stroke="#8a9a9e" strokeWidth="4" />}
-        {b.lowerFraction !== null && b.upperFraction !== null ? <><line x1={x(b.lowerFraction)} x2={x(b.upperFraction)} y1={y} y2={y} stroke="#087b72" strokeWidth="6" /><circle cx={x(b.lowerFraction)} cy={y} r="4" fill="#087b72" /><circle cx={x(b.upperFraction)} cy={y} r="4" fill="#087b72" /></> : <text x="360" y={y} textAnchor="middle">No finite pairs</text>}
+        {c.lowerFraction !== null && c.upperFraction !== null && <line className="envelope-completion" x1={x(c.lowerFraction)} x2={x(c.upperFraction)} y1={y + 11} y2={y + 11} stroke="#8a9a9e" strokeWidth="4" />}
+        {b.lowerFraction !== null && b.upperFraction !== null ? <g className="envelope-finite"><line x1={x(b.lowerFraction)} x2={x(b.upperFraction)} y1={y} y2={y} stroke="#087b72" strokeWidth="6" /><circle cx={x(b.lowerFraction)} cy={y} r="4" fill="#087b72" /><circle cx={x(b.upperFraction)} cy={y} r="4" fill="#087b72" /></g> : <text x="360" y={y} textAnchor="middle">No finite pairs</text>}
       </g>;
     })}
     <text x="360" y="247" textAnchor="middle" className="axis-caption">A fraction − B fraction · exact selected-range bounds</text>

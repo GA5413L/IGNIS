@@ -4,12 +4,14 @@
 
 IGNIS connects NASA fire experiment profiles, published atmosphere coordinates, stored detector readings and source-based model assessments. Working project name: IGNIS. Team: Emberfall. Independent NASA Space Apps 2026 project; not affiliated with or endorsed by NASA.
 
-**Current local build: web-2026-11-15.6.** The [Claude-assisted improvement report](docs/EVIDENCE_HANDOFF_AND_GUIDED_EXAMPLE_2026-11-15.md) covers the computed walkthrough, single-file evidence packages, original-byte preservation and export/race repairs. The [prior adversarial audit](docs/CODEBASE_AUDIT_AND_COMPETITOR_DELTA_2026-11-15.md) remains the scientific baseline. Current verification: 327 offline team checks and 61 production browser checks pass (one duplicate skipped, final results combined with the affected rerun); production build, TypeScript and lint pass. Six new visual states have no page/console errors or whole-page overflow. Claude helper calls were development reviews; runtime interpretation remains unavailable.
+**Current local build: web-2026-11-15.7.** The [competitive strategy and visual refinement](docs/COMPETITIVE_STRATEGY_AND_VISUAL_REFINEMENT_2026-11-15.md) compares 14 public projects, six live interfaces and all ten current awards. The worked example now leads with its computed finding, pooled/flight views and both preset outcomes. The [evidence-package report](docs/EVIDENCE_HANDOFF_AND_GUIDED_EXAMPLE_2026-11-15.md) remains the functional baseline. Thirty affected production browser checks pass, along with TypeScript, lint and the webpack build; all 17 curated source files are unchanged. The .6 baseline passed 327 offline checks and 61 browser checks (one duplicate skipped); those totals are not new runs for this UI patch. Runtime interpretation remains unavailable.
 
 ## See the interface
 
 - [Open the computed worked example](http://127.0.0.1:3000/example)
-- [Current desktop walkthrough](artifacts/previews/evidence-handoff/desktop-example.png)
+- [Current desktop research story](artifacts/previews/research-story/desktop-first-screen.png)
+- [Current mobile research story](artifacts/previews/research-story/mobile-flights.png)
+- [Previous desktop walkthrough](artifacts/previews/evidence-handoff/desktop-example.png)
 - [Current mobile evidence package](artifacts/previews/evidence-handoff/mobile-package.png)
 - [Current revision detail](artifacts/previews/audit-patch/desktop-revision.png)
 - [Current mobile notebook](artifacts/previews/audit-patch/mobile-notebook.png)

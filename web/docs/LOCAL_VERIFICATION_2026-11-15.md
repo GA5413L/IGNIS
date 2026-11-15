@@ -2,7 +2,14 @@
 
 Assistant-performed checks in the E: source workspace and F: tooling mirror establish local software behavior, not independent scientific validation, competitor superiority or adoption.
 
-## Current workflow patch: web-2026-11-15.6
+## Current visual refinement: web-2026-11-15.7
+
+- Thirty affected production browser checks pass across desktop and mobile: guided example/package handoff, scenarios, source identity and research workflows. The pooled-only view does not remove flight rows from the analysis/export. Both range presets continue to use the authoritative method.
+- TypeScript, ESLint and webpack production build pass. All 17 curated source files match build .6 byte for byte. Engine .5, renderer .5, descriptive method .2 and catalogue r2 are unchanged.
+- Six new visual states were inspected. The first capture exposed small mobile chart labels and an unnecessarily wide exact-ranges table; these were corrected and the final build/captures rechecked. Logs and receipts are in `_raw/strategy_refinement_2026-11-15/`.
+- Prior full-suite totals below remain dated baselines. The change is a presentation/workflow refinement, not a newly validated physical model or new independent research evaluation.
+
+## Prior workflow patch: web-2026-11-15.6
 
 - **327/327 offline team checks pass** in 15 files. The 25 private-fixture provider checks are excluded from this public team command; no runtime acceptance is claimed. TypeScript, production webpack build and application/affected-test lint pass.
 - **61 browser checks pass**, one intentional duplicate skipped, combining the latest result per test/viewport from the full run and the final affected rerun. That rerun passed 21 checks with one duplicate skip. Installed Chrome: desktop 1366×768 and mobile width 375×812. No competitor service or provider was invoked by these checks.

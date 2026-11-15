@@ -4,9 +4,14 @@ import { readFileSync } from 'node:fs';
 test('guided analysis changes its conclusion and opens exactly the selected lab settings', async ({ page }) => {
   const errors: string[] = []; page.on('pageerror', (e) => errors.push(e.message));
   await page.goto('/example');
-  await expect(page.getByRole('heading', { name: 'Can a pooled result hide a different story?' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'One pooled result. Two different stories.' })).toBeVisible();
   const ranges = page.getByRole('region', { name: 'Worked example exact ranges' });
   await expect(ranges).toContainText('[66, 78] / 133'); await expect(ranges).toContainText('[-6, -3] / 25');
+  await expect(page.locator('.example-finding')).toContainText('opposite signs');
+  await page.getByRole('button', { name: 'Pooled only', exact: true }).click();
+  await expect(page.getByRole('img', { name: /Pooled range only/ })).toBeVisible();
+  await expect(ranges).toContainText('[-6, -3] / 25');
+  await page.getByRole('button', { name: 'Separate the flights', exact: true }).click();
   await expect(page.locator('.example-finding')).toContainText('opposite signs');
   await page.getByRole('radio', { name: '0–5 V · wider range' }).check();
   await expect(page.locator('.example-finding')).toContainText('either sign');
