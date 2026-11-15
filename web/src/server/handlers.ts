@@ -12,7 +12,7 @@ import { runtimeStatus } from './runtime';
 import { ResearchSelectionsSchema } from '../core/researchSelections';
 import { RevisionParentSchema } from '../core/revisionParent';
 
-export const BUILD_REVISION = 'web-2026-11-15.7';
+export const BUILD_REVISION = 'web-2026-11-15.8';
 // A revision carries one immutable parent with up to four source-bound analyses.
 // The all-analysis source snapshot can exceed 1 MiB; retain a finite 2 MiB local-only cap.
 // This does not change interpreter/provider input, output, probe or spend limits.

@@ -244,3 +244,10 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
 - **Effect:**
   - The 1.27-cm μg curve below 18.5 % rests on a reburned specimen, as far as the tables show.
   - This is a traceability note, **not** a claim that the figure is wrong. The authors describe their μg data as "not systematically taken".
+
+### C-28: RIES24 printed pressure matrix versus captions (15 Nov 2026)
+- **Source:** Ries, Eigenbrod and Meyer (2024), DOI 10.1016/j.proci.2024.105358; full publisher PDF SHA-256 `3c4fa8278cae1da73bc15a4b5443d927006a8150b3d8a83d4c79582f127008f2`.
+- **Confirmed as printed:** page 4 Table 1 places oxygen-series X cells under 70 kPa. Its pressure columns are 60, 70, 75, 90 and 101.3 kPa. Figure 6's caption instead describes an oxygen series at 75 kPa. Page 3 Figure 3 describes 35.4% oxygen / 75 kPa / 100 mm/s, absent from the printed X cells.
+- **Unresolved:** which pressure values correspond to the actual runs. This record does not correct 70 to 75, infer additional runs, or claim that the paper is scientifically invalid. Author clarification has not been requested.
+- **Preservation:** `web/data/design-studies/ries2024.json` stores all 12 X cells exactly as printed and one O flow range; discrete flow runs remain unknown. No `research/data` transcription or frozen r2 record is changed.
+- **Effect on the new audit:** the proof relies on section 2.2's restriction that only the 35.4% / 60 kPa line varies flow and other microgravity tests use 100 mm/s. Both pressure readings stay on that plane, so the nominal-design zero-basis proof is invariant. The conflict still accompanies every condition classification. This is not a proof about the combined 1g/microgravity fit or about actual coordinate uncertainty.

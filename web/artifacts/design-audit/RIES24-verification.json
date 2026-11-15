@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "ignis-design-audit-verification-1",
+  "certificateSha256": "da15a0f43116f3e95e60ed710537a3164c442e8bc68d3fa56310940ef8914381",
+  "arithmetic": "PASS",
+  "method": "Python Fraction, Gram principal minors, exact nullspace residuals and monomial vanishing factors",
+  "classes": {
+    "twoTerm": {
+      "rank": 2,
+      "nullity": 0,
+      "distinctCoordinateResponseConstraints": 0
+    },
+    "expandedFiveTerm": {
+      "rank": 2,
+      "nullity": 3,
+      "distinctCoordinateResponseConstraints": 0
+    }
+  },
+  "mutationsRejected": [
+    "rank",
+    "matrix",
+    "class",
+    "identification_claim",
+    "reduced_matrix"
+  ],
+  "publisherPdf": {
+    "status": "PASS",
+    "sha256": "3c4fa8278cae1da73bc15a4b5443d927006a8150b3d8a83d4c79582f127008f2",
+    "tableXCells": 12,
+    "tableOCells": 1,
+    "plottedValuesDigitized": 0
+  },
+  "physicalValidation": "NOT RUN",
+  "independentHumanValidation": false
+}

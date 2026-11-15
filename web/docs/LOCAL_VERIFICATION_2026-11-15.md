@@ -2,7 +2,16 @@
 
 Assistant-performed checks in the E: source workspace and F: tooling mirror establish local software behavior, not independent scientific validation, competitor superiority or adoption.
 
-## Current visual refinement: web-2026-11-15.7
+## Current technical patch: web-2026-11-15.8
+
+- **363 shared offline tests pass**, including 36 new source-bound design/math/API checks. Private provider fixtures remain excluded; no runtime calls were made. TypeScript, ESLint and webpack production build pass.
+- **Ten production/source checks pass:** index/source snapshot, index/post cache headers, production certificate equality with the CLI, gravity/query/origin/body boundaries, current build plus preserved registry/runtime, and all 17 prior curated-file hashes. Local server now runs .8.
+- The Python Fraction verifier recomputes rank through Gram principal minors, checks exact nullspace residuals and rejects five deliberate corruptions of rank, matrix, class, identification claim and reduced matrix. It agrees with the TypeScript two-point certificate: rank 2/nullity 0 for two terms, rank 2/nullity 3 for five terms.
+- Direct PDF text-coordinate checking agrees with all 12 Table 1 X cells and the O cell. The fixed-flow method sentence and exact PDF hash match. No plotted data are digitized. See [certificate/receipt and reproduction](EXPERIMENTAL_DESIGN_AUDIT_2026-11-15.md).
+- Engine .5, renderer .5, descriptive method .2 and catalogue r2 remain unchanged. No UI source, frozen packet, original research/data transcription or existing assessment/export schema was changed. No fresh browser/visual review is claimed.
+- Physical validation, actual candidate experiments, coordinate-uncertainty analysis, independent human review and comparative competitor/user evaluation are **NOT RUN**. Receipts are retained under `_raw/technical_core_2026-11-15/`.
+
+## Prior visual refinement: web-2026-11-15.7
 
 - Thirty affected production browser checks pass across desktop and mobile: guided example/package handoff, scenarios, source identity and research workflows. The pooled-only view does not remove flight rows from the analysis/export. Both range presets continue to use the authoritative method.
 - TypeScript, ESLint and webpack production build pass. All 17 curated source files match build .6 byte for byte. Engine .5, renderer .5, descriptive method .2 and catalogue r2 are unchanged.

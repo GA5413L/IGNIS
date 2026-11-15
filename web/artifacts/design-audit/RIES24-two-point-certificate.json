@@ -1,0 +1,463 @@
+{
+  "schemaVersion": "ignis-design-audit-1",
+  "methodRevision": "design-audit-2026-11-15.1",
+  "claimType": "nominal_design_rank",
+  "request": {
+    "schemaVersion": "ignis-design-audit-request-1",
+    "studyId": "RIES24",
+    "gravity": "microgravity",
+    "candidates": [
+      {
+        "id": "algebraic-A",
+        "oxygenVolPercent": "28.3",
+        "pressureKPa": "60",
+        "flowMmS": "50"
+      },
+      {
+        "id": "algebraic-B",
+        "oxygenVolPercent": "35.4",
+        "pressureKPa": "75",
+        "flowMmS": "50"
+      }
+    ]
+  },
+  "sourceStudy": {
+    "schemaVersion": "ignis-design-study-1",
+    "revision": "ries24-design-2026-11-15.1",
+    "id": "RIES24",
+    "title": "Effect of oxygen concentration, pressure, and opposed flow velocity on the flame spread along thin PMMA sheets",
+    "authors": [
+      "Hans-Christoph Ries",
+      "Christian Eigenbrod",
+      "Florian Meyer"
+    ],
+    "doi": "10.1016/j.proci.2024.105358",
+    "url": "https://doi.org/10.1016/j.proci.2024.105358",
+    "year": 2024,
+    "source": {
+      "pdfSha256": "3c4fa8278cae1da73bc15a4b5443d927006a8150b3d8a83d4c79582f127008f2",
+      "pdfBytes": 2105330,
+      "pdfPages": 7,
+      "access": "user_supplied_publisher_full_text",
+      "reviewDate": "2026-11-15",
+      "review": "assistant_checked",
+      "independentHumanReview": false,
+      "rights": "Article states CC BY on page 1; source PDF is not redistributed here.",
+      "extraction": "Printed matrix symbols and method text; no plotted measurements digitized."
+    },
+    "scope": {
+      "gravity": "microgravity",
+      "material": "Cast PMMA, CLAREX",
+      "sampleDimensionsMm": [
+        "50",
+        "80",
+        "0.2"
+      ],
+      "freeBurningWidthMm": "40",
+      "opposedFlow": true,
+      "dropDurationSeconds": "9.3",
+      "measurementOperator": {
+        "id": "RIES24_IR_603K_3_7S",
+        "quantity": "Pyrolysis-front propagation rate, not visible flame-boundary velocity",
+        "thresholdK": "603",
+        "comparison": "strictly_greater_than",
+        "scanDirection": "From the side facing away from the igniter",
+        "parallelLines": 11,
+        "lineSpacingMm": "1.9",
+        "windowSeconds": [
+          "3",
+          "7"
+        ],
+        "estimator": "Linear regression of the mean front position across the 11 lines",
+        "locator": "PDF/printed page 3, section 2.1 and Figure 2"
+      },
+      "coordinateMeaning": "Reported nominal oxygen volume percent, pressure in kPa and inflow in mm/s; actual coordinate uncertainty is not available.",
+      "flowMeasurement": "Calculated from metered gas mass flows, pressure and channel cross section; not a direct local velocity measurement (page 2).",
+      "replication": "Section 2.2 generally reports one experiment per parameter. Error bars describe within-experiment deviations; multiple runs, where present, are shown separately.",
+      "excluded": "1g experiments: natural convection, with 200 mm/s assumed in Figure 10. These are not additional prescribed-flow microgravity observations."
+    },
+    "design": {
+      "units": {
+        "oxygenVolPercent": "vol%",
+        "pressureKPa": "kPa",
+        "flowMmS": "mm/s"
+      },
+      "marginalBounds": {
+        "oxygenVolPercent": [
+          "21",
+          "35.4"
+        ],
+        "pressureKPa": [
+          "60",
+          "101.3"
+        ],
+        "flowMmS": [
+          "30",
+          "200"
+        ]
+      },
+      "fixedFlowMmS": "100",
+      "tableXConditions": [
+        {
+          "id": "X01",
+          "oxygenVolPercent": "21.0",
+          "pressureKPa": "70.0"
+        },
+        {
+          "id": "X02",
+          "oxygenVolPercent": "21.0",
+          "pressureKPa": "101.3"
+        },
+        {
+          "id": "X03",
+          "oxygenVolPercent": "23.6",
+          "pressureKPa": "70.0"
+        },
+        {
+          "id": "X04",
+          "oxygenVolPercent": "23.6",
+          "pressureKPa": "90.0"
+        },
+        {
+          "id": "X05",
+          "oxygenVolPercent": "26.5",
+          "pressureKPa": "70.0"
+        },
+        {
+          "id": "X06",
+          "oxygenVolPercent": "26.5",
+          "pressureKPa": "75.0"
+        },
+        {
+          "id": "X07",
+          "oxygenVolPercent": "28.3",
+          "pressureKPa": "60.0"
+        },
+        {
+          "id": "X08",
+          "oxygenVolPercent": "28.3",
+          "pressureKPa": "70.0"
+        },
+        {
+          "id": "X09",
+          "oxygenVolPercent": "28.3",
+          "pressureKPa": "75.0"
+        },
+        {
+          "id": "X10",
+          "oxygenVolPercent": "28.3",
+          "pressureKPa": "90.0"
+        },
+        {
+          "id": "X11",
+          "oxygenVolPercent": "28.3",
+          "pressureKPa": "101.3"
+        },
+        {
+          "id": "X12",
+          "oxygenVolPercent": "35.4",
+          "pressureKPa": "70.0"
+        }
+      ],
+      "tableOFlowSweep": {
+        "oxygenVolPercent": "35.4",
+        "pressureKPa": "60",
+        "rangeMmS": [
+          "30",
+          "200"
+        ],
+        "exactRunVelocities": null,
+        "runCount": null,
+        "locator": "PDF/printed page 4, Table 1, O cell and section 2.2"
+      },
+      "tableLocator": "PDF/printed page 4, Table 1; X denotes 100 mm/s, O denotes the 30-200 mm/s flow sweep",
+      "supportStatement": "Section 2.2 restricts the flow sweep to 35.4% oxygen at 60 kPa; other microgravity tests use 100 mm/s.",
+      "supportStatementLocator": "PDF/printed page 4, section 2.2, first paragraph",
+      "outerSupport": "Within the reported marginal ranges: u=100 OR (x=35.4 AND p=60). This contains the reported nominal design; it is not a filled measurement surface.",
+      "center": {
+        "oxygenVolPercent": "35.4",
+        "pressureKPa": "60",
+        "flowMmS": "100"
+      }
+    },
+    "conflicts": [
+      {
+        "id": "RIES24-C01",
+        "status": "unresolved_publication_conflict",
+        "description": "Table 1 prints several oxygen-series X cells under 70 kPa; Figure 6 describes a 75 kPa oxygen series. Figure 3 describes 35.4% oxygen at 75 kPa, a condition not listed as X in Table 1.",
+        "locators": [
+          "PDF/printed page 4, Table 1 and Figure 6 caption",
+          "PDF/printed page 3, Figure 3 caption"
+        ],
+        "policy": "Preserve Table 1 exactly. Do not replace 70 with 75, manufacture runs or assert that an unlisted point was never measured.",
+        "nominalSupportCertificateInvariant": true,
+        "reason": "Both pressure readings remain on the u=100 plane; the certificate depends on section 2.2, not a corrected pressure matrix."
+      }
+    ],
+    "notIncluded": [
+      "Measured response values",
+      "Digitized figure points",
+      "Enumerated flow-sweep runs",
+      "Author model evaluation",
+      "Model fitting",
+      "1g rows",
+      "Physical predictions"
+    ]
+  },
+  "certificate": {
+    "scope": "Reported microgravity nominal design only; not the combined 1g/microgravity data behind the published fit.",
+    "normalizedCoordinates": {
+      "a": "x/35.4 - 1",
+      "b": "p/60 - 1",
+      "c": "u/100 - 1"
+    },
+    "coordinateUnits": {
+      "oxygenVolPercent": "vol%",
+      "pressureKPa": "kPa",
+      "flowMmS": "mm/s"
+    },
+    "modelClass": "For a specified fixed baseline f0, f_theta = f0 + sum(theta_j * basis_j). Theta has the response units. These are deviations from the baseline, not a claim that its mixed partials are zero.",
+    "symbolicZeroProof": [
+      "At u=100, c=0, so all declared basis terms vanish for any oxygen and pressure.",
+      "At x=35.4 and p=60, a=b=0, so all declared basis terms vanish for every flow velocity.",
+      "Section 2.2 places the reported microgravity nominal design in this union. Therefore restriction of f_theta to that design is constant in theta for a fixed f0."
+    ],
+    "reportedDesignRank": 0,
+    "minimumUnidentifiedDirectionsInTwoTermClass": 2,
+    "expandedClassUnidentifiedDirections": 5,
+    "proofUsesOuterSupportOnly": true,
+    "sourcePressureConflictChangesThisProof": false,
+    "reportedFlowRunEnumerationRequired": false,
+    "fixedFlowPlaneIsFilledWithMeasurements": false,
+    "largerUnidentifiedFamiliesExist": true
+  },
+  "candidateCount": 2,
+  "uniqueCoordinateCount": 2,
+  "duplicateCoordinateGroups": [],
+  "candidates": [
+    {
+      "input": {
+        "id": "algebraic-A",
+        "oxygenVolPercent": "28.3",
+        "pressureKPa": "60",
+        "flowMmS": "50"
+      },
+      "status": "hypothetical_coordinate_only",
+      "centered": {
+        "a": "-71/354",
+        "b": "0",
+        "c": "-1/2"
+      },
+      "interactionRow": [
+        "71/708",
+        "0",
+        "-71/1416",
+        "0",
+        "0"
+      ],
+      "withinMarginalRanges": {
+        "oxygenVolPercent": true,
+        "pressureKPa": true,
+        "flowMmS": true
+      },
+      "insideMarginalBox": true,
+      "onFixedFlowPlane": false,
+      "onFlowSweepLine": false,
+      "withinReportedOuterSupport": false,
+      "classification": "inside_marginal_box_outside_reported_outer_support",
+      "tableCellId": null,
+      "exactFlowSweepRunConfirmed": false,
+      "measurementAvailableInThisModule": false,
+      "sourceConflictIds": [
+        "RIES24-C01"
+      ]
+    },
+    {
+      "input": {
+        "id": "algebraic-B",
+        "oxygenVolPercent": "35.4",
+        "pressureKPa": "75",
+        "flowMmS": "50"
+      },
+      "status": "hypothetical_coordinate_only",
+      "centered": {
+        "a": "0",
+        "b": "1/4",
+        "c": "-1/2"
+      },
+      "interactionRow": [
+        "0",
+        "-1/8",
+        "0",
+        "1/16",
+        "0"
+      ],
+      "withinMarginalRanges": {
+        "oxygenVolPercent": true,
+        "pressureKPa": true,
+        "flowMmS": true
+      },
+      "insideMarginalBox": true,
+      "onFixedFlowPlane": false,
+      "onFlowSweepLine": false,
+      "withinReportedOuterSupport": false,
+      "classification": "inside_marginal_box_outside_reported_outer_support",
+      "tableCellId": null,
+      "exactFlowSweepRunConfirmed": false,
+      "measurementAvailableInThisModule": false,
+      "sourceConflictIds": [
+        "RIES24-C01"
+      ]
+    }
+  ],
+  "classes": {
+    "twoTerm": {
+      "terms": [
+        "a*c",
+        "b*c"
+      ],
+      "classIsTruncation": true,
+      "columns": 2,
+      "rows": [
+        [
+          "71/708",
+          "0"
+        ],
+        [
+          "0",
+          "-1/8"
+        ]
+      ],
+      "rank": 2,
+      "nullity": 0,
+      "pivotColumns": [
+        0,
+        1
+      ],
+      "freeColumns": [],
+      "rref": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "nullspace": [],
+      "reportedDesignRank": 0,
+      "rankGainOverReportedNominalDesign": 2,
+      "remainingUnidentifiedDirections": 0,
+      "coefficientsIdentifiableConditionalOnFixedBaseline": true,
+      "distinctCoordinateResponseConstraints": 0,
+      "extraRowsBeyondRank": 0,
+      "noDistinctCoordinateFalsificationConstraint": true,
+      "statisticalResidualDegreesOfFreedom": null,
+      "conclusion": "Full column rank only in this declared finite class, conditional on a fixed baseline and the source measurement operator.",
+      "validation": "NOT RUN: no measured candidate responses, independent runs, uncertainty model or physical validation are provided."
+    },
+    "expandedFiveTerm": {
+      "terms": [
+        "a*c",
+        "b*c",
+        "a*c^2",
+        "b*c^2",
+        "a*b*c"
+      ],
+      "classIsTruncation": true,
+      "columns": 5,
+      "rows": [
+        [
+          "71/708",
+          "0",
+          "-71/1416",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1/8",
+          "0",
+          "1/16",
+          "0"
+        ]
+      ],
+      "rank": 2,
+      "nullity": 3,
+      "pivotColumns": [
+        0,
+        1
+      ],
+      "freeColumns": [
+        2,
+        3,
+        4
+      ],
+      "rref": [
+        [
+          "1",
+          "0",
+          "-1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "-1/2",
+          "0"
+        ]
+      ],
+      "nullspace": [
+        [
+          "1/2",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/2",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "reportedDesignRank": 0,
+      "rankGainOverReportedNominalDesign": 2,
+      "remainingUnidentifiedDirections": 3,
+      "coefficientsIdentifiableConditionalOnFixedBaseline": false,
+      "distinctCoordinateResponseConstraints": 0,
+      "extraRowsBeyondRank": 0,
+      "noDistinctCoordinateFalsificationConstraint": true,
+      "statisticalResidualDegreesOfFreedom": null,
+      "conclusion": "At least one coefficient direction remains invisible in this declared finite class.",
+      "validation": "NOT RUN: no measured candidate responses, independent runs, uncertainty model or physical validation are provided."
+    }
+  },
+  "conditions": [
+    "Baseline held fixed; its parameters or discrepancies are not estimated here.",
+    "Same material, geometry and 603 K / 3-7 s IR measurement operator.",
+    "Exact reported nominal coordinates; realized coordinate uncertainty and numerical conditioning are not assessed.",
+    "Any prospective scalar response would have to exist; extinction or unsteady propagation can require a different/censored endpoint."
+  ],
+  "boundaries": {
+    "physicalPredictionProvided": false,
+    "modelFitPerformed": false,
+    "experimentRecommended": false,
+    "actualRunCountKnown": false,
+    "independentValidation": false,
+    "uncertaintyQuantified": false,
+    "note": "Algebraic rank does not establish physical feasibility, safety, precision, predictive validity, optimality or identification beyond the declared class. Repeats at old nominal coordinates cannot resolve these directions. Nonzero realized-coordinate jitter would require a separate conditioning and measurement-error analysis."
+  }
+}

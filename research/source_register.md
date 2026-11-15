@@ -1,5 +1,11 @@
 # Source register
 
+## Full-text access update: RIES24, 15 November 2026
+
+The owner supplied the full publisher PDF of Ries, Eigenbrod and Meyer (2024), DOI [10.1016/j.proci.2024.105358](https://doi.org/10.1016/j.proci.2024.105358). All seven pages were read; Table 1 and Figures 3/6/10 context were inspected. SHA-256 `3c4fa8278cae1da73bc15a4b5443d927006a8150b3d8a83d4c79582f127008f2`, 2,105,330 bytes. The article states CC BY. This supersedes earlier access limits for this source only, not their historical records. The new [source collection](../web/data/design-studies/ries2024.json) transcribes printed coordinates and method definitions; no figure measurements were digitized. It is separate from the frozen registry/evaluation packet. See [C-28](source_conflicts.md) for the pressure discrepancy and the [nominal-design audit](../web/docs/EXPERIMENTAL_DESIGN_AUDIT_2026-11-15.md). Curation is assistant-checked, not independent human review.
+
+## Historical register
+
 Identity checks were done on 2026-10-20. "Inspected" means read in this session. Metadata-only records are labelled
 as such. Rights are in `manifests/rights_and_attribution.csv`. Retrieval details and checksums are in
 `manifests/data_sources.csv`.

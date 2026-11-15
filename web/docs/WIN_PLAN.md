@@ -1,8 +1,10 @@
 # IGNIS completion and release plan
 
-Updated 15 November 2026, PKT. Current local build is web-2026-11-15.7; see [status](BUILD_STATUS.md), [previews](../README.md) and the [current comparison, award strategy and Claude discussion](COMPETITIVE_STRATEGY_AND_VISUAL_REFINEMENT_2026-11-15.md). Fourteen priority public heads and six live interfaces were checked in this round; the earlier 37-project audit remains historical evidence. No new local credential designation or funded/credited status has been verified. The current live model comparison remains NOT RUN.
+Updated 15 November 2026, PKT. Current backend build is web-2026-11-15.8; see [exact experimental-design audit](EXPERIMENTAL_DESIGN_AUDIT_2026-11-15.md), [status](BUILD_STATUS.md) and [current comparison/award strategy](COMPETITIVE_STRATEGY_AND_VISUAL_REFINEMENT_2026-11-15.md). **The owner transferred UI work to a teammate; this continuation must focus on technical research and backend capabilities.** The new exact design-rank audit is implemented and tested. Next technical priorities are endpoint harmonization, source/run identity, usable raw observations, group-aware evaluation if data justify it, and a measured researcher task comparison. Do not add models solely to match competitor feature counts. Current live model comparison remains NOT RUN; no new credential designation or funded account is verified.
 
 The implemented contribution now connects atmosphere cases, detector-cell provenance, paired cohort sensitivity and a changed scientific claim to matching exports and portable session rechecks. Exact source selections attach to the brief as descriptive context; they do not become model-validation evidence. The [deeper-research report](PROFESSIONAL_RESEARCH_AND_IMPROVEMENTS_2026-11-15.md) explains the professional-tool comparison, new data and decision to defer an unvalidated physical predictor. Search, matching, provenance, receipts and replay already exist in strong public competitors. Relative researcher benefit and common competitor task performance have not been measured.
+
+The detailed next-UI proposals in earlier reports are historical plans, superseded for this technical track by the owner's direction above. Existing source-sharing authorization continues; website deployment, provider acceptance, submission and outreach remain separately gated.
 
 ## Completed locally
 
@@ -13,16 +15,17 @@ The implemented contribution now connects atmosphere cases, detector-cell proven
 5. Broad brief, suppression path, model assessment, evidence inspector and revision/export workflow.
 6. Validated evidence API and researcher reproduction guide.
 7. Evaluation-budget/probe repair, tested without inference.
-8. Current production webpack build, TypeScript/lint, 30 affected browser checks and six visual states. The .6 baseline passed 327 offline team checks and 61 browser checks with one intentional skip; these are not rerun totals for .7.
+8. Production webpack build, TypeScript/lint and current 363 shared offline plus ten production/source checks. The .7 baseline passed 30 affected browser checks and inspected six visual states; those are not new visual checks for .8.
 9. Judge rehearsal, deck, submission text and AI/pre-event disclosures.
 10. Paired channel/cohort sensitivity audit, exact selected-analysis handoff, portable notebook recheck and reviewed data/method opportunities.
 11. Exact cutoff-range sensitivity, source-bound scenario URLs, guided robustness start and matching brief/export/session support. Source data and the core registry remain unchanged.
 12. A computed worked example with pooled/flight display choices, both offered cutoff presets' outcomes visible, exact-setting transfers and a clearer visual hierarchy.
 13. Bounded evidence packages preserving original assessments, recipes and normalized application collections, with historical/current separation and byte-exact imported-file download. Original NASA binaries and historical engine code remain outside the package.
+14. Exact RIES24 nominal-design support and identifiability audit through API/CLI, preserving source conflicts and measurement definitions. The full source has been inspected; a two-/five-term certificate and separate arithmetic/PDF checks are complete.
 
 The audit repaired shared scientific state, missing-definition admission, ambiguous arithmetic, revision/scope reporting, notebook races and production numerical identity. Both IGNIS and strong competitors now preserve normalized source snapshots in saved workflows; this is a shared capability, with different scopes.
 
-The strongest remaining gaps are live interpretation evaluation, optical/new-data ingestion, a complete research-planning journey and measured benefit against equally informed alternatives. A predictive model is not required merely to match competitors, but any claimed physical prediction would need external validation. The current visual refinement does not establish general superiority.
+The strongest remaining gaps are live interpretation evaluation, optical/new-data ingestion, a complete research-planning journey and measured benefit against equally informed alternatives. A predictive model is not required merely to match competitors, but any claimed physical prediction would need external validation. The current technical result does not establish general superiority.
 
 ## Recommended next refinement
 

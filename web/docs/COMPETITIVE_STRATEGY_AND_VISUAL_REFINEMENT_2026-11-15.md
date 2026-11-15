@@ -1,5 +1,7 @@
 # IGNIS: competitive position, useful visuals and the next research contribution
 
+**Later owner direction, 15 November:** UI work now belongs to a teammate. This report remains the dated comparison; its next visual proposals are historical plans. The subsequent technical result is the [source-bound experimental-design audit and API](EXPERIMENTAL_DESIGN_AUDIT_2026-11-15.md).
+
 15 November 2026. Fourteen priority public repository heads refreshed at about 10:56 UTC (15:56 PKT), six competitor interfaces opened in a browser, and a public-research review followed by a critical discussion with Claude. This extends the earlier 37-repository audit and 282-project screen; it is not a new exhaustive inspection of every entrant. Private projects and future changes remain outside the evidence.
 
 **Assessment:** IGNIS is not established as the best overall entry. VESTA, MARGIN and Kenyalang communicate their purpose more immediately; Fireline offers a useful image-analysis workflow that IGNIS lacks. IGNIS has substantial measurement/claim discipline and a concrete descriptive result, but no comparative researcher study establishes its advantage. A professional interface must make that result understandable, not merely expose more controls or disclaimers.
