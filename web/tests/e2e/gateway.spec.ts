@@ -16,8 +16,11 @@ async function respond(route: Route, response: Response) {
   await route.fulfill({ status: response.status, headers: Object.fromEntries(response.headers), body: await response.text() });
 }
 
-test('unaccepted gateway remains unavailable while structured SI works', async ({ page }) => {
+test('retired SI page redirects to overview while floating chat remains usable', async ({ page }) => {
   await page.goto('/console#si');
+  await expect(page).toHaveURL(/\/console#overview$/);
+  await expect(page.getByRole('navigation', { name: 'Dashboard sections' }).getByRole('link', { name: 'SI', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: 'Your research question', exact: true })).toHaveCount(0);
   await page.getByRole('button', { name: 'Open SI chat', exact: true }).click();
   await expect(page.getByRole('dialog', { name: 'SI Scientific Intelligence' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Search evidence', exact: true })).toBeDisabled();
@@ -31,8 +34,6 @@ test('unaccepted gateway remains unavailable while structured SI works', async (
   const status = await (await page.request.get('/api/si/gateway')).json();
   expect(status.available).toBe(false); expect(status.reasons).toContain('provider_evaluation_pending');
   expect(JSON.stringify(status)).not.toMatch(/CF_AI_GATEWAY_TOKEN|signingKey/);
-  await page.getByRole('button', { name: 'Smoke detection evidence', exact: true }).click();
-  await expect(page.getByRole('button', { name: 'Review request', exact: true })).toBeEnabled();
   await page.getByRole('navigation', { name: 'Dashboard sections' }).getByRole('link', { name: 'Sources' }).click();
   await page.getByRole('button', { name: 'Open SI chat', exact: true }).click();
   await expect(page.getByText('Catalogue matches', { exact: true })).toBeVisible();
@@ -62,7 +63,7 @@ test('mocked SI confirms a visitor-bound receipt, preserves scope and rejects or
       confirmations++; submittedConfirmation = route.request().postDataJSON();
       return respond(route, await gatewayAssess(await browserRequest(route), deps));
     });
-    await page.goto('/console#si');
+    await page.goto('/console#findings');
   await page.getByRole('button', { name: 'Open SI chat', exact: true }).click();
     await page.getByRole('textbox', { name: 'Ask SI about the evidence', exact: true }).fill('What do spacecraft smoke detector experiments report?');
     await expect(page.getByRole('button', { name: 'Interpret with SI', exact: true })).toBeDisabled();

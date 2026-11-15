@@ -1,5 +1,9 @@
 # IGNIS current build status
 
+## Dedicated SI page removed
+
+At the owner's follow-up request, the standalone SI form, page navigation and landing-page link are removed. Legacy `#si` bookmarks redirect to the overview, preserving query parameters. The floating chat remains available across the eight console sections and links to Sources/notebook. **26 affected desktop/mobile browser checks, affected-file lint, TypeScript and production webpack build PASS.** The obsolete form-only browser cases were removed with that component; signed chat scope confirmation, model checks in Findings, source links and figure exports remain covered. Runtime acceptance, scientific methods and data are unchanged. The local preview is running; deployment belongs to the teammate.
+
 ## Floating SI chat follow-up
 
 The owner-requested lower-right chat replaces the inline chatbot form and is available throughout the console. Source-linked keyword catalogue search works with runtime SI disabled; accepted live interpretation retains authenticated scope confirmation. **All 14 affected desktop/mobile browser checks, affected-file lint, TypeScript and production webpack build PASS.** Desktop/mobile captures reviewed; the designated token is absent from all 55 rebuilt browser assets. No live inference or deployment occurred. See [chat handoff](FLOATING_SI_CHAT_2026-11-15.md). Prior offline test totals below describe their original scope; scientific methods and data were not changed by this presentation patch.

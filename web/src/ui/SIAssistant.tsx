@@ -104,7 +104,7 @@ export default function SIAssistant({ shared }: { shared: Shared }) {
         record(data); setResult({ binding, value: data });
       }
     } catch (e) {
-      if (call === operation.current) setError(e instanceof Error && e.name === 'AbortError' ? 'The request was cancelled or timed out. Use structured mode or try later.' : (e as Error).message);
+      if (call === operation.current) setError(e instanceof Error && e.name === 'AbortError' ? 'The request was cancelled or timed out. Please try again later.' : (e as Error).message);
     } finally {
       clearTimeout(timer);
       if (kind === 'interpret') { setVerification(''); setVerificationKey((n) => n + 1); }
@@ -152,7 +152,7 @@ export default function SIAssistant({ shared }: { shared: Shared }) {
         <dt>Claim / time / feature</dt><dd>{[current.proposal.requestedClaim, current.proposal.temporalScope, current.proposal.requestedFeature].map((s) => s.replace(/_/g, ' ')).join(' / ')}</dd></dl>
       <details><summary>Complete proposed scope</summary><pre className="local-json">{JSON.stringify(current.proposal, null, 2)}</pre></details>
       {deriveHandling(current.proposal).reasons.map((reason) => <p key={reason}>{reason}</p>)}
-      <p className="muted">{current.provenance.returnedModel} · Review every condition and exclusion. Edit your question or use structured mode if the interpretation needs correction.</p>
+      <p className="muted">{current.provenance.returnedModel} · Review every condition and exclusion. Edit your question if the interpretation needs correction.</p>
       <p className="muted">Confirm within 15 minutes of interpretation; otherwise interpret the question again.</p>
       <div className="btn-row"><button type="button" className="btn" disabled={busy || deriveHandling(current.proposal).handling !== 'ready'} onClick={() => void run('assess')}>Confirm SI scope and assess</button>
         <button type="button" className="btn ghost" onClick={() => download('ignis-si-interpretation-receipt.json', JSON.stringify(current, null, 2))}>Download interpretation receipt</button></div>
@@ -171,7 +171,7 @@ export default function SIAssistant({ shared }: { shared: Shared }) {
         {status?.available && status.mode === 'public' && status.turnstileSiteKey && <Verification key={verificationKey} siteKey={status.turnstileSiteKey} onToken={setToken} />}
         <div className="si-chat-input"><textarea ref={composer} aria-label="Ask SI about the evidence" rows={2} maxLength={2000} value={question} onChange={(e) => edit(e.target.value)} placeholder="Ask about combustion evidence…" onKeyDown={(event) => { if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); send(); } }} />
           <button type="button" aria-label={status?.available ? 'Interpret with SI' : 'Search evidence'} disabled={!catalog || !question.trim() || busy || (status?.available ? !ack || (status.mode === 'public' && !verification) : !shared.brief)} onClick={send}>↑</button></div>
-        <div className="si-chat-tools"><span>Enter to send · Shift+Enter for a new line</span><button type="button" onClick={() => { close(); shared.go('si'); }}>Research workbench ↗</button></div>
+        <div className="si-chat-tools"><span>Enter to send · Shift+Enter for a new line</span><button type="button" onClick={() => { close(); shared.go('sources'); }}>Sources &amp; notebook ↗</button></div>
         {busy && <button type="button" className="btn ghost" onClick={cancel}>Cancel SI interpretation</button>}
       </footer>
     </section>}

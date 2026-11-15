@@ -170,7 +170,7 @@ export default function Landing() {
           <li><a href="/console#figures"><span>05</span><h3>Reproduce</h3><p>Figures with Python code, exact data and an exportable research notebook.</p></a></li>
         </ol>
         <Action href="/console" primary>Open the research console</Action>
-        <p className="lp-more">Working with your own measurements? <a href="/console#local-data">Bring your data</a> · <a href="/console#si">Review a question with SI</a></p>
+        <p className="lp-more">Working with your own measurements? <a href="/console#local-data">Bring your data</a> · <a href="/console">Ask SI in the console</a></p>
       </section>
     </main>
     <footer className="lp-footer"><a className="lp-brand" href="#intro">IGNIS <span> / Emberfall</span></a><nav aria-label="Project resources"><a href="/console#sources">Sources & methods</a><a href="/console#figures">Figures & code</a><a href="https://github.com/GA5413L/IGNIS">GitHub ↗</a></nav></footer>

@@ -246,3 +246,5 @@ Newest last. Each entry: date, decision, basis, and how it could be reversed.
 - The owner's latest screenshot-directed UI request authorizes replacing the inline chatbot form with a lower-right panel across console views. Catalogue keyword matches remain explicitly separate from generated answers; source qualifications travel with every finding.
 - Keep the existing runtime acceptance and authenticated scope-confirmation contracts. No API call, secret exposure or external deployment is needed for this interface change.
 
+## D-075: Floating chat is the sole SI interface (15 Nov 2026 PKT)
+- The owner explicitly removed the standalone SI page. Delete its form and navigation, preserve legacy bookmark access through the overview, and retain signed scope review in the floating bot. Sources remains the notebook destination; Findings retains model claim checks.

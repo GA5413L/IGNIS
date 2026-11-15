@@ -42,7 +42,7 @@ test.describe('rebuilt dashboard', () => {
   });
 
   test('every view renders without sideways scroll', async ({ page }) => {
-    for (const view of ['overview', 'investigations', 'atmospheres', 'smoke', 'findings', 'figures', 'sources', 'local-data', 'si']) {
+    for (const view of ['overview', 'investigations', 'atmospheres', 'smoke', 'findings', 'figures', 'sources', 'local-data']) {
       const errors = await open(page, view);
       await noSidewaysScroll(page);
       expect(errors, view).toEqual([]);

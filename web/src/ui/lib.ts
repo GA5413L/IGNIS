@@ -5,7 +5,7 @@ import { proposalFromForm, type FormChoices } from '../core/interpretation';
 import { deriveHandling } from '../core/handling';
 import type { ResearchSelection } from '../core/researchSelections';
 
-export type ViewId = 'overview' | 'investigations' | 'atmospheres' | 'smoke' | 'findings' | 'figures' | 'sources' | 'local-data' | 'si';
+export type ViewId = 'overview' | 'investigations' | 'atmospheres' | 'smoke' | 'findings' | 'figures' | 'sources' | 'local-data';
 export const VIEWS: { id: ViewId; label: string; title: string }[] = [
   { id: 'overview', label: 'Overview', title: 'Overview' },
   { id: 'investigations', label: 'Investigations', title: 'Investigations' },
@@ -15,7 +15,6 @@ export const VIEWS: { id: ViewId; label: string; title: string }[] = [
   { id: 'figures', label: 'Figures', title: 'Publication figures' },
   { id: 'sources', label: 'Sources', title: 'Sources and methods' },
   { id: 'local-data', label: 'Your data', title: 'Local data workbench' },
-  { id: 'si', label: 'SI', title: 'SI · Scientific Intelligence' },
 ];
 
 export const AREAS: SafetyArea[] = ['prevention', 'detection', 'suppression'];

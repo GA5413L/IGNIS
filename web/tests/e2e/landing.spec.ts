@@ -35,7 +35,7 @@ test('landing anchors stay on home and result links open the matching console vi
 
 test('shared root bookmarks and the example route retain their destinations', async ({ page }) => {
   for (const [before, after, label] of [
-    ['/?from=bookmark#si', '/console?from=bookmark#si', 'SI'],
+    ['/?from=bookmark#si', '/console?from=bookmark#overview', 'Overview'],
     ['/#figures', '/console#figures', 'Figures'],
     ['/example', '/console#smoke', 'Smoke detection'],
   ]) {

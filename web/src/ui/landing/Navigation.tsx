@@ -19,6 +19,10 @@ export default function Navigation() {
   useEffect(() => {
     // Preserve links shared before the dashboard moved from / to /console.
     const redirectLegacy = () => {
+      if (window.location.hash === '#si') {
+        window.location.replace(`/console${window.location.search}#overview`);
+        return;
+      }
       if (VIEWS.some((view) => `#${view.id}` === window.location.hash)) {
         window.location.replace(`/console${window.location.search}${window.location.hash}`);
       }
