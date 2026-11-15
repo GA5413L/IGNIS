@@ -241,3 +241,8 @@ Newest last. Each entry: date, decision, basis, and how it could be reversed.
 - Owner requested protection against Cloudflare token exposure, then clarified that staging needs a straightforward environment-file upload and explicitly rejected Windows encryption. Prepared an ignored `.secrets/staging/.env.production.local` from the already designated credential. The temporary encryption implementation and encrypted duplicate were removed; the original RTF remained unchanged.
 - This is server-only plaintext configuration, not a claim of encrypted server storage. The token remains outside GitHub/public assets and uses the fixed Cloudflare HTTPS authorization header. The local audit found zero exact-token occurrences in 1,047 locally reachable Git objects and 55 client assets; external host settings and copies remain unverified.
 - Withhold upstream diagnostic prose from research observers. Reflections of configured secrets in response content, metadata or transport errors are stripped before observers/receipts, halt further calls, and retain numeric usage and unresolved reservations. Tests use fake credentials; no live inference, deployment or spending occurred. SI acceptance and enable flags remain unchanged.
+
+## D-074: Floating Scientific Intelligence chat (15 Nov 2026 PKT)
+- The owner's latest screenshot-directed UI request authorizes replacing the inline chatbot form with a lower-right panel across console views. Catalogue keyword matches remain explicitly separate from generated answers; source qualifications travel with every finding.
+- Keep the existing runtime acceptance and authenticated scope-confirmation contracts. No API call, secret exposure or external deployment is needed for this interface change.
+

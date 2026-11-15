@@ -653,3 +653,38 @@ blockquote { border-left-color: var(--accent); }
 .raw-cell { max-width: 30rem; }
 .field input[type="file"] { min-width: 0; width: 100%; max-width: 100%; }
 .field input:not([type]), .field textarea { min-width: 0; width: 100%; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: var(--r); background: var(--surface); }
+.si-chat { position: fixed; right: 24px; bottom: max(24px, env(safe-area-inset-bottom)); z-index: 45; font-size: 14px; }
+.si-chat-launcher { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 13px 20px; border-radius: 28px; background: #eaf1ff; color: #111827; border: 1px solid #b8cff4; box-shadow: 0 6px 28px #0008; font-weight: 600; cursor: pointer; margin-left: auto; }
+.si-chat-panel { position: absolute; right: 0; bottom: 66px; width: min(430px, calc(100vw - 32px)); height: min(650px, calc(100dvh - 110px)); display: flex; flex-direction: column; overflow: hidden; background: #111315; color: #f1f3f5; border: 1px solid #393e45; border-radius: 18px; box-shadow: 0 12px 60px #000a; }
+.si-chat-header { display: flex; align-items: flex-start; justify-content: space-between; padding: 18px; border-bottom: 1px solid #32363c; flex-shrink: 0; }
+.si-chat-header h2 { margin: 0; font-size: 19px; letter-spacing: -.3px; }
+.si-chat-header h2 span { font-size: 13px; font-weight: 400; color: #bdc6d3; margin-left: 7px; }
+.si-chat-header p { margin: 5px 0 0; font-size: 12px; color: #b6c3d4; }
+.si-chat-header button { border: 0; background: transparent; color: #fff; font-size: 26px; min-width: 44px; min-height: 44px; margin: -10px -10px 0 0; cursor: pointer; }
+.si-chat-conversation { overflow-y: auto; overscroll-behavior: contain; padding: 16px; flex: 1; min-height: 0; overflow-wrap: anywhere; }
+.si-chat-conversation p { font-size: 14px; line-height: 1.6; margin: 8px 0; }
+.si-chat-message { background: #1b1e23; border-radius: 12px; padding: 14px; margin-bottom: 16px; }
+.si-chat-conversation .si-chat-question { background: #263852; padding: 10px 14px; margin: 0 0 12px 28px; border-radius: 12px 12px 2px 12px; white-space: pre-wrap; }
+.si-chat-prompts { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.si-chat-prompts button { padding: 8px 10px; min-height: 38px; font-size: 12px; border: 1px solid #4a5567; border-radius: 16px; background: transparent; color: #d4e2f8; cursor: pointer; }
+.si-chat-conversation .si-chat-note, .si-chat-label { color: #b6c3d4; font-size: 12px; }
+.si-chat-finding { margin-top: 14px; padding-top: 12px; border-top: 1px solid #39414c; }
+.si-chat-finding details { font-size: 12px; margin: 12px 0; }
+.si-chat-finding ul { padding-left: 18px; }
+.si-chat-sources { display: grid; gap: 8px; font-size: 12px; }
+.si-chat-sources a { color: #b6d3ff; text-decoration: underline; }
+.si-chat-compose { padding: 12px 14px; border-top: 1px solid #32363c; flex-shrink: 0; background: #111315; }
+.si-chat-input { display: flex; align-items: flex-end; border: 1px solid #566172; border-radius: 12px; padding: 5px; background: #1b1e23; }
+.si-chat-input textarea { flex: 1; min-width: 0; resize: none; background: transparent; color: #fff; padding: 8px; border: 0; font-size: 14px; max-height: 100px; }
+.si-chat-input button { flex-shrink: 0; width: 40px; height: 40px; border: 0; border-radius: 9px; background: #b6d3ff; color: #132238; font-size: 24px; cursor: pointer; }
+.si-chat-input button:disabled { opacity: .4; cursor: default; }
+.si-chat-tools { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 7px; margin-top: 9px; font-size: 10px; color: #aeb8c6; }
+.si-chat-tools button { color: #c7dcff; border: 0; background: transparent; font-size: 11px; cursor: pointer; padding: 0; }
+.si-chat-consent { display: flex; align-items: flex-start; gap: 8px; font-size: 11px; line-height: 1.5; margin-bottom: 10px; }
+.si-chat :focus-visible { outline: 2px solid #b6d3ff; outline-offset: 3px; }
+.si-chat-conversation .card { padding: 14px; }
+.si-chat-conversation .kv { grid-template-columns: 1fr; }
+.si-chat-conversation h3 { font-size: 17px; }
+.si-chat-conversation .local-json { max-width: 100%; overflow-x: auto; }
+@media (max-width: 600px) { .si-chat { right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); } .si-chat-panel { width: calc(100vw - 24px); height: min(650px, calc(100dvh - 92px)); bottom: 62px; } .si-chat-header { padding: 14px; } .si-chat-input textarea { font-size: 16px; } }
+@media print { .si-chat { display: none; } }

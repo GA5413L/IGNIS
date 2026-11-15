@@ -35,6 +35,9 @@ function Verification({ siteKey, onToken }: { siteKey: string; onToken: (token: 
 /** The complete receipt is confirmed server-side; the browser cannot assign AI provenance. */
 export default function SIAssistant({ shared }: { shared: Shared }) {
   const { catalog, selections, record } = shared;
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState<{ question: string; claims: Assessment['claims'] }[]>([]);
+  const launcher = useRef<HTMLButtonElement>(null), composer = useRef<HTMLTextAreaElement>(null), conversation = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<Status | null>(null), [question, setQuestion] = useState('');
   const [ack, setAck] = useState(false), [verification, setVerification] = useState(''), [verificationKey, setVerificationKey] = useState(0);
   const [review, setReview] = useState<{ binding: string; receipt: ProposalReceipt } | null>(null);
@@ -46,6 +49,14 @@ export default function SIAssistant({ shared }: { shared: Shared }) {
   const current = review?.binding === context ? review.receipt : null;
   const assessment = result?.binding === context ? result.value : null;
   const setToken = useCallback((token: string) => setVerification(token), []);
+  useEffect(() => {
+    if (!open) return;
+    composer.current?.focus();
+    const onEscape = (event: KeyboardEvent) => { if (event.key === 'Escape') { setOpen(false); launcher.current?.focus(); } };
+    window.addEventListener('keydown', onEscape);
+    return () => window.removeEventListener('keydown', onEscape);
+  }, [open]);
+  useEffect(() => { conversation.current?.scrollTo({ top: conversation.current.scrollHeight }); }, [messages, review, result, pending]);
   useEffect(() => {
     const abort = new AbortController();
     fetch('/api/si/gateway', { cache: 'no-store', signal: abort.signal }).then((r) => r.ok ? r.json() : null)
@@ -101,24 +112,45 @@ export default function SIAssistant({ shared }: { shared: Shared }) {
     }
   }
 
-  return <section className="section" aria-labelledby="si-assistant-heading">
-    <div className="section-head"><h2 id="si-assistant-heading">Ask SI</h2><span className="tag outline">{status?.available ? 'Connected' : 'Connection checks pending'}</span></div>
-    <p>Describe your spacecraft fire research question. SI proposes a scope for your review; the assessment then uses the curated evidence and published model contracts.</p>
-    {!status?.available && <p className="muted">Natural-language interpretation is awaiting provider evaluation and connection checks. You can use the structured workflow below now.</p>}
-    <label className="field"><span>Ask SI about the evidence</span><textarea rows={3} value={question} onChange={(e) => edit(e.target.value)} placeholder="Which evidence distinguishes flame disappearance from extinction?" /></label>
-    <p className={question.length > 2000 ? 'error' : 'muted'}>{question.length.toLocaleString()} / 2,000 characters</p>
-    <label className="row"><input type="checkbox" checked={ack} onChange={(e) => setAck(e.target.checked)} /><span>This question contains public research information only. Send it with the public catalogue to the configured SI provider through Cloudflare.</span></label>
-    <p className="muted">Your CSV, notebook and analyses are not automatically attached. Anything you type in this question is sent when you confirm public-only and choose Interpret with SI. SI does not run simulations or execute instructions.</p>
-    {status?.available && status.mode === 'public' && status.turnstileSiteKey && <Verification key={verificationKey} siteKey={status.turnstileSiteKey} onToken={setToken} />}
-    <div className="btn-row"><button type="button" className="btn" disabled={!status?.available || !ack || !catalog || !question.trim() || question.length > 2000 || busy || (status.mode === 'public' && !verification)} onClick={() => void run('interpret')}>Interpret with SI</button>
-      {busy && <button type="button" className="btn ghost" onClick={cancel}>Cancel SI interpretation</button>}</div>
-    {error && <p role="alert" className="error">{error}</p>}
+  const close = () => { setOpen(false); launcher.current?.focus(); };
+  const send = () => {
+    if (busy || !question.trim() || question.length > 2000 || (status?.available && (!ack || (status.mode === 'public' && !verification)))) return;
+    if (status?.available) { void run('interpret'); return; }
+    if (!shared.brief || !question.trim() || question.length > 2000) return;
+    const ignored = new Set(['what', 'which', 'does', 'have', 'with', 'from', 'about', 'there', 'their', 'that', 'this', 'when', 'where', 'research', 'evidence', 'tell', 'show', 'please']);
+    const terms = [...new Set(question.toLowerCase().match(/[a-z0-9]{3,}/g) ?? [])].filter((term) => !ignored.has(term));
+    const claims = shared.brief.claims.map((claim) => ({ claim, score: terms.reduce((score, term) => score + (new RegExp(`\\b${term}`, 'i').test(`${claim.title} ${claim.authoritativeText}`) ? 1 : 0), 0) }))
+      .filter((entry) => entry.score > 0).sort((a, b) => b.score - a.score).slice(0, 3).map((entry) => entry.claim);
+    setMessages((previous) => [...previous.slice(-11), { question: question.trim(), claims }]);
+    edit('');
+    composer.current?.focus();
+  };
+  const renderClaims = (claims: Assessment['claims']) => claims.map((claim) => <article className="si-chat-finding" key={claim.id}>
+    <strong>{claim.title}</strong><p>{claim.authoritativeText}</p>
+    <details><summary>Scope and limitations</summary><ul>{[...claim.qualifications, ...claim.forbiddenStrongerClaims].map((text, i) => <li key={i}>{text}</li>)}</ul></details>
+    <div className="si-chat-sources">{claim.sourceIds.map((id) => { const source = catalog?.sources.find((item) => item.id === id); return source?.canonicalUri ? <a key={id} href={source.canonicalUri} target="_blank" rel="noreferrer">{source.title}</a> : <span key={id}>{id}</span>; })}</div>
+  </article>);
+  return <div className="si-chat">
+    <button ref={launcher} className="si-chat-launcher" type="button" aria-label={open ? 'Minimize SI chat' : 'Open SI chat'} aria-expanded={open} aria-controls="si-chat-panel" onClick={() => open ? close() : setOpen(true)}>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-3 2V11.5a10 10 0 0 1 20 0Z" /><path d="M7 10h8M7 14h5" /></svg><span>Ask SI</span>
+    </button>
+    {open && <section id="si-chat-panel" role="dialog" aria-modal="false" aria-labelledby="si-assistant-heading" className="si-chat-panel" onKeyDown={(event) => { if (event.key === 'Escape') { event.stopPropagation(); close(); } }}>
+      <header className="si-chat-header"><div><h2 id="si-assistant-heading">SI <span>Scientific Intelligence</span></h2><p>{status?.available ? 'Connected · reviewable, source-linked answers' : 'Catalogue search · live SI unavailable'}</p></div><button type="button" aria-label="Close SI chat" onClick={close}>×</button></header>
+      <div ref={conversation} className="si-chat-conversation" role="log" aria-label="SI conversation" aria-live="polite" aria-relevant="additions">
+        <div className="si-chat-message"><strong>Explore spacecraft combustion.</strong><p>Find reported results, compare measurement limits and follow the original sources.</p>
+          <div className="si-chat-prompts">{['Smoke detection', 'Flame extinction', 'Microgravity', 'Oxygen concentration'].map((prompt) => <button key={prompt} type="button" onClick={() => { edit(prompt); composer.current?.focus(); }}>{prompt}</button>)}</div>
+          {!status?.available && <p className="si-chat-note">Searches reviewed findings by keyword. Results are source excerpts, not a generated answer or simulation.</p>}
+        </div>
+        {messages.map((message, i) => <div key={i}><p className="si-chat-question">{message.question}</p><div className="si-chat-message"><span className="si-chat-label">Catalogue matches</span>{message.claims.length ? renderClaims(message.claims) : <p>No reviewed finding matches those terms. Try an investigation name, material or measurement. Absence here does not establish absence of evidence.</p>}</div></div>)}
+        {(current || busy || assessment) && <p className="si-chat-question">{question}</p>}
+        {busy && <p role="status">{current ? 'Preparing the assessment…' : 'Interpreting your question…'}</p>}
+        {error && <p role="alert" className="error">{error}</p>}
     {current && <article className="card flat">
       <h3>Review the SI interpretation</h3><blockquote>{current.question}</blockquote>
       <dl className="kv"><dt>Task</dt><dd>{current.proposal.intent.replace(/_/g, ' ')}</dd><dt>Areas</dt><dd>{current.proposal.safetyAreas.join(', ') || 'All areas'}</dd>
         <dt>Investigations</dt><dd>{current.proposal.investigationIds.map((id) => catalog?.investigations.find((x) => x.id === id)?.displayName ?? id).join(', ') || 'Not specified'}</dd>
         <dt>Claim / time / feature</dt><dd>{[current.proposal.requestedClaim, current.proposal.temporalScope, current.proposal.requestedFeature].map((s) => s.replace(/_/g, ' ')).join(' / ')}</dd></dl>
-      <details open><summary>Complete proposed scope</summary><pre className="local-json">{JSON.stringify(current.proposal, null, 2)}</pre></details>
+      <details><summary>Complete proposed scope</summary><pre className="local-json">{JSON.stringify(current.proposal, null, 2)}</pre></details>
       {deriveHandling(current.proposal).reasons.map((reason) => <p key={reason}>{reason}</p>)}
       <p className="muted">{current.provenance.returnedModel} · Review every condition and exclusion. Edit your question or use structured mode if the interpretation needs correction.</p>
       <p className="muted">Confirm within 15 minutes of interpretation; otherwise interpret the question again.</p>
@@ -133,5 +165,15 @@ export default function SIAssistant({ shared }: { shared: Shared }) {
         <div className="card-foot">{claim.sourceIds.map((id) => { const s = catalog?.sources.find((x) => x.id === id); return s?.canonicalUri ? <a key={id} href={s.canonicalUri} target="_blank" rel="noreferrer">{s.title}</a> : <span key={id}>{id}</span>; })}</div></article>)}
       {assessment.researchAnalyses?.map((a) => <article key={a.id} className="card"><h4>{a.title}</h4><ul className="bullets">{a.summary.map((s) => <li key={s}>{s}</li>)}</ul></article>)}
     </article>}
-  </section>;
+      </div>
+      <footer className="si-chat-compose">
+        {status?.available && <label className="si-chat-consent"><input type="checkbox" checked={ack} onChange={(e) => setAck(e.target.checked)} /><span>This question contains public research information only. Send it with the public catalogue through Cloudflare. CSVs and notebooks are not attached.</span></label>}
+        {status?.available && status.mode === 'public' && status.turnstileSiteKey && <Verification key={verificationKey} siteKey={status.turnstileSiteKey} onToken={setToken} />}
+        <div className="si-chat-input"><textarea ref={composer} aria-label="Ask SI about the evidence" rows={2} maxLength={2000} value={question} onChange={(e) => edit(e.target.value)} placeholder="Ask about combustion evidence…" onKeyDown={(event) => { if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); send(); } }} />
+          <button type="button" aria-label={status?.available ? 'Interpret with SI' : 'Search evidence'} disabled={!catalog || !question.trim() || busy || (status?.available ? !ack || (status.mode === 'public' && !verification) : !shared.brief)} onClick={send}>↑</button></div>
+        <div className="si-chat-tools"><span>Enter to send · Shift+Enter for a new line</span><button type="button" onClick={() => { close(); shared.go('si'); }}>Research workbench ↗</button></div>
+        {busy && <button type="button" className="btn ghost" onClick={cancel}>Cancel SI interpretation</button>}
+      </footer>
+    </section>}
+  </div>;
 }

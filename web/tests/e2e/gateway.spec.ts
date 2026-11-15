@@ -18,13 +18,24 @@ async function respond(route: Route, response: Response) {
 
 test('unaccepted gateway remains unavailable while structured SI works', async ({ page }) => {
   await page.goto('/console#si');
-  await expect(page.getByRole('heading', { name: 'Ask SI', exact: true })).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Interpret with SI', exact: true })).toBeDisabled();
+  await page.getByRole('button', { name: 'Open SI chat', exact: true }).click();
+  await expect(page.getByRole('dialog', { name: 'SI Scientific Intelligence' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Search evidence', exact: true })).toBeDisabled();
+  await page.getByRole('textbox', { name: 'Ask SI about the evidence' }).fill('Smoke detection');
+  await page.getByRole('button', { name: 'Search evidence', exact: true }).click();
+  await expect(page.getByText('Catalogue matches', { exact: true })).toBeVisible();
+  await expect(page.locator('.si-chat-sources a').first()).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBe(0);
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('button', { name: 'Open SI chat', exact: true })).toBeFocused();
   const status = await (await page.request.get('/api/si/gateway')).json();
   expect(status.available).toBe(false); expect(status.reasons).toContain('provider_evaluation_pending');
   expect(JSON.stringify(status)).not.toMatch(/CF_AI_GATEWAY_TOKEN|signingKey/);
   await page.getByRole('button', { name: 'Smoke detection evidence', exact: true }).click();
   await expect(page.getByRole('button', { name: 'Review request', exact: true })).toBeEnabled();
+  await page.getByRole('navigation', { name: 'Dashboard sections' }).getByRole('link', { name: 'Sources' }).click();
+  await page.getByRole('button', { name: 'Open SI chat', exact: true }).click();
+  await expect(page.getByText('Catalogue matches', { exact: true })).toBeVisible();
 });
 
 test('mocked SI confirms a visitor-bound receipt, preserves scope and rejects ordinary-endpoint provenance forgery', async ({ page }) => {
@@ -52,6 +63,7 @@ test('mocked SI confirms a visitor-bound receipt, preserves scope and rejects or
       return respond(route, await gatewayAssess(await browserRequest(route), deps));
     });
     await page.goto('/console#si');
+  await page.getByRole('button', { name: 'Open SI chat', exact: true }).click();
     await page.getByRole('textbox', { name: 'Ask SI about the evidence', exact: true }).fill('What do spacecraft smoke detector experiments report?');
     await expect(page.getByRole('button', { name: 'Interpret with SI', exact: true })).toBeDisabled();
     await page.getByRole('checkbox', { name: /This question contains public research information only/ }).check();

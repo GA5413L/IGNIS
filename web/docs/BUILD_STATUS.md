@@ -1,5 +1,9 @@
 # IGNIS current build status
 
+## Floating SI chat follow-up
+
+The owner-requested lower-right chat replaces the inline chatbot form and is available throughout the console. Source-linked keyword catalogue search works with runtime SI disabled; accepted live interpretation retains authenticated scope confirmation. **All 14 affected desktop/mobile browser checks, affected-file lint, TypeScript and production webpack build PASS.** Desktop/mobile captures reviewed; the designated token is absent from all 55 rebuilt browser assets. No live inference or deployment occurred. See [chat handoff](FLOATING_SI_CHAT_2026-11-15.md). Prior offline test totals below describe their original scope; scientific methods and data were not changed by this presentation patch.
+
 ## Staging token security follow-up
 
 The owner requested a simple server environment-file handoff. The private file is ignored and supplied separately; the application has no Windows credential dependency. The backend withholds diagnostic prose and configured-secret echoes before observer logs or receipts, retaining accounting. **568 shared offline tests, affected-file lint, TypeScript and webpack build PASS.** No UI or scientific-data changes; the earlier browser checks below retain their scope. The exact designated token was absent from locally reachable Git history, changed public files and rebuilt browser assets. [Security receipt](../artifacts/refinement/token-security-check.json), [staging handoff](STAGING_TOKEN_HANDOFF.md). Deployment and host storage protections remain unverified.

@@ -15,6 +15,7 @@ import Sources from './Sources';
 import Figures from './Figures';
 import LocalData from './LocalData';
 import SI from './SI';
+import SIAssistant from './SIAssistant';
 import type { RecheckedSession } from '../core/researchSession';
 import { PALETTES, type ChartPalette } from './palette';
 
@@ -162,6 +163,7 @@ export default function Dashboard() {
         </div>
         <div hidden={view !== 'si'}><SI shared={shared} /></div>
       </main>
+      <SIAssistant shared={shared} />
       <div aria-live="polite" role="status">{toast && <div className="toast">{toast}</div>}</div>
     </div>
   );

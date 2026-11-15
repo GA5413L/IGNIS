@@ -532,3 +532,8 @@ The user's 14 Nov brief ("We are moving IGNIS from specification into implementa
 - Owner assigned deployment to a teammate, requested token protection, then clarified a simple server-only environment upload. Prepared the ignored staging file; removed the temporary Windows-specific mechanism and encrypted duplicate, preserving the original designated source.
 - Added exact configured-secret echo suppression and generic upstream diagnostics before research observers or HTTP receipts, preserving usage and unresolved reservations. Three added fake-secret security tests pass within the 568-test shared offline suite; no new live API call or runtime acceptance.
 - Checked the designated token against 1,047 locally reachable Git objects and 55 browser assets: zero occurrences. Hosting settings, server-disk encryption and external copies were not inspected. See the staging token handoff and security receipt.
+
+### 15 November 2026 — Floating SI chat
+- Owner requested a compact lower-right chatbot instead of the inline form. Added a persistent console launcher, accessible responsive chat, quick combustion topics and source-linked catalogue matching from the existing deterministic brief. The explicit research workbench remains available.
+- Preserved public-only consent, signed scope confirmation, exports and provider acceptance. No scientific dataset, provider activation or deployment change. See web/docs/FLOATING_SI_CHAT_2026-11-15.md.
+

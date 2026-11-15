@@ -9,7 +9,6 @@ import { proposalFromForm, type FormChoices } from '../core/interpretation';
 import { selectionLabel } from '../core/researchSelections';
 import type { Shared } from './Dashboard';
 import { AREAS, AREA_LABEL, buildRequest, download } from './lib';
-import SIAssistant from './SIAssistant';
 
 type Provider = 'groq' | 'gemini';
 interface Draft { question: string; choices: FormChoices }
@@ -86,7 +85,6 @@ export default function SI({ shared }: { shared: Shared }) {
   return <div className="page">
     <header className="page-head"><span className="crumb">09 · SI</span><h1>SI · Scientific Intelligence</h1><p>Frame a research question, review its scope and follow the evidence to an assessment you can reproduce.</p></header>
     <ol className="path" aria-label="SI workflow"><li><small>01</small><span>Your question</span></li><li><small>02</small><span>Review the scope</span></li><li><small>03</small><span>Source-linked assessment</span></li></ol>
-    <SIAssistant shared={shared} />
     <section className="section" aria-labelledby="si-question"><div className="section-head"><h2 id="si-question">Your research question</h2><span className="tag outline">Structured mode</span></div>
       <div className="chips">{EXAMPLES.map((x) => <button className="chip" type="button" key={x.label} onClick={() => edit(x.draft)}>{x.label}</button>)}</div>
       <label className="field"><span>Question</span><textarea rows={4} value={draft.question} onChange={(e) => edit({ ...draft, question: e.target.value })} placeholder="What do you want to learn from the experiments?" aria-describedby="si-question-count" /></label>
