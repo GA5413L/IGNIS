@@ -1,18 +1,57 @@
 # IGNIS deployment requirements
-# This is a Node.js / Next.js application; Python/pip is not needed to host it.
-# Runtime: Node.js >=22.13.0 <23, with npm.
-# Hosting root directory: web
-# Install command: npm ci --include=dev
-# Build command: npm run build
-# Render Build Command (install and build combined): npm ci --include=dev && npm run build
-# Start command: npm start
-# PORT: use the hosting provider's environment value; defaults to 3000.
-# The server listens on 0.0.0.0 for the hosting provider's reverse proxy.
-# Dependency manifest: web/package.json
-# Exact dependency lock: web/package-lock.json
-# Runtime packages: next 16.4.6, react 19.3.1, react-dom 19.3.1, zod 4.6.7.
-# The install step must include build dependencies (TypeScript, etc.).
-# Keep AI_ENABLED=false and CF_SI_ENABLED=false for the current release.
-# Private server configuration belongs outside public assets and Git.
-# Optional Python figure reproduction has its own requirements file:
+#
+# IGNIS is a Node.js / Next.js application. Python and pip are NOT needed to host it.
+# This file holds comments only, so `pip install -r requirements.txt` installs nothing.
+#
+# --- Runtime -------------------------------------------------------------
+# Node.js             : >=22.13.0 <23 (with npm)
+# Root directory      : web
+# Dependency manifest : web/package.json
+# Lock file           : web/package-lock.json (must be committed; npm ci needs it)
+# Runtime packages    : next 16.4.6, react 19.3.1, react-dom 19.3.1, zod 4.6.7
+#
+# --- Commands ------------------------------------------------------------
+# Install : npm ci --include=dev
+#           (dev dependencies such as TypeScript are needed at build time)
+# Build   : npm run build
+# Start   : npm start
+# Render Build Command (install + build combined):
+#           npm ci --include=dev && npm run build
+#
+# --- Server --------------------------------------------------------------
+# PORT : read from the hosting provider's environment; falls back to 3000
+# Host : listens on 0.0.0.0 behind the provider's reverse proxy
+#
+# --- Environment variables -----------------------------------------------
+# AI_ENABLED=false
+# CF_SI_ENABLED=false
+# Keep both false for this release.
+# Secrets and private server config go in the host's environment settings,
+# never in public/ and never in Git.
+#
+# --- Optional ------------------------------------------------------------
+# Python figure reproduction has its own requirements file:
 # web/public/figures/code/requirements.txt
+#
+# --- Custom domain: Porkbun DNS -> Render --------------------------------
+# Render service : ignis-4o3y.onrender.com
+# Domain         : ignisatlis.earth (registrar: Porkbun)
+#
+# 1. Delete Porkbun's default parking records (pixie.porkbun.com).
+# 2. Make sure Porkbun URL forwarding is OFF.
+# 3. Add these records:
+#
+#    Type    Host             Answer / Value             TTL
+#    ALIAS   (blank = root)   ignis-4o3y.onrender.com    600
+#    CNAME   www              ignis-4o3y.onrender.com    600
+#
+#    Fallback if ALIAS is not available: A record, root, 216.24.57.1
+#    (use either ALIAS or A, never both). Do not add AAAA records.
+#
+# www.ignisatlis.earth redirects to ignisatlis.earth (configured in Render).
+#
+# --- Verify after deployment ---------------------------------------------
+# nslookup ignisatlis.earth 8.8.8.8
+# nslookup www.ignisatlis.earth 8.8.8.8
+# Then Render > Settings > Custom Domains > Retry Verification.
+# Both domains should show "Verified" and "Certificate Issued".
