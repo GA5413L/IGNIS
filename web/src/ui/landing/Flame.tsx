@@ -3,9 +3,8 @@
 import { useEffect, useRef } from 'react';
 
 /**
- * The page's one moving picture: a drawn microgravity flame. Without buoyancy a flame has no "up", so it is a
- * sphere and its particles drift outward in every direction. This is an illustration drawn in code, not a
- * simulation, a measurement or NASA footage.
+ * Decorative spherical flame artwork. Its changing appearance follows the page sections, not a physical
+ * model. Microgravity flames are not universally spherical: geometry and imposed flow also matter.
  */
 export type FlameState = 'burning' | 'rich' | 'sensed' | 'cool' | 'model' | 'dim';
 

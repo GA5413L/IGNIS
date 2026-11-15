@@ -19,7 +19,7 @@ test('production server and browser preserve the offline source numbers and anal
   }
   const health = await (await request.get('/api/health')).json();
   expect(health.catalogDigest).toBe(requireCatalog().digest);
-  await page.goto('/#smoke');
+  await page.goto('/console#smoke');
   await page.getByRole('tab', { name: 'Cutoff range', exact: true }).click();
   const file = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Download range analysis', exact: true }).click();

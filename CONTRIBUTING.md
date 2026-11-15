@@ -1,6 +1,6 @@
 # Working on IGNIS
 
-The shared application is in `web/`, build **web-2026-11-15.11**. The complete teammate UI push is integrated at `/`; components live in `web/src/ui/`. See the [workbench/competitor report](web/docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [SI handoff](web/docs/SI_PREPARATION.md), [build status](web/docs/BUILD_STATUS.md) and [scientific rules](CLAUDE.md).
+The shared application is in `web/`, build **web-2026-11-15.12**. The landing page is at `/`; the integrated teammate dashboard is at `/console`. Components live in `web/src/ui/`. See the [workbench/competitor report](web/docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [SI handoff](web/docs/SI_PREPARATION.md), [build status](web/docs/BUILD_STATUS.md) and [scientific rules](CLAUDE.md).
 
 ## Clone and run
 

@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { verifyAssessment } from '../../src/core/export';
 
 async function openSI(page: Page) {
-  await page.goto('/#si');
+  await page.goto('/console#si');
   await expect(page.getByRole('heading', { name: 'SI · Scientific Intelligence', exact: true })).toBeVisible();
   await page.waitForLoadState('networkidle');
 }
@@ -63,7 +63,7 @@ test('SI packet preview preserves the question and chosen provider and excludes 
 });
 
 test('figure palette changes plots and downloads; its source and exact data are accessible', async ({ page }) => {
-  await page.goto('/#figures');
+  await page.goto('/console#figures');
   await page.getByRole('combobox', { name: 'Figure palette', exact: true }).selectOption('monochrome');
   await expect(page.locator('.shell')).toHaveAttribute('data-palette', 'monochrome');
   await expect(page.getByRole('link', { name: 'Download PDF', exact: true }).first()).toHaveAttribute('href', '/figures/monochrome/fig1-atmosphere-cases.pdf');

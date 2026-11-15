@@ -5,7 +5,7 @@ const open = async (page: Page, view: string) => {
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()); });
-  await page.goto(`/#${view}`);
+  await page.goto(`/console#${view}`);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   return errors;
 };

@@ -1,6 +1,14 @@
 # IGNIS current build status
 
-## Current integration — web-2026-11-15.11
+## Current routing and presentation — web-2026-11-15.12
+
+The landing page is at `/`; the research dashboard is at `/console`. The owner requested the missing landing page after the complete teammate push. Rechecking the latest remote branch, repository history and the known local checkout found only saved landing screenshots and `Flame.tsx`. The page and scoped styles were recreated from that design, with server-rendered worked examples using the existing scientific core. Counts are current (24 profiles, 16 findings/context records, 7 atmosphere cases, 154 detector rows, 12 registry sources); the workflow distinguishes 10 ranked investigations from 24 searchable profiles.
+
+Old `/#overview`, `/#si`, `/#figures` and the other known dashboard hashes redirect to `/console` with their query/hash preserved. Landing section anchors remain on `/`. `/example` opens `/console#smoke`, and the console's IGNIS link returns home. Mobile plots retain readable labels in their own scroll regions. Curated data, scientific algorithms and SI/provider gates are unchanged.
+
+**Validation: 40 production Chromium checks PASS** at 1366/375 pixels, including all previous console checks plus home/console navigation, landing anchors and legacy bookmarks. TypeScript, lint and the webpack production build PASS. Thirteen captured landing states at 1440/375/320 pixels have no page/console errors or whole-page overflow; mobile plots scroll within their own regions. [Landing previews and receipt](../artifacts/previews/landing/) record these checks. Scientific code/data have no changes; the .11 checks below remain the previous complete offline technical baseline. No new provider calls, deployment or submission occurred.
+
+## Previous integration — web-2026-11-15.11
 
 The complete teammate UI push `26a952d` is integrated at `/` with the current backend. The owner authorized integration, figure code/palettes, presentation cleanup and SI preparation. Earlier UI-freeze entries below are historical. Current owner working cutoff: **15 November, 23:00 PKT**.
 

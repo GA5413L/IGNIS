@@ -4,7 +4,7 @@ import { defineConfig, devices } from '@playwright/test';
 // Uses installed Playwright browsers; this command never downloads a browser.
 export default defineConfig({
   testDir: 'tests/e2e',
-  testMatch: ['dashboard.spec.ts', 'source-identity.spec.ts', 'workbench.spec.ts', 'si-figures.spec.ts'],
+  testMatch: ['landing.spec.ts', 'dashboard.spec.ts', 'source-identity.spec.ts', 'workbench.spec.ts', 'si-figures.spec.ts'],
   timeout: 60_000,
   retries: 0,
   workers: 2,

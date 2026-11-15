@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
 import type { Assessment } from '../core/assess';
 import type { ResearchSelection } from '../core/researchSelections';
 import type { SafetyArea } from '../core/schemas';
@@ -128,13 +129,13 @@ export default function Dashboard() {
     <div className="shell" data-palette={palette}>
       <a className="skip" href="#main">Skip to content</a>
       <header className="rail">
-        <a className="brand" href="#overview" onClick={(event) => { event.preventDefault(); go('overview'); }}>
+        <Link className="brand" href="/" aria-label="IGNIS home" prefetch={false}>
           <svg className="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
             <circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" strokeWidth="2" />
             <circle cx="16" cy="16" r="3.5" fill="#6ea8ff" />
           </svg>
           <span className="brand-name" translate="no">IGNIS<span className="brand-sub">Fire-safety evidence</span></span>
-        </a>
+        </Link>
         <nav className="nav" aria-label="Dashboard sections">
           {VIEWS.map((item, index) => (
             <a key={item.id} href={`#${item.id}`} aria-current={item.id === view ? 'page' : undefined}

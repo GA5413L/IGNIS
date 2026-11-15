@@ -2,9 +2,9 @@
 
 IGNIS connects NASA microgravity combustion evidence, descriptive analyses and reproducible research records. Independent project by team Emberfall; see [development/preparation disclosure](docs/AI_DISCLOSURE.md) and [source rights](docs/SOURCE_RIGHTS.md).
 
-**Current build: `web-2026-11-15.11`.** The complete `UI_REVAMP` push (`26a952d`) is integrated with the current scientific backend. The dashboard is at `/`; `/example` redirects to Smoke detection. The landing page and `/console` described in older teammate notes were absent from that complete push.
+**Current build: `web-2026-11-15.12`.** The landing page is at `/`, and the research dashboard is at `/console`. The complete `UI_REVAMP` push (`26a952d`) contained the landing screenshots and flame artwork but omitted the page and styles; the saved design has now been recreated with current evidence from the shared scientific core. Old root dashboard bookmarks redirect to the matching console view; `/example` opens `/console#smoke`.
 
-[Open IGNIS locally](http://127.0.0.1:3000) · [SI](http://127.0.0.1:3000/#si) · [Figures and code](http://127.0.0.1:3000/#figures) · [Your data](http://127.0.0.1:3000/#local-data)
+[Landing page](http://127.0.0.1:3000) · [Research console](http://127.0.0.1:3000/console) · [SI](http://127.0.0.1:3000/console#si) · [Figures and code](http://127.0.0.1:3000/console#figures) · [Your data](http://127.0.0.1:3000/console#local-data)
 
 ## Run
 
@@ -72,7 +72,7 @@ npm run typecheck
 npm run test:e2e
 ```
 
-**479 offline checks and 34 production browser checks pass**, plus TypeScript, lint, webpack build and figure replay. Browser checks use installed Chromium at 1366/375 pixels, port 3000; set `IGNIS_CHROMIUM_EXECUTABLE` if needed. Private provider/evaluation fixtures and historical specs targeting deleted components are excluded. Firefox is NOT RUN because the installed binary is incompatible with this Playwright version.
+**Build .12 passes 40 production browser checks, TypeScript, lint and the webpack build.** The unchanged scientific core retains the .11 baseline of 479 passing offline checks and figure replay. Browser checks use installed Chromium at 1366/375 pixels, port 3000; set `IGNIS_CHROMIUM_EXECUTABLE` if needed. The [landing previews and visual receipt](artifacts/previews/landing/) cover 1440, 375 and 320 pixels. Private provider/evaluation fixtures and historical specs targeting deleted components are excluded. Firefox is NOT RUN because the installed binary is incompatible with this Playwright version.
 
 The r2 catalogue, engine .5, renderer .5 and all 20 existing curated collections remain unchanged. [Build status](docs/BUILD_STATUS.md), [current competitor/research review](docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [contributor setup](../CONTRIBUTING.md).
 

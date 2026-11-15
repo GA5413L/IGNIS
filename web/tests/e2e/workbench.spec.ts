@@ -8,8 +8,8 @@ import { auditDesign, TWO_POINT_DESIGN_EXAMPLE } from '../../src/core/designAudi
 import { digestOf } from '../../src/core/canonicalize';
 
 const open = async (page: Page, view = 'local-data') => {
-  await page.goto(`/#${view}`);
-  expect((await (await page.request.get('/api/health')).json()).buildRevision).toBe('web-2026-11-15.11');
+  await page.goto(`/console#${view}`);
+  expect((await (await page.request.get('/api/health')).json()).buildRevision).toBe('web-2026-11-15.12');
   await page.waitForLoadState('networkidle');
 };
 const downloadedText = async (page: Page, button: string) => {
