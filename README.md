@@ -1,86 +1,113 @@
-# IGNIS: research and event prototype
+# IGNIS
 
-**Team development:** [Clone, run, test and contribute](CONTRIBUTING.md). The application is in `web/`; no API key is needed for its structured workflows. Use `npm run test:team` for the checks available in this shared checkout. Raw source downloads and private evaluation state remain local.
+**Fire-safety evidence for spacecraft and lunar habitats.**
 
-> **Current application: web-2026-11-15.13.** Landing at `/`, dashboard at `/console`. The teammate UI now exposes source-linked statistical relationships, material/flight stratification, recorded-sample deletion sensitivity, browser CSV/channel comparisons, citation API receipts and reproducible exports. Interactive material legends isolate or combine materials without moving the remaining points or silently changing statistical populations. [Run and reproduce](web/README.md), [verification](web/docs/BUILD_STATUS.md), [current competitor comparison](web/docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [hosting setup](web/docs/HOSTING_HANDOFF_2026-11-15.md).
->
-> Structured workflows need no key. The Cloudflare SI transport received a bounded live test, but errors prevent runtime acceptance. Hosting is being prepared for the owner-designated `ignisatlas.earth`; the owner is discussing the account choice. No live deployment or independent scientific validation is claimed.
+IGNIS brings NASA combustion research, experimental measurements and reproducible analysis into one browser workspace. Researchers can compare published conditions, inspect detector readings, follow source evidence and explore their own data.
 
-> **Historical technical extension (15 Nov 2026, build .9):** [Dissertation evidence and local trajectory calculations](web/docs/DISSERTATION_AND_TRAJECTORY_METHODS_2026-11-15.md), [endpoint/protocol API](web/docs/ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md), [design audit](web/docs/EXPERIMENTAL_DESIGN_AUDIT_2026-11-15.md), [competitor comparison](web/docs/COMPETITIVE_STRATEGY_AND_VISUAL_REFINEMENT_2026-11-15.md). The new technical extension adds eight printed derived heat-release summaries with provenance, common-experiment lineage and a local coordinate-calculation library/CLI. All 416 shared tests, TypeScript, lint, ten CLI/source/live-identity checks and separate Python arithmetic/PDF checks pass. All 19 earlier source collections remain unchanged. The served app stays at build .9; no UI, new app route or physical predictor was added. UI work belongs to the teammate. Source reconstruction, independent validation and live interpretation remain NOT RUN; deployment remains held.
+Developed by **team Emberfall** for **NASA Space Apps Challenge 2026 - Flame in Freefall**.
 
-> **Historical handoff (7 Nov 2026 PKT):** [Contract closure and build handoff](IGNIS_Contract_Closure_and_Build_Handoff.md) governed the four scientific templates, ordered runtime AI, versioned assessment/revision and then-current build gate. Saffire was the principal analytical path; NIST was secondary and the rod reconstruction an optional control. At that date preparation reuse was unresolved and no application had been built; those status statements are superseded above. The [cross-disciplinary report](IGNIS_Cross_Disciplinary_Improvement_Decision.md), [competitive-core report](IGNIS_Competitive_Core_Decision.md) and [earlier research verdict](IGNIS_Astra_Research_and_Winning_Solution.md) remain historical research context.
+[Run locally](#run-locally) · [Research workflows](#research-workflows) · [Figures and code](#figures-and-code) · [Project record](PROJECT_RECORD.md)
 
-**IGNIS** (Intelligent Graph for NASA In-Space Safety) is a prototype evidence workbench for NASA microgravity
-fire-safety data, targeting the NASA Space Apps Challenge 2026 challenge *"Flame in Freefall"*. It is **not**
-affiliated with or endorsed by NASA.
+![IGNIS landing page: fire-safety evidence for crewed spaceflight](media/landing.png)
 
-> **Historical status (20 Oct 2026): pre-event research only.** Space Apps rules say participants should not begin working on
-> their project before **14 Nov 2026, 09:00 local time**. This repository contains research notes, verified source
-> transcriptions and a plan. It contains **no application**. See `planning/competition_rules.md` for what is
-> confirmed and what is awaiting an organizer ruling.
+## Research workflows
 
-## The central principle
-**Similarity is not scientific comparability.** Two results about "PMMA flame spread" or "extinction" may measure
-different things, under different protocols, on different specimens, or even the same specimen burned twice.
+| Workspace | What it provides |
+| --- | --- |
+| Investigations | Search 24 NASA PSI profiles, inspect their objectives and compare available evidence. |
+| Atmospheres | Compare seven published Saffire cases by material, burning sides, oxygen fraction and pressure. |
+| Smoke detection | Inspect 154 stored detector rows; compare channels, flights and materials; explore cutoff sensitivity and rank association. |
+| Findings | Trace findings to sources and check whether a published model supports the requested quantity and claim. |
+| Figures | Isolate or combine materials, switch palettes, and download the exact visible data and SVG. |
+| Your data | Import a CSV locally, declare units and measurement context, and reproduce the analysis from its exported record. |
+| Sources | Inspect provenance, check citation identity, and export or recompute research notebooks. |
+| SI chat | Find reviewed evidence from the floating Scientific Intelligence panel. Catalogue search works without an API key; live model interpretation remains disabled pending acceptance. |
 
-## What we found (details in `research/session_report_2026-10-20.md`)
-- The ISS PMMA-rod flame-spread data (Link et al. 2018, Tables S1/S2) **are available** and are transcribed here with a mechanical check against the publisher PDF.
-- A **19-label candidate crosswalk** links journal records to NASA's BASS-II as-run log (NASA/TM-20210011385, Table A.3), with qualified specimen identities and burn order; not every relationship is one-to-one or resolved.
-- **Positive result:** in NASA burn P4 (black PMMA rod, 9.525 mm, 18.5 % O₂), spread rate 32.5 → 26.9 µm/s as opposed flow went 2.00 → 1.73 cm/s (descriptive, within one burn).
-- **Open conflict, kept in quarantine:** NASA's appendix log lists the paper's headline series (B16/B19) as **"Concurrent"**. The article, NASA's own Chapter 4 and the published photographs present them as opposed. The adversarial audit (second 20 Oct session) classifies this as a genuine unresolved conflict with the evidence favouring opposed (`research/b16_b19_discrepancy_review.md`). It is **not** a headline finding.
-- **Historical rod demonstration, now an optional control: burn history changes a fire-safety reading** (`research/evidence_case_03.md`, 21 Oct).
-  - **0.95- and 0.64-cm rods:** selected first-logged microgravity burns have printed spread rates at initial O₂ values below the ground-table minima; protocols differ and segment oxygen is unknown.
-  - **1.27-cm rods:** the low-initial-O₂ record B9/P9 is a reburn of specimen 202m. Matching gas entries support possible atmospheric continuity, not proof of an unchanged atmosphere.
-  - **First-logged 1.27-cm rods:** the selected table minimum becomes 19.3%; the corresponding low-initial-O₂ spread question remains unresolved. Changing this selection changes the target population.
-  - **Not claimed:** no limiting oxygen value.
-- **Endpoint specification corrected** (`research/endpoint_dictionary.md`). The measured quantity (measurand) is now separated from method, statistic, context and protocol. The same measurand under different protocols may be displayed and contrasted, but not pooled or read causally.
-- A spreadsheet reproduces all the arithmetic. The contribution so far is **curation and conflict detection**, not algorithms. A public competitor (MicroFire Atlas) already does page-level provenance and reused-sample flags for other BASS-II materials (`research/prior_art_comparison.md`).
+The 24 profiles describe the searchable inventory. The assessment registry separately contains 10 investigations and 16 findings/context records; these counts do not represent independent experiments.
 
-**Audit status (20 Oct, second session):** see `research/adversarial_source_audit.md` for which earlier findings
-survived (PASS), were qualified, or failed. Still **no independent human review** (B-07).
+![IGNIS interactive detector figure showing Teflon and Kapton](media/material-comparison.png)
 
-**Third session (21 Oct):**
-- The endpoint specification was corrected; Evidence Case 03 was written; the shared-atmosphere pattern was recorded (C-26).
-- A value hypothesis, an evaluation repair note, a human-review checklist and a revised (unsent) organizer email were added.
-- Readiness decision: **do not build** (`planning/competition_readiness.md` §0).
+*Select one material, then add another for comparison. Axes stay fixed; missing values and original source cells remain visible. The plotted cutoffs are analyst choices, not alarm thresholds.*
 
-**Fourth session (22 Oct): handoff, nothing built.**
-- **Ready for the user to send** (unsent): the final organizer e-mail and one researcher invitation.
-- **Ready for a person:** the human review packet `planning/review_packet/`.
-- **Build gate:** `planning/implementation_gate.md`. **NO-GO** until the ruling, 14 Nov and an explicit instruction.
+<details>
+<summary>View the research console and SI panel</summary>
 
-## Layout
-| Path | Contents |
-|---|---|
-| `IGNIS_Contract_Closure_and_Build_Handoff.md` | **historical build specification**: four contracts, manual traces, proposed acceptance cases, AI/revision rules and first authorized build |
-| `research/evidence_case_03.md` | optional rod control: lowest O₂ with recorded spread, μg vs 1 g, and what burn history changes |
-| `research/evidence_case_02.md` | rod case: question, admission rules, within-burn result (P4), negative cases |
-| `planning/researcher_workflow.md`, `planning/value_hypothesis.md` | one-page user task; falsifiable value hypothesis and spreadsheet comparator |
-| `planning/review_packet/` | **human review packet**: blind source reading (A), interpretation check (B), held-out task brief (C), review form |
-| `planning/implementation_gate.md`, `planning/researcher_invitation.md` | GO/NO-GO handoff for the first authorized build; unsent pilot invitation |
-| `planning/future_evaluation_plan.md` | evaluation repair note and future plan (`human_review_checklist.md` is superseded) |
-| `research/evidence_case_01.md` | auxiliary thin-sheet critical-velocity case (re-verified) |
-| `research/source_conflicts.md` | 27 conflicts and definition gaps, with exact locations and treatments |
-| `research/adversarial_source_audit.md` | second-session audit: approval decisions, surviving/failed findings |
-| `research/b16_b19_discrepancy_review.md`, `research/p4_independent_recheck.md`, `research/prior_art_comparison.md` | focused audit reviews |
-| `planning/competition_readiness.md`, `planning/evaluation_audit.md`, `planning/independent_reviewer_instructions.md` | rules status, strategy, evaluation audit, reviewer brief (superseded by `review_packet/`) |
-| `planning/organizer_clarification_email.md`, `planning/author_clarification_email.md` | **drafts, not sent** |
-| `research/data/` | as-printed transcriptions + crosswalk + verification results |
-| `research/analysis/` | verification, crosswalk and evidence-case scripts |
-| `research/` (other) | source register, data access audit, endpoint dictionary, inventory, literature matrix, prior art |
-| `planning/` | rules status, scope, evaluation plan (frozen tasks), implementation blueprint, submission checklist |
-| `manifests/` | retrieval provenance with SHA-256; rights and attribution |
-| `DECISIONS.md`, `BLOCKERS.md`, `CHRONOLOGY.md` | decision log, blockers, disclosure timeline |
-| `tools/` | download and PDF inspection utilities |
-| `_raw/` | local third-party downloads (**gitignored**; re-fetch with `tools/fetch.ps1`) |
+![IGNIS research console](media/console.png)
 
-## Reproduce the checks
-Requires Windows PowerShell, `curl.exe`, and Python 3 with PyMuPDF.
-```powershell
-.\tools\fetch.ps1 -Url "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41598-017-18398-4/MediaObjects/41598_2017_18398_MOESM1_ESM.pdf" -Slug link2018 -FileName 41598_2017_18398_MOESM1_ESM.pdf
-.\tools\fetch.ps1 -Url "https://ntrs.nasa.gov/api/citations/20210011385/downloads/TM-20210011385.pdf" -Slug ntrs_20210011385 -FileName TM-20210011385.pdf
-py -3 -I research\analysis\verify_transcriptions.py _raw\link2018\41598_2017_18398_MOESM1_ESM.pdf _raw\ntrs_20210011385\TM-20210011385.pdf
-py -3 -I research\analysis\crosswalk.py
-py -3 -I research\analysis\evidence_case_02.py
+<img src="media/si-chat.png" alt="SI catalogue search showing reviewed combustion findings and source links" width="430" />
+
+</details>
+
+## Figures and code
+
+![Seven published Saffire atmosphere cases](web/public/figures/fig1-atmosphere-cases.png)
+
+The publication figures are available as **PDF, PNG and SVG**, with **Okabe-Ito** and monochrome palettes. The reproduction bundle contains Python code, the derived figure inputs and dependency pins.
+
+- [Browse publication figures](web/public/figures/)
+- [Download the reproduction bundle](web/public/figures/code/ignis-figure-reproduction.zip)
+- [Figure code and instructions](web/public/figures/code/README.txt)
+- [Statistical method and interpretation limits](web/docs/DETECTOR_ASSOCIATION_METHOD_2026-11-15.md)
+
+The atmosphere chart displays published coordinates. It does not predict burning behaviour or establish a safe atmosphere.
+
+## Run locally
+
+Use **Node.js 22.13 or newer within the 22.x family**, with npm.
+
+```sh
+git clone https://github.com/GA5413L/IGNIS.git
+cd IGNIS/web
+npm ci --include=dev
+npm run build
+npm start
 ```
-Compare the downloaded files' SHA-256 with `manifests/data_sources.csv` before trusting the results.
+
+Open **http://localhost:3000**. For development, use `npm run dev`. The start command respects `PORT`; build and development retain the project's webpack configuration.
+
+### Render settings
+
+| Setting | Value |
+| --- | --- |
+| Runtime | Node.js 22.x |
+| Root directory | `web` |
+| Build command | `npm ci --include=dev && npm run build` |
+| Start command | `npm start` |
+| Pre-deploy command | Empty |
+
+The research workflows and catalogue chat need no API key. Keep `AI_ENABLED=false` and `CF_SI_ENABLED=false` for the current release. See [deployment instructions](web/docs/HOSTING_HANDOFF_2026-11-15.md).
+
+## Reproduce and verify
+
+From `web/`:
+
+```sh
+npm run validate:data
+npm run test:team
+npm run lint
+npm run build
+npm run typecheck
+```
+
+The [application guide](web/README.md) covers analysis exports and command-line replay. [Contributing](CONTRIBUTING.md) describes browser checks and scientific conventions. [Verification status](web/docs/BUILD_STATUS.md) separates historical execution results from this documentation cleanup.
+
+## Repository guide
+
+| Path | Contents |
+| --- | --- |
+| `web/src/` | Next.js interface, scientific calculations and server APIs |
+| `web/data/` | Curated records, source identities and model-applicability contracts |
+| `web/tests/` | Unit, integration, export and browser checks |
+| `web/scripts/` | Curation, analysis, verification and figure-generation commands |
+| `web/public/figures/` | Existing publication figures and reproduction code |
+| `web/docs/` | Data provenance, scientific methods, deployment and disclosure |
+| `research/`, `manifests/`, `tools/` | Supporting source research, attribution, verification and acquisition utilities |
+| `media/` | Screenshots for this README |
+
+## Sources and project record
+
+NASA PSI and NTRS records, NIST publications and cited combustion literature supply the evidence. Source versions, units, missingness and experimental context are retained. Read the [data provenance](web/docs/ATLAS_DATA_PROVENANCE.md), [detector provenance](web/docs/DETECTOR_DATA_PROVENANCE.md) and [source-rights record](web/docs/SOURCE_RIGHTS.md).
+
+Pre-event research and AI assistance are disclosed in the [project record](PROJECT_RECORD.md) and [AI-use statement](web/docs/AI_DISCLOSURE.md). The 16 November repository cleanup changes documentation and README images only; application code, data, tests, public assets, configuration and dependencies are preserved. Screenshots were captured after submission from that unchanged application.
+
+IGNIS is an independent research prototype by team Emberfall, without NASA affiliation or endorsement. It presents evidence and descriptive analyses; it does not certify fire safety or provide a validated physical predictor.

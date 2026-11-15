@@ -1,22 +1,22 @@
 # Researcher reuse: local evidence and reproducibility
 
-**Current build: web-2026-11-15.5.** The [code audit and competitor refresh](CODEBASE_AUDIT_AND_COMPETITOR_DELTA_2026-11-15.md) repairs scientific isolation, unknown definitions, arithmetic, export closure, revision scope and notebook races. Source data remain unchanged. Build and dev scripts explicitly use webpack to preserve imported numeric values; source/server/browser identity tests pass. Scenario links reopen selections, notebook files carry recipes/receipts, and assessment JSON retains original selected results. These are different artifacts; historical bundle-generated fingerprints may legitimately report drift.
+The retained application supports source inspection, descriptive comparisons and reproducible exports. Use the [application guide](../README.md) for the current interface and [build status](BUILD_STATUS.md) for dated verification. Historical receipts retain their original source and method identities.
 
 **15 November 2026.** IGNIS is the working name for a local, AI-assisted research workbench. Its present contribution is measurable evidence exploration: inspect sources, compare stated coordinates, recount selected readings and revise an assessment. It provides no field certification, predictive SOTA result or NASA adoption/endorsement. No final public URL or original-code license is implied.
 
 ## Run the local application
 
-Use Node **22.13.0 or later**, npm, the supplied `web/package-lock.json`, and the matching working-tree files. From the repository root:
+Use Node **22.13.0 or later within 22.x**, npm, the committed lockfile and matching application source. From the repository root:
 
 ```text
 cd web
-npm ci
+npm ci --include=dev
 npm run validate:data
 npm run build
 npm start
 ```
 
-The production server uses port 3000. Installation requires registry access; evidence requests need no credentials or inference service. These are reproduction instructions, not a claim that this documentation task executed installation or a production server.
+The production server uses `PORT`, defaulting to 3000. Installation requires registry access; the deterministic evidence workflows require no credentials or inference service.
 
 ## Read-only API
 
@@ -46,7 +46,7 @@ Keep the original **assessment JSON** as well as the session: recipes and receip
 
 For the paired audit, default AW scatter versus AV obscuration at separately declared 2 V cutoffs gives 133 jointly finite pairs among 134 nonreference rows; A-minus-B fractions are +70/133 pooled, −6/25 flight 1 and +76/108 flight 2. Original workbook/sheet/row identity is the pairing key. Equal voltage cutoffs do not establish a shared physical response scale. The optional literal-n fan filter is a population-sensitivity operation, not an instrument-failure diagnosis. Export the full paired audit to preserve marginal counts, finite completion bounds and exclusion witnesses.
 
-See the [deeper-research report](PROFESSIONAL_RESEARCH_AND_IMPROVEMENTS_2026-11-15.md) for new primary sources, the decision to defer physical ML fitting, professional-tool comparisons and concrete data-admission requirements.
+See the [deeper-research report](https://github.com/GA5413L/IGNIS/blob/6dc8f5e0c1bc9c1202e70b803c9e26f202f9cdd5/web/docs/PROFESSIONAL_RESEARCH_AND_IMPROVEMENTS_2026-11-15.md) for new primary sources, the decision to defer physical ML fitting, professional-tool comparisons and concrete data-admission requirements.
 
 ## Distinguish evidence depth and versions
 
@@ -70,7 +70,7 @@ python -I web/scripts/curate-detector-data.py --check
 
 Both use the standard library. **The exact local `_raw/` archive is required**, including pinned acquisition manifests/audit metadata, 24 PSI records, 22 CSVs and the relevant papers/workbook. A public clone without that archive can consume generated JSON but cannot reproduce these source checks. Downloading the latest similarly named file is insufficient. The atlas verifies 55 raw hashes; detector curation verifies its pinned source inputs. Neither runs spreadsheet formulas, inference or a simulator. See [atlas provenance](ATLAS_DATA_PROVENANCE.md) and [detector provenance](DETECTOR_DATA_PROVENANCE.md).
 
-No immutable release commit containing this working implementation has been published. Before citing a reproduced build, freeze the code and lockfile in a commit, record that commit and file hashes, retain dataset schema/source versions and `/api/catalog` digest, and preserve exported requests/results. A schema identifier alone is not a content version.
+The retained source baseline is recorded in [PROJECT_RECORD.md](../../PROJECT_RECORD.md). When citing a reproduced result, record the actual commit and lockfile, dataset/source versions, catalogue digest and exported request/results. A schema identifier alone is not a content version.
 
 Rights remain item-specific: 23 PSI records state CC0-1.0; PSI-10's license is unknown. NTRS 20260001992 is public but marked `MAY_INCLUDE_COPYRIGHT_MATERIAL`. Full PDFs, figures and workbooks are excluded from the proposed public package. Original-code licensing remains a release decision. Retain attribution and [AI/pre-event disclosure](AI_DISCLOSURE.md); consult [source rights](SOURCE_RIGHTS.md).
 

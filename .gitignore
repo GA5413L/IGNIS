@@ -28,3 +28,14 @@ node_modules/
 *.tsbuildinfo
 test-results/
 playwright-report/
+
+# Local agent settings, working notes and submission drafts are not public source.
+.claude/
+.codex/
+.agents/
+CLAUDE.md
+AGENTS.md
+BLOCKERS.md
+CHRONOLOGY.md
+DECISIONS.md
+IGNIS_SUBMISSION_ANSWERS_*.md

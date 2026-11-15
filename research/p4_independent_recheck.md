@@ -1,6 +1,6 @@
 # P4 / B4 positive case: recheck against the sources
 
-> **Scientific correction, 7 Nov 2026:** The numerical conversion and difference below survive rechecking. Segment oxygen and an unchanged inter-burn atmosphere are not established by boundary readings. References below to lower oxygen in a particular segment or to a definitely inherited atmosphere are superseded by the [current assessment, section 2](../IGNIS_Astra_Research_and_Winning_Solution.md#2-reality-audit-and-scientific-repairs). This remains an assistant check, not independent human validation.
+> **Scientific correction, 7 Nov 2026:** The numerical conversion and difference below survive rechecking. Segment oxygen and an unchanged inter-burn atmosphere are not established by boundary readings. References below to lower oxygen in a particular segment or to a definitely inherited atmosphere are superseded by the [current assessment, section 2](https://github.com/GA5413L/IGNIS/blob/6dc8f5e0c1bc9c1202e70b803c9e26f202f9cdd5/IGNIS_Astra_Research_and_Winning_Solution.md#2-reality-audit-and-scientific-repairs). This remains an assistant check, not independent human validation.
 
 **Date:** 20 October 2026, second session (adversarial audit). This recheck was done by an AI assistant from the
 publisher and NTRS PDFs, without using the earlier verification script for the values. It is **not** an independent

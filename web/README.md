@@ -2,7 +2,7 @@
 
 IGNIS connects NASA microgravity combustion evidence, descriptive analyses and reproducible research records. Independent project by team Emberfall; see [development/preparation disclosure](docs/AI_DISCLOSURE.md) and [source rights](docs/SOURCE_RIGHTS.md).
 
-**Current build: `web-2026-11-15.13`.** Landing at `/`, research dashboard at `/console`. The integrated teammate design now exposes statistical channel relationships, per-material/flight analysis, recorded-sample deletion sensitivity, local channel comparisons, API citation checks and complete source-linked exports. The protected SI connection has been tested live but has not earned runtime acceptance. [Current verification](docs/BUILD_STATUS.md), [competitor comparison](docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md).
+**Current build: `web-2026-11-15.13`.** Landing at `/`, research dashboard at `/console`. The integrated teammate design now exposes statistical channel relationships, per-material/flight analysis, recorded-sample deletion sensitivity, local channel comparisons, API citation checks and complete source-linked exports. The protected SI connection has been tested live but has not earned runtime acceptance. [Current verification](docs/BUILD_STATUS.md), [statistical method](docs/DETECTOR_ASSOCIATION_METHOD_2026-11-15.md).
 
 [Landing page](http://127.0.0.1:3000) · [Research console and SI chat](http://127.0.0.1:3000/console) · [Figures and code](http://127.0.0.1:3000/console#figures) · [Your data](http://127.0.0.1:3000/console#local-data)
 
@@ -20,7 +20,7 @@ Hosting settings: root directory `web`, install `npm ci --include=dev`, build `n
 
 **Render:** its Build Command must include installation: `npm ci --include=dev && npm run build`. Keep Root Directory `web`, Start Command `npm start`, and Pre-Deploy Command empty. Running only `npm run build` on a clean checkout produces `next: not found`. After saving the command, use **Manual Deploy → Clear build cache & deploy**. If Render is connected to a fork, synchronize that fork with the team repository before deploying. [Render deployment commands](https://render.com/docs/deploys#build-command).
 
-For development, use `npm run dev`. Both scripts explicitly select webpack: a prior Turbopack build altered imported detector numbers, so exact source/server/browser identity checks are mandatory. No key is needed for the implemented workflows. `Start-IGNIS.cmd` starts the owner's existing F: installation; contributors should use the portable commands above.
+For development, use `npm run dev`. Both scripts explicitly select webpack: a prior Turbopack build altered imported detector numbers, so exact source/server/browser identity checks are mandatory. No key is needed for the implemented workflows.
 
 ## Research workflows
 
@@ -93,6 +93,6 @@ npm run test:e2e
 
 **Current verification is recorded in [BUILD_STATUS](docs/BUILD_STATUS.md).** Browser checks use installed Chromium at 1366/375 pixels on port 3000. Set `IGNIS_CHROMIUM_EXECUTABLE` if needed. Private provider/evaluation fixtures and historical specs targeting removed controls remain excluded. Firefox remains NOT RUN because the installed protocol is incompatible with this Playwright version.
 
-The r2 catalogue, engine .5, renderer .5 and all 20 existing curated collections remain unchanged. [Build status](docs/BUILD_STATUS.md), [current competitor/research review](docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [contributor setup](../CONTRIBUTING.md).
+The r2 catalogue, engine .5, renderer .5 and all 20 existing curated collections remain unchanged. [Build status](docs/BUILD_STATUS.md), [current competitor/research review](https://github.com/GA5413L/IGNIS/blob/6dc8f5e0c1bc9c1202e70b803c9e26f202f9cdd5/web/docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [contributor setup](../CONTRIBUTING.md).
 
 GitHub source sharing and hosting preparation are authorized. The owner has designated `ignisatlas.earth` and is discussing the hosting account; deployment is pending that decision. [Hosting handoff](docs/HOSTING_HANDOFF_2026-11-15.md). Competition submission and outreach remain separate. Historical reports/screenshots describe their dated builds. No independent scientific validation, measured competitive superiority or NASA adoption is claimed.

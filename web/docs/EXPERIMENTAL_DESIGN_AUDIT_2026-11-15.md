@@ -93,13 +93,13 @@ The arithmetic verifier needs only Python's standard library. `--pdf` additional
 
 With the supplied PDF, all 12 printed X cells and the O cell match the extraction by text coordinates; the load-bearing fixed-flow sentence is present. No figure points are digitized. New tests cover marginal-box false positives, sparse-plane membership, unknown flow-run enumeration, both pressure interpretations, repeated/collinear proposals, higher-order aliasing, a five-column full-rank counterexample, rational near-center values, nonvanishing negative controls, detached output, incompatible scope and bounded HTTP bodies.
 
-Current checks: **363 shared offline tests pass**, including **36 new design/API checks**; TypeScript and lint pass. The webpack production build and ten production/source checks pass, including byte-value-equivalent production/CLI certificates and unchanged prior source identities; see the [verification addendum](LOCAL_VERIFICATION_2026-11-15.md). Prior UI/browser results remain dated baselines; this backend continuation does not claim a new visual review. The 17 existing curated files are preserved. Provider tests requiring private evaluation state are excluded from the shared suite.
+Current checks: **363 shared offline tests pass**, including **36 new design/API checks**; TypeScript and lint pass. The webpack production build and ten production/source checks pass, including byte-value-equivalent production/CLI certificates and unchanged prior source identities; see the [verification addendum](https://github.com/GA5413L/IGNIS/blob/6dc8f5e0c1bc9c1202e70b803c9e26f202f9cdd5/web/docs/LOCAL_VERIFICATION_2026-11-15.md). Prior UI/browser results remain dated baselines; this backend continuation does not claim a new visual review. The 17 existing curated files are preserved. Provider tests requiring private evaluation state are excluded from the shared suite.
 
 **NOT RUN:** candidate experiments; parameter fitting; physical predictions; measurement-error/conditioning analysis; source-author clarification; independent human review; comparative researcher trial; common-task competitor benchmark; runtime model acceptance; NASA review/adoption. The mathematical method is standard exact linear algebra applied to a traceable source design. Its relative usefulness remains to be measured.
 
 ## Technical comparison and next evidence
 
-The [14-project comparison](COMPETITIVE_STRATEGY_AND_VISUAL_REFINEMENT_2026-11-15.md) remains the current pinned audit, not an exhaustive current ranking. The new backend is a concrete capability, not evidence that no other entrant has a similar one.
+The [14-project comparison](https://github.com/GA5413L/IGNIS/blob/6dc8f5e0c1bc9c1202e70b803c9e26f202f9cdd5/web/docs/COMPETITIVE_STRATEGY_AND_VISUAL_REFINEMENT_2026-11-15.md) remains the current pinned audit, not an exhaustive current ranking. The new backend is a concrete capability, not evidence that no other entrant has a similar one.
 
 | Research task | IGNIS now | Remaining gap against observed public tools |
 |---|---|---|

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "ignis-repository-cleanup-1",
+  "maintenanceDatePKT": "2026-11-16",
+  "baselineCommit": "6dc8f5e0c1bc9c1202e70b803c9e26f202f9cdd5",
+  "scope": "Documentation, obsolete internal-file removal and README screenshots only; original Git history retained.",
+  "trackedFilesBefore": 550,
+  "obsoleteFilesRemovedFromCurrentTree": 244,
+  "removedFilesBackedUpLocally": true,
+  "protectedFilesChecked": 258,
+  "protectedFileMismatches": [],
+  "protectedManifestSha256": "04070df09a08add041bd7caadb3ca5df315199c29cd45bae900eab745197d85e",
+  "preserved": [
+    "application source",
+    "curated data",
+    "tests",
+    "scripts and tools",
+    "dependency manifests and lockfile",
+    "runtime configuration",
+    "shipped public assets and scientific figures",
+    "source attribution and preparation/AI disclosure"
+  ],
+  "historicalDocumentLinksUpdated": 7,
+  "readmeScreenshots": [
+    {
+      "path": "media/landing.png",
+      "sha256": "0147147d0d454e0628e9b8b06604929039e9479e1628b5154c72b92b0cb880f7"
+    },
+    {
+      "path": "media/console.png",
+      "sha256": "2861e512652e4ea32be5209733c00679af2f685a809465e81d8c0e8499830618"
+    },
+    {
+      "path": "media/material-comparison.png",
+      "sha256": "ace9b4faa2b94f6de205039d7188e486f95106dfd1701f40dcf087c0d0bbb35b"
+    },
+    {
+      "path": "media/si-chat.png",
+      "sha256": "7b8ff35989b2474ded1ebfafe09e898ac2194a266b28056f04766633ed0fd979"
+    }
+  ],
+  "screenshotsScope": "Captured after submission from the existing build; source/data/public assets in the preview mirror matched the source baseline. Existing UI controls only; no source or data edits.",
+  "fullTestSuiteDuringCleanup": "NOT RUN: no executable change. Earlier results remain explicitly dated in BUILD_STATUS.md.",
+  "providerInferenceDuringCleanup": "NOT RUN",
+  "deploymentDuringCleanup": "NOT RUN",
+  "gitHistoryRewritten": false,
+  "localLinkCheck": {
+    "markdownFilesChecked": 37,
+    "missingTargets": [],
+    "externalWebLinksFetched": false
+  }
+}

@@ -1,69 +1,51 @@
-# Working on IGNIS
+# Contributing to IGNIS
 
-The shared application is in `web/`, build **web-2026-11-15.13**. The landing page is at `/`; the integrated teammate dashboard is at `/console`. Components live in `web/src/ui/`. See the [workbench/competitor report](web/docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [SI handoff](web/docs/SI_PREPARATION.md), [build status](web/docs/BUILD_STATUS.md), [hosting setup](web/docs/HOSTING_HANDOFF_2026-11-15.md) and [scientific rules](CLAUDE.md).
+The application is in `web/`. The submission snapshot is documented in [PROJECT_RECORD.md](PROJECT_RECORD.md). Keep later development on a clearly dated branch; the current repository cleanup makes no application changes.
 
-## Clone and run
+## Development
 
-Install Node.js **22.13.0 or later within 22.x** and Git. These commands work from a fresh clone on Windows, macOS or Linux:
+Use Node.js 22.13 or newer within 22.x.
 
 ```sh
 git clone https://github.com/GA5413L/IGNIS.git
 cd IGNIS/web
-npm ci
+npm ci --include=dev
 npm run dev
 ```
 
-Open `http://localhost:3000`. No API key or environment file is needed for the structured research workflows. Live SI interpretation is disabled; cloning the repository does not authorize provider calls or reset evaluation budgets.
+Open http://localhost:3000. No provider key is needed for catalogue search or deterministic research workflows.
 
-For the production app:
+## Verification
 
 ```sh
 npm run validate:data
 npm run test:team
+npm run lint
 npm run build
 npm run typecheck
-npm start
 ```
 
-Use the package scripts: `dev` and `build` explicitly select **webpack**. The audited Turbopack output changed imported detector numbers. Keep the source-text checks strict. `Start-IGNIS.cmd` is the original owner's workstation shortcut; other contributors should use the portable commands above.
+`test:team` excludes the provider evaluation file that depends on private frozen fixtures. Its result is a software check, not a live model evaluation. Private questions, answer keys and spending ledgers are not distributed.
 
-## Verify a change
-
-`npm run test:team` runs **479 offline application checks**. The 25-test provider/IE-1 file needs private frozen evaluation fixtures and is deliberately excluded from the team command. This is not a live interpretation acceptance result. Private fixtures, score keys and cumulative spend/probe ledgers stay local; do not invent replacements or start a new ledger to bypass them.
-
-Run `npm run lint` and a production build before handing off a change. The existing browser suite uses installed **Chromium** at desktop 1366/mobile 375 widths and starts/reuses a production server on port 3000:
+Browser tests use the production build at port 3000 and an installed compatible Chromium browser:
 
 ```sh
-npm run build
 npm run test:e2e
 ```
 
-Set `IGNIS_CHROMIUM_EXECUTABLE` to an installed compatible binary if needed. The command does not download a browser. If none is available, record checks as NOT RUN. Optional Firefox checks require `IGNIS_TEST_FIREFOX=1`; the owner's installed Firefox protocol was incompatible and checks were NOT RUN. Do not silently replace failed source assertions, weaken equality to an epsilon, or change frozen answers to make tests pass. Source-curation scripts require the pinned local `_raw/` downloads; the app itself runs from the committed curated data.
+Set `IGNIS_CHROMIUM_EXECUTABLE` to the browser executable when needed. The test command does not install a browser. Keep the webpack build configuration: source/server/browser numeric identity is explicitly tested.
 
-## Collaborate without overwriting one another
+## Scientific conventions
 
-```sh
-git switch main
-git pull --ff-only
-git switch -c yourname/short-task
-# make and check the change
-git add <changed-files>
-git commit -m "Describe the concrete change"
-git push -u origin yourname/short-task
-```
+- Preserve source values, units, locators, missing/error states and version identities. Never fill an unreported value with zero or an assumed default.
+- Establish the measured quantity, instrument/operator, configuration and observation window before combining records. Similar labels alone do not make experiments comparable.
+- Keep analytical populations separate from display-only material visibility. Source-cell witnesses and export recipes must reproduce the stated result.
+- Do not promote descriptive fractions or rank associations to alarms, causal effects, calibration, physical predictions or confidence intervals.
+- Preserve source conflicts and qualifications. Independent scientific review must be identified separately from AI assistance and software verification.
+- Model interpretation remains subject to its existing acceptance, public-data, confirmation and server-side accounting contracts.
 
-Open a pull request against `main`. Explain the trigger, resulting behavior, verification and remaining limitations. Coordinate shared files such as `ui/Dashboard.tsx` and the scientific core before editing them concurrently. Keep the authoritative source in this repository; dependencies and generated builds are local.
+## Changes and source rights
 
-Useful workstreams for the team are:
+Use a branch and a focused pull request. Explain the observed problem, resulting behaviour and relevant verification. Do not rewrite submission history or imply later changes were made during the challenge.
 
-- **Research review:** independently check source mappings and claim qualifications, preserving locators and disagreements. Separate development examples from any later blinded comparison.
-- **Product workflow:** improve guided tasks and historical evidence preservation, with narrow-screen and keyboard checks.
-- **Core reliability:** protect scientific scope, source identity, exact arithmetic and revision/session behavior with consequential counterexamples.
-
-## Sharing boundaries
-
-The owner explicitly authorized this GitHub source handoff on 15 November 2026. Website deployment, competition submission and outreach remain separate actions. No new provider use or billing change is implied.
-
-Do not commit credentials, `.env` files, private evaluation state, mailbox exports, raw third-party downloads, `node_modules`, build caches or local review ZIPs. The reviewed public figure-code ZIP is a specific exception: it contains our script, derived figure inputs, pins and manifest, not private data or third-party source binaries. Safe empty `.env.example` defaults are included. [Source rights](web/docs/SOURCE_RIGHTS.md) and [AI/preparation disclosure](web/docs/AI_DISCLOSURE.md) remain applicable. No repository-wide original-code license is assigned by this push.
-
-Current and historical UI previews and dated research reports are included. Historical reports can link `_raw/` evidence or local ZIPs that are intentionally absent from GitHub; their absence is not evidence that those measurements were rerun by a teammate. See the pinned public source links and retained SHA-256 identities in the reports.
+Keep credentials, environment files, raw third-party downloads, private evaluation material, local notes and build caches out of Git. The public figure-code bundle is intentionally included; source PDFs and workbooks are not. [Source rights](web/docs/SOURCE_RIGHTS.md), [AI disclosure](web/docs/AI_DISCLOSURE.md) and the original dependency licenses remain applicable. No new repository-wide license is assigned by this cleanup.
