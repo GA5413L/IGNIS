@@ -1,5 +1,8 @@
 # Blockers
 
+**Access update, 15 November 2026:** LIV24's nine-page accepted manuscript is now supplied/read; both copies have identical text/renders. See [endpoint/protocol report](web/docs/ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md). Rivera 2026 remains unread in full. Liveretou's verified 2025 Berkeley dissertation is an additional source lead; direct retrieval returned 403 and the full text was not inspected. Earlier access statements below are historical.
+
+
 > **Current status, 15 Nov 2026 PKT:** use [BUILD_STATUS](web/docs/BUILD_STATUS.md) and [WIN_PLAN](web/docs/WIN_PLAN.md). Preparation reuse is authorized (D-050); the owner zone is PKT; the supplied 2026 guides have been read; 24 public PSI records, 22 CSVs and the analyzed SAME workbook are acquired without an account. Older B-01/B-02/B-03 status language below is historical and must not trigger a repeated permission request or account creation. Scientific conflicts/quarantines and independent-human-review gaps remain. Live interpretation has no passing accepted configuration, and deployment is still on hold.
 
 **Current handoff, 7 Nov 2026 PKT:** see [contract closure, current gate and remaining external actions](IGNIS_Contract_Closure_and_Build_Handoff.md#10-first-authorized-build-gate-order-and-cuts). Emberfall/Universal is confirmed; accepted roster and creator's time zone still need a final check. The full challenge statement is verified. Preparation reuse is unresolved. Optional NIST/rod asset gaps do not block a supported NASA comparison specification. Source access failures remain session-specific. Independent human review and user-value evidence remain absent.

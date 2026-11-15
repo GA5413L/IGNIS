@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "ignis-endpoint-audit-request-1",
+  "dataRole": "hypothetical",
+  "runs": [
+    {
+      "id": "hypothetical-run",
+      "contextDescription": "Mathematical example; not a material test or experiment protocol",
+      "operators": {
+        "sustainedFlameSpread": {
+          "method": "Hypothetical observer",
+          "windowSeconds": "60",
+          "resolutionDescription": "Hypothetical fixed detection rule; no instrument calibration established"
+        },
+        "visibleFlame": {
+          "method": "Hypothetical observer",
+          "windowSeconds": "60",
+          "resolutionDescription": "Hypothetical fixed detection rule; no instrument calibration established"
+        },
+        "fuelRegression": {
+          "method": null,
+          "windowSeconds": null,
+          "resolutionDescription": null
+        }
+      },
+      "steps": [
+        {
+          "id": "A",
+          "oxygenVolPercent": "20",
+          "observations": {
+            "sustainedFlameSpread": "detected",
+            "visibleFlame": "detected",
+            "fuelRegression": "unknown"
+          },
+          "testEnded": false
+        },
+        {
+          "id": "B",
+          "oxygenVolPercent": "19",
+          "observations": {
+            "sustainedFlameSpread": "not_detected",
+            "visibleFlame": "detected",
+            "fuelRegression": "unknown"
+          },
+          "testEnded": false
+        },
+        {
+          "id": "C",
+          "oxygenVolPercent": "18",
+          "observations": {
+            "sustainedFlameSpread": "not_detected",
+            "visibleFlame": "not_detected",
+            "fuelRegression": "unknown"
+          },
+          "testEnded": true
+        }
+      ]
+    }
+  ],
+  "idealizedModel": {
+    "monotoneBinaryResponse": true,
+    "fixedContextWithinRun": true,
+    "settledResponseAtEachStep": true,
+    "errorFreeDetection": true,
+    "boundaryConvention": "detected_at_or_above"
+  }
+}

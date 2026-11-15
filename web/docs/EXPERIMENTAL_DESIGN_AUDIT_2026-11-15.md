@@ -1,5 +1,7 @@
 # Exact experimental-design audit and technical handoff
 
+**Later access update, 15 November:** the owner supplied LIV24's full accepted manuscript. It is now read and integrated in the separate [endpoint/protocol audit](ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md); the request below for that full text is historical. RIES24 mathematics and source data are unchanged.
+
 15 November 2026. Build `web-2026-11-15.8`; method `design-audit-2026-11-15.1`. The owner transferred UI work to a teammate. This continuation changes the scientific backend, API, CLI, tests and documentation; it makes no component, style or layout changes.
 
 IGNIS can now distinguish being inside published parameter ranges from having joint experimental support, and show exact coefficient directions that the reported design cannot distinguish. This is a response-free identifiability calculation, not a flame-spread predictor. It adds a concrete mathematical question to the existing provenance and sensitivity work. No claim of a new theorem, exclusive competitor capability, SOTA performance or NASA adoption is established.

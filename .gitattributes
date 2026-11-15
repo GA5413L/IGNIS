@@ -3,6 +3,8 @@ web/data/*.json -text
 web/src/data/*.json -text
 web/data/design-studies/*.json -text
 web/artifacts/design-audit/*.json -text
+web/data/endpoint-studies/*.json -text
+web/artifacts/endpoint-audit/*.json -text
 web/package*.json text eol=lf
 
 *.png binary

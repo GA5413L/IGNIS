@@ -1,5 +1,8 @@
 # Data access audit
 
+**Access update, 15 November 2026:** LIV24's nine-page accepted manuscript is now supplied/read; both copies have identical text/renders. See [endpoint/protocol report](../web/docs/ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md). Rivera 2026 remains unread in full. Liveretou's verified 2025 Berkeley dissertation is an additional source lead; direct retrieval returned 403 and the full text was not inspected. Earlier access statements below are historical.
+
+
 **Priority question:** *Can we retrieve and verify the original PMMA-cylinder test records and their measured
 flame-spread rates?*
 

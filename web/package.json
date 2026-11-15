@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "validate:data": "tsx scripts/validate-catalog.ts",
     "audit:design": "tsx scripts/audit-design.ts",
+    "audit:endpoints": "tsx scripts/audit-endpoints.ts",
     "test:unit": "vitest run tests/unit",
     "test:integration": "vitest run tests/integration",
     "test:exports": "vitest run tests/exports",

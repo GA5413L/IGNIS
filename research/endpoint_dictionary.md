@@ -1,5 +1,15 @@
 # Endpoint dictionary
 
+## Current access/method addendum: 15 November 2026
+
+The supplied LIV24 accepted manuscript is now fully read. Its intended quantity concerns downward opposed flame-spread limits, but its condition-level reported outcome is spread cessation **or** flame extinction. A residual blue flame after spread cessation is described. Individual failure branches and transition pairs are unavailable; the source cannot be silently assigned to a pure full-extinction endpoint. RIES24's newly read operator is instead the propagation rate of an IR pyrolysis marker strictly above 603 K over 3–7 s, not an oxygen limit or automatically an optical flame-leading-edge rate.
+
+The separate [LIV24 dossier](../web/data/endpoint-studies/liveretou2024.json) and [endpoint audit](../web/docs/ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md) implement observation criteria for detected spread, visible flame and fuel regression. These are detector/method-dependent records, not a relabeling of M-03/M-04 physical quantities. No automatic implication connects them. A test-ended event with unknown observation status supplies no threshold inequality. Conditional mathematical sets are opt-in and do not establish physical absence or a material constant.
+
+Legacy E-01–E-08 and their source meanings below are unchanged. The frozen r2 registry is unchanged. The original statement below that this dictionary was specification-only describes its October revision; the new source-specific backend is a separate November implementation.
+
+## Historical dictionary revision
+
 **Revised 21 Oct 2026 (third session): measurand layer added.** The first version bundled three things into each
 endpoint ID: the quantity measured, the conditions, and the protocol. It then ruled that "Records with different
 endpoint IDs are **never** pooled, compared numerically, or substituted for one another." That rule confused *what

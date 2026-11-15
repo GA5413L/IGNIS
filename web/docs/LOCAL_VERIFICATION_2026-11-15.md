@@ -2,7 +2,15 @@
 
 Assistant-performed checks in the E: source workspace and F: tooling mirror establish local software behavior, not independent scientific validation, competitor superiority or adoption.
 
-## Current technical patch: web-2026-11-15.8
+## Current endpoint patch: web-2026-11-15.9
+
+- **390 shared offline tests pass**, including 27 new endpoint/API checks. The direct-predicate oracle covers all 27 three-level status assignments under two boundary conventions. TypeScript, ESLint and webpack production build pass. Private provider tests remain excluded; no runtime calls were made.
+- **Twelve production/source checks pass:** complete source dossier, GET/POST cache policy, default and conditional API equality with CLI/artifact, role/query/origin/body boundaries, build/registry/runtime identity, unchanged previous design API and 18 unchanged source collections. Local server runs .9.
+- Python Fraction/direct-predicate verification agrees with the explicitly hypothetical artifact and rejects three altered reports. Eleven printed method anchors match the canonical accepted manuscript. Both PDF hashes/sizes match; extracted text and all nine 72-dpi page renders are identical despite differing bytes. No figure measurements were digitized.
+- No UI files, original research/data transcriptions, frozen evaluator records, r2 content or older evidence-package schemas changed. No fresh browser/visual check is claimed. Source PDFs remain local. Physical experiments/model execution, independent review and comparative researcher benefit remain **NOT RUN**.
+- [Methods, source access, usage and reproduction](ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md); receipts in `_raw/endpoint_audit_2026-11-15/`.
+
+## Prior design patch: web-2026-11-15.8
 
 - **363 shared offline tests pass**, including 36 new source-bound design/math/API checks. Private provider fixtures remain excluded; no runtime calls were made. TypeScript, ESLint and webpack production build pass.
 - **Ten production/source checks pass:** index/source snapshot, index/post cache headers, production certificate equality with the CLI, gravity/query/origin/body boundaries, current build plus preserved registry/runtime, and all 17 prior curated-file hashes. Local server now runs .8.

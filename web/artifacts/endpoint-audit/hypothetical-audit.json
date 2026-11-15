@@ -1,0 +1,434 @@
+{
+  "schemaVersion": "ignis-endpoint-audit-1",
+  "methodRevision": "endpoint-audit-2026-11-15.1",
+  "request": {
+    "schemaVersion": "ignis-endpoint-audit-request-1",
+    "dataRole": "hypothetical",
+    "runs": [
+      {
+        "id": "hypothetical-run",
+        "contextDescription": "Mathematical example; not a material test or experiment protocol",
+        "operators": {
+          "sustainedFlameSpread": {
+            "method": "Hypothetical observer",
+            "windowSeconds": "60",
+            "resolutionDescription": "Hypothetical fixed detection rule; no instrument calibration established"
+          },
+          "visibleFlame": {
+            "method": "Hypothetical observer",
+            "windowSeconds": "60",
+            "resolutionDescription": "Hypothetical fixed detection rule; no instrument calibration established"
+          },
+          "fuelRegression": {
+            "method": null,
+            "windowSeconds": null,
+            "resolutionDescription": null
+          }
+        },
+        "steps": [
+          {
+            "id": "A",
+            "oxygenVolPercent": "20",
+            "observations": {
+              "sustainedFlameSpread": "detected",
+              "visibleFlame": "detected",
+              "fuelRegression": "unknown"
+            },
+            "testEnded": false
+          },
+          {
+            "id": "B",
+            "oxygenVolPercent": "19",
+            "observations": {
+              "sustainedFlameSpread": "not_detected",
+              "visibleFlame": "detected",
+              "fuelRegression": "unknown"
+            },
+            "testEnded": false
+          },
+          {
+            "id": "C",
+            "oxygenVolPercent": "18",
+            "observations": {
+              "sustainedFlameSpread": "not_detected",
+              "visibleFlame": "not_detected",
+              "fuelRegression": "unknown"
+            },
+            "testEnded": true
+          }
+        ]
+      }
+    ],
+    "idealizedModel": {
+      "monotoneBinaryResponse": true,
+      "fixedContextWithinRun": true,
+      "settledResponseAtEachStep": true,
+      "errorFreeDetection": true,
+      "boundaryConvention": "detected_at_or_above"
+    }
+  },
+  "methodologicalSource": {
+    "schemaVersion": "ignis-endpoint-study-1",
+    "revision": "liv24-endpoint-2026-11-15.1",
+    "id": "LIV24",
+    "title": "The limiting oxygen volume fraction for opposed flame spread extinction",
+    "authors": [
+      "Christina Liveretou",
+      "Charles Scudiere",
+      "Jose Rivera",
+      "Lilly Etzenbach",
+      "Maria Thomsen",
+      "Carlos Fernandez-Pello",
+      "Michael J. Gollner",
+      "Sandra Olson",
+      "Paul Ferkul"
+    ],
+    "doi": "10.1016/j.proci.2024.105224",
+    "url": "https://doi.org/10.1016/j.proci.2024.105224",
+    "source": {
+      "version": "accepted_manuscript",
+      "versionOfRecordFullTextInspected": false,
+      "pages": 9,
+      "canonicalPdfSha256": "a1899bf28581fa30a480a65d7868a94019821e7fc7b02b3f51ff2c34fc2b6bb0",
+      "canonicalPdfBytes": 1385409,
+      "alternatePdfSha256": "8ff9c5214eac0f2d7da53ddac4493578b1cba9954ccd6fbbf813c0cfef5398fc",
+      "alternatePdfBytes": 1384104,
+      "duplicateCheck": "Different PDF bytes; identical extracted text and all nine page renders at the checked resolution. These are not independent sources or replications.",
+      "reviewDate": "2026-11-15",
+      "review": "assistant_checked",
+      "independentHumanReview": false,
+      "rights": "Page 1 states Elsevier user license, https://www.elsevier.com/open-access/userlicense/1.0/. No CC BY assumption; PDFs and figures are not redistributed.",
+      "extraction": "Printed methods and model parameters only. No graph measurements digitized."
+    },
+    "context": {
+      "gravity": "normal_gravity",
+      "material": "Black cast PMMA",
+      "geometry": {
+        "shape": "cylinder",
+        "diameterMm": "12.7",
+        "lengthMm": "55"
+      },
+      "orientation": "Vertical; downward opposed flame spread",
+      "chamber": {
+        "volumeL": "105",
+        "flowTunnelDimensionsMm": [
+          "125",
+          "125",
+          "600"
+        ],
+        "gasManagement": "Fresh gas supply and exhausted effluents; oxygen is prescribed in decreasing steps, not left to deplete by combustion in a sealed chamber."
+      },
+      "flow": {
+        "nominalForcedCmS": "10",
+        "buoyancy": "Additional self-induced natural-convection flow",
+        "localDeviationCmSAsReported": "up to 4",
+        "deviationInterpretation": "Condition-dependent obstruction near sample/heaters; not a measured uncertainty interval or a known effective total flow."
+      },
+      "pressureKPa": {
+        "minimum": "40",
+        "maximum": "100",
+        "statedIncrement": "10"
+      },
+      "radiation": {
+        "peakFluxLevelsKWm2": [
+          "0",
+          "0.9",
+          "1.9",
+          "3.3"
+        ],
+        "profile": "Radially uniform but nonuniform along the sample; half-Gaussian axial profile",
+        "peakLocationMmFromSampleTop": "10",
+        "localFrontFluxKnown": false
+      },
+      "locators": [
+        "PDF/printed page 3, section 2, lines 103-118",
+        "PDF/printed page 4, lines 1-47 and 83-87"
+      ]
+    },
+    "protocol": {
+      "initialOxygenVolPercent": "21",
+      "initialStabilizationMinutesApprox": "2",
+      "stepHoldMinutesApprox": "1.5",
+      "oxygenStepSizePercentagePoints": [
+        "0.5",
+        "1"
+      ],
+      "stepSizePerRunKnown": false,
+      "direction": "decreasing",
+      "pressureWithinRun": "kept constant",
+      "validityRuleAsDescribed": "A stable flame at LOC plus the step resolution, followed by extinction at the reported LOC.",
+      "oxygenCheck": "ENERAC 700 measurement of gas flowing into the test section",
+      "recording": "Sony RX10-III front-view video",
+      "measurementResolution": null,
+      "holdSufficiencyEstablishedByThisAudit": false,
+      "historyCaveat": "Burning changes the specimen and the front moves within a nonuniform heating profile; constant chamber settings do not establish constant thermal state or local heat flux.",
+      "locator": "PDF/printed page 4, section 2.1, lines 48-81"
+    },
+    "endpoint": {
+      "intendedQuantity": "Limiting oxygen volume fraction for downward opposed flame spread",
+      "sourceFailureDescription": "Spread cessation or flame extinction",
+      "sourceStatistic": "Condition-level average of the reported oxygen volume fractions",
+      "statisticSpread": "Standard deviation across tests, not a confidence interval or a complete measurement-error model",
+      "usualRepeatCountAsReported": [
+        3,
+        5
+      ],
+      "extraRepeatNote": "The authors describe three test points with six to ten additional tests; exact run identities and counts for each condition are unavailable here.",
+      "reportedResidualFlame": "Page 4 describes spread stopping while a blue semicircular flame remains near the top surface.",
+      "failureBranchPerRunKnown": false,
+      "perRunTransitionsAvailable": false,
+      "rawResponseValuesAdmitted": false,
+      "sourceCompositeRepresentableAsSingleAuditCriterion": false,
+      "mappingPolicy": "Do not automatically map the source's combined endpoint to a single detected-spread, visible-flame or fuel-regression criterion. Do not reconstruct run brackets from condition averages or graph symbols.",
+      "locators": [
+        "PDF/printed page 4, lines 56-81",
+        "PDF/printed page 5, section 3, lines 1-17"
+      ]
+    },
+    "publishedModels": [
+      {
+        "id": "LIV24-EQ1",
+        "kind": "author_empirical_correlation",
+        "formulaAsPrinted": "P_O/P_amb + q_ext/q_char = (X_O)_a + 0.02 * (1 - P_amb/P_atm)",
+        "parameters": {
+          "referenceOxygenMoleFraction": "0.183",
+          "referencePressureKPa": "101",
+          "characteristicFluxKWm2": "100"
+        },
+        "parameterRoles": "Reference/fitted correlation parameters. The 101 kPa reference is not an additional observed test condition, and 100 kW/m2 is not the applied peak flux range.",
+        "locator": "PDF/printed page 5, equation 1 and lines 42-57",
+        "execution": "NOT RUN",
+        "independentValidation": "NOT RUN"
+      },
+      {
+        "id": "LIV24-MECHANISM-DISCUSSION",
+        "kind": "author_phenomenological_analysis",
+        "scope": "Heat transfer, gas kinetics and combined limits are discussed separately. The rods are stated to lie between thermal thin/thick limits; the discussion uses a thick-rod approximation.",
+        "unresolved": "Section 4.3.3 says extracting the oxygen limit is constrained by difficulty determining equation parameters and is beyond the work's scope. No per-run mechanism label is supplied.",
+        "locators": [
+          "PDF/printed page 6, equations 2-5",
+          "PDF/printed page 7, section 4.3",
+          "PDF/printed page 8, section 4.3.3"
+        ],
+        "execution": "NOT RUN"
+      }
+    ],
+    "sourceQualifications": [
+      "LIV24-Q01: Combined source endpoint and residual flame; no unique mapping to full extinction.",
+      "LIV24-Q02: Stepped oxygen, unspecified per-run increments and finite holds; no exact continuous physical threshold.",
+      "LIV24-Q03: Condition averages and standard deviations do not identify individual run bounds, mechanisms or independence.",
+      "LIV24-Q04: Normal-gravity mixed convection and nonuniform radiant profile; nominal flow or PMMA labels do not establish cross-study equivalence."
+    ]
+  },
+  "sourceAssociation": "Methodological context only. Submitted steps are not reconstructed LIV24 observations.",
+  "runs": [
+    {
+      "id": "hypothetical-run",
+      "contextDescription": "Mathematical example; not a material test or experiment protocol",
+      "suppliedStepCount": 3,
+      "uniqueOxygenCoordinateCount": 3,
+      "duplicateCoordinateGroups": [],
+      "criteria": {
+        "sustainedFlameSpread": {
+          "criterion": "sustainedFlameSpread",
+          "operator": {
+            "method": "Hypothetical observer",
+            "windowSeconds": "60",
+            "resolutionDescription": "Hypothetical fixed detection rule; no instrument calibration established"
+          },
+          "observationPattern": "ordered_separation",
+          "counts": {
+            "detected": 1,
+            "notDetected": 2,
+            "unknown": 0
+          },
+          "maximumNotDetected": {
+            "oxygenVolPercent": "19",
+            "witnessStepIds": [
+              "B"
+            ]
+          },
+          "minimumDetected": {
+            "oxygenVolPercent": "20",
+            "witnessStepIds": [
+              "A"
+            ]
+          },
+          "chronology": {
+            "lastDetectedStepId": "A",
+            "firstNotDetectedStepId": "B"
+          },
+          "orderedSeparationGapPercentagePoints": "1",
+          "contradictionWitness": null,
+          "excludedUnknownStepIds": [],
+          "testEndWithoutCriterionEvidenceIds": [],
+          "sequence": {
+            "oxygenOrder": "strictly_decreasing",
+            "firstNonDetectionAtLastKnownStep": false,
+            "descendingStopAtFirstNonDetectionPattern": false,
+            "monotonicityValidated": false,
+            "note": "A descending record ending at first non-detection automatically separates the observed levels. It does not test steady-state monotonicity. Later non-detections after flame-out can reflect history or an absorbing state."
+          },
+          "conditionalSet": {
+            "status": "conditional_compatibility_set",
+            "target": "idealized_detection_transition_parameter",
+            "missingContract": [],
+            "lower": {
+              "oxygenVolPercent": "19",
+              "witnessStepIds": [
+                "B"
+              ],
+              "boundary": "open"
+            },
+            "upper": {
+              "oxygenVolPercent": "20",
+              "witnessStepIds": [
+                "A"
+              ],
+              "boundary": "closed"
+            },
+            "intervalMeaning": "Exact open/closed inequalities only within the declared idealized model.",
+            "confidenceInterval": false,
+            "physicalThresholdEstablished": false
+          },
+          "criterionCaveat": "Spread detection depends on spatial resolution and observation duration; no detected spread does not prove zero regression or no flame."
+        },
+        "visibleFlame": {
+          "criterion": "visibleFlame",
+          "operator": {
+            "method": "Hypothetical observer",
+            "windowSeconds": "60",
+            "resolutionDescription": "Hypothetical fixed detection rule; no instrument calibration established"
+          },
+          "observationPattern": "ordered_separation",
+          "counts": {
+            "detected": 2,
+            "notDetected": 1,
+            "unknown": 0
+          },
+          "maximumNotDetected": {
+            "oxygenVolPercent": "18",
+            "witnessStepIds": [
+              "C"
+            ]
+          },
+          "minimumDetected": {
+            "oxygenVolPercent": "19",
+            "witnessStepIds": [
+              "B"
+            ]
+          },
+          "chronology": {
+            "lastDetectedStepId": "B",
+            "firstNotDetectedStepId": "C"
+          },
+          "orderedSeparationGapPercentagePoints": "1",
+          "contradictionWitness": null,
+          "excludedUnknownStepIds": [],
+          "testEndWithoutCriterionEvidenceIds": [],
+          "sequence": {
+            "oxygenOrder": "strictly_decreasing",
+            "firstNonDetectionAtLastKnownStep": true,
+            "descendingStopAtFirstNonDetectionPattern": true,
+            "monotonicityValidated": false,
+            "note": "A descending record ending at first non-detection automatically separates the observed levels. It does not test steady-state monotonicity. Later non-detections after flame-out can reflect history or an absorbing state."
+          },
+          "conditionalSet": {
+            "status": "conditional_compatibility_set",
+            "target": "idealized_detection_transition_parameter",
+            "missingContract": [],
+            "lower": {
+              "oxygenVolPercent": "18",
+              "witnessStepIds": [
+                "C"
+              ],
+              "boundary": "open"
+            },
+            "upper": {
+              "oxygenVolPercent": "19",
+              "witnessStepIds": [
+                "B"
+              ],
+              "boundary": "closed"
+            },
+            "intervalMeaning": "Exact open/closed inequalities only within the declared idealized model.",
+            "confidenceInterval": false,
+            "physicalThresholdEstablished": false
+          },
+          "criterionCaveat": "Failure to detect a flame does not prove that all combustion or fuel regression has ceased."
+        },
+        "fuelRegression": {
+          "criterion": "fuelRegression",
+          "operator": {
+            "method": null,
+            "windowSeconds": null,
+            "resolutionDescription": null
+          },
+          "observationPattern": "no_information",
+          "counts": {
+            "detected": 0,
+            "notDetected": 0,
+            "unknown": 3
+          },
+          "maximumNotDetected": null,
+          "minimumDetected": null,
+          "chronology": {
+            "lastDetectedStepId": null,
+            "firstNotDetectedStepId": null
+          },
+          "orderedSeparationGapPercentagePoints": null,
+          "contradictionWitness": null,
+          "excludedUnknownStepIds": [
+            "A",
+            "B",
+            "C"
+          ],
+          "testEndWithoutCriterionEvidenceIds": [
+            "C"
+          ],
+          "sequence": {
+            "oxygenOrder": "strictly_decreasing",
+            "firstNonDetectionAtLastKnownStep": false,
+            "descendingStopAtFirstNonDetectionPattern": false,
+            "monotonicityValidated": false,
+            "note": "A descending record ending at first non-detection automatically separates the observed levels. It does not test steady-state monotonicity. Later non-detections after flame-out can reflect history or an absorbing state."
+          },
+          "conditionalSet": {
+            "status": "no_information",
+            "target": "idealized_detection_transition_parameter",
+            "missingContract": [
+              "operators.fuelRegression.method",
+              "operators.fuelRegression.windowSeconds",
+              "operators.fuelRegression.resolutionDescription"
+            ],
+            "lower": null,
+            "upper": null,
+            "intervalMeaning": "Exact open/closed inequalities only within the declared idealized model.",
+            "confidenceInterval": false,
+            "physicalThresholdEstablished": false
+          },
+          "criterionCaveat": "Fuel regression under external heating need not be monotone in oxygen or establish flaming combustion; the model requires separate justification."
+        }
+      }
+    }
+  ],
+  "boundaries": {
+    "physicalPredictionProvided": false,
+    "extinctionDeclared": false,
+    "safetyAssessmentProvided": false,
+    "sourceDataReconstructed": false,
+    "poolingAcrossRuns": false,
+    "independentRunsEstablished": false,
+    "physicalValidation": "NOT RUN",
+    "independentHumanReview": "NOT RUN",
+    "statements": [
+      "Detected/not-detected statuses concern a stated observation method, window and resolution; no automatic implications are made between criteria.",
+      "Test termination alone is not a non-detection or extinction observation. Unknowns impose no inequality.",
+      "The source reports a combined outcome and aggregate statistics; these do not identify individual transitions or a complete-extinction threshold.",
+      "Conditional sets require settled, error-free observations of a monotone binary response in fixed context. The source does not establish these assumptions.",
+      "Burn history, changing local heating and post-extinction hysteresis may defeat the model. An inconsistency is a model-assumption conflict, not a declaration that the data are erroneous.",
+      "Gaps describe the supplied coordinate schedule. They are not uncertainty estimates, confidence intervals, recommendations or material constants.",
+      "Run IDs are supplied labels, not verified independence groups. No global threshold is calculated."
+    ]
+  }
+}

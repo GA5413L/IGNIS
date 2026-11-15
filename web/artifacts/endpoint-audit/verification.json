@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "ignis-endpoint-verification-1",
+  "auditSha256": "b3cf04f1c59c0026d86c42c9bc00ae10c85a2a7b4f584bca7ff39416ae7bebb5",
+  "arithmetic": "PASS",
+  "method": "Python Fraction and direct binary-predicate checks at boundaries, between them and beyond extremes",
+  "criteria": [
+    {
+      "run": "hypothetical-run",
+      "criterion": "sustainedFlameSpread",
+      "pattern": "ordered_separation",
+      "conditionalSet": "conditional_compatibility_set"
+    },
+    {
+      "run": "hypothetical-run",
+      "criterion": "visibleFlame",
+      "pattern": "ordered_separation",
+      "conditionalSet": "conditional_compatibility_set"
+    },
+    {
+      "run": "hypothetical-run",
+      "criterion": "fuelRegression",
+      "pattern": "no_information",
+      "conditionalSet": "no_information"
+    }
+  ],
+  "mutationsRejected": [
+    "physical_claim",
+    "source_data",
+    "counts"
+  ],
+  "sourcePdf": {
+    "status": "PASS",
+    "printedAnchorsChecked": 11,
+    "duplicateCheck": {
+      "status": "PASS",
+      "textIdentical": true,
+      "identicalPageRendersAt72Dpi": 9,
+      "byteIdentical": false
+    },
+    "figureMeasurementsDigitized": 0
+  },
+  "physicalValidation": "NOT RUN",
+  "independentHumanValidation": false
+}

@@ -1,5 +1,11 @@
 # Source register
 
+## Full accepted-manuscript access: LIV24, 15 November 2026
+
+The owner supplied two nine-page copies of Liveretou et al. (2024), DOI [10.1016/j.proci.2024.105224](https://doi.org/10.1016/j.proci.2024.105224). Both were checked; all pages were read and methods/results pages visually inspected. Canonical hash `a1899bf28581fa30a480a65d7868a94019821e7fc7b02b3f51ff2c34fc2b6bb0` (1,385,409 bytes); alternate `8ff9c5214eac0f2d7da53ddac4493578b1cba9954ccd6fbbf813c0cfef5398fc` (1,384,104 bytes). Text and nine 72-dpi renders match, despite byte differences. These are duplicate manifestations, not independent sources. Page 1 states the Elsevier user license; the PDFs remain local. The version-of-record full text remains uninspected.
+
+The [source dossier](../web/data/endpoint-studies/liveretou2024.json) records the combined endpoint, finite-step protocol, mean/SD statistic, mixed convection, nonuniform radiant heating and unevaluated source correlation. No per-run transitions or graph values are reconstructed. [C-29](source_conflicts.md) and the [technical report](../web/docs/ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md) explain why source LOC cannot be promoted to complete extinction. This updates access only; older reports below retain their dated limitations.
+
 ## Full-text access update: RIES24, 15 November 2026
 
 The owner supplied the full publisher PDF of Ries, Eigenbrod and Meyer (2024), DOI [10.1016/j.proci.2024.105358](https://doi.org/10.1016/j.proci.2024.105358). All seven pages were read; Table 1 and Figures 3/6/10 context were inspected. SHA-256 `3c4fa8278cae1da73bc15a4b5443d927006a8150b3d8a83d4c79582f127008f2`, 2,105,330 bytes. The article states CC BY. This supersedes earlier access limits for this source only, not their historical records. The new [source collection](../web/data/design-studies/ries2024.json) transcribes printed coordinates and method definitions; no figure measurements were digitized. It is separate from the frozen registry/evaluation packet. See [C-28](source_conflicts.md) for the pressure discrepancy and the [nominal-design audit](../web/docs/EXPERIMENTAL_DESIGN_AUDIT_2026-11-15.md). Curation is assistant-checked, not independent human review.

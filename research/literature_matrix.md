@@ -1,5 +1,16 @@
 # Literature matrix
 
+## Full-text updates, 15 November 2026
+
+| Source | Updated inspected scope | Admitted use |
+|---|---|---|
+| LIV24 | Nine-page accepted manuscript; black cast PMMA rods 12.7 mm by 55 mm; 1g mixed forced/buoyant flow; 40–100 kPa; stepped prescribed oxygen; four peak radiant-flux levels with nonuniform axial profile; combined spread-cessation/extinction outcome; aggregate means and SDs | Method/endpoint dossier and conditional observation-audit specification. No per-run data, figure digitization, physical model execution or automatic mapping to complete extinction. |
+| RIES24 | Seven-page publisher paper; 0.2 mm PMMA sheets; source-defined IR pyrolysis-front rate; one oxygen/pressure flow-sweep line, remaining microgravity nominal conditions at fixed flow | Exact nominal-design certificate. Printed pressure discrepancy preserved; no new physical predictions. |
+
+See [current endpoint/protocol report](../web/docs/ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md) and [design audit](../web/docs/EXPERIMENTAL_DESIGN_AUDIT_2026-11-15.md). Rivera 2026 and the newly located Liveretou 2025 dissertation remain unread in full. The following table retains the earlier October access state.
+
+## Historical matrix
+
 Rows are sources. Columns are the comparability dimensions that decide whether two results can be compared at all.
 "?" means not known from what was read. A dash means not applicable.
 
