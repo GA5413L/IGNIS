@@ -12,7 +12,7 @@ import { runtimeStatus } from './runtime';
 import { ResearchSelectionsSchema } from '../core/researchSelections';
 import { RevisionParentSchema } from '../core/revisionParent';
 
-export const BUILD_REVISION = 'web-2026-11-15.9';
+export const BUILD_REVISION = 'web-2026-11-15.11';
 // A revision carries one immutable parent with up to four source-bound analyses.
 // The all-analysis source snapshot can exceed 1 MiB; retain a finite 2 MiB local-only cap.
 // This does not change interpreter/provider input, output, probe or spend limits.
@@ -28,7 +28,7 @@ export function handleHealth(): Reply {
   const rt = runtimeStatus();
   return { status: snapshot ? 200 : 503, body: {
     status: snapshot ? 'ok' : 'registry_invalid', catalogRevision: snapshot?.revision ?? null, catalogDigest: snapshot?.digest ?? null,
-    buildRevision: BUILD_REVISION, aiAvailable: rt.aiAvailable, acceptedConfiguration: rt.label, aiReason: rt.reason,
+    buildRevision: BUILD_REVISION, siAvailable: rt.aiAvailable, siReason: rt.reason, aiAvailable: rt.aiAvailable, acceptedConfiguration: rt.label, aiReason: rt.reason,
     featureFlags: { liveInterpretation: false, synthesisCall: false, nistModule: false, rodControl: false, transferMethods: false },
     registryErrors: snapshot ? 0 : errors.length,
   } };
@@ -71,7 +71,7 @@ export function handleInterpret(rawText: string): Reply {
   if (parsed.data.envelope.catalogRevision !== s.revision) return err(409, 'stale_catalog', 'Catalogue revision changed; refresh before interpreting.', [], parsed.data.envelope);
   const rt = runtimeStatus();
   // No accepted configuration exists, so no outbound inference is ever attempted (M17).
-  return err(503, 'ai_unavailable', `AI interpretation unavailable: ${rt.reason} Use the structured form; it runs the same assessment.`, [], parsed.data.envelope);
+  return err(503, 'ai_unavailable', `SI interpretation unavailable: ${rt.reason} Use the structured form; it runs the same assessment.`, [], parsed.data.envelope);
 }
 
 const AssessBody = z.strictObject({ request: ConfirmedRequest, catalogRevision: z.string(), parent: z.unknown().nullable().optional(), researchSelections: ResearchSelectionsSchema.optional() });

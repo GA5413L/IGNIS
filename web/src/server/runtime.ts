@@ -32,7 +32,7 @@ export function runtimeStatus(env: Record<string, string | undefined> = process.
   if (env.AI_ENABLED === 'true' && accepted && authorized) {
     return { aiAvailable: false, label: 'none', config, reason: 'Research adapters are available, but application runtime activation has not been completed.' };
   }
-  const reason = env.AI_ENABLED !== 'true' ? 'AI interpretation is disabled in this build.'
+  const reason = env.AI_ENABLED !== 'true' ? 'SI interpretation is awaiting provider setup and evaluation.'
     : !accepted ? 'No configuration is accepted for the current interpretation packet. Earlier Groq configurations failed an earlier gate; new candidates have not completed scored evaluation.'
     : 'No recorded authorization, spending cap and call cap for live inference.';
   return { aiAvailable: false, label: 'none', reason, config: { ...config, acceptance: accepted ? 'accepted' : config.provider === 'disabled' ? 'disabled' : 'rejected' } };

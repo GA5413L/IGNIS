@@ -1,0 +1,93 @@
+{
+  "baseline": "8611e5fd81dd29b405181249b578608a8f6bae3f",
+  "curatedCollectionCount": 20,
+  "curatedBytesUnchanged": true,
+  "registryDigest": "37ad29b82a13f06d79d392ae21f99003dab36b2a421043f18b9ab0bf844242a2",
+  "collections": [
+    {
+      "path": "web/data/applicability-contracts.json",
+      "sha256": "33f0069d7fec0bc3bfc2cf9e20d5d0e1184c63d55f3389e3c154e531fd473cdc"
+    },
+    {
+      "path": "web/data/assertions.json",
+      "sha256": "6386fe3162d183355c66381f4fc9ab4a55102daffccb978abe5735f24b6f27bd"
+    },
+    {
+      "path": "web/data/catalog-manifest.json",
+      "sha256": "890121b0683ce259348d8cd6f1405f8a3d5ae50657cc35a3244560c27a976850"
+    },
+    {
+      "path": "web/data/condition-cases.json",
+      "sha256": "9cdb3f75102d19182ad2ef11a414346d593e6c12495acfd5918084b3149f9226"
+    },
+    {
+      "path": "web/data/conflicts.json",
+      "sha256": "893a50b84e750ab1cb238668d38414fde4c9f5d0a3f0fbcd9ac0bc2e6504178a"
+    },
+    {
+      "path": "web/data/design-studies/ries2024.json",
+      "sha256": "f288c32b6823fae229a28c9b8c6805e392411b42732ca1f2ea949ca661d7d713"
+    },
+    {
+      "path": "web/data/detector-data.json",
+      "sha256": "106ecf729a1de8655eb53574ae60ba83680cfcaf9d1ee929258c5617cc7135d9"
+    },
+    {
+      "path": "web/data/endpoint-studies/liveretou2024.json",
+      "sha256": "52ddbbb6f1bc02683089db8daff4274fa81e3c2f22eed08ed8bfa13c6eee89f0"
+    },
+    {
+      "path": "web/data/entities.json",
+      "sha256": "e3e92c17db49e91a0938ad2f2b25e433a63e9775381950cbd587fbbd6b8903d3"
+    },
+    {
+      "path": "web/data/events.json",
+      "sha256": "9b8af327ab6954bba3485e772c703c585e1f2efcd0eee3590aa9ed78844fd4a0"
+    },
+    {
+      "path": "web/data/findings.json",
+      "sha256": "7459f1af5d4635461c0aa84aba4673fb7280f23e470e136bea1d7f0f313a40a4"
+    },
+    {
+      "path": "web/data/investigation-atlas.json",
+      "sha256": "98052e81a1a3df2315ae112ace55779b05600bf5986c8f67b680e2ec7b145e67"
+    },
+    {
+      "path": "web/data/investigations.json",
+      "sha256": "0bb96fdd792f55bfe22bf58f90d5e03b6b773ef1a4bc40dd3aa3cb2bd2a1e4ef"
+    },
+    {
+      "path": "web/data/observation-uses.json",
+      "sha256": "173c5402303815c0cf8bd9a578b8fa87a233c3600ec78208f6ee75a2c2322c29"
+    },
+    {
+      "path": "web/data/observations.json",
+      "sha256": "b797f2f1508ec2210afed100947c4dc5a9a249d91cf73fe18e9005e81b364f83"
+    },
+    {
+      "path": "web/data/physical-models.json",
+      "sha256": "e515badc3f7fccde2c47103bedfb998038851706954ce69725f07b0d0727bffd"
+    },
+    {
+      "path": "web/data/sources.json",
+      "sha256": "1638c7644e4ee36353a8ff351e90e1c73b69f64c3af50f7b394f58ed1d1e15c1"
+    },
+    {
+      "path": "web/data/trajectory-studies/liveretou2025.json",
+      "sha256": "37606932ff0a91b900d4c07c394e28fe980852dac452e9dec0b6b978dbdd5958"
+    },
+    {
+      "path": "web/data/transfer-methods.json",
+      "sha256": "d68012b0cdfc9b6eeb29a230f24c34cbcc0dfac9262b1fe0aef6d6d3ff489ae2"
+    },
+    {
+      "path": "web/src/data/research-opportunities.json",
+      "sha256": "f955a9594623269d209088cd4e653fd45b158949dfe11023c3bff16951c30d84"
+    }
+  ],
+  "reviewedChangedPaths": 137,
+  "mergeMarkers": 0,
+  "credentialPatternFindings": 0,
+  "privatePathFindings": 0,
+  "figureBundleFiles": 5
+}

@@ -1,0 +1,6 @@
+﻿time_ms,run,position_mm,signal_V
+0,hypothetical-A,0,0.2
+500,hypothetical-A,1,0.4
+1000,hypothetical-A,,0.6
+1500,hypothetical-A,3,-9999
+2000,hypothetical-A,4,0.8

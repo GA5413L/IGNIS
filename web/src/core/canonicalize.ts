@@ -38,7 +38,11 @@ const K = new Uint32Array([
 ]);
 
 export function sha256Hex(text: string): string {
-  const msg = new TextEncoder().encode(text);
+  return sha256Bytes(new TextEncoder().encode(text));
+}
+
+/** Hash the exact bytes, including a UTF-8 BOM and original line endings. */
+export function sha256Bytes(msg: Uint8Array): string {
   const bitLen = msg.length * 8;
   const padLen = ((msg.length + 9 + 63) >> 6) << 6;
   const buf = new Uint8Array(padLen);

@@ -1,0 +1,39 @@
+{
+  "delimiter": ",",
+  "headerRecord": 1,
+  "firstDataRecord": 2,
+  "lastDataRecord": null,
+  "origin": "hypothetical",
+  "sourceDescription": "Constructed software fixture; not experiment or solver output.",
+  "context": "One invented run, no physical validation.",
+  "timeOrigin": "Zero assigned to the first invented record.",
+  "timeColumn": 0,
+  "timeUnit": "ms",
+  "run": {
+    "kind": "column",
+    "column": 1
+  },
+  "phase": {
+    "kind": "constant",
+    "value": "example"
+  },
+  "channels": [
+    {
+      "column": 2,
+      "quantity": "Tracked coordinate",
+      "unit": "mm",
+      "operator": "Invented coordinates",
+      "missingTokens": []
+    },
+    {
+      "column": 3,
+      "quantity": "Sensor signal",
+      "unit": "V",
+      "operator": "Invented voltage",
+      "missingTokens": [
+        "-9999"
+      ]
+    }
+  ],
+  "timeMissingTokens": []
+}

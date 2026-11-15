@@ -1,0 +1,331 @@
+{
+  "schemaVersion": "ignis-local-data-1",
+  "methodRevision": "csv-inspection-2026-11-15.1",
+  "integrityMeaning": "checksum_not_signature",
+  "file": {
+    "name": "hypothetical.csv",
+    "byteCount": 169,
+    "sha256": "4ad35a9149036098cb2410ff06dd562e3644ae51d20ea4a3b3a22d52a8695852",
+    "rawUtf8": "﻿time_ms,run,position_mm,signal_V\r\n0,hypothetical-A,0,0.2\r\n500,hypothetical-A,1,0.4\r\n1000,hypothetical-A,,0.6\r\n1500,hypothetical-A,3,-9999\r\n2000,hypothetical-A,4,0.8\r\n"
+  },
+  "spec": {
+    "delimiter": ",",
+    "headerRecord": 1,
+    "firstDataRecord": 2,
+    "lastDataRecord": null,
+    "origin": "hypothetical",
+    "sourceDescription": "Constructed software fixture; not experiment or solver output.",
+    "context": "One invented run, no physical validation.",
+    "timeOrigin": "Zero assigned to the first invented record.",
+    "timeColumn": 0,
+    "timeUnit": "ms",
+    "run": {
+      "kind": "column",
+      "column": 1
+    },
+    "phase": {
+      "kind": "constant",
+      "value": "example"
+    },
+    "channels": [
+      {
+        "column": 2,
+        "quantity": "Tracked coordinate",
+        "unit": "mm",
+        "operator": "Invented coordinates",
+        "missingTokens": []
+      },
+      {
+        "column": 3,
+        "quantity": "Sensor signal",
+        "unit": "V",
+        "operator": "Invented voltage",
+        "missingTokens": [
+          "-9999"
+        ]
+      }
+    ],
+    "timeMissingTokens": []
+  },
+  "recipe": {
+    "run": null,
+    "phase": null,
+    "timeMin": null,
+    "timeMax": null,
+    "channels": [
+      2,
+      3
+    ],
+    "selectedRecord": null
+  },
+  "result": {
+    "methodRevision": "csv-inspection-2026-11-15.1",
+    "sourceSha256": "4ad35a9149036098cb2410ff06dd562e3644ae51d20ea4a3b3a22d52a8695852",
+    "specDigest": "162fb450e36564bfa8469a8e558e48f00efb9b5f588ffaaa9ed1f14e2459a2e4",
+    "recipeDigest": "63deeef5708e09541ae33fbcaa4d09d5900ac90ff8a1b3b79fda542d9d0c76cd",
+    "origin": "hypothetical",
+    "metadataVerified": false,
+    "measurementValidated": false,
+    "unitConversion": "none",
+    "precision": "IEEE-754 binary64; raw decimal text retained",
+    "skippedRecords": [
+      1
+    ],
+    "rows": [
+      {
+        "record": 2,
+        "lineStart": 2,
+        "lineEnd": 2,
+        "byteStart": 37,
+        "byteEnd": 59,
+        "run": "hypothetical-A",
+        "phase": "example",
+        "time": {
+          "raw": "0",
+          "value": 0,
+          "status": "finite",
+          "reason": null
+        },
+        "values": [
+          {
+            "column": 2,
+            "cell": {
+              "raw": "0",
+              "value": 0,
+              "status": "finite",
+              "reason": null
+            }
+          },
+          {
+            "column": 3,
+            "cell": {
+              "raw": "0.2",
+              "value": 0.2,
+              "status": "finite",
+              "reason": null
+            }
+          }
+        ],
+        "included": true,
+        "exclusions": [],
+        "timeFlags": []
+      },
+      {
+        "record": 3,
+        "lineStart": 3,
+        "lineEnd": 3,
+        "byteStart": 61,
+        "byteEnd": 85,
+        "run": "hypothetical-A",
+        "phase": "example",
+        "time": {
+          "raw": "500",
+          "value": 500,
+          "status": "finite",
+          "reason": null
+        },
+        "values": [
+          {
+            "column": 2,
+            "cell": {
+              "raw": "1",
+              "value": 1,
+              "status": "finite",
+              "reason": null
+            }
+          },
+          {
+            "column": 3,
+            "cell": {
+              "raw": "0.4",
+              "value": 0.4,
+              "status": "finite",
+              "reason": null
+            }
+          }
+        ],
+        "included": true,
+        "exclusions": [],
+        "timeFlags": []
+      },
+      {
+        "record": 4,
+        "lineStart": 4,
+        "lineEnd": 4,
+        "byteStart": 87,
+        "byteEnd": 111,
+        "run": "hypothetical-A",
+        "phase": "example",
+        "time": {
+          "raw": "1000",
+          "value": 1000,
+          "status": "finite",
+          "reason": null
+        },
+        "values": [
+          {
+            "column": 2,
+            "cell": {
+              "raw": "",
+              "value": null,
+              "status": "blank",
+              "reason": "Blank or whitespace-only cell"
+            }
+          },
+          {
+            "column": 3,
+            "cell": {
+              "raw": "0.6",
+              "value": 0.6,
+              "status": "finite",
+              "reason": null
+            }
+          }
+        ],
+        "included": true,
+        "exclusions": [],
+        "timeFlags": []
+      },
+      {
+        "record": 5,
+        "lineStart": 5,
+        "lineEnd": 5,
+        "byteStart": 113,
+        "byteEnd": 140,
+        "run": "hypothetical-A",
+        "phase": "example",
+        "time": {
+          "raw": "1500",
+          "value": 1500,
+          "status": "finite",
+          "reason": null
+        },
+        "values": [
+          {
+            "column": 2,
+            "cell": {
+              "raw": "3",
+              "value": 3,
+              "status": "finite",
+              "reason": null
+            }
+          },
+          {
+            "column": 3,
+            "cell": {
+              "raw": "-9999",
+              "value": null,
+              "status": "declared_missing",
+              "reason": "Exact user-declared missing token"
+            }
+          }
+        ],
+        "included": true,
+        "exclusions": [],
+        "timeFlags": []
+      },
+      {
+        "record": 6,
+        "lineStart": 6,
+        "lineEnd": 6,
+        "byteStart": 142,
+        "byteEnd": 167,
+        "run": "hypothetical-A",
+        "phase": "example",
+        "time": {
+          "raw": "2000",
+          "value": 2000,
+          "status": "finite",
+          "reason": null
+        },
+        "values": [
+          {
+            "column": 2,
+            "cell": {
+              "raw": "4",
+              "value": 4,
+              "status": "finite",
+              "reason": null
+            }
+          },
+          {
+            "column": 3,
+            "cell": {
+              "raw": "0.8",
+              "value": 0.8,
+              "status": "finite",
+              "reason": null
+            }
+          }
+        ],
+        "included": true,
+        "exclusions": [],
+        "timeFlags": []
+      }
+    ],
+    "groups": [
+      {
+        "run": "hypothetical-A",
+        "phase": "example",
+        "records": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "channels": [
+      {
+        "column": 2,
+        "quantity": "Tracked coordinate",
+        "unit": "mm",
+        "operator": "Invented coordinates",
+        "finite": 4,
+        "unavailable": 1,
+        "minimum": 0,
+        "maximum": 4,
+        "minRecords": [
+          2
+        ],
+        "maxRecords": [
+          6
+        ]
+      },
+      {
+        "column": 3,
+        "quantity": "Sensor signal",
+        "unit": "V",
+        "operator": "Invented voltage",
+        "finite": 4,
+        "unavailable": 1,
+        "minimum": 0.2,
+        "maximum": 0.8,
+        "minRecords": [
+          2
+        ],
+        "maxRecords": [
+          6
+        ]
+      }
+    ],
+    "includedRecords": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "excludedRecords": [],
+    "warnings": [
+      "Origin, identities, units, operator and context are user assertions, not verified metadata. Hashes identify the supplied bytes, not an instrument original.",
+      "Numeric coordinates use IEEE-754 binary64. Distinct decimal texts can round to the same value. Raw strings are retained. Window boundaries use these same coordinates in supplied units.",
+      "All units remain as supplied. No conversion, clock synchronization, smoothing, imputation or physical prediction is performed.",
+      "Record counts are not counts of independent experiments. Separate runs/phases are plotted separately; matching IDs do not prove independence or comparability.",
+      "Unknown measurement uncertainty stays unknown. Extrema describe selected finite cells and are not uncertainty limits or safety thresholds."
+    ]
+  },
+  "resultDigest": "253f98b2f00f8faba6232708fea685c4d3d6d5ae29cf8e6497b8a79651fec4a6",
+  "checksum": "6f07c7a5d7e6d48e9575ec73341241b34c456a3155a69d17d64f685cde4ed14e"
+}

@@ -5,6 +5,7 @@ import { requireCatalog } from '../../src/core/registry';
 import atlasDataset from '../../data/investigation-atlas.json';
 import { buildResearchAnalysis } from '../../src/core/researchSelections';
 import { DEFAULT_CUTOFF_ENVELOPE_SELECTION } from '../../src/core/cutoffEnvelope';
+import { readFile } from 'node:fs/promises';
 
 test('production server and browser preserve the offline source numbers and analysis identities', async ({ page, request }) => {
   // Expected values are parsed by the Node test runner, independently of the production bundler.
@@ -18,14 +19,12 @@ test('production server and browser preserve the offline source numbers and anal
   }
   const health = await (await request.get('/api/health')).json();
   expect(health.catalogDigest).toBe(requireCatalog().digest);
-  await page.goto('/');
-  await page.getByRole('button', { name: 'Test a finding’s robustness', exact: false }).click();
-  await expect(page.getByRole('table', { name: 'Cutoff range by flight' })).toBeVisible();
-  await page.getByRole('button', { name: 'Create scenario link', exact: true }).click();
-  const url = await page.getByLabel('Scenario URL', { exact: true }).inputValue();
-  const packet = JSON.parse(Buffer.from(new URL(url).hash.slice('#ignis-scenario='.length), 'base64url').toString('utf8'));
+  await page.goto('/#smoke');
+  await page.getByRole('tab', { name: 'Cutoff range', exact: true }).click();
+  const file = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Download range analysis', exact: true }).click();
+  const downloaded = await file;
+  const packet = JSON.parse(await readFile((await downloaded.path())!, 'utf8'));
   const offline = buildResearchAnalysis({ kind: 'cutoff_envelope', options: DEFAULT_CUTOFF_ENVELOPE_SELECTION });
-  expect(packet.sourceDigest).toBe(offline.sourceDigest);
-  expect(packet.resultDigest).toBe(offline.resultDigest);
-  expect(packet.selection).toEqual(offline.selection);
+  expect(packet).toEqual(offline.result);
 });

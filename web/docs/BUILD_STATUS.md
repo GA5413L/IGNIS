@@ -1,5 +1,22 @@
 # IGNIS current build status
 
+## Current integration — web-2026-11-15.11
+
+The complete teammate UI push `26a952d` is integrated at `/` with the current backend. The owner authorized integration, figure code/palettes, presentation cleanup and SI preparation. Earlier UI-freeze entries below are historical. Current owner working cutoff: **15 November, 23:00 PKT**.
+
+- Local CSV mapping, record-quality ledger, per-run/phase inspection, explicit sentinel/units/operator declarations and raw-byte replay; local CLI and hypothetical fixture.
+- Restored notebook export/import/recheck and historical/current separation, without silently truncating ancestry. Added local trajectory, design and endpoint calculators to Sources. `/example` redirects to Smoke detection. Scenario share-link and paired per-row exclusion-note controls remain absent from this UI; core schemas/APIs retain their capabilities.
+- Okabe–Ito/monochrome settings, Python code, exact figure data, dependency pins and reproduction bundle. Repeated housekeeping was removed from the interface; specific limits and project disclosure remain.
+- SI question/scope review, confirmed assessment/export and no-dispatch Groq/Gemini packet previews. No accepted provider, credential inspection or inference.
+- **479 shared offline checks, 34 production Chromium desktop/mobile checks, TypeScript, lint and webpack build: PASS.** Browser tests cover exact source identity, offline CSV replay, notebook recheck, calculator equality, SI stale replies and figure settings/downloads. Private provider fixtures and historical old-interface specs are excluded. Firefox is NOT RUN: installed binary/protocol incompatibility.
+- Figure packet equals current core export. Extracted bundle/manifest checked; Figure 3 regenerates identical PNGs for both palettes in the same environment, not a cross-platform PDF identity claim.
+- Fifteen visual states at 1366, 375 and 320 pixels have no page/console errors or whole-page overflow after correcting file-input width and monochrome contrast. Captures and measured checks are in [current previews](../artifacts/previews/workbench/). A plot may scroll within its own region to keep axis labels readable.
+- Engine .5, renderer .5, descriptive method .2, catalogue r2 and 20 existing curated collections are unchanged. New workbench method: `csv-inspection-2026-11-15.1`.
+
+See [current research/competitor report](RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md), [SI preparation](SI_PREPARATION.md), [README](../README.md) and [figure receipt](../artifacts/workbench/reproduction-check.json). Sections below are dated historical baselines, including older routes, counts, controls and schedules.
+
+## Historical technical extension
+
 **Current technical extension: trajectory-ops-2026-11-15.1; running app web-2026-11-15.9.** The [dissertation review and tracked-coordinate calculation](./DISSERTATION_AND_TRAJECTORY_METHODS_2026-11-15.md) add a separate source dossier, pure library and local CLI. Eight printed HRR summaries remain derived condition summaries; same-experiment ancestry, pressure/initial-condition conflicts, fit-imposed rate shape and differing time origins are explicit. All 416 shared offline checks (26 new), TypeScript, lint and ten CLI/source/live-identity checks pass. Python recount verifies 19 printed PDF anchors and rejects four corruptions. All 19 previous source collections and r2 remain unchanged. No app route/UI changes, new Next build or visual review occurred. Physical modeling, experiments, independent validation, runtime inference and deployment remain NOT RUN or held. Earlier sections retain their dated scope.
 
 ## Prior functional patch

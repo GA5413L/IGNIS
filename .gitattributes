@@ -7,6 +7,11 @@ web/data/endpoint-studies/*.json -text
 web/artifacts/endpoint-audit/*.json -text
 web/data/trajectory-studies/*.json -text
 web/artifacts/trajectory/*.json -text
+web/artifacts/workbench/*.json -text
+web/artifacts/workbench/*.csv -text
+web/artifacts/figures/*.json -text
+web/public/figures/code/*.json -text
+web/public/figures/code/* -text
 web/package*.json text eol=lf
 
 *.png binary

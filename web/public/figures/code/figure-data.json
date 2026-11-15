@@ -1,0 +1,2313 @@
+{
+ "generated": "from src/core; catalogue 2026-11-15.r2",
+ "moonRange": {
+  "minOxygenPercent": 30,
+  "maxPressureKPa": 70.3265214,
+  "note": "Challenge statement: 30% oxygen or greater at 10.2 psi or less; 1 psi = 6.894757 kPa"
+ },
+ "conditions": [
+  {
+   "sample": "IV-2",
+   "material": "PMMA",
+   "sides": 2,
+   "oxygenPercent": 22,
+   "pressureKPa": 100,
+   "oxygenPartialPressureKPa": 22
+  },
+  {
+   "sample": "V-3",
+   "material": "PMMA",
+   "sides": 1,
+   "oxygenPercent": 26,
+   "pressureKPa": 74.5,
+   "oxygenPartialPressureKPa": 19.37
+  },
+  {
+   "sample": "VI-3",
+   "material": "PMMA",
+   "sides": 2,
+   "oxygenPercent": 30,
+   "pressureKPa": 54.4,
+   "oxygenPartialPressureKPa": 16.32
+  },
+  {
+   "sample": "VI-4",
+   "material": "PMMA",
+   "sides": 1,
+   "oxygenPercent": 29,
+   "pressureKPa": 55,
+   "oxygenPartialPressureKPa": 15.95
+  },
+  {
+   "sample": "IV-1",
+   "material": "SIBAL",
+   "sides": 2,
+   "oxygenPercent": 23,
+   "pressureKPa": 98,
+   "oxygenPartialPressureKPa": 22.54
+  },
+  {
+   "sample": "V-2",
+   "material": "Cotton",
+   "sides": 2,
+   "oxygenPercent": 28,
+   "pressureKPa": 74.1,
+   "oxygenPartialPressureKPa": 20.748
+  },
+  {
+   "sample": "VI-2",
+   "material": "SIBAL",
+   "sides": 2,
+   "oxygenPercent": 31,
+   "pressureKPa": 54.1,
+   "oxygenPartialPressureKPa": 16.771
+  }
+ ],
+ "conditionSource": "ICES-2026-577, Table 1",
+ "channels": [
+  {
+   "id": "issScatterV",
+   "label": "ISS detector scatter",
+   "column": "AW"
+  },
+  {
+   "id": "issObscurationV",
+   "label": "ISS obscuration channel",
+   "column": "AV"
+  },
+  {
+   "id": "stsV",
+   "label": "STS detector",
+   "column": "AX"
+  },
+  {
+   "id": "ionDeltaV",
+   "label": "Ion B signal minus offset",
+   "column": "BK"
+  }
+ ],
+ "detectorRows": [
+  {
+   "row": 3,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.241195,
+    "issObscurationV": 3.2196505,
+    "stsV": -0.0007019039999999999,
+    "ionDeltaV": 0.38108899999999934
+   }
+  },
+  {
+   "row": 4,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.2453005,
+    "issObscurationV": 3.1876515,
+    "stsV": -0.0007324217499999997,
+    "ionDeltaV": 0.33341899999999836
+   }
+  },
+  {
+   "row": 5,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.2579045,
+    "issObscurationV": 3.2622525,
+    "stsV": -0.00068664535,
+    "ionDeltaV": 0.2776888684210528
+   }
+  },
+  {
+   "row": 6,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.243179500000001,
+    "issObscurationV": 3.0152894999999997,
+    "stsV": -0.0006713865999999999,
+    "ionDeltaV": 0.7476354999999995
+   }
+  },
+  {
+   "row": 7,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.245758,
+    "issObscurationV": 3.0097505,
+    "stsV": -0.0006713859999999999,
+    "ionDeltaV": 0.6458589999999997
+   }
+  },
+  {
+   "row": 8,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.246857,
+    "issObscurationV": 2.90506,
+    "stsV": 5.133179,
+    "ionDeltaV": 0.6833484999999992
+   }
+  },
+  {
+   "row": 9,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.253037368421054,
+    "issObscurationV": 3.1960584210526317,
+    "stsV": -0.0006745988421052632,
+    "ionDeltaV": 0.3111102105263148
+   }
+  },
+  {
+   "row": 10,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.256577,
+    "issObscurationV": 3.2435454999999997,
+    "stsV": -0.0005798337999999998,
+    "ionDeltaV": 0.2325879999999998
+   }
+  },
+  {
+   "row": 11,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.235765000000001,
+    "issObscurationV": 3.028138,
+    "stsV": -0.0005645753,
+    "ionDeltaV": 0.6122739999999993
+   }
+  },
+  {
+   "row": 12,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.244583499999999,
+    "issObscurationV": 3.02681,
+    "stsV": -0.0005493163499999999,
+    "ionDeltaV": 0.5177144999999994
+   }
+  },
+  {
+   "row": 13,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.254395,
+    "issObscurationV": 3.272279,
+    "stsV": -0.0006103516499999998,
+    "ionDeltaV": 0.1779314999999997
+   }
+  },
+  {
+   "row": 14,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.206390000000002,
+    "issObscurationV": 3.320434,
+    "stsV": -0.0007934563999999998,
+    "ionDeltaV": 0.11685249999999936
+   }
+  },
+  {
+   "row": 15,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.240723,
+    "issObscurationV": 3.15973,
+    "stsV": -0.0008239742,
+    "ionDeltaV": 0.5709715000000024
+   }
+  },
+  {
+   "row": 16,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.2468414999999995,
+    "issObscurationV": 3.173995,
+    "stsV": -0.0007476805999999999,
+    "ionDeltaV": 0.4769585000000003
+   }
+  },
+  {
+   "row": 17,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.257949999999999,
+    "issObscurationV": 2.9458624999999996,
+    "stsV": -0.0004882815,
+    "ionDeltaV": 0.7810524999999995
+   }
+  },
+  {
+   "row": 18,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.257323999999999,
+    "issObscurationV": 2.9606769999999996,
+    "stsV": -0.0007781974499999999,
+    "ionDeltaV": 0.6548905000000014
+   }
+  },
+  {
+   "row": 19,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.2593695,
+    "issObscurationV": 3.186265,
+    "stsV": -0.0005645751,
+    "ionDeltaV": 0.4282984999999986
+   }
+  },
+  {
+   "row": 20,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.259322499999999,
+    "issObscurationV": 3.2127380000000003,
+    "stsV": -0.0006713867499999998,
+    "ionDeltaV": 0.360129904761906
+   }
+  },
+  {
+   "row": 21,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 6.246277000000001,
+    "issObscurationV": 2.992845,
+    "stsV": -0.0006408690000000002,
+    "ionDeltaV": 0.7030314999999989
+   }
+  },
+  {
+   "row": 22,
+   "flight": "SAME",
+   "material": "DBP",
+   "role": "reference",
+   "values": {
+    "issScatterV": 4.893748333333333,
+    "issObscurationV": 3.2190433333333335,
+    "stsV": -0.0007629393333333334,
+    "ionDeltaV": 0.2868649999999997
+   }
+  },
+  {
+   "row": 23,
+   "flight": "SAME",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 3.6637120000000003,
+    "issObscurationV": 3.414307,
+    "stsV": -0.0006408687499999999,
+    "ionDeltaV": 1.2553260000000002
+   }
+  },
+  {
+   "row": 24,
+   "flight": "SAME",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 4.826384,
+    "issObscurationV": 3.4089354999999997,
+    "stsV": -0.00067138655,
+    "ionDeltaV": 0.833734309523809
+   }
+  },
+  {
+   "row": 25,
+   "flight": "SAME",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 4.2031577272727265,
+    "issObscurationV": 3.3880618181818183,
+    "stsV": 4.559117727272727,
+    "ionDeltaV": 1.195426363636365
+   }
+  },
+  {
+   "row": 26,
+   "flight": "SAME",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.083938999999999,
+    "issObscurationV": 3.3642119999999998,
+    "stsV": 4.61171,
+    "ionDeltaV": 1.1210489999999993
+   }
+  },
+  {
+   "row": 27,
+   "flight": "SAME",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.6411435,
+    "issObscurationV": 3.3899690000000007,
+    "stsV": -0.0006561275499999998,
+    "ionDeltaV": 1.7636555000000005
+   }
+  },
+  {
+   "row": 28,
+   "flight": "SAME",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.883332000000001,
+    "issObscurationV": 3.381546,
+    "stsV": -0.0006256102999999999,
+    "ionDeltaV": 1.1577589999999995
+   }
+  },
+  {
+   "row": 29,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.678,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.8838596666666669
+   }
+  },
+  {
+   "row": 30,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.623,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.4860219999999993
+   }
+  },
+  {
+   "row": 31,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.242,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.8573015
+   }
+  },
+  {
+   "row": 32,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.248,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.946422368421051
+   }
+  },
+  {
+   "row": 33,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.8977507499999998,
+    "issObscurationV": 0,
+    "stsV": 4.822631,
+    "ionDeltaV": 0.9683685000000004
+   }
+  },
+  {
+   "row": 34,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.4372559,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.8438864999999991
+   }
+  },
+  {
+   "row": 35,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.4940947500000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.5764924999999987
+   }
+  },
+  {
+   "row": 36,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.67108155,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.1367955000000025
+   }
+  },
+  {
+   "row": 37,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.7216948999999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.6925336578947361
+   }
+  },
+  {
+   "row": 38,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.6522521000000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.5036164999999988
+   }
+  },
+  {
+   "row": 39,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.7405854000000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.9302984999999993
+   }
+  },
+  {
+   "row": 40,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.9827577999999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.9709190000000012
+   }
+  },
+  {
+   "row": 41,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 1.1677094999999995,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.6104879999999993
+   }
+  },
+  {
+   "row": 42,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.18647765,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.5973669999999984
+   }
+  },
+  {
+   "row": 43,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.18695069999999997,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.35919099999999915
+   }
+  },
+  {
+   "row": 44,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.74995435,
+    "issObscurationV": 0,
+    "stsV": 4.900589,
+    "ionDeltaV": 0.4930874999999997
+   }
+  },
+  {
+   "row": 45,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.7163239499999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.018600499999999
+   }
+  },
+  {
+   "row": 46,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.7473449499999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.5944974999999992
+   }
+  },
+  {
+   "row": 47,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.7454529000000002,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.393891
+   }
+  },
+  {
+   "row": 48,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.8422851999999998,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.8580856190476185
+   }
+  },
+  {
+   "row": 49,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.4175567,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.5884100000000005
+   }
+  },
+  {
+   "row": 50,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": null,
+    "issObscurationV": null,
+    "stsV": null,
+    "ionDeltaV": 0.41433749999999936
+   }
+  },
+  {
+   "row": 51,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 2.7684005,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.3650500000000001
+   }
+  },
+  {
+   "row": 52,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 2.4593499999999997,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.34892500000000126
+   }
+  },
+  {
+   "row": 53,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.469621000000002,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.4569094999999992
+   }
+  },
+  {
+   "row": 54,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.126924761904762,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.40870550000000083
+   }
+  },
+  {
+   "row": 55,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 4.6021415,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.3912210000000007
+   }
+  },
+  {
+   "row": 56,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 4.42363,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.38465850000000046
+   }
+  },
+  {
+   "row": 57,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.415985000000001,
+    "issObscurationV": 0,
+    "stsV": 4.5750275,
+    "ionDeltaV": 1.5110475
+   }
+  },
+  {
+   "row": 58,
+   "flight": "SAME-R",
+   "material": "Kapton",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.7652435499999999,
+    "issObscurationV": 0,
+    "stsV": 4.9595635,
+    "ionDeltaV": 0.47065650000000137
+   }
+  },
+  {
+   "row": 59,
+   "flight": "SAME",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.231994999999999,
+    "issObscurationV": 3.3346863333333334,
+    "stsV": 4.549662666666667,
+    "ionDeltaV": 1.2634585000000014
+   }
+  },
+  {
+   "row": 60,
+   "flight": "SAME",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.241927,
+    "issObscurationV": 3.3386225000000005,
+    "stsV": -0.0007019042,
+    "ionDeltaV": 1.786773499999999
+   }
+  },
+  {
+   "row": 61,
+   "flight": "SAME",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.246612000000001,
+    "issObscurationV": 3.3158105,
+    "stsV": -0.0007476804499999999,
+    "ionDeltaV": 1.2499259999999985
+   }
+  },
+  {
+   "row": 62,
+   "flight": "SAME",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2472995,
+    "issObscurationV": 3.322661500000001,
+    "stsV": 4.667801,
+    "ionDeltaV": 1.0221849999999995
+   }
+  },
+  {
+   "row": 63,
+   "flight": "SAME",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.251068500000001,
+    "issObscurationV": 3.327666,
+    "stsV": -0.0007629392499999999,
+    "ionDeltaV": 1.8597874999999995
+   }
+  },
+  {
+   "row": 64,
+   "flight": "SAME",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.254776000000001,
+    "issObscurationV": 3.3119959999999997,
+    "stsV": -0.0004577636499999999,
+    "ionDeltaV": 1.0633704999999996
+   }
+  },
+  {
+   "row": 65,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.6770475,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.258957999999998
+   }
+  },
+  {
+   "row": 66,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.257429999999999,
+    "issObscurationV": 0,
+    "stsV": 4.5798335,
+    "ionDeltaV": 1.4347835
+   }
+  },
+  {
+   "row": 67,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.256,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.8981019999999997
+   }
+  },
+  {
+   "row": 68,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2357344999999995,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.7926009999999994
+   }
+  },
+  {
+   "row": 69,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.239685499999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.3189090000000006
+   }
+  },
+  {
+   "row": 70,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.250153499999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.417358
+   }
+  },
+  {
+   "row": 71,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.250869500000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.7549134999999998
+   }
+  },
+  {
+   "row": 72,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2503665,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.0735485000000002
+   }
+  },
+  {
+   "row": 73,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.253204500000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.5158689999999986
+   }
+  },
+  {
+   "row": 74,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2472695,
+    "issObscurationV": 0,
+    "stsV": 4.5754395,
+    "ionDeltaV": 1.6967452857142842
+   }
+  },
+  {
+   "row": 75,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.7956835,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.2346049999999993
+   }
+  },
+  {
+   "row": 76,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.7411045,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.248062
+   }
+  },
+  {
+   "row": 77,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.222127619047618,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.43104088744588775
+   }
+  },
+  {
+   "row": 78,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.1840815,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.3601100000000006
+   }
+  },
+  {
+   "row": 79,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.256042,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.28289899999999957
+   }
+  },
+  {
+   "row": 80,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.246781000000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.2337789999999993
+   }
+  },
+  {
+   "row": 81,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.279388000000001,
+    "issObscurationV": 0,
+    "stsV": 4.892825238095238,
+    "ionDeltaV": 1.362258999999999
+   }
+  },
+  {
+   "row": 82,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2525025,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.666030000000001
+   }
+  },
+  {
+   "row": 83,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.249,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.8065025000000006
+   }
+  },
+  {
+   "row": 84,
+   "flight": "SAME-R",
+   "material": "Lampwick",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.249,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.5121470000000015
+   }
+  },
+  {
+   "row": 85,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.238,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.753038
+   }
+  },
+  {
+   "row": 86,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.24,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.146177999999999
+   }
+  },
+  {
+   "row": 87,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.248,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 3.013169000000002
+   }
+  },
+  {
+   "row": 88,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.249,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.454162
+   }
+  },
+  {
+   "row": 89,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.120941499999999,
+    "issObscurationV": 0,
+    "stsV": 4.507355,
+    "ionDeltaV": 1.938156000000002
+   }
+  },
+  {
+   "row": 90,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.256834499999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 3.005463500000001
+   }
+  },
+  {
+   "row": 91,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.259078000000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.4373464999999994
+   }
+  },
+  {
+   "row": 92,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2617505,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 3.2007450000000004
+   }
+  },
+  {
+   "row": 93,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.263825,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.6265410000000013
+   }
+  },
+  {
+   "row": 94,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2280885,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.8547069999999968
+   }
+  },
+  {
+   "row": 95,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.233444499999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.364562500000001
+   }
+  },
+  {
+   "row": 96,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2421275,
+    "issObscurationV": 0,
+    "stsV": 4.2430115,
+    "ionDeltaV": 2.463072499999998
+   }
+  },
+  {
+   "row": 97,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 4.819808999999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.06100550000000027
+   }
+  },
+  {
+   "row": 98,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 4.381728999999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.0786585000000013
+   }
+  },
+  {
+   "row": 99,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.575013000000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.062148499999999274
+   }
+  },
+  {
+   "row": 100,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.280457000000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.0744784999999979
+   }
+  },
+  {
+   "row": 101,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.244,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.473237
+   }
+  },
+  {
+   "row": 102,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2564994999999985,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.31652900000000006
+   }
+  },
+  {
+   "row": 103,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2575835,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.32200650000000053
+   }
+  },
+  {
+   "row": 104,
+   "flight": "SAME-R",
+   "material": "Pyrell",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.283677000000002,
+    "issObscurationV": 0,
+    "stsV": 4.6147465,
+    "ionDeltaV": 2.0130929999999996
+   }
+  },
+  {
+   "row": 105,
+   "flight": "SAME",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.241760000000001,
+    "issObscurationV": 3.0313725000000002,
+    "stsV": -0.0007629388999999998,
+    "ionDeltaV": 2.578947499999998
+   }
+  },
+  {
+   "row": 106,
+   "flight": "SAME",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2438805,
+    "issObscurationV": 2.9691765000000006,
+    "stsV": -0.0006866451,
+    "ionDeltaV": 1.966507
+   }
+  },
+  {
+   "row": 107,
+   "flight": "SAME",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.249208,
+    "issObscurationV": 3.133774,
+    "stsV": 4.274017500000001,
+    "ionDeltaV": 1.8259429999999988
+   }
+  },
+  {
+   "row": 108,
+   "flight": "SAME",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.236571499999999,
+    "issObscurationV": 3.1291965,
+    "stsV": 4.2092905,
+    "ionDeltaV": 2.086944000000001
+   }
+  },
+  {
+   "row": 109,
+   "flight": "SAME",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2120555555555566,
+    "issObscurationV": 3.3152094444444438,
+    "stsV": -0.0007968473888888889,
+    "ionDeltaV": 1.8548285555555548
+   }
+  },
+  {
+   "row": 110,
+   "flight": "SAME",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.221328000000001,
+    "issObscurationV": 3.3016975000000004,
+    "stsV": -0.0007629392499999999,
+    "ionDeltaV": 1.472931
+   }
+  },
+  {
+   "row": 111,
+   "flight": "SAME",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2939,
+    "issObscurationV": 2.8774,
+    "stsV": 4.3936,
+    "ionDeltaV": 1.811
+   }
+  },
+  {
+   "row": 112,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.246,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.555539500000002
+   }
+  },
+  {
+   "row": 113,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.249,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.0071865000000013
+   }
+  },
+  {
+   "row": 114,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.25,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 3.065353
+   }
+  },
+  {
+   "row": 115,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.25,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.6018655000000006
+   }
+  },
+  {
+   "row": 116,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.244,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.6039440000000003
+   }
+  },
+  {
+   "row": 117,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.247,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.8085620000000002
+   }
+  },
+  {
+   "row": 118,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.249008000000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 3.0991670000000013
+   }
+  },
+  {
+   "row": 119,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2502130000000005,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.534513499999999
+   }
+  },
+  {
+   "row": 120,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.26475,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.405534000000003
+   }
+  },
+  {
+   "row": 121,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.245361999999998,
+    "issObscurationV": 0,
+    "stsV": 4.417329,
+    "ionDeltaV": 2.1791540000000023
+   }
+  },
+  {
+   "row": 122,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.254745,
+    "issObscurationV": 0,
+    "stsV": 4.3222510000000005,
+    "ionDeltaV": 2.240050499999998
+   }
+  },
+  {
+   "row": 123,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.248993,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 3.052796999999998
+   }
+  },
+  {
+   "row": 124,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2518005,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.537216999999999
+   }
+  },
+  {
+   "row": 125,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.238404999999999,
+    "issObscurationV": 0,
+    "stsV": 4.150497499999999,
+    "ionDeltaV": 3.103424499999999
+   }
+  },
+  {
+   "row": 126,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.252045,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.391295500000001
+   }
+  },
+  {
+   "row": 127,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2521819999999995,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.3115380000000005
+   }
+  },
+  {
+   "row": 128,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2606215,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.6858520000000015
+   }
+  },
+  {
+   "row": 129,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.260176499999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.7288225000000006
+   }
+  },
+  {
+   "row": 130,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.25296,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.8389884999999992
+   }
+  },
+  {
+   "row": 131,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.2513584999999985,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.876160500000001
+   }
+  },
+  {
+   "row": 132,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.277129499999999,
+    "issObscurationV": 0,
+    "stsV": 4.556986666666667,
+    "ionDeltaV": 2.157988999999999
+   }
+  },
+  {
+   "row": 133,
+   "flight": "SAME-R",
+   "material": "Silicone",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 6.245,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.998977
+   }
+  },
+  {
+   "row": 134,
+   "flight": "SAME",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 1.6403656500000001,
+    "issObscurationV": 3.415237,
+    "stsV": 4.5407105,
+    "ionDeltaV": 1.2118515000000007
+   }
+  },
+  {
+   "row": 135,
+   "flight": "SAME",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.8191377000000001,
+    "issObscurationV": 3.4348439999999996,
+    "stsV": -0.0005035399999999999,
+    "ionDeltaV": 1.3432765
+   }
+  },
+  {
+   "row": 136,
+   "flight": "SAME",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.9355621,
+    "issObscurationV": 3.4342635,
+    "stsV": -0.0005950926499999999,
+    "ionDeltaV": 0.8842019999999993
+   }
+  },
+  {
+   "row": 137,
+   "flight": "SAME",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.8635255499999998,
+    "issObscurationV": 3.432862000000001,
+    "stsV": 4.641037,
+    "ionDeltaV": 1.0513909999999989
+   }
+  },
+  {
+   "row": 138,
+   "flight": "SAME",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.0006866452,
+    "issObscurationV": 3.41098,
+    "stsV": -0.0006866452,
+    "ionDeltaV": 0.9732669999999999
+   }
+  },
+  {
+   "row": 139,
+   "flight": "SAME",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.0007067225789473684,
+    "issObscurationV": 3.415109473684211,
+    "stsV": -0.0007067225789473684,
+    "ionDeltaV": 0.5870538421052629
+   }
+  },
+  {
+   "row": 140,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.188,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.6353765000000013
+   }
+  },
+  {
+   "row": 141,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.782,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.3444359999999991
+   }
+  },
+  {
+   "row": 142,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 5.041518999999999,
+    "issObscurationV": 0,
+    "stsV": 4.6750035,
+    "ionDeltaV": 1.8236689999999998
+   }
+  },
+  {
+   "row": 143,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 1.1039280000000002,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.902908
+   }
+  },
+  {
+   "row": 144,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 1.1247265,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.3226639999999996
+   }
+  },
+  {
+   "row": 145,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 2.1625675000000006,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.2613220000000007
+   }
+  },
+  {
+   "row": 146,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 2.1021720000000004,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.679489499999999
+   }
+  },
+  {
+   "row": 147,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 1.7692875000000003,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.1105810000000007
+   }
+  },
+  {
+   "row": 148,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 1.8084105000000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.505600000000002
+   }
+  },
+  {
+   "row": 149,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 3.416,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 2.23163
+   }
+  },
+  {
+   "row": 150,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.9656227,
+    "issObscurationV": 0,
+    "stsV": 4.866637,
+    "ionDeltaV": 0.8425440000000011
+   }
+  },
+  {
+   "row": 151,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.9495089499999999,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.6139975000000009
+   }
+  },
+  {
+   "row": 152,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.94136045,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.5213614999999985
+   }
+  },
+  {
+   "row": 153,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.7279054500000001,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.20231499999999958
+   }
+  },
+  {
+   "row": 154,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.696808,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 0.14373849999999955
+   }
+  },
+  {
+   "row": 155,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 4.0240935,
+    "issObscurationV": 0,
+    "stsV": 0.0008392331999999998,
+    "ionDeltaV": 1.723250000000001
+   }
+  },
+  {
+   "row": 156,
+   "flight": "SAME-R",
+   "material": "Teflon",
+   "role": "spacecraft_material",
+   "values": {
+    "issScatterV": 0.1842,
+    "issObscurationV": 0,
+    "stsV": 0,
+    "ionDeltaV": 1.8327475000000009
+   }
+  }
+ ],
+ "paired": [
+  {
+   "label": "Pooled",
+   "difference": {
+    "numerator": 70,
+    "denominator": 133,
+    "fraction": 0.5263157894736842
+   },
+   "completion": {
+    "lowerNumerator": 69,
+    "upperNumerator": 71,
+    "denominator": 134,
+    "lowerFraction": 0.5149253731343284,
+    "upperFraction": 0.5298507462686567
+   }
+  },
+  {
+   "label": "SAME",
+   "difference": {
+    "numerator": -6,
+    "denominator": 25,
+    "fraction": -0.24
+   },
+   "completion": {
+    "lowerNumerator": -6,
+    "upperNumerator": -6,
+    "denominator": 25,
+    "lowerFraction": -0.24,
+    "upperFraction": -0.24
+   }
+  },
+  {
+   "label": "SAME-R",
+   "difference": {
+    "numerator": 76,
+    "denominator": 108,
+    "fraction": 0.7037037037037037
+   },
+   "completion": {
+    "lowerNumerator": 75,
+    "upperNumerator": 77,
+    "denominator": 109,
+    "lowerFraction": 0.6880733944954128,
+    "upperFraction": 0.7064220183486238
+   }
+  }
+ ],
+ "envelopes": {
+  "narrow": [
+   {
+    "label": "Pooled",
+    "paired": {
+     "lowerNumerator": 66,
+     "upperNumerator": 78,
+     "denominator": 133,
+     "lowerFraction": 0.49624060150375937,
+     "upperFraction": 0.5864661654135338,
+     "stability": "strictly_positive"
+    },
+    "completion": {
+     "lowerNumerator": 65,
+     "upperNumerator": 79,
+     "denominator": 134,
+     "lowerFraction": 0.48507462686567165,
+     "upperFraction": 0.5895522388059702,
+     "stability": "strictly_positive"
+    }
+   },
+   {
+    "label": "SAME",
+    "paired": {
+     "lowerNumerator": -6,
+     "upperNumerator": -3,
+     "denominator": 25,
+     "lowerFraction": -0.24,
+     "upperFraction": -0.12,
+     "stability": "strictly_negative"
+    },
+    "completion": {
+     "lowerNumerator": -6,
+     "upperNumerator": -3,
+     "denominator": 25,
+     "lowerFraction": -0.24,
+     "upperFraction": -0.12,
+     "stability": "strictly_negative"
+    }
+   },
+   {
+    "label": "SAME-R",
+    "paired": {
+     "lowerNumerator": 72,
+     "upperNumerator": 81,
+     "denominator": 108,
+     "lowerFraction": 0.6666666666666666,
+     "upperFraction": 0.75,
+     "stability": "strictly_positive"
+    },
+    "completion": {
+     "lowerNumerator": 71,
+     "upperNumerator": 82,
+     "denominator": 109,
+     "lowerFraction": 0.6513761467889908,
+     "upperFraction": 0.7522935779816514,
+     "stability": "strictly_positive"
+    }
+   }
+  ],
+  "wide": [
+   {
+    "label": "Pooled",
+    "paired": {
+     "lowerNumerator": -51,
+     "upperNumerator": 133,
+     "denominator": 133,
+     "lowerFraction": -0.38345864661654133,
+     "upperFraction": 1,
+     "stability": "both_signs"
+    },
+    "completion": {
+     "lowerNumerator": -52,
+     "upperNumerator": 134,
+     "denominator": 134,
+     "lowerFraction": -0.3880597014925373,
+     "upperFraction": 1,
+     "stability": "both_signs"
+    }
+   },
+   {
+    "label": "SAME",
+    "paired": {
+     "lowerNumerator": -9,
+     "upperNumerator": 25,
+     "denominator": 25,
+     "lowerFraction": -0.36,
+     "upperFraction": 1,
+     "stability": "both_signs"
+    },
+    "completion": {
+     "lowerNumerator": -9,
+     "upperNumerator": 25,
+     "denominator": 25,
+     "lowerFraction": -0.36,
+     "upperFraction": 1,
+     "stability": "both_signs"
+    }
+   },
+   {
+    "label": "SAME-R",
+    "paired": {
+     "lowerNumerator": -42,
+     "upperNumerator": 108,
+     "denominator": 108,
+     "lowerFraction": -0.3888888888888889,
+     "upperFraction": 1,
+     "stability": "both_signs"
+    },
+    "completion": {
+     "lowerNumerator": -43,
+     "upperNumerator": 109,
+     "denominator": 109,
+     "lowerFraction": -0.3944954128440367,
+     "upperFraction": 1,
+     "stability": "both_signs"
+    }
+   }
+  ]
+ },
+ "ranking": [
+  {
+   "rank": 1,
+   "name": "FLEX",
+   "findings": 2,
+   "areas": [
+    "suppression"
+   ]
+  },
+  {
+   "rank": 2,
+   "name": "Saffire VI",
+   "findings": 9,
+   "areas": [
+    "prevention",
+    "detection"
+   ]
+  },
+  {
+   "rank": 3,
+   "name": "SAME",
+   "findings": 2,
+   "areas": [
+    "detection"
+   ]
+  },
+  {
+   "rank": 4,
+   "name": "Saffire I",
+   "findings": 2,
+   "areas": [
+    "prevention"
+   ]
+  },
+  {
+   "rank": 5,
+   "name": "Saffire II",
+   "findings": 2,
+   "areas": [
+    "prevention"
+   ]
+  },
+  {
+   "rank": 6,
+   "name": "Saffire III",
+   "findings": 2,
+   "areas": [
+    "prevention"
+   ]
+  },
+  {
+   "rank": 7,
+   "name": "Saffire V",
+   "findings": 3,
+   "areas": [
+    "prevention",
+    "detection"
+   ]
+  },
+  {
+   "rank": 8,
+   "name": "BASS",
+   "findings": 0,
+   "areas": [
+    "prevention",
+    "suppression"
+   ]
+  },
+  {
+   "rank": 9,
+   "name": "BASS-II",
+   "findings": 0,
+   "areas": [
+    "prevention"
+   ]
+  },
+  {
+   "rank": 10,
+   "name": "SAME-R",
+   "findings": 0,
+   "areas": [
+    "detection"
+   ]
+  }
+ ],
+ "atlas": [
+  {
+   "accession": "PSI-10",
+   "name": "ACME/Flame Design",
+   "records": 327
+  },
+  {
+   "accession": "PSI-20",
+   "name": "ACME BRE",
+   "records": 18
+  },
+  {
+   "accession": "PSI-21",
+   "name": "ACME CLD Flame",
+   "records": 32
+  },
+  {
+   "accession": "PSI-22",
+   "name": "ACME E-FIELD Flames",
+   "records": 32
+  },
+  {
+   "accession": "PSI-23",
+   "name": "ACME s-Flame",
+   "records": 18
+  },
+  {
+   "accession": "PSI-25",
+   "name": "BASS-II",
+   "records": 129
+  },
+  {
+   "accession": "PSI-26",
+   "name": "BASS",
+   "records": 122
+  },
+  {
+   "accession": "PSI-39",
+   "name": "CFI",
+   "records": 87
+  },
+  {
+   "accession": "PSI-47",
+   "name": "DAFT / DAFT-2",
+   "records": 2
+  },
+  {
+   "accession": "PSI-60",
+   "name": "PSI-60",
+   "records": 0
+  },
+  {
+   "accession": "PSI-62",
+   "name": "PSI-62",
+   "records": 0
+  },
+  {
+   "accession": "PSI-68",
+   "name": "FLEX-2",
+   "records": 8
+  },
+  {
+   "accession": "PSI-69",
+   "name": "FLEX",
+   "records": 274
+  },
+  {
+   "accession": "PSI-98",
+   "name": "SAFFIRE-I",
+   "records": 4
+  },
+  {
+   "accession": "PSI-99",
+   "name": "SAFFIRE-II",
+   "records": 15
+  },
+  {
+   "accession": "PSI-100",
+   "name": "SAFFIRE-III",
+   "records": 2
+  },
+  {
+   "accession": "PSI-101",
+   "name": "SAME-R",
+   "records": 109
+  },
+  {
+   "accession": "PSI-102",
+   "name": "SAME",
+   "records": 8
+  },
+  {
+   "accession": "PSI-106",
+   "name": "SLICE",
+   "records": 12
+  },
+  {
+   "accession": "PSI-107",
+   "name": "SPICE",
+   "records": 469
+  },
+  {
+   "accession": "PSI-115",
+   "name": "PSI-115",
+   "records": 0
+  },
+  {
+   "accession": "PSI-117",
+   "name": "PSI-117",
+   "records": 0
+  },
+  {
+   "accession": "PSI-142",
+   "name": "PSI-142",
+   "records": 8
+  },
+  {
+   "accession": "PSI-159",
+   "name": "ACME CFI-G",
+   "records": 333
+  }
+ ]
+}

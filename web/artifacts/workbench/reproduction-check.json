@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "figureReplay": [
+    {
+      "palette": "okabe-ito",
+      "figure": 3,
+      "sameEnvironmentPngSha256": "f22b49cb98a7065bb1d623841d78ff37595711e1efe42cf1e410e91788ed04bc"
+    },
+    {
+      "palette": "monochrome",
+      "figure": 3,
+      "sameEnvironmentPngSha256": "d428cbf98b4fd1baa1e56cf6ee6eab2173ea2bbd8144b76f78b6c9b6584914c4"
+    }
+  ],
+  "bundleManifestChecked": true,
+  "figureDataEqualsCurrentEngineExport": true,
+  "hypotheticalCsvRecords": 5,
+  "sourceSha256": "4ad35a9149036098cb2410ff06dd562e3644ae51d20ea4a3b3a22d52a8695852",
+  "meaning": "Local software reproduction with pinned installed dependencies; not independent scientific validation."
+}

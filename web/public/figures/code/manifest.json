@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "ignis-figure-reproduction-1",
+  "dataRevision": "2026-11-15.r2",
+  "dependencies": {
+    "paperplot-quantum": "0.1.0",
+    "matplotlib": "3.10.8",
+    "numpy": "2.4.0"
+  },
+  "palettes": [
+    "okabe-ito",
+    "monochrome"
+  ],
+  "figureIds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "files": {
+    "make-figures.py": {
+      "bytes": 8688,
+      "sha256": "59b64fe9067c0def6046268ab22048834f5ac6310954fca31315b7f68894affa"
+    },
+    "figure-data.json": {
+      "bytes": 47991,
+      "sha256": "2db0fe9e1d6c1732f351a7875ac06039a7cd9622d0fd2c500035fce1098cf1a0"
+    },
+    "requirements.txt": {
+      "bytes": 57,
+      "sha256": "7792a4e99653ec2a6f8a2935156cd5c803feda43d7b2232333620fe150cc8953"
+    },
+    "README.txt": {
+      "bytes": 1244,
+      "sha256": "48ffc35f6482fb3d32291747e52c67b0759f1281d3910f0575b61b5c00333764"
+    }
+  }
+}
