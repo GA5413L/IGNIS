@@ -18,6 +18,8 @@ npm start
 
 Hosting settings: root directory `web`, install `npm ci --include=dev`, build `npm run build`, start `npm start`. The start command binds to `0.0.0.0` and uses the host's `PORT` environment variable (default `3000`). Vercel manages startup itself; leave its start-command setting unset. See the root [requirement.txt](../requirement.txt) deployment checklist; web dependencies are installed from `package.json` and its lockfile, not pip.
 
+**Render:** its Build Command must include installation: `npm ci --include=dev && npm run build`. Keep Root Directory `web`, Start Command `npm start`, and Pre-Deploy Command empty. Running only `npm run build` on a clean checkout produces `next: not found`. After saving the command, use **Manual Deploy → Clear build cache & deploy**. If Render is connected to a fork, synchronize that fork with the team repository before deploying. [Render deployment commands](https://render.com/docs/deploys#build-command).
+
 For development, use `npm run dev`. Both scripts explicitly select webpack: a prior Turbopack build altered imported detector numbers, so exact source/server/browser identity checks are mandatory. No key is needed for the implemented workflows. `Start-IGNIS.cmd` starts the owner's existing F: installation; contributors should use the portable commands above.
 
 ## Research workflows

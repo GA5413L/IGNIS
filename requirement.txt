@@ -4,6 +4,7 @@
 # Hosting root directory: web
 # Install command: npm ci --include=dev
 # Build command: npm run build
+# Render Build Command (install and build combined): npm ci --include=dev && npm run build
 # Start command: npm start
 # PORT: use the hosting provider's environment value; defaults to 3000.
 # The server listens on 0.0.0.0 for the hosting provider's reverse proxy.
