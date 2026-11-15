@@ -1,5 +1,7 @@
 # Blockers
 
+**Later access update, 15 November 2026:** the owner supplied the complete LIV25 dissertation. Its relevant experimental chapters and selected methods/appendix were reviewed; see [new evidence and limits](web/docs/DISSERTATION_AND_TRAJECTORY_METHODS_2026-11-15.md). It is no longer inaccessible. No raw tracked-position exports, run-level identities or synchronized measurement package were acquired. Rivera DOI 10.1016/j.firesaf.2026.104719 and DOI 10.1016/j.proci.2026.106460 remain unread in full. Older retrieval failures below are historical. Local arithmetic now exists; a validated physical predictor, independent reviewer assessment and researcher benefit measurement remain open.
+
 **Access update, 15 November 2026:** LIV24's nine-page accepted manuscript is now supplied/read; both copies have identical text/renders. See [endpoint/protocol report](web/docs/ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md). Rivera 2026 remains unread in full. Liveretou's verified 2025 Berkeley dissertation is an additional source lead; direct retrieval returned 403 and the full text was not inspected. Earlier access statements below are historical.
 
 

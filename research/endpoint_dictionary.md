@@ -1,5 +1,9 @@
 # Endpoint dictionary
 
+## LIV25 measurement addendum: 15 November 2026
+
+Chapter 3 PDF 46 / printed 34 defines its LOC by visual flame extinction; Fig. 15 dots (PDF 50 / printed 38) instead mark the end of the spread phase. Neither definition silently replaces LIV24's combined outcome. Chapter 4 rates are derivatives of phase-specific quadratic fits to tracked image positions (PDF 62–63 / printed 50–51), with the operator/calibration details not fully acquired. They are not raw instantaneous derivative measurements or mass regression rates. The new local calculation returns signed coordinate displacement over elapsed time, distinct from these source quantities. Figure 14 and Figure 15 use different time origins. See [full context](../web/docs/DISSERTATION_AND_TRAJECTORY_METHODS_2026-11-15.md); legacy E01–E08 remain unchanged.
+
 ## Current access/method addendum: 15 November 2026
 
 The supplied LIV24 accepted manuscript is now fully read. Its intended quantity concerns downward opposed flame-spread limits, but its condition-level reported outcome is spread cessation **or** flame extinction. A residual blue flame after spread cessation is described. Individual failure branches and transition pairs are unavailable; the source cannot be silently assigned to a pure full-extinction endpoint. RIES24's newly read operator is instead the propagation rate of an IR pyrolysis marker strictly above 603 K over 3–7 s, not an oxygen limit or automatically an optical flame-leading-edge rate.

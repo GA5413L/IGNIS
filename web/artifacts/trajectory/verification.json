@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "methodRevision": "trajectory-ops-2026-11-15.1",
+  "windowsRecounted": 2,
+  "artifactSha256": "74e37e800105b0929d35a37e34b41faec3a8ac3960ff246195ae8f9ef7f3f614",
+  "sourceDossierSha256": "37606932ff0a91b900d4c07c394e28fe980852dac452e9dec0b6b978dbdd5958",
+  "sourceVerification": {
+    "status": "PASS",
+    "pdfPages": 96,
+    "printedTextAnchors": 19,
+    "figureDigitization": false,
+    "fullScientificValidation": false
+  },
+  "corruptionsRejected": [
+    "invented physical claim",
+    "fabricated shared endpoint",
+    "altered secant",
+    "invented instantaneous claim"
+  ],
+  "independentValidation": false,
+  "physicalExperiments": "NOT RUN",
+  "sourceTrajectoryReconstruction": "NOT RUN"
+}

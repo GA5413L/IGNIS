@@ -1,6 +1,6 @@
 # Working on IGNIS
 
-The shared application is in `web/`. Current backend build: **web-2026-11-15.9**; the interface remains the .7 design and belongs to the UI teammate. Start with [the endpoint/protocol API and CLI](web/docs/ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md), [the experimental-design API](web/docs/EXPERIMENTAL_DESIGN_AUDIT_2026-11-15.md), [build status](web/docs/BUILD_STATUS.md) and [scientific working rules](CLAUDE.md).
+The shared application is in `web/`. The running backend remains **web-2026-11-15.9**; UI work belongs to the teammate. The latest technical extension is the [dissertation dossier and local trajectory CLI](web/docs/DISSERTATION_AND_TRAJECTORY_METHODS_2026-11-15.md), method `trajectory-ops-2026-11-15.1`. Also see [endpoint/protocol API](web/docs/ENDPOINT_PROTOCOL_AUDIT_2026-11-15.md), [design API](web/docs/EXPERIMENTAL_DESIGN_AUDIT_2026-11-15.md), [build status](web/docs/BUILD_STATUS.md) and [scientific rules](CLAUDE.md).
 
 ## Clone and run
 
@@ -29,7 +29,7 @@ Use the package scripts: `dev` and `build` explicitly select **webpack**. The au
 
 ## Verify a change
 
-`npm run test:team` runs **390 offline application checks**. The prior build's full owner suite passed 341 checks. The 25-test provider/IE-1 file needs private frozen evaluation fixtures and is deliberately excluded from the team command. This is not a live interpretation acceptance result. Private fixtures, score keys and cumulative spend/probe ledgers stay local; do not invent replacements or start a new ledger to bypass them.
+`npm run test:team` runs **416 offline application checks**. The prior build's full owner suite passed 341 checks. The 25-test provider/IE-1 file needs private frozen evaluation fixtures and is deliberately excluded from the team command. This is not a live interpretation acceptance result. Private fixtures, score keys and cumulative spend/probe ledgers stay local; do not invent replacements or start a new ledger to bypass them.
 
 Run `npm run lint` and a production build before handing off a change. The existing browser suite uses installed **Google Chrome** and starts a production server on port 3100:
 

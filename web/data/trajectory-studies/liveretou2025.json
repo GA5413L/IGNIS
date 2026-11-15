@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "ignis-trajectory-study-1",
+  "id": "LIV25",
+  "source": {
+    "title": "Effect of Pressure and External Heating on Microgravity and Earth Gravity Fires",
+    "author": "Christina Liveretou",
+    "institution": "University of California, Berkeley",
+    "year": 2025,
+    "url": "https://escholarship.org/uc/item/5px3896h",
+    "pdfSha256": "f64dbd7ad0e23e79a5ab2fd686ec858a0e4a5ce31240552760db11c6ff978a6b",
+    "bytes": 26721273,
+    "pdfPages": 96,
+    "reviewStatus": "Full file acquired; focused review of Chapters 3-6, Chapter 2 methods/results excerpts, outline, references and appendix; not a claim that every background page was reviewed.",
+    "rights": "No redistribution license established in this review; PDF and page images remain local. Shared content is factual transcription and original analysis.",
+    "figureDigitization": false
+  },
+  "lineage": {
+    "group": "LIV25-CH3-CH4-shared-experiments",
+    "basis": "PDF 30 / printed 18 explicitly states Chapter 4 uses Chapter 3 data.",
+    "independentReplication": false,
+    "runIdsAvailable": false,
+    "rawTrajectoriesAcquired": false,
+    "chapter2Relation": "Overlapping title, apparatus and reported conditions with LIV24; not treated as independent replication. Exact run-by-run correspondence is unestablished.",
+    "journalVersionRelation": "Chapter 3 title matches the later journal article DOI 10.1016/j.firesaf.2025.104625; version-of-record equivalence and exact run correspondence have not been checked."
+  },
+  "rodContext": {
+    "locators": ["PDF 30 / printed 18", "PDF 46-50 / printed 34-38", "PDF 60-66 / printed 48-54"],
+    "material": "black cast PMMA",
+    "lengthMM": "55",
+    "diameterMM": "12.7",
+    "nominalForcedFlowCMPerS": "10",
+    "groundChamberL": "105",
+    "microgravityChamberL": "100",
+    "pressureKPa": ["40", "60", "80", "100"],
+    "externalHeating": "Chapter 3 outline explicitly states no external radiant flux; not generalized to other MIST campaigns.",
+    "gasProtocol": "Recirculating depletion; initially closed ports, with occasional venting to maintain pressure. Not a constant-inventory sealed vessel throughout.",
+    "initialOxygenVolPercent": null,
+    "initialOxygenNote": "Generic air/21% descriptions coexist with explicit lower microgravity starts and elevated ground starts at 40/60 kPa. Per-run initial values are unavailable.",
+    "groundRepeatRangeAsReported": [3, 5],
+    "microgravityRepeatRangeAsReported": [1, 2],
+    "exactRunMembershipPerCondition": null,
+    "endpoint": "Chapter 3 PDF 46 / printed 34 defines LOC by visual flame extinction. Figure 15 dots instead mark the end of the spread phase. These are different endpoints."
+  },
+  "measurementPipeline": {
+    "locators": ["PDF 49-50 / printed 37-38", "PDF 62-66 / printed 50-54", "PDF 95 / printed 83"],
+    "videoFramesPerSecond": "30",
+    "oxygenSamplesPerSecond": "1",
+    "positionSoftware": "Flame Tracker, Carmignani (2021), SoftwareX 15:100791",
+    "softwareVersionUsed": null,
+    "positionMethod": "Image-derived flame-front positions; exact tracking configuration, pixel-to-length calibration uncertainty and raw exports not acquired.",
+    "rateMethod": "Identify spread/regression phases; separately fit degree-two position polynomials; differentiate each fit.",
+    "sourceFitRSquaredCriterion": "0.94",
+    "appendixExamplePositionRSquared": "0.992",
+    "fitCoefficientsAcquired": false,
+    "figure21Smoothing": "Presentation only; explicitly not used for the rate calculation.",
+    "positionTimeOriginFigure14": "Sample lowered into position, after ignition.",
+    "oxygenTimeOriginFigure15": "Ignition.",
+    "timeOriginOffsetSeconds": null,
+    "crossSignalAlignmentEstablished": false,
+    "interpretation": "A quadratic position model yields a linear time derivative by construction. Position fit quality alone does not validate instantaneous rates. This does not establish that the source rates are wrong."
+  },
+  "printedMeanHeatRelease": {
+    "locator": "Table 1, PDF 51 / printed 39",
+    "quantity": "Average heat release rate from ignition until visual flame extinction",
+    "unit": "kW",
+    "role": "source_reported_derived_condition_summary",
+    "method": "Calculated using oxygen depletion and approximately 13.1 kJ per gram of oxygen consumed.",
+    "rows": [
+      { "pressureKPa": "40", "microgravityKW": "0.53", "earthGravityKW": "0.18" },
+      { "pressureKPa": "60", "microgravityKW": "0.90", "earthGravityKW": "0.39" },
+      { "pressureKPa": "80", "microgravityKW": "1.24", "earthGravityKW": "0.61" },
+      { "pressureKPa": "100", "microgravityKW": "1.89", "earthGravityKW": "0.85" }
+    ],
+    "uncertainty": null,
+    "durationsSeconds": null,
+    "perConditionRunIds": null,
+    "independentCalorimeterValidation": false,
+    "totalEnergyComputed": false,
+    "arithmeticCheckAgainstRawOxygen": "NOT RUN: raw oxygen, flow/venting corrections and durations are unavailable."
+  },
+  "separateSheetStudy": {
+    "locator": "Chapter 5, PDF 72-83 / printed 60-71; Tables 2-3 at PDF 79 / printed 67",
+    "configuration": "Upward concurrent spread on 0.1 mm PMMA sheets in normal gravity; forced flow 20 cm/s plus buoyancy; central tracking and a one-second window around the sample midpoint.",
+    "nominalNormoxicRelation": "Pressure times oxygen mole fraction approximately 21 kPa; printed settings are rounded. Oxygen depletes during burning.",
+    "reportedPressureKPa": ["80", "90", "100"],
+    "reportedInitialOxygenVolPercent": ["26.2", "23.2", "21"],
+    "reportedPowerLawExponents": [
+      { "material": "PMMA", "front": "flame_tip", "exponent": "-0.5" },
+      { "material": "PMMA", "front": "pyrolysis_front", "exponent": "-1" },
+      { "material": "PMMA", "front": "burnout_front", "exponent": "-2" },
+      { "material": "cotton", "front": "flame_tip", "exponent": "-0.5" },
+      { "material": "cotton", "front": "pyrolysis_front", "exponent": "-0.75" },
+      { "material": "cotton", "front": "burnout_front", "exponent": "-0.75" }
+    ],
+    "exponentRole": "Approximate source correlations along coupled nominal pressure/oxygen settings; not raw observations, dimensional equations, fixed-oxygen pressure effects or transferable rod models.",
+    "cottonAncestry": "Prior Thomsen et al. ICES 2023 study, reference 98; not new independent PMMA observations.",
+    "heatReleaseMethods": "Chapter 5 describes mass-loss and oxygen-consumption methods. They are distinct methods sharing the experiment, not demonstrated statistically independent validations. No plotted HRR values transcribed.",
+    "pooledWithRodStudy": false
+  },
+  "unresolved": [
+    { "id": "LIV25-Q01", "register": "C-30", "issue": "Chapter 3 PDF 51/57 reports higher LOC at lower pressure. NASA FY2026 MIST Task Book summary reports lower LOC-FS and LOC-FR at lower pressure. Endpoint/run/version differences remain unresolved; no universal pressure trend inferred." },
+    { "id": "LIV25-Q02", "register": "C-31", "issue": "Generic 21% initial oxygen descriptions are qualified by explicit per-condition exceptions. Do not assign 21% to all runs." },
+    { "id": "LIV25-Q03", "register": "C-32", "issue": "PDF 68 / printed 56 Eq. 23 prints g outside the square root, whereas PDF 53 / printed 41 puts g inside. With dimensional gravitational acceleration these have different dimensions. No equation silently repaired or executed." }
+  ],
+  "boundaries": {
+    "newPhysicalPrediction": false,
+    "independentValidation": false,
+    "trainingDataset": false,
+    "sourceModelExecuted": false,
+    "safetyAssessment": false
+  }
+}

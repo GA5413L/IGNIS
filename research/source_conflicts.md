@@ -258,3 +258,17 @@ Information PDF; **[TM]** NASA/TM-20210011385 (PDF page / printed page). Full id
 - **Unresolved:** per-run branch, exact step size, steady-response adequacy, observation resolution and the relationship of the condition averages to separate spread/regression limits. No claim is made that the authors' measurements are wrong or that all runs used a mixed trigger.
 - **Policy:** preserve the source's combined definition and intended spread-limit question. Do not recode it as pure visible-flame extinction, absence of all combustion or fuel-regression cessation. Mean/SD and graph symbols do not provide individual transition records. Do not add synthetic trial rows to the source data.
 - **Implementation:** the separate endpoint audit operates on hypothetical or user-supplied unverified step records, with three detected/not-detected/unknown criteria. The source's combined outcome is not automatically representable as any single criterion. Conditional compatibility sets require explicit idealized assumptions; no new physical threshold is inferred from this paper.
+
+### C-30: LIV25 dissertation versus later MIST pressure-trend summary (15 Nov 2026)
+- LIV25 Chapter 3, PDF 51/57 / printed 39/45, reports higher visual-extinction LOC at lower pressure in recirculating oxygen-depletion tests. Source SHA-256 `f64dbd7ad0e23e79a5ab2fd686ec858a0e4a5ce31240552760db11c6ff978a6b`.
+- NASA FY2026 MIST Task Book summary, rechecked 15 November, reports lower spread and regression limits at lower pressure: https://taskbook.nasaprs.com/tbp/index.cfm?TASKID=A4E891655E49E9A6A0353DF3D9B4DE14&action=public_query_taskbook_content .
+- Endpoint, run membership and analysis-version correspondence are unresolved. These are not established to be a matched comparison. Do not infer a universal pressure law, causal reversal or that either source is wrong; the earlier open-versus-recirculating protocol distinction does not by itself explain this new contrast.
+
+### C-31: LIV25 generic initial air versus explicit oxygen exceptions (15 Nov 2026)
+- PDF 46–47/60–61 describe initial air/21% oxygen; PDF 50 and 65 describe lower initial microgravity oxygen, while PDF 65–66 describes elevated initial oxygen at 40/60 kPa on Earth.
+- Preserve both the general methods and explicit qualifications. Actual per-run values and group membership are unavailable. The dossier leaves initial oxygen null; no synthetic 21% run rows are added. Changed starts also complicate comparisons of transient rates and mean HRR.
+
+### C-32: LIV25 printed buoyancy expression (15 Nov 2026)
+- Visually verified PDF 68 / printed 56 Eq. 23 prints `Um = g sqrt(beta DeltaT lc) + c`; PDF 53 / printed 41 prints `Um = sqrt(g beta DeltaT lc) + 10 cm/s`.
+- If g has the dimensions of gravitational acceleration, beta DeltaT is dimensionless and lc is a length, the first gravity term has dimensions L^(3/2)/T^2, unlike velocity L/T. The second has velocity dimensions. A different unstated normalization is not supplied by IGNIS.
+- Retain this as a source expression/definition issue. Do not silently relocate g, execute a corrected physical model, or infer that the experimental data are invalid. No author clarification or version-of-record comparison has been obtained.

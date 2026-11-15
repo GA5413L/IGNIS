@@ -1,5 +1,9 @@
 # Source register
 
+## LIV25 supplied dissertation: 15 November 2026, later access update
+
+Christina Liveretou, [Effect of Pressure and External Heating on Microgravity and Earth Gravity Fires](https://escholarship.org/uc/item/5px3896h), UC Berkeley PhD, 2025. Supplied PDF: 96 pages, 26,721,273 bytes, SHA-256 `f64dbd7ad0e23e79a5ab2fd686ec858a0e4a5ce31240552760db11c6ff978a6b`. Chapters 3–6 and selected methods/outline/references/appendix reviewed, with table/method/equation page images inspected. Full-file acquisition does not mean every background page was audited. PDF/figures remain local; no redistribution license established. The [factual dossier](../web/data/trajectory-studies/liveretou2025.json) preserves eight printed derived HRR values and six approximate sheet-study correlation exponents, with source roles and common-experiment ancestry. No raw trajectory or run identities acquired. See [review](../web/docs/DISSERTATION_AND_TRAJECTORY_METHODS_2026-11-15.md); earlier access notes below are historical.
+
 ## Full accepted-manuscript access: LIV24, 15 November 2026
 
 The owner supplied two nine-page copies of Liveretou et al. (2024), DOI [10.1016/j.proci.2024.105224](https://doi.org/10.1016/j.proci.2024.105224). Both were checked; all pages were read and methods/results pages visually inspected. Canonical hash `a1899bf28581fa30a480a65d7868a94019821e7fc7b02b3f51ff2c34fc2b6bb0` (1,385,409 bytes); alternate `8ff9c5214eac0f2d7da53ddac4493578b1cba9954ccd6fbbf813c0cfef5398fc` (1,384,104 bytes). Text and nine 72-dpi renders match, despite byte differences. These are duplicate manifestations, not independent sources. Page 1 states the Elsevier user license; the PDFs remain local. The version-of-record full text remains uninspected.

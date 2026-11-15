@@ -1,5 +1,7 @@
 # Endpoint and stepped-observation audit
 
+**Later access correction, 15 November 2026:** the owner has now supplied the dissertation mentioned below. See [its focused review and technical extension](DISSERTATION_AND_TRAJECTORY_METHODS_2026-11-15.md). The earlier inaccessible/unread status is historical. The thesis also reports a pressure trend in recirculating tests that differs from the later Task Book summary; endpoint/run/version correspondence is unresolved (C-30). The earlier protocol contrast alone does not resolve that difference. The .9 endpoint implementation and its source collection remain unchanged.
+
 15 November 2026, build `web-2026-11-15.9`, method `endpoint-audit-2026-11-15.1`. Backend-only continuation under the owner's instruction that a teammate owns the UI. No component, CSS or layout changes.
 
 The newly supplied Liveretou manuscript resolves the earlier full-text access gap. It also prevents an incorrect upgrade of its reported LOC into a universal complete-extinction threshold. IGNIS now audits three observational criteria separately and can produce explicitly conditional mathematical compatibility sets from supplied step records. It does not reproduce the paper's response data or run its physical models.

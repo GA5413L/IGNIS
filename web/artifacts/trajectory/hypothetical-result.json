@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "ignis-trajectory-result-1",
+  "methodRevision": "trajectory-ops-2026-11-15.1",
+  "label": "Arithmetic on supplied coordinates; measurement validity unverified.",
+  "request": {
+    "schemaVersion": "ignis-trajectory-request-1",
+    "dataRole": "hypothetical",
+    "runId": "example-run",
+    "phaseId": "example-phase",
+    "lineageDescription": "Constructed coordinates, not dissertation measurements.",
+    "positionUnit": "mm",
+    "timeUnit": "s",
+    "contract": {
+      "trackedFeature": "Hypothetical image feature",
+      "positiveAxis": "Positive coordinate along the example axis",
+      "spatialCalibration": "Hypothetical coordinates expressed in mm; no actual camera calibration",
+      "timeOrigin": "Frame zero in a hypothetical constant-rate acquisition",
+      "phaseSelection": "One explicitly constructed phase"
+    },
+    "measurementAssumptions": {
+      "timestampsExact": true,
+      "positionBoundsAreAbsolute": true,
+      "sameTrackedFeatureAndCoordinateSystem": true
+    },
+    "samples": {
+      "kind": "video_frames",
+      "framesPerSecond": {
+        "numerator": "30",
+        "denominator": "1"
+      },
+      "points": [
+        {
+          "id": "a",
+          "positionMM": "0",
+          "absolutePositionErrorBoundMM": "0.1",
+          "frameIndex": "0"
+        },
+        {
+          "id": "b",
+          "positionMM": "0.1",
+          "absolutePositionErrorBoundMM": "0.1",
+          "frameIndex": "1"
+        },
+        {
+          "id": "c",
+          "positionMM": "2.5",
+          "absolutePositionErrorBoundMM": "0.1",
+          "frameIndex": "30"
+        }
+      ]
+    },
+    "windows": [
+      {
+        "id": "one-frame",
+        "from": "a",
+        "to": "b"
+      },
+      {
+        "id": "one-second",
+        "from": "a",
+        "to": "c"
+      }
+    ]
+  },
+  "missingContract": [],
+  "normalizedTimesSeconds": [
+    {
+      "sampleId": "a",
+      "timeSeconds": "0"
+    },
+    {
+      "sampleId": "b",
+      "timeSeconds": "1/30"
+    },
+    {
+      "sampleId": "c",
+      "timeSeconds": "1"
+    }
+  ],
+  "windows": [
+    {
+      "id": "one-frame",
+      "from": "a",
+      "to": "b",
+      "elapsedSeconds": "1/30",
+      "displacementMM": "1/10",
+      "netDisplacementPerElapsedSecond": "3",
+      "unit": "mm/s",
+      "interpretation": "Net displacement divided by elapsed time for the supplied tracked coordinate; no instantaneous-rate or physical-front validation.",
+      "conditionalPositionBound": {
+        "status": "conditional_worst_case_interval",
+        "lowerMMPerS": "-3",
+        "upperMMPerS": "9",
+        "halfWidthMMPerS": "6",
+        "confidenceInterval": false
+      },
+      "instantaneousRateEstablished": false,
+      "withinWindowMonotonicityEstablished": false
+    },
+    {
+      "id": "one-second",
+      "from": "a",
+      "to": "c",
+      "elapsedSeconds": "1",
+      "displacementMM": "5/2",
+      "netDisplacementPerElapsedSecond": "5/2",
+      "unit": "mm/s",
+      "interpretation": "Net displacement divided by elapsed time for the supplied tracked coordinate; no instantaneous-rate or physical-front validation.",
+      "conditionalPositionBound": {
+        "status": "conditional_worst_case_interval",
+        "lowerMMPerS": "23/10",
+        "upperMMPerS": "27/10",
+        "halfWidthMMPerS": "1/5",
+        "confidenceInterval": false
+      },
+      "instantaneousRateEstablished": false,
+      "withinWindowMonotonicityEstablished": false
+    }
+  ],
+  "sharedEndpointPairs": [
+    {
+      "windowIds": [
+        "one-frame",
+        "one-second"
+      ],
+      "sampleIds": [
+        "a"
+      ]
+    }
+  ],
+  "interpretationLimits": [
+    "A supplied run/phase/lineage label or complete metadata does not establish experimental validity or independence.",
+    "Error bounds are asserted absolute endpoint bounds, not standard deviations or estimated confidence. Calibration, tracking and scale errors must already be covered by those bounds.",
+    "Frame-rate timing assumes the supplied rate is exact and indices refer to correctly timed acquisition frames. Dropped/duplicated frames, clock drift, timestamp rounding and timing error are not estimated.",
+    "Worst-case intervals need no probabilistic independence assumption. They may be conservative for common offsets, and adjacent windows can share endpoint errors.",
+    "The bound half-width is (e_from + e_to)/elapsed; shorter windows amplify asserted coordinate uncertainty.",
+    "An interval excluding zero does not rule out reversals or identify an instantaneous derivative, spread cessation, fuel regression or extinction.",
+    "No smoothing, polynomial fitting, source trajectory reconstruction, oxygen alignment, HRR calculation or automatic cross-run pooling is performed."
+  ],
+  "boundaries": {
+    "physicalPrediction": false,
+    "measurementValidated": false,
+    "sourceDataReconstructed": false,
+    "statisticalIndependenceEstablished": false,
+    "safetyAssessment": false
+  }
+}

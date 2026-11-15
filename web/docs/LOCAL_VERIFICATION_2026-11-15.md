@@ -1,5 +1,14 @@
 # Local verification, 15 November 2026
 
+## Latest local technical extension: trajectory-ops-2026-11-15.1
+
+- **416 shared offline tests pass**, including 26 new checks and direct enumeration of 81 endpoint-error boxes. TypeScript and ESLint pass. These checks verify arithmetic/software behavior, not physical measurement validity.
+- **Ten CLI/source/live-identity checks pass:** default-off bounds, conditional example, exact intervals, byte/UTF-8/JSON/role rejections, all 19 prior source identities and unchanged running build .9/r2/disabled interpretation.
+- The Python Fraction verifier agrees with the example, checks source hash/96-page identity and 19 printed text anchors, and rejects four corrupted outputs. Source Tables 1–3 and selected methods/equations were visually checked; no plotted values digitized.
+- No new Next build or browser/visual review: app routes/components/styles are unchanged. All physical models, source reconstruction, experiments, independent human review, competitor user studies, runtime inference and deployment are NOT RUN. See [report and reproduction](DISSERTATION_AND_TRAJECTORY_METHODS_2026-11-15.md).
+
+Earlier verification below refers to the earlier implementation scopes.
+
 Assistant-performed checks in the E: source workspace and F: tooling mirror establish local software behavior, not independent scientific validation, competitor superiority or adoption.
 
 ## Current endpoint patch: web-2026-11-15.9

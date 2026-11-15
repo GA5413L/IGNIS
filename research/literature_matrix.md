@@ -1,5 +1,9 @@
 # Literature matrix
 
+## Later dissertation update: 15 November 2026
+
+LIV25 is now acquired: a focused review of the original dissertation, not a new journal-version comparison. Chapters 3 and 4 use the same experimental data. Printed Table 1 gives oxygen-derived mean HRR; Tables 2–3 give approximate exponents for separate upward sheet tests. Optical rates come from differentiated quadratic fits. No independent predictive validation, raw trial reconstruction or new flame model is admitted. C-30/C-31/C-32 and unknown alignment/calibration/run membership remain explicit. The [review and local calculation](../web/docs/DISSERTATION_AND_TRAJECTORY_METHODS_2026-11-15.md) supersede earlier statements that this dissertation is unread.
+
 ## Full-text updates, 15 November 2026
 
 | Source | Updated inspected scope | Admitted use |

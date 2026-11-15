@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "ignis-trajectory-request-1",
+  "dataRole": "hypothetical",
+  "runId": "example-run",
+  "phaseId": "example-phase",
+  "lineageDescription": "Constructed coordinates, not dissertation measurements.",
+  "positionUnit": "mm",
+  "timeUnit": "s",
+  "contract": {
+    "trackedFeature": "Hypothetical image feature",
+    "positiveAxis": "Positive coordinate along the example axis",
+    "spatialCalibration": "Hypothetical coordinates expressed in mm; no actual camera calibration",
+    "timeOrigin": "Frame zero in a hypothetical constant-rate acquisition",
+    "phaseSelection": "One explicitly constructed phase"
+  },
+  "measurementAssumptions": {
+    "timestampsExact": true,
+    "positionBoundsAreAbsolute": true,
+    "sameTrackedFeatureAndCoordinateSystem": true
+  },
+  "samples": {
+    "kind": "video_frames",
+    "framesPerSecond": {
+      "numerator": "30",
+      "denominator": "1"
+    },
+    "points": [
+      {
+        "id": "a",
+        "positionMM": "0",
+        "absolutePositionErrorBoundMM": "0.1",
+        "frameIndex": "0"
+      },
+      {
+        "id": "b",
+        "positionMM": "0.1",
+        "absolutePositionErrorBoundMM": "0.1",
+        "frameIndex": "1"
+      },
+      {
+        "id": "c",
+        "positionMM": "2.5",
+        "absolutePositionErrorBoundMM": "0.1",
+        "frameIndex": "30"
+      }
+    ]
+  },
+  "windows": [
+    {
+      "id": "one-frame",
+      "from": "a",
+      "to": "b"
+    },
+    {
+      "id": "one-second",
+      "from": "a",
+      "to": "c"
+    }
+  ]
+}
