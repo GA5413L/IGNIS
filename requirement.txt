@@ -1,0 +1,17 @@
+# IGNIS deployment requirements
+# This is a Node.js / Next.js application; Python/pip is not needed to host it.
+# Runtime: Node.js >=22.13.0 <23, with npm.
+# Hosting root directory: web
+# Install command: npm ci --include=dev
+# Build command: npm run build
+# Start command: npm start
+# PORT: use the hosting provider's environment value; defaults to 3000.
+# The server listens on 0.0.0.0 for the hosting provider's reverse proxy.
+# Dependency manifest: web/package.json
+# Exact dependency lock: web/package-lock.json
+# Runtime packages: next 16.4.6, react 19.3.1, react-dom 19.3.1, zod 4.6.7.
+# The install step must include build dependencies (TypeScript, etc.).
+# Keep AI_ENABLED=false and CF_SI_ENABLED=false for the current release.
+# Private server configuration belongs outside public assets and Git.
+# Optional Python figure reproduction has its own requirements file:
+# web/public/figures/code/requirements.txt

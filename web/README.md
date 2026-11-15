@@ -4,17 +4,19 @@ IGNIS connects NASA microgravity combustion evidence, descriptive analyses and r
 
 **Current build: `web-2026-11-15.13`.** Landing at `/`, research dashboard at `/console`. The integrated teammate design now exposes statistical channel relationships, per-material/flight analysis, recorded-sample deletion sensitivity, local channel comparisons, API citation checks and complete source-linked exports. The protected SI connection has been tested live but has not earned runtime acceptance. [Current verification](docs/BUILD_STATUS.md), [competitor comparison](docs/RESEARCH_WORKBENCH_AND_COMPETITOR_REVIEW_2026-11-15.md).
 
-[Landing page](http://127.0.0.1:3000) · [Research console](http://127.0.0.1:3000/console) · [SI](http://127.0.0.1:3000/console#si) · [Figures and code](http://127.0.0.1:3000/console#figures) · [Your data](http://127.0.0.1:3000/console#local-data)
+[Landing page](http://127.0.0.1:3000) · [Research console and SI chat](http://127.0.0.1:3000/console) · [Figures and code](http://127.0.0.1:3000/console#figures) · [Your data](http://127.0.0.1:3000/console#local-data)
 
 ## Run
 
 Use Node.js 22.13 or later within the 22.x family. From `web/`:
 
 ```sh
-npm ci
+npm ci --include=dev
 npm run build
 npm start
 ```
+
+Hosting settings: root directory `web`, install `npm ci --include=dev`, build `npm run build`, start `npm start`. The start command binds to `0.0.0.0` and uses the host's `PORT` environment variable (default `3000`). Vercel manages startup itself; leave its start-command setting unset. See the root [requirement.txt](../requirement.txt) deployment checklist; web dependencies are installed from `package.json` and its lockfile, not pip.
 
 For development, use `npm run dev`. Both scripts explicitly select webpack: a prior Turbopack build altered imported detector numbers, so exact source/server/browser identity checks are mandatory. No key is needed for the implemented workflows. `Start-IGNIS.cmd` starts the owner's existing F: installation; contributors should use the portable commands above.
 
@@ -30,7 +32,7 @@ For development, use `npm run dev`. Both scripts explicitly select webpack: a pr
 | Figures | Isolate or combine materials in four detector panels, export the exact visible SVG/data, or download static publication figures and Python code in either palette. |
 | Sources | Inspect evidence, export/recheck notebooks and use trajectory, design and endpoint calculators. |
 | Your data | Map a local CSV, declare its clock/units/operator, compare additive channels with a common datum and replay original bytes. |
-| SI | Use structured scope/assessment now; reviewed natural-language proposals require an accepted provider. Groq/Gemini packet previews remain available. |
+| Floating SI chat | Search reviewed findings and follow source links from any console view; live interpretation requires an accepted provider. |
 
 Try Kapton at 2 V: 20/35 finite readings fall below the cutoff, with 36 total source rows. In the paired view, scatter-minus-obscuration is +70/133 pooled, −6/25 for SAME and +76/108 for SAME-R. These describe stored readings, not alarms or detector superiority. Changing the cutoff rectangle changes exact sensitivity bounds. For a model question, compare the later Saffire VI CO₂ response with chemical heat release; the requested quantity changes while the model stays fixed.
 
@@ -57,7 +59,7 @@ Original NASA binaries and the full analysis engine are not in the bundle. Rende
 
 ## SI preparation
 
-SI means **Scientific Intelligence**. Structured mode works. The server-only Cloudflare integration has fixed free routes, atomic durable quotas, retained unknown-call reservations, circuit breakers, public-mode Turnstile and visitor-bound signed confirmation receipts. Browser CSV/notebook content is not automatically attached; anything typed into an approved public question is sent.
+SI means **Scientific Intelligence**. The floating chat provides catalogue search; the separate SI page has been removed. The server-only Cloudflare integration has fixed free routes, atomic durable quotas, retained unknown-call reservations, circuit breakers, public-mode Turnstile and visitor-bound signed confirmation receipts. Browser CSV/notebook content is not automatically attached; anything typed into an approved public question is sent.
 
 **Actual live result:** one Groq compatibility probe succeeded; the 42-call evaluation stopped after ten attempts. Nine valid schemas, four reference passes, two interpretation errors, three application/reference handling mismatches and one transport failure. Remaining 32 calls, OpenRouter/free and Gemini **NOT RUN**. No runtime configuration accepted. [SI handoff and measured usage](docs/SI_PREPARATION.md). Keys must stay in server configuration and cannot bypass evaluation or acceptance.
 

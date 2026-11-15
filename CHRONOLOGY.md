@@ -540,3 +540,7 @@ The user's 14 Nov brief ("We are moving IGNIS from specification into implementa
 ### 15 November 2026 - Retire the dedicated SI page
 - Owner requested removing `/console#si` after adding the floating chatbot. Removed the form component, sidebar entry and links to that page. Legacy console/root SI bookmarks resolve to the overview with query parameters retained.
 - The floating chat now links to Sources/notebook. Existing source assessments, model checks and backend acceptance gates remain intact. Browser checks now cover the retired route and the remaining chat workflow.
+
+### 15 November 2026 - Portable deployment commands
+- Added the requested root requirement.txt as a Node deployment checklist. Web dependencies remain locked by package.json/package-lock.json; Python is optional for figure reproduction only.
+- npm start now binds to 0.0.0.0 and respects the hosting PORT (default 3000). Verified the exact command with PORT=3101 and a successful health response against the existing production build. Dependency pins and lockfile remain unchanged.
