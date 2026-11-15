@@ -16,7 +16,7 @@ import { buildResearchAnalyses, type ResearchAnalysis, type ResearchSelection } 
 
 export const SCHEMA_VERSION = 'ignis-assessment-1';
 export const ENGINE_REVISION = 'engine-2026-11-15.5';
-export const RENDERER_REVISION = 'renderer-2026-11-15.4';
+export const RENDERER_REVISION = 'renderer-2026-11-15.5';
 
 export interface ClaimResult {
   id: string; kind: 'source_finding' | 'contract'; findingRef: { id: string; revision: string } | null;

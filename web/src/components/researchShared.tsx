@@ -1,7 +1,11 @@
 'use client';
 
 export function downloadResearch(name: string, data: unknown) {
-  const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2) + '\n'], { type: 'application/json' }));
+  downloadBlob(name, new Blob([JSON.stringify(data, null, 2) + '\n'], { type: 'application/json' }));
+}
+
+export function downloadBlob(name: string, blob: Blob) {
+  const url = URL.createObjectURL(blob);
   const link = Object.assign(document.createElement('a'), { href: url, download: name });
   document.body.append(link); link.click(); link.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);

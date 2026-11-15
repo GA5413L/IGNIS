@@ -2,7 +2,19 @@
 
 Assistant-performed checks in the E: source workspace and F: tooling mirror establish local software behavior, not independent scientific validation, competitor superiority or adoption.
 
-## Current audit patch: web-2026-11-15.5
+## Current workflow patch: web-2026-11-15.6
+
+- **327/327 offline team checks pass** in 15 files. The 25 private-fixture provider checks are excluded from this public team command; no runtime acceptance is claimed. TypeScript, production webpack build and application/affected-test lint pass.
+- **61 browser checks pass**, one intentional duplicate skipped, combining the latest result per test/viewport from the full run and the final affected rerun. That rerun passed 21 checks with one duplicate skip. Installed Chrome: desktop 1366×768 and mobile width 375×812. No competitor service or provider was invoked by these checks.
+- Six new desktop/mobile visual states have zero page exceptions, console errors and whole-page overflow. The collection-status table was adjusted after inspection to show both columns on narrow screens. The larger source/recheck tables retain labelled horizontal scrolling. The captured wide-cutoff, one-assessment package is 3,248,060 bytes, below the 8 MiB limit.
+- Original-file download is tested byte for byte with a UTF-8 BOM, extra whitespace and the original JSON formatting. Tests also cover preserved reviews during export, cancellation, stale import responses, consistent forged claims, changed narrative, unavailable current sources, source substitution, body/depth limits and Markdown heading injection.
+- All 17 curated files match the prior GitHub handoff byte for byte. Catalogue r2, digest `37ad29b82a13f06d79d392ae21f99003dab36b2a421043f18b9ab0bf844242a2`, remains unchanged. Engine .5 and descriptive method .2 remain; renderer advances to .5 for the export change.
+
+Failures are retained in `_raw/claude_helper_2026-11-15/`: the first browser run had two new-test selectors expecting the assessment heading in the lab; both passed after correction. The subsequent run exposed a real early-click race: interpretation was enabled before its catalogue was ready and could silently return. The control now waits for the catalogue; a deliberately delayed-catalogue regression and the affected notebook/workspace suite pass. Final results are `team-tests-final.json`, `browser-final.json`, `browser-loading-rerun.json`, the deduplicated `browser-combined.json`, `source-identity.json` and `visual-checks.json`.
+
+Two approved Claude Fable 5.2 development reviews completed with tool access disabled. Their findings led to source/archive separation and concrete file/request/export repairs; these are not independent scientific validation or live interpreter acceptance. See the [implementation and execution report](EVIDENCE_HANDOFF_AND_GUIDED_EXAMPLE_2026-11-15.md). No new fitting, deployment, external outreach or submission occurred.
+
+## Prior audit patch: web-2026-11-15.5
 
 - 341/341 offline checks in 15 files; catalogue validation, TypeScript, lint and final webpack production build PASS.
 - Full production Chrome suite: 49 PASS, one intentional duplicate SKIPPED. Source-identity checks compare all 154 detector records, full conditions/atlas data, catalogue identity and browser cutoff source/result identities to offline values at both viewports.

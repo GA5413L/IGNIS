@@ -32,11 +32,11 @@ test('an oversized replacement clears an older recheck without replacing the cur
   const saved = await savePacket(page, 'Notebook A');
   await page.getByRole('textbox', { name: 'Question', exact: true }).fill('Keep current draft C');
   await importPacket(page, 'a.json', saved); await rechecked(page);
-  await page.getByLabel('Session JSON file').setInputFiles({ name: 'oversized-b.json', mimeType: 'application/json', buffer: Buffer.alloc(2 * 1024 * 1024 + 1, 32) });
+  await page.getByLabel('Session JSON file').setInputFiles({ name: 'oversized-b.json', mimeType: 'application/json', buffer: Buffer.from(saved + ' '.repeat(2 * 1024 * 1024)) });
   await expect(page.getByText('Nothing loaded: session exceeds 2 MiB.', { exact: true })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Load rechecked workspace', exact: true })).toHaveCount(0);
   await expect(page.getByRole('textbox', { name: 'Question', exact: true })).toHaveValue('Keep current draft C');
-  await expect(page.getByRole('button', { name: 'Import session', exact: true })).toBeEnabled();
+  await expect(page.getByRole('button', { name: 'Import session or package', exact: true })).toBeEnabled();
 });
 
 test('an older delayed file read cannot replace the latest selected notebook', async ({ page }) => {
@@ -56,7 +56,7 @@ test('an older delayed file read cannot replace the latest selected notebook', a
     if (request.url().endsWith('/api/session')) sentQuestions.push(JSON.parse(request.postData()!).draft.question);
   });
   await importPacket(page, 'slow-a.json', a);
-  await expect(page.getByRole('button', { name: 'Import session', exact: true })).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Import session or package', exact: true })).toBeDisabled();
   // A second change event also covers an already-open/native file picker finishing after the first intent.
   await importPacket(page, 'newer-b.json', b); await rechecked(page);
   await page.evaluate(() => (window as unknown as { releaseNotebookRead: () => void }).releaseNotebookRead());

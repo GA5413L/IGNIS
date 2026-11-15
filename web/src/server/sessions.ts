@@ -28,7 +28,7 @@ export function handleSession(rawText: string, now?: string): Reply {
       byOldId.set(receipt.assessmentId, a);
     }
     const body: RecheckedSession = { session, assessments: [...byOldId.values()], checks,
-      notice: 'Recomputed locally from the current reviewed sources. A matching checksum detects accidental alteration; it does not authenticate the author or independently validate the science. Saved receipts are comparison references, not trusted results.' };
+      notice: 'Recomputed locally from the current reviewed sources. A matching checksum detects accidental alteration; it does not authenticate the author or independently validate the science. Saved receipts are comparison references, not trusted results. Lightweight receipts do not retain every original presentation field; use an evidence package to compare original wording and full payload fields.' };
     return { status: 200, body };
   } catch (e) {
     return { status: 400, body: { code: 'invalid_session', message: e instanceof Error ? e.message : 'Session could not be rechecked. Nothing was loaded.' } };

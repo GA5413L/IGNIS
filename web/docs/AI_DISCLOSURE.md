@@ -3,6 +3,7 @@
 Updated 15 November 2026. The submission guide requires AI-assisted code and data to be acknowledged in descriptive text and metadata. This file covers the `web/` application and its research artifacts.
 
 ## What AI tools did
+- **Additional development review:** the owner authorized two tool-free Claude Fable 5.2 reviews of five designated application files. Codex implemented and tested the guided example and evidence-package changes, including defects identified by the helper. [Scope and reported usage](EVIDENCE_HANDOFF_AND_GUIDED_EXAMPLE_2026-11-15.md) distinguish these calls from the application's unaccepted runtime interpretation. This is not independent scientific review.
 - **Code and interface:** the initial 14 November application was developed with Claude Code (recorded by the prior builder as Claude Opus 5.5). The 15 November continuation used OpenAI Codex for research integration, interface components, source curation, mathematical repairs, provider-accounting repairs, tests and documentation. Package metadata acknowledges both tools.
 - **Data:**
   - **What the assistants wrote:** the reviewed registry, PSI investigation atlas, seven source-transcribed atmosphere cases, and the parser/curation of stored SAME/SAME-R workbook cells. NASA measurements are not represented as AI-created experiments. AI-authored selection, paraphrase, conversion and interpretation policy remain distinct from source values.

@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useState } from 'react';
+import { useId, useMemo, useState } from 'react';
 import { analyzeCutoffEnvelope, DEFAULT_CUTOFF_ENVELOPE_SELECTION, type CutoffDifferenceEnvelope, type CutoffEnvelopeResult, type CutoffEnvelopeSelection, type CutoffStability } from '../core/cutoffEnvelope';
 import { DETECTOR_CHANNEL_IDS, DETECTOR_CHANNELS, DETECTOR_MATERIALS } from '../core/detector';
 import type { CutoffResearchSelection } from '../core/researchSelections';
@@ -13,12 +13,13 @@ const signLabel: Record<CutoffStability, string> = {
 };
 const bounds = (b: CutoffDifferenceEnvelope) => b.denominator ? `[${b.lowerNumerator}, ${b.upperNumerator}] / ${b.denominator}` : 'Undefined';
 
-function EnvelopePlot({ result }: { result: CutoffEnvelopeResult }) {
+export function EnvelopePlot({ result }: { result: CutoffEnvelopeResult }) {
+  const plotId = useId();
   const groups = [{ label: 'Pooled', summary: result.summary }, ...result.byFlight.map((f) => ({ label: `Flight ${f.flight}`, summary: f.summary }))];
   const x = (n: number) => 360 + n * 220;
-  return <svg className="scientific-chart" viewBox="0 0 670 260" role="img" aria-labelledby="envelope-plot-title envelope-plot-desc">
-    <title id="envelope-plot-title">Exact difference ranges over the declared cutoff rectangle</title>
-    <desc id="envelope-plot-desc">Solid intervals show the minimum and maximum A-minus-B at-or-above fractions on jointly finite source rows. Faint intervals include unrestricted completions of unavailable readings, on a different denominator. Neither interval is a confidence interval.</desc>
+  return <svg className="scientific-chart" viewBox="0 0 670 260" role="img" aria-labelledby={`${plotId}-title ${plotId}-desc`}>
+    <title id={`${plotId}-title`}>Exact difference ranges over the declared cutoff rectangle</title>
+    <desc id={`${plotId}-desc`}>Solid intervals show the minimum and maximum A-minus-B at-or-above fractions on jointly finite source rows. Faint intervals include unrestricted completions of unavailable readings, on a different denominator. Neither interval is a confidence interval.</desc>
     {[-1, -.5, 0, .5, 1].map((n) => <g key={n}><line x1={x(n)} x2={x(n)} y1="22" y2="190" className={n === 0 ? 'target-line' : 'plot-grid'} /><text x={x(n)} y="215" textAnchor="middle">{n > 0 ? '+' : ''}{n}</text></g>)}
     {groups.map((g, i) => {
       const b = g.summary.pairedDifferenceEnvelope, c = g.summary.completionDifferenceEnvelope, y = 54 + i * 54;

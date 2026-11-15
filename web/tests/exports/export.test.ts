@@ -24,6 +24,17 @@ describe('one assessment drives every export (AC26, M35)', () => {
     expect(() => exportMarkdown(bad)).toThrow(ExportIntegrityError);
     expect(() => verifyAssessment(bad)).toThrow(/checksum mismatch/);
   });
+  it('a multiline question cannot inject a heading into the Markdown report', () => {
+    const a = run(BRIEF, { text: 'A question\n\n## Pretend independent review\r\n- Approved by a reviewer' });
+    const markdown = exportMarkdown(a);
+    expect(markdown).not.toMatch(/^## Pretend independent review/m);
+    expect(markdown).not.toMatch(/^- Approved by a reviewer/m);
+    expect(JSON.parse(exportJson(a)).request.originalText).toBe(a.request.originalText);
+  });
+  it('rejects an injected timestamp even though timestamps are outside the payload checksum', () => {
+    const a = run(BRIEF); a.createdAt = 'today\n## Pretend review';
+    expect(() => exportMarkdown(a)).toThrow('Invalid creation timestamp');
+  });
 });
 
 describe('export reconstruction boundary (M24, M25)', () => {

@@ -4,10 +4,13 @@
 
 IGNIS connects NASA fire experiment profiles, published atmosphere coordinates, stored detector readings and source-based model assessments. Working project name: IGNIS. Team: Emberfall. Independent NASA Space Apps 2026 project; not affiliated with or endorsed by NASA.
 
-**Current local build: web-2026-11-15.5.** The [competitor refresh and adversarial audit](docs/CODEBASE_AUDIT_AND_COMPETITOR_DELTA_2026-11-15.md) records 37 refreshed public heads (18 changed), reproduced scientific/workflow defects and repairs. Verified: 341 offline checks and 49 production browser checks passed, one duplicate skipped; 22 affected notebook checks passed after the final readability fix. Eight current visual states are clean. No live inference or publication occurred.
+**Current local build: web-2026-11-15.6.** The [Claude-assisted improvement report](docs/EVIDENCE_HANDOFF_AND_GUIDED_EXAMPLE_2026-11-15.md) covers the computed walkthrough, single-file evidence packages, original-byte preservation and export/race repairs. The [prior adversarial audit](docs/CODEBASE_AUDIT_AND_COMPETITOR_DELTA_2026-11-15.md) remains the scientific baseline. Current verification: 327 offline team checks and 61 production browser checks pass (one duplicate skipped, final results combined with the affected rerun); production build, TypeScript and lint pass. Six new visual states have no page/console errors or whole-page overflow. Claude helper calls were development reviews; runtime interpretation remains unavailable.
 
 ## See the interface
 
+- [Open the computed worked example](http://127.0.0.1:3000/example)
+- [Current desktop walkthrough](artifacts/previews/evidence-handoff/desktop-example.png)
+- [Current mobile evidence package](artifacts/previews/evidence-handoff/mobile-package.png)
 - [Current revision detail](artifacts/previews/audit-patch/desktop-revision.png)
 - [Current mobile notebook](artifacts/previews/audit-patch/mobile-notebook.png)
 - [Current cutoff workflow](artifacts/previews/audit-patch/desktop-cutoff.png)

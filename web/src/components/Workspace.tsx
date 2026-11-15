@@ -24,8 +24,9 @@ const DetectorLab = dynamic(() => import('./DetectorLab'), { loading: () => <sec
 const DataMethods = dynamic(() => import('./DataMethods'));
 const PairedDetector = dynamic(() => import('./PairedDetector'));
 const CutoffEnvelope = dynamic(() => import('./CutoffEnvelope'));
-type WorkspaceTab = 'explore' | 'conditions' | 'detectors' | 'analysis' | 'data' | 'about';
-const TAB_LABELS: Record<WorkspaceTab, string> = { explore: 'Explore', conditions: 'Conditions', detectors: 'Smoke lab', analysis: 'Analysis', data: 'Data & methods', about: 'About' };
+const GuidedExample = dynamic(() => import('./GuidedExample'));
+type WorkspaceTab = 'explore' | 'example' | 'conditions' | 'detectors' | 'analysis' | 'data' | 'about';
+const TAB_LABELS: Record<WorkspaceTab, string> = { explore: 'Explore', example: 'Worked example', conditions: 'Conditions', detectors: 'Smoke lab', analysis: 'Analysis', data: 'Data & methods', about: 'About' };
 
 interface CatalogView {
   revision: string; digest: string;
@@ -71,9 +72,9 @@ function outcomeBadge(c: ClaimResult) {
   return <span className={`badge ${cls}`}>{outcomeLabel(c)}</span>;
 }
 
-export default function Workspace() {
-  const [tab, setTab] = useState<WorkspaceTab>('explore');
-  const [visited, setVisited] = useState<WorkspaceTab[]>(['explore']);
+export default function Workspace({ initialTab = 'explore' }: { initialTab?: WorkspaceTab }) {
+  const [tab, setTab] = useState<WorkspaceTab>(initialTab);
+  const [visited, setVisited] = useState<WorkspaceTab[]>([initialTab]);
   const [catalog, setCatalog] = useState<CatalogView | null>(null);
   const [health, setHealth] = useState<Health | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -257,11 +258,11 @@ export default function Workspace() {
         {loadError && <div className="notice err" role="alert">{loadError}</div>}
         {scenarioNotice && <div className={`notice ${scenarioNotice.error ? 'err' : 'info'}`} role={scenarioNotice.error ? 'alert' : 'status'}><p>{scenarioNotice.text}</p><button className="linkbtn" onClick={() => { setScenarioNotice(null); window.history.replaceState(null, '', window.location.pathname + window.location.search); }}>Dismiss scenario notice</button></div>}
         <details className="notebook-toggle"><summary>Research notebook · save or reopen a session</summary>
-          <SessionControls makePacket={() => makeSession({ question, proposal: proposalFromForm(form) }, researchSelections, [...history].reverse().concat(current ? [current] : []))} onLoad={loadSession} />
+          <SessionControls makePacket={() => makeSession({ question, proposal: proposalFromForm(form) }, researchSelections, [...history].reverse().concat(current ? [current] : []))} getOriginals={() => [...history].reverse().concat(current ? [current] : [])} onLoad={loadSession} />
         </details>
         {tab === 'explore' && (
           <>
-            <ResearchLanding onConditions={() => navigate('conditions')} onDetectors={() => navigate('detectors')} onRobustness={() => openCutoffRange()} onBrief={() => prepareBrief()} />
+            <ResearchLanding onConditions={() => navigate('conditions')} onDetectors={() => navigate('detectors')} onRobustness={() => openCutoffRange()} onBrief={() => prepareBrief()} onExample={() => navigate('example')} />
             <InvestigationAtlas onReviewedProfile={(id) => { setInspect({ kind: 'investigation', id }); setTimeout(() => drawerHeading.current?.focus(), 0); }} />
             <section className="panel" id="research-request" aria-labelledby="q-h">
               <p className="eyebrow">03 / EVIDENCE WORKSPACE</p>
@@ -275,7 +276,7 @@ export default function Workspace() {
                   <button className="linkbtn" aria-label={`Remove ${s.kind} attachment`} onClick={() => { formVersion.current += 1; setResearchSelections((list) => list.filter((x) => x.kind !== s.kind)); if (current) setFormChangedAfterResult(true); }}>Remove</button></li>)}</ul>
               </div>}
               <div className="row" style={{ marginTop: 8 }}>
-                <button className="btn" onClick={interpret} disabled={!question.trim() || status === 'interpreting'}>{status === 'interpreting' ? 'Interpreting…' : 'Interpret with AI'}</button>
+                <button className="btn" onClick={interpret} disabled={!catalog || !question.trim() || status === 'interpreting'}>{status === 'interpreting' ? 'Interpreting…' : 'Interpret with AI'}</button>
                 <button className="btn" onClick={() => { updateForm({ intent: 'browse_investigations' }); document.getElementById('catalogue')?.scrollIntoView(); }}>Browse investigations</button>
                 <span className="hint">{question.length}/2000</span>
               </div>
@@ -369,6 +370,11 @@ export default function Workspace() {
             </aside>
           </div>)}
 
+        {visited.includes('example') && <div hidden={tab !== 'example'}><GuidedExample onBrief={(s) => prepareBrief('detection', s)} onLab={(s) => {
+          setRestoredSelections((previous) => [...previous.filter((p) => p.kind !== s.kind), s]);
+          setViewRevisions((previous) => ({ ...previous, cutoff_envelope: previous.cutoff_envelope + 1 }));
+          setDetectorMode('range'); navigate('detectors');
+        }} /></div>}
         {tab === 'data' && <DataMethods />}
         {tab === 'about' && <About catalog={catalog} health={health} />}
       </main>

@@ -1,6 +1,6 @@
 # Working on IGNIS
 
-The shared application is in `web/`. Current scientific/interaction baseline: **web-2026-11-15.5**. Start with [the current audit](web/docs/CODEBASE_AUDIT_AND_COMPETITOR_DELTA_2026-11-15.md), [build status](web/docs/BUILD_STATUS.md) and [scientific working rules](CLAUDE.md).
+The shared application is in `web/`. Current interaction build: **web-2026-11-15.6**. Start with [the evidence-handoff patch](web/docs/EVIDENCE_HANDOFF_AND_GUIDED_EXAMPLE_2026-11-15.md), [the scientific audit](web/docs/CODEBASE_AUDIT_AND_COMPETITOR_DELTA_2026-11-15.md), [build status](web/docs/BUILD_STATUS.md) and [scientific working rules](CLAUDE.md).
 
 ## Clone and run
 
@@ -29,7 +29,7 @@ Use the package scripts: `dev` and `build` explicitly select **webpack**. The au
 
 ## Verify a change
 
-`npm run test:team` runs **316 offline application checks**. The full owner's workspace passed 341 checks. The 25-test provider/IE-1 file needs private frozen evaluation fixtures and is deliberately excluded from the team command. This is not a live interpretation acceptance result. Private fixtures, score keys and cumulative spend/probe ledgers stay local; do not invent replacements or start a new ledger to bypass them.
+`npm run test:team` runs **327 offline application checks**. The prior build's full owner suite passed 341 checks. The 25-test provider/IE-1 file needs private frozen evaluation fixtures and is deliberately excluded from the team command. This is not a live interpretation acceptance result. Private fixtures, score keys and cumulative spend/probe ledgers stay local; do not invent replacements or start a new ledger to bypass them.
 
 Run `npm run lint` and a production build before handing off a change. The existing browser suite uses installed **Google Chrome** and starts a production server on port 3100:
 

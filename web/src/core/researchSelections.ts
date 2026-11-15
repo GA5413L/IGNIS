@@ -71,7 +71,7 @@ export function buildResearchAnalysis(raw: ResearchSelection): ResearchAnalysis 
     return { ...common, kind: selection.kind, selection, result, title: 'Selected atmosphere comparison',
       sourceDigest: digestOf(conditionDataset), resultDigest: digestOf(result),
       summary: [selectionLabel(selection), `${frontier.length} of ${result.cases.length} cases on the condition-gap frontier: ${frontier.join(', ') || 'none'}.`,
-        `Cohort: ${result.cohort.material}, ${result.cohort.sidesBurning} burning side(s). Flow is excluded: direction descriptions conflict for five overlapping cases, and complete flow histories are not established.`],
+        `Cohort: ${result.cohort.material}, ${result.cohort.sidesBurning} burning side(s). Flow is excluded: direction descriptions conflict for ${new Set(result.earlierSourceContext.flatMap((s) => s.caseIds)).size} overlapping cases, and complete flow histories are not established.`],
       limitations: ['Coordinate proximity is not physical equivalence or a fire prediction.', 'These selected cases do not become validation evidence for the published-model contracts.'],
       sources: [{ title: `${result.source.version}, ${result.source.table}, PDF page ${result.source.pdfPage}`, url: result.source.publicUrl, sha256: result.source.sha256 },
         ...result.earlierSourceContext.map((s) => ({ title: `${s.version}: source-conflict context`, url: s.publicUrl, sha256: s.sha256 }))],

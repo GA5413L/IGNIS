@@ -5,6 +5,7 @@
 import type { Assessment, ClaimResult } from './assess';
 import { payloadDigest } from './digest';
 import { canonicalJson } from './canonicalize';
+import { z } from 'zod';
 
 export class ExportIntegrityError extends Error {}
 
@@ -29,10 +30,11 @@ const ROUTE: Record<string, string> = {
 };
 export const outcomeLabel = (c: Pick<ClaimResult, 'outcome'>) => (c.outcome ? OUTCOME[c.outcome] : null);
 export const routeLabel = (c: Pick<ClaimResult, 'route'>) => ROUTE[c.route];
-const md = (t: string) => t.replace(/([\\`*_[\]<>|])/g, '\\$1');
+const md = (t: string) => t.replace(/[\r\n\u2028\u2029]+/g, ' ').replace(/([\\`*_[\]<>|])/g, '\\$1');
 
 export function exportMarkdown(a: Assessment): string {
   verifyAssessment(a);
+  if (!z.iso.datetime().safeParse(a.createdAt).success) throw new ExportIntegrityError('Invalid creation timestamp; Markdown was not exported.');
   const s = a.evidenceSnapshot as { sources: { id: string; title: string; canonicalUri: string; access: string; observedSha256: string | null }[] };
   const src = new Map(s.sources.map((x) => [x.id, x]));
   const L: string[] = [];

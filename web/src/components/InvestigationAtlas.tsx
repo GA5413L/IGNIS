@@ -4,7 +4,7 @@ import atlas from '../../data/investigation-atlas.json';
 import conditions from '../../data/condition-cases.json';
 import { downloadResearch, SourceHash, Stat } from './researchShared';
 
-export function ResearchLanding({ onConditions, onDetectors, onRobustness, onBrief }: { onConditions: () => void; onDetectors: () => void; onRobustness: () => void; onBrief: () => void }) {
+export function ResearchLanding({ onConditions, onDetectors, onRobustness, onBrief, onExample }: { onConditions: () => void; onDetectors: () => void; onRobustness: () => void; onBrief: () => void; onExample: () => void }) {
   return <>
     <section className="research-hero" aria-labelledby="hero-title">
       <div className="hero-copy">
@@ -12,7 +12,7 @@ export function ResearchLanding({ onConditions, onDetectors, onRobustness, onBri
         <h1 id="hero-title">Understand fire.<br /><em>Beyond Earth.</em></h1>
         <p>Trace experiments, compare their conditions, and build research briefs with sources you can inspect.</p>
         <div className="row"><button className="btn primary" onClick={onConditions}>Compare atmospheres <span aria-hidden="true">↗</span></button><button className="btn hero-secondary" onClick={onBrief}>Build a research brief</button></div>
-        <a className="hero-anchor" href="#atlas">Explore the investigation atlas <span aria-hidden="true">↓</span></a>
+        <button className="linkbtn hero-anchor" onClick={onExample}>New here? Follow a worked example <span aria-hidden="true">↗</span></button>
       </div>
       <div className="hero-figure">
         <div className="figure-label"><span>SAFFIRE IV–VI</span><span>07 published cases</span></div>

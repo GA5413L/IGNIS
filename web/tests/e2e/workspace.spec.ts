@@ -2,6 +2,20 @@ import { expect, test } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 
 test.describe('signed-out workspace (M29, CH01)', () => {
+  test('interpretation waits for its catalogue instead of silently ignoring an early click', async ({ page }) => {
+    let release!: () => void, observed!: () => void;
+    const gate = new Promise<void>((r) => { release = r; }), intercepted = new Promise<void>((r) => { observed = r; });
+    await page.route('**/api/catalog', async (route) => { const response = await route.fetch(); observed(); await gate; await route.fulfill({ response }); });
+    try {
+      await page.goto('/'); await intercepted;
+      await page.getByRole('textbox', { name: 'Question', exact: true }).fill('A question typed before the catalogue arrives');
+      await expect(page.getByRole('button', { name: 'Interpret with AI', exact: true })).toBeDisabled();
+      release();
+      await expect(page.getByRole('button', { name: 'Interpret with AI', exact: true })).toBeEnabled();
+      await page.getByRole('button', { name: 'Interpret with AI', exact: true }).click();
+      await expect(page.getByText(/AI interpretation unavailable/).first()).toBeVisible();
+    } finally { release(); }
+  });
   test('catalogue, honest AI status and the typed fallback', async ({ page }) => {
     await page.goto('/');
     await expect(page.getByRole('heading', { name: 'Investigations in this reviewed bank' })).toBeVisible();

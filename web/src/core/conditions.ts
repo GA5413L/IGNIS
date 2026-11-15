@@ -103,7 +103,7 @@ function requireMatch(condition: boolean, description: string): void {
   if (!condition) throw new Error(`Invalid condition dataset: ${description}.`);
 }
 
-function validateDataset(value: unknown): ConditionDataset {
+export function validateConditionDataset(value: unknown): ConditionDataset {
   const parsed = datasetSchema.safeParse(value);
   if (!parsed.success) {
     const details = parsed.error.issues.map((issue) => `${issue.path.join('.')}: ${issue.message}`).join('; ');
@@ -177,7 +177,7 @@ function deepFreeze<T>(value: T): T {
 }
 
 /** Validated once at module load. Freezing prevents later UI code from changing the comparison corpus. */
-export const conditionDataset = deepFreeze(validateDataset(rawDataset));
+export const conditionDataset = deepFreeze(validateConditionDataset(rawDataset));
 
 const inputSchema = z.object({
   cohortId: text,

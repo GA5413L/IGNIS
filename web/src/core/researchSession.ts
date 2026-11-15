@@ -2,7 +2,7 @@
 import { z } from 'zod';
 import type { Assessment } from './assess';
 import { ConfirmedRequest, InterpretationProposal } from './schemas';
-import { canonicalJson, digestOf } from './canonicalize';
+import { digestOf } from './canonicalize';
 import { payloadDigest } from './digest';
 import { ResearchSelectionsSchema, type ResearchSelection } from './researchSelections';
 
@@ -33,15 +33,15 @@ export interface RecheckedSession {
   notice: string;
 }
 
-export function sourceFingerprint(a: Assessment): string {
+export function sourceFingerprint(a: { catalogDigest: string; researchAnalyses?: { kind: string; sourceDigest: string }[] }): string {
   return digestOf({ catalog: a.catalogDigest, analyses: (a.researchAnalyses ?? []).map((r) => ({ kind: r.kind, sourceDigest: r.sourceDigest })) });
 }
-export function resultFingerprint(a: Assessment): string {
+export function resultFingerprint(a: Record<'handling' | 'requestedAreas' | 'ranking' | 'claims' | 'derivations' | 'readiness' | 'limitations', unknown> & { researchAnalyses?: { kind: string; selection: unknown; resultDigest: string }[] }): string {
   return digestOf({ handling: a.handling, requestedAreas: a.requestedAreas, ranking: a.ranking, claims: a.claims,
     derivations: a.derivations, readiness: a.readiness, limitations: a.limitations,
     research: (a.researchAnalyses ?? []).map((r) => ({ kind: r.kind, selection: r.selection, resultDigest: r.resultDigest })) });
 }
-export function methodFingerprint(a: Assessment): string {
+export function methodFingerprint(a: { engineRevision: string; rendererRevision: string; researchAnalyses?: { kind: string; methodRevision: string }[] }): string {
   return digestOf({ engine: a.engineRevision, renderer: a.rendererRevision,
     analyses: (a.researchAnalyses ?? []).map((r) => ({ kind: r.kind, methodRevision: r.methodRevision })) });
 }
@@ -55,9 +55,15 @@ export function makeSession(draft: ResearchSession['draft'], selections: Researc
   const body = SessionBodySchema.parse({ schemaVersion: SESSION_SCHEMA, savedAt: now, integrityMeaning: 'checksum_not_signature',
     draft, selections, receipts: chronological.map(receiptFor) });
   const packet = { ...body, checksum: digestOf(body) };
-  if (new TextEncoder().encode(canonicalJson(packet)).length > MAX_SESSION_BYTES) throw new Error('Session exceeds 2 MiB; nothing was truncated.');
+  serializeSession(packet);
   validateSessionAncestry(packet);
   return packet;
+}
+/** Measure the same UTF-8 representation written by both download and browser save. */
+export function serializeSession(packet: ResearchSession): string {
+  const text = JSON.stringify(packet, null, 2) + '\n';
+  if (new TextEncoder().encode(text).length > MAX_SESSION_BYTES) throw new Error('Session exceeds 2 MiB; nothing was truncated.');
+  return text;
 }
 export function parseSession(rawText: string): ResearchSession {
   if (new TextEncoder().encode(rawText).length > MAX_SESSION_BYTES) throw new Error('Session exceeds 2 MiB; nothing was loaded.');
