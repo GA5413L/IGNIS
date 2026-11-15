@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "ignis.research-opportunities.v1",
+  "reviewedDate": "2026-11-15",
+  "reviewStatus": "Assistant-checked source bytes, stored cells and cited methods; independent human review pending.",
+  "admissionPolicy": "These are bounded research opportunities, not automatically admitted analysis records. Preserve each source's observation unit, operator, configuration, time basis, ancestry and rights metadata. No automatic cross-source pooling or calibration transfer.",
+  "opportunities": [
+    {
+      "id": "same-paired-channel-audit",
+      "title": "Inspect paired SAME detector channels",
+      "availability": "existing-curated-data",
+      "sourceRole": "Stored instrument-channel observations; descriptive calculation only",
+      "sources": [
+        {
+          "title": "NASA PSI-101 SAME/SAME-R analyzed results",
+          "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-101",
+          "doi": "10.60555/2np7-jv14",
+          "recordVersion": 4,
+          "asset": "PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx",
+          "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218",
+          "locator": "Material Sort; headers row 2; flight marker A=1 or 2; AW50 is blank",
+          "rights": "PSI record declares CC0-1.0; preserve record attribution and asset identity."
+        }
+      ],
+      "fields": [
+        { "name": "ISS scatter", "unit": "V", "locator": "AW2" },
+        { "name": "ISS obscuration signal", "unit": "V", "locator": "AV2" },
+        { "name": "STS signal", "unit": "V", "locator": "AX2" },
+        { "name": "Ion B delta", "unit": "V", "locator": "BK2" }
+      ],
+      "purpose": "Show same-row channel patterns with independent descriptive cutoffs, joint and marginal finite denominators, missing/error cells, material/flight strata and source witnesses.",
+      "cannotEstablish": [
+        "Actual alarm events, detection failure, accuracy or a universal voltage threshold",
+        "Independent trials from repeated or aged source rows",
+        "A common physical quantity merely because both channel units are volts"
+      ],
+      "nextAdmissionCheck": "Approve the exact joint-denominator and status/exclusion contract; preserve source hash + sheet + Excel-row pairing. Resolve channel configuration/offset/window definitions before interpreting flight-dependent patterns."
+    },
+    {
+      "id": "same-aging-lineage",
+      "title": "Recover SAME-R run and aging lineage",
+      "availability": "newly-acquired-methods-and-tem-data",
+      "sourceRole": "Run-ancestry methods plus separately processed TEM particle measurements",
+      "sources": [
+        {
+          "title": "SAME-R final report",
+          "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-101",
+          "doi": "10.60555/2np7-jv14",
+          "recordVersion": 4,
+          "assetVersion": 1,
+          "asset": "PSI-101_Reports_SAME-R_Final Report.pdf",
+          "sha256": "65381e2715eb7379113dd1b9c550baaa5fa5a247dba00419123143aa98ef80d6",
+          "locator": "PDF p. 3: run/carousel ancestry; pp. 16, 24–26: TEM and moment-instrument methods",
+          "rights": "PSI record declares CC0-1.0."
+        },
+        {
+          "title": "Kapton run 62 unaged TEM analysis",
+          "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-101",
+          "recordVersion": 4,
+          "assetVersion": 1,
+          "asset": "PSI-101_Analyzed Data_62 Kapton unaged.xlsx",
+          "sha256": "e621db68f06276e0600147181c065e5f18f750f761f5014b0d0db49f2e8e470d",
+          "locator": "all data!C5:C6; Binned data (2)!B5/D5; Comments on binned data!A2/A5",
+          "rights": "PSI record declares CC0-1.0."
+        },
+        {
+          "title": "Kapton run 62 aged TEM analysis, source-flagged bin issue",
+          "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-101",
+          "recordVersion": 4,
+          "assetVersion": 1,
+          "asset": "PSI-101_Analyzed Data_62 Kapton aged issue with bins.xlsx",
+          "sha256": "76fb4542d784d39c4ea03849d4d3d913b940ed209611e9fc6a0d0249eeee3355",
+          "locator": "Binned data (2)!B5=870; D5=869; original filename retains issue with bins",
+          "rights": "PSI record declares CC0-1.0."
+        }
+      ],
+      "fields": [
+        { "name": "Reported generation runs", "unit": "runs", "value": 67, "locator": "Report PDF p. 3" },
+        { "name": "Reported entries including secondary aging", "unit": "listed observations", "value": 109, "locator": "Report PDF p. 3" },
+        { "name": "Reported reused-sample runs", "unit": "runs", "value": 2, "locator": "Report PDF p. 3" },
+        { "name": "TEM diameter and bin definitions", "unit": "µm in method notes; retain each operator", "locator": "Comments on binned data!A2/A5; all data and binned worksheets" }
+      ],
+      "purpose": "Distinguish source-generation runs, secondary-aging observations and TEM particles; expose processing populations, copied worksheets and source errors before joining measurements.",
+      "cannotEstablish": [
+        "A verified crosswalk from the final report's 109 entries to the combined workbook",
+        "An aging causal effect or an independent sample size from particle counts",
+        "One preferred bin total or processing worksheet without reconciliation"
+      ],
+      "nextAdmissionCheck": "Reconcile sample/run/grid/image identities, particle exclusions, calibration and bin edges. Preserve physical-carousel reuse and the existing CSV/workbook identity conflict; do not join on run labels alone."
+    },
+    {
+      "id": "nist-ground-alarm-reference",
+      "title": "Inspect NIST reference alarm trials",
+      "availability": "newly-acquired-reference-only",
+      "sourceRole": "Ground smoke-box/room alarm measurements with a distinct apparatus and endpoint",
+      "sources": [
+        {
+          "title": "Data on Smoke Alarm Performance: compilation to NIST TN 1947",
+          "url": "https://www.nist.gov/el/fire/engineered-fire-safety/data-smoke-alarm-performance",
+          "doi": "10.18434/T4530X",
+          "assetUrl": "https://www.nist.gov/document/summarynistsmokeboxroomresultsxlsx",
+          "asset": "summary_nistsmokebox_roomresults.xlsx",
+          "sha256": "7b5a958d4101cea4d73e0d22c9329c372d1f22d71e64e5c23bd304f1d61384d0",
+          "locator": "I 01-14!A8:P8; model/unit I-01-6; column groups B:D, E:G, H:J, K:M, N:P",
+          "versionNote": "Dataset date 2016-12-14; landing page updated 2026-01-30; captured bytes pinned by hash, no semantic file revision asserted.",
+          "rights": "Dataset catalog points to NIST's license statement; retain attribution and notices. Not relabeled CC0.",
+          "rightsUrl": "https://www.nist.gov/open/license"
+        },
+        {
+          "title": "NIST Technical Note 1947",
+          "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.1947.pdf",
+          "doi": "10.6028/NIST.TN.1947",
+          "asset": "NIST.TN.1947.pdf",
+          "sha256": "6fbfa0cfb24c923263a1d10b9d6df8ccc3c31c684ea7ba5eff0c3cc231d06a28",
+          "locator": "PDF pp. 18–19 and 35 / printed pp. 8–9 and 25",
+          "rights": "NIST technical-series terms and attribution apply; third-party material remains separately attributed."
+        }
+      ],
+      "fields": [
+        { "name": "Observed alarm time", "unit": "s", "locator": "B2/E2/H2/K2/N2" },
+        { "name": "Beam obscuration at alarm", "unit": "%/ft", "locator": "C2/F2/I2/L2/O2" },
+        { "name": "Measuring ionization chamber current at alarm", "unit": "pA", "locator": "D2/G2/J2/M2/P2" },
+        { "name": "Model, unit, repeat, orientation, flow configuration", "unit": "source identifiers and categories", "locator": "A8 and B1/E1/H1/K1/N1" }
+      ],
+      "purpose": "Show repeated configuration measurements for one identified alarm unit, with source uncertainty conventions and exact cells. Provide a separate example of a documented measurement chain.",
+      "cannotEstablish": [
+        "A calibration from SAME volts to obscuration, mass concentration or alarms",
+        "Microgravity transfer, operational settings or a current product ranking",
+        "Five independent devices from the five configuration observations of unit I-01-6"
+      ],
+      "nextAdmissionCheck": "Curate model/unit/experiment identities, endpoint/clock definitions, configurations, units and uncertainty conventions. Keep this collection reference-only; linked raw time-series archives were not acquired."
+    },
+    {
+      "id": "saffire-telemetry-clock-audit",
+      "title": "Audit Saffire-I channel clocks before alignment",
+      "availability": "newly-acquired-telemetry",
+      "sourceRole": "Stored spacecraft/payload telemetry and derived spreadsheet processing",
+      "sources": [
+        {
+          "title": "Saffire-I processed telemetry",
+          "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+          "doi": "10.60555/0t15-1z43",
+          "recordVersion": 4,
+          "assetVersion": 1,
+          "asset": "PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+          "sha256": "2e6657842266b80d48bdfef9e6683ff522696a62f95c4b81222bb583b76f9ccf",
+          "locator": "CygnusSmokeDetectorData!A2:D3/F2:I3; RawData headers A1:AV1; SaffireData headers A1:AG1",
+          "rights": "PSI record declares CC0-1.0."
+        },
+        {
+          "title": "Saffire-I/III source organization README",
+          "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+          "recordVersion": 4,
+          "assetVersion": 1,
+          "asset": "PSI-98_Science Documents_SAFFIRE-I and SAFFIRE-III Readme.docx",
+          "sha256": "49c939337fa00a0473f7efa10367288f510afcbf69dd7f5405054a2617d3a66d",
+          "locator": "Tables 1 and 3: sample/camera and image-processing identifiers",
+          "rights": "PSI record declares CC0-1.0."
+        }
+      ],
+      "fields": [
+        { "name": "Obscuration timestamp", "unit": "source clock timestamp", "valueAsStored": "1465931204893", "locator": "CygnusSmokeDetectorData!A3" },
+        { "name": "Scatter timestamp on the same spreadsheet row", "unit": "source clock timestamp", "valueAsStored": "1465932848063", "locator": "CygnusSmokeDetectorData!F3" },
+        { "name": "Obscuration and scatter signals", "unit": "V", "locator": "CygnusSmokeDetectorData!D2/I2" },
+        { "name": "Relative time", "unit": "ms and s in separate source columns", "locator": "CygnusSmokeDetectorData!B2/C2/G2/H2" },
+        { "name": "Radiometer/anemometer channels", "unit": "not established by inspected bare headers", "locator": "SaffireData!E1:J1" }
+      ],
+      "purpose": "Expose timestamp arrays, missingness, recorded channel units and alignment requirements before a time-history analysis.",
+      "cannotEstablish": [
+        "Synchronous observations from spreadsheet row equality",
+        "Detector delay without a verified event clock and alignment policy",
+        "Chemical HRR from a radiometer label or IV–VI gas histories from Saffire-I telemetry"
+      ],
+      "nextAdmissionCheck": "Resolve clock origins/offsets, explicit time-unit discrepancies, sensor calibration, status/sentinel values and source windows. Join only with an approved time-alignment rule; retain unpaired observations."
+    }
+  ]
+}

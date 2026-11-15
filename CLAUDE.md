@@ -1,23 +1,30 @@
 # CLAUDE.md: working rules for this repository
 
 ## Operating mode
-- **Pre-event research mode is the default.** Do not build the submission application, UI, dashboard, or demo assets before 14 Nov 2026 09:00 local time, unless the user gives an explicit instruction **and** a written organizer ruling permits it (see `planning/competition_rules.md`, U1/U2). Don't infer authorization from the brief's existence.
-- Pre-event work allowed: reading and verifying public sources, transcribing and checking records, writing research notes, and planning. Log any new code in `CHRONOLOGY.md`.
+- **Team source sharing authorized, 15 Nov 2026:** the user explicitly requested a push to `https://github.com/GA5413L/IGNIS` so teammates can work. This overrides the prior hold for that repository source handoff only. Preserve remote work and history; exclude raw third-party downloads, credentials, private evaluation state and local ZIPs. Website deployment, runtime/provider acceptance, billing, competition submission and outreach remain separately gated. See `CONTRIBUTING.md` and D-063.
+- **Current mode, 15 Nov 2026: authorized event implementation and research.** The event window is open. The user authorized the build under `DOCS/IGNIS_MASTER_SOLUTION_AND_BUILD_SPEC_v1.0.md`, its official-resources addendum and `DOCS/IGNIS_MASTER_AMENDMENTS.md`. Earlier pre-event restrictions remain historical records, not current blockers.
+- The user allowed reuse of all pre-event research under D-050 and public PSI records/listed tables under D-052. Preserve the user's eligibility decision and accurate AI/preparation disclosure; do not claim an organizer ruling. Log new code in `CHRONOLOGY.md`.
+- Current handoff: `web/docs/RESEARCH_LAB_SYNTHESIS_2026-11-15.md`, `web/docs/BUILD_STATUS.md` and `web/docs/WIN_PLAN.md`. The master scientific contracts remain authoritative; historical reports and frozen evaluations stay intact. Deadline is 15 Nov 23:59 PKT; feature freeze is 18:00 PKT.
+- Latest local patch: `web/docs/CODEBASE_AUDIT_AND_COMPETITOR_DELTA_2026-11-15.md`, build `web-2026-11-15.5`, engine .5, renderer .4, source arithmetic ops-2. Refreshed 37 focused public heads (18 changed); prior broad screen 282. Repaired scientific aliasing, unknown definitions, arithmetic, transitive export closure, scope/revisions, notebook races and HTTP/ancestry boundaries. 341 offline and 49 production browser checks passed (one duplicate skipped), plus 22 final affected notebook checks and eight visual states. All 17 curated files and registry r2 unchanged. Build/dev scripts must use webpack: captured Turbopack output altered 50 detector numbers; exact source/server/browser checks now pass. Never weaken those checks or silently accept historical fingerprint drift. No inference, fitting or publication occurred.
+- Latest account state: the user is preparing Groq and Gemini keys; no new local credential designation or funded/credited status has been verified. Keep current live comparison NOT RUN and interpretation disabled until the existing evaluation/acceptance gates pass; do not repeat key requests, create accounts or switch to unapproved inference. The tested local implementation and seven-slide handoff are documented in `web/README.md` and `web/docs/LOCAL_VERIFICATION_2026-11-15.md`. Fresh competitor changes are in `web/docs/lab/18_competitor_delta_2026-11-15.md`; the older comparison remains historical.
+- Live IE-1 testing has existing bounded authorization under D-051/D-054, not blanket authority to enable a runtime configuration. No configuration is accepted. Do not search for credentials or change billing. Deployment remains on hold under D-053; a GoDaddy domain alone does not impose static hosting. The user explicitly requested the specialist research team for this continuation; this is not blanket permission for unrelated delegation.
 - Don't contact organizers, authors or NASA, and don't register accounts. Propose these to the user (D-013).
 
 ## Scientific rules (non-negotiable)
-- Similarity ≠ comparability. Every comparison needs a confirmed endpoint ID (`research/endpoint_dictionary.md`), configuration, and intended use.
+- Similarity ≠ comparability. Every comparison needs a confirmed quantity/measurement operator, configuration, window and intended claim. Use `research/endpoint_dictionary.md` IDs for the rod cases; use the current handoff's bounded T1–T4 contracts for Saffire/NIST. Missing required definitions remain explicit requirements, not guessed matches.
 - Data files under `research/data/` are **as printed**: never correct, normalise or gap-fill them. Interpretation goes in notes; conflicts go in `research/source_conflicts.md` with exact locations.
 - Unknown stays unknown: pressure is not reported for the rod data. Don't default it.
-- No label-only joins across sources (C-14). Independence group = NASA physical sample number (D-009).
+- No label-only joins across sources (C-14). Track specimen, burn, segment, campaign/source ancestry, shared apparatus/calibration and possible atmosphere dependence. A distinct specimen is not proof of independent errors (D-030 supersedes the specimen-only part of D-009).
+- Initial/final oxygen does not establish segment oxygen or monotonicity. Matching gas entries do not prove no intervening gas management. First logged burn is not certified lifetime freshness; changing to first-logged specimens changes the target population.
 - B16/B19 are quarantined (C-03). Table S1 right-half rows are conditional (C-02).
 - "Test ended" ≠ "flame extinguished". A Table S2 "-" is undefined, not zero.
-- No predictions, confidence percentages, safe/unsafe labels, or causal claims from within-burn differences.
+- Do not generate new physical predictions or confidence percentages, assign safe/unsafe labels, or infer causation from within-burn differences. Published model outputs may be inspected with their actual source/run status; an arithmetic check on them is not a reproduced prediction or independent validation.
 - Never fabricate numbers. Never digitise figures as data.
 
 ## Conventions
 - Retrieval: `tools/fetch.ps1 -Url … -Slug … -FileName …` (logs time, status, size and SHA-256 to `_raw/fetch_log.tsv`). WebFetch fails TLS here, so use the script.
 - Python: run with `py -3 -I` (isolated mode). Scripts read `research/data/` and take PDF paths as arguments.
+- If the retrieval script is blocked or the `py` alias fails, use an available verified-TLS retrieval method with the same provenance fields, or the installed Python executable with `-I`. Do not change execution policy or disable TLS verification to make those historical commands work.
 - After changing any transcription, run `research/analysis/verify_transcriptions.py` (expect 6/6 PASS) and re-run `crosswalk.py` and `evidence_case_02.py`.
 - Record source locators as PDF page / printed page for NASA TM-20210011385 (printed = PDF − 8 in the appendix and Ch. 2–4).
 - New decisions go in `DECISIONS.md`; blockers in `BLOCKERS.md`.

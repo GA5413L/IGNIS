@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "ignis-registry-1",
+  "records": [
+    {"id": "USE-SV24-PROXY", "revision": "r1", "modelRef": {"id": "PM-SV24", "revision": "r1"}, "observationRef": {"id": "OBS-SV6-PROXY-TOTAL", "revision": "r1"},
+     "role": "boundary_input", "historicalUse": "documented_use", "transform": null, "windowDescription": null, "assertionIds": ["AS-M-VNORM-01"],
+     "review": {"level": "assistant_checked", "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build", "reviewedAt": "2026-11-14T12:30:00Z", "scope": "S-V p.6 passage", "method": "text match", "inheritedFrom": null, "independentOfDesign": false}},
+    {"id": "USE-SV24-NORM", "revision": "r1", "modelRef": {"id": "PM-SV24", "revision": "r1"}, "observationRef": {"id": "OBS-SV6-REMOTE-TOTAL", "revision": "r1"},
+     "role": "normalization", "historicalUse": "documented_use", "transform": "multiplicative_source_scale", "windowDescription": "steady state (~1500 s)", "assertionIds": ["AS-M-VNORM-01"],
+     "review": {"level": "assistant_checked", "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build", "reviewedAt": "2026-11-14T12:30:00Z", "scope": "S-V p.6 passage: the remote-inferred 54.4 g total set the 1.82 source scale", "method": "text match", "inheritedFrom": null, "independentOfDesign": false}},
+    {"id": "USE-SVI25-SOURCE", "revision": "r1", "modelRef": {"id": "PM-SVI25", "revision": "r1"}, "observationRef": {"id": "OBS-SVI6-SOURCE-TOTAL", "revision": "r1"},
+     "role": "boundary_input", "historicalUse": "documented_use", "transform": null, "windowDescription": null, "assertionIds": ["AS-M-VSOURCE-01", "AS-M-VI6MASS-01"],
+     "review": {"level": "assistant_checked", "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build", "reviewedAt": "2026-11-14T12:30:00Z", "scope": "S-VI p.3 (MGR applied at outlet) and p.9 (total input from the MGR)", "method": "text match", "inheritedFrom": null, "independentOfDesign": false}},
+    {"id": "USE-SVI25-HAR", "revision": "r1", "modelRef": {"id": "PM-SVI25", "revision": "r1"}, "observationRef": {"id": "OBS-SVI6-HAR-TOTAL", "revision": "r1"},
+     "role": "boundary_input", "historicalUse": "documented_use", "transform": null, "windowDescription": null, "assertionIds": ["AS-M-VSOURCE-01", "AS-M-HAR-01"],
+     "review": {"level": "assistant_checked", "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build", "reviewedAt": "2026-11-14T12:30:00Z", "scope": "S-VI p.3 (HAR applied at outlet) and p.9 (HAR integral)", "method": "text match", "inheritedFrom": null, "independentOfDesign": false}},
+    {"id": "USE-SVI25-INIT", "revision": "r1", "modelRef": {"id": "PM-SVI25", "revision": "r1"}, "observationRef": {"id": "OBS-SVI5-INIT-CO2", "revision": "r1"},
+     "role": "initial_condition", "historicalUse": "documented_use", "transform": "additive_offset_to_initial_values", "windowDescription": "initial value; documented for events 5, 6 and 8", "assertionIds": ["AS-M-VIALIGN-01"],
+     "review": {"level": "assistant_checked", "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build", "reviewedAt": "2026-11-14T12:30:00Z", "scope": "S-VI p.7 passage: initial cabin CO2 from the sensor mean, then curves shifted to each sensor's initial value", "method": "text match", "inheritedFrom": null, "independentOfDesign": false}}
+  ]
+}

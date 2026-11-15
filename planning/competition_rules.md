@@ -1,5 +1,7 @@
 # Competition rules status
 
+> **Current update, 7 Nov 2026 PKT:** [Contract closure, section 10](../IGNIS_Contract_Closure_and_Build_Handoff.md#10-first-authorized-build-gate-order-and-cuts) governs the current build gate. Its one official-source refresh matched the preceding capture; the full challenge is available and guides/resources remain scheduled for 13 Nov. Emberfall/Universal is confirmed, with PKT as the planning basis subject to the team creator's zone. A bounded newer-message search established no asset-specific ruling. U2's historical no-reply re-derive fallback does not establish eligibility: an organizer must clarify the allowed path with preparation disclosed. No messages have been sent. **Everything below is dated history; its pending-28-Oct statements and unknown team identity are not current blockers.**
+
 Checked 2026-10-20 against official pages on spaceappschallenge.org. Page bodies are saved locally under
 `_raw/spaceapps/`. **Re-check on 28 Oct (challenge statement) and 13 Nov (submission + judging guides).**
 

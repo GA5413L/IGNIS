@@ -1,10 +1,16 @@
-# IGNIS: pre-event research repository
+# IGNIS: research and event prototype
 
-**IGNIS** (Intelligent Graph for NASA In-Space Safety) is a planned evidence workbench for NASA microgravity
+**Team development:** [Clone, run, test and contribute](CONTRIBUTING.md). The application is in `web/`; no API key is needed for its structured workflows. Use `npm run test:team` for the checks available in this shared checkout. Raw source downloads and private evaluation state remain local.
+
+> **Current handoff (15 Nov 2026 PKT):** [Application and UI previews](web/README.md), [audit and competitor refresh](web/docs/CODEBASE_AUDIT_AND_COMPETITOR_DELTA_2026-11-15.md), [build status](web/docs/BUILD_STATUS.md). Build web-2026-11-15.5 repairs scientific/workflow integrity and preserves exact production source numbers. 341 offline and 49 browser checks passed; one duplicate skipped, followed by 22 affected notebook checks. The user is preparing keys; no new designated credential or funded status is verified. Live interpretation remains disabled and its comparison NOT RUN. Deployment remains on hold. The seven-page briefing and earlier dated material are historical snapshots.
+
+> **Historical handoff (7 Nov 2026 PKT):** [Contract closure and build handoff](IGNIS_Contract_Closure_and_Build_Handoff.md) governed the four scientific templates, ordered runtime AI, versioned assessment/revision and then-current build gate. Saffire was the principal analytical path; NIST was secondary and the rod reconstruction an optional control. At that date preparation reuse was unresolved and no application had been built; those status statements are superseded above. The [cross-disciplinary report](IGNIS_Cross_Disciplinary_Improvement_Decision.md), [competitive-core report](IGNIS_Competitive_Core_Decision.md) and [earlier research verdict](IGNIS_Astra_Research_and_Winning_Solution.md) remain historical research context.
+
+**IGNIS** (Intelligent Graph for NASA In-Space Safety) is a prototype evidence workbench for NASA microgravity
 fire-safety data, targeting the NASA Space Apps Challenge 2026 challenge *"Flame in Freefall"*. It is **not**
 affiliated with or endorsed by NASA.
 
-> **Status (20 Oct 2026): pre-event research only.** Space Apps rules say participants should not begin working on
+> **Historical status (20 Oct 2026): pre-event research only.** Space Apps rules say participants should not begin working on
 > their project before **14 Nov 2026, 09:00 local time**. This repository contains research notes, verified source
 > transcriptions and a plan. It contains **no application**. See `planning/competition_rules.md` for what is
 > confirmed and what is awaiting an organizer ruling.
@@ -15,13 +21,13 @@ different things, under different protocols, on different specimens, or even the
 
 ## What we found (details in `research/session_report_2026-10-20.md`)
 - The ISS PMMA-rod flame-spread data (Link et al. 2018, Tables S1/S2) **are available** and are transcribed here with a mechanical check against the publisher PDF.
-- All 19 sample labels map to **NASA's BASS-II as-run test log** (NASA/TM-20210011385, Table A.3), with specimen IDs and burn order.
+- A **19-label candidate crosswalk** links journal records to NASA's BASS-II as-run log (NASA/TM-20210011385, Table A.3), with qualified specimen identities and burn order; not every relationship is one-to-one or resolved.
 - **Positive result:** in NASA burn P4 (black PMMA rod, 9.525 mm, 18.5 % O₂), spread rate 32.5 → 26.9 µm/s as opposed flow went 2.00 → 1.73 cm/s (descriptive, within one burn).
 - **Open conflict, kept in quarantine:** NASA's appendix log lists the paper's headline series (B16/B19) as **"Concurrent"**. The article, NASA's own Chapter 4 and the published photographs present them as opposed. The adversarial audit (second 20 Oct session) classifies this as a genuine unresolved conflict with the evidence favouring opposed (`research/b16_b19_discrepancy_review.md`). It is **not** a headline finding.
-- **Primary demonstration: burn history changes a fire-safety reading** (`research/evidence_case_03.md`, 21 Oct).
-  - **0.95- and 0.64-cm rods:** Link's tables record μg flame spread from fresh rods at ≥ 1 O₂ point below any recorded 1 g spread.
-  - **1.27-cm rods:** the only such record (B9) is the second ignition of rod 202m, in the unrenewed atmosphere left by its first burn.
-  - **Fresh 1.27-cm rods:** the answer is undetermined.
+- **Historical rod demonstration, now an optional control: burn history changes a fire-safety reading** (`research/evidence_case_03.md`, 21 Oct).
+  - **0.95- and 0.64-cm rods:** selected first-logged microgravity burns have printed spread rates at initial O₂ values below the ground-table minima; protocols differ and segment oxygen is unknown.
+  - **1.27-cm rods:** the low-initial-O₂ record B9/P9 is a reburn of specimen 202m. Matching gas entries support possible atmospheric continuity, not proof of an unchanged atmosphere.
+  - **First-logged 1.27-cm rods:** the selected table minimum becomes 19.3%; the corresponding low-initial-O₂ spread question remains unresolved. Changing this selection changes the target population.
   - **Not claimed:** no limiting oxygen value.
 - **Endpoint specification corrected** (`research/endpoint_dictionary.md`). The measured quantity (measurand) is now separated from method, statistic, context and protocol. The same measurand under different protocols may be displayed and contrasted, but not pooled or read causally.
 - A spreadsheet reproduces all the arithmetic. The contribution so far is **curation and conflict detection**, not algorithms. A public competitor (MicroFire Atlas) already does page-level provenance and reused-sample flags for other BASS-II materials (`research/prior_art_comparison.md`).
@@ -42,7 +48,8 @@ survived (PASS), were qualified, or failed. Still **no independent human review*
 ## Layout
 | Path | Contents |
 |---|---|
-| `research/evidence_case_03.md` | **primary demonstration**: lowest O₂ with recorded spread, μg vs 1 g, and what burn history changes |
+| `IGNIS_Contract_Closure_and_Build_Handoff.md` | **current handoff**: four contracts, manual traces, proposed acceptance cases, AI/revision rules and first authorized build |
+| `research/evidence_case_03.md` | optional rod control: lowest O₂ with recorded spread, μg vs 1 g, and what burn history changes |
 | `research/evidence_case_02.md` | rod case: question, admission rules, within-burn result (P4), negative cases |
 | `planning/researcher_workflow.md`, `planning/value_hypothesis.md` | one-page user task; falsifiable value hypothesis and spreadsheet comparator |
 | `planning/review_packet/` | **human review packet**: blind source reading (A), interpretation check (B), held-out task brief (C), review form |

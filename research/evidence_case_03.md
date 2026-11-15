@@ -1,5 +1,7 @@
 # Evidence Case 03: lowest oxygen with recorded flame spread, by rod diameter, μg vs 1 g, and what burn history changes
 
+> **Scientific correction, 7 Nov 2026:** [Current assessment, section 2](../IGNIS_Astra_Research_and_Winning_Solution.md#2-reality-audit-and-scientific-repairs) supersedes the claims below that oxygen was monotonic at every segment, that copied/matching atmosphere cells prove no intervening change, or that these minima alone establish physical LOC bounds. First-logged selection changes the target population. The as-printed data and historical analysis are retained; those stronger interpretations are withdrawn.
+
 **Date:** 21 October 2026 (third session; pre-event research, not a submission artifact)
 **Status:**
 - Every record below was re-read from the publisher and NTRS PDFs this session: text layer plus 150–220 dpi renders.

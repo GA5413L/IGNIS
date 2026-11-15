@@ -6,3 +6,21 @@ _raw/
 __pycache__/
 *.pyc
 .env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+.secrets/
+
+# Third-party source downloads and private evaluation state remain local.
+DOCS/*.pdf
+web/eval/
+web/artifacts/*.zip
+
+# Local tools and build caches are never team source.
+node_modules/
+.next/
+*.tsbuildinfo
+test-results/
+playwright-report/

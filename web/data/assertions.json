@@ -1,0 +1,949 @@
+{
+ "schemaVersion": "ignis-registry-1",
+ "note": "statement = exact source wording (quotation). IGNIS paraphrase lives in findings.json and is labelled as IGNIS wording.",
+ "records": [
+  {
+   "id": "AS-OBJ-BASS-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "The Burning and Suppression of Solids (BASS) investigation examines the burning and extinction characteristics of a wide variety of fuel samples in microgravity.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-NR02",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Burning and Suppression of Solids (BASS)",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "examines the burning and extinction characteristics"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired HTML",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Programme description (objective), not an observed result."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-OBJ-BASS-02",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "Burning and Suppression of Solids (BASS) was one of the first investigations to examine how to extinguish fuels burning in microgravity.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-R15",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "BASS paragraph",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "one of the first investigations to examine how to extinguish"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired HTML",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Institutional overview sentence; no result values."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-OBJ-BASSII-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "BASS-II examined the characteristics of a variety of fuel samples to see whether materials burn as well in microgravity as in normal gravity, given the right conditions.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-R15",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "BASS paragraph",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "BASS-II examined the characteristics"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired HTML",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Describes what BASS-II examined, not what it found. BASS-II row-level records are not in this release."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-CTX-SOLIDS-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "Flammability studies focus on solid materials such as fabrics and plastics, as studied in the Burning and Suppression of Solids (BASS and BASS-II) and Spacecraft Fire Safety Demonstration (Saffire-I, -II, and -III) investigations.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-CHALLENGE",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Background",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "Flammability studies focus on solid materials"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in official API capture",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Challenge background: names the investigations; reports no results."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-OBJ-SAFFIRE-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "Saffire, NASA’s Spacecraft Fire Safety Demonstration Project, is a series of six experiments that investigate how fires grow and spread in space, especially aboard future spacecraft bound for the Moon and Mars.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-R31",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "opening paragraph",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "is a series of six experiments"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired HTML",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Programme objective as described in May 2020."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-OBJ-SAME-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "SAME will measure the distribution of particle sizes in smoke from on-orbit combustion of several materials found in the spacecraft.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-NAV-D",
+      "revision": "r1"
+     },
+     "pdfPage": 1,
+     "printedPage": null,
+     "section": "Research Overview",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "SAME will measure the distribution of particle sizes"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Future-tense objective from the experiment description; results are in separate findings."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-OBJ-SAME-02",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "Results will allow an evaluation of the performance in microgravity of the two existing U.S. spacecraft smoke detector designs, in use on the Shuttle and ISS, and evaluate other fire detection devices.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-NAV-D",
+      "revision": "r1"
+     },
+     "pdfPage": 1,
+     "printedPage": null,
+     "section": "Research Overview",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "Results will allow an evaluation of the performance"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Objective, not an outcome. Compare with FD-D-SAME-02 for the reported detector result."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-OBJ-SAMEDET-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "Fire detection was tested in microgravity through the Smoke and Aerosol Measurement Experiment studies (SAME and SAME-R).",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-CHALLENGE",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Background",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "Fire detection was tested in microgravity"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in official API capture",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Names SAME-R; no SAME-R result has been acquired for this release, so SAME findings are not copied to SAME-R."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-OBJ-FLEX-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "The Flame Extinguishment Experiment (FLEX) experiment was designed to assess and quantify the effectiveness of inert-gas suppressants in microgravity and obtain the most conservative estimate of the limiting oxygen index for steady combustion.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-NR02",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Flame Extinguishment Experiment (FLEX)",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "designed to assess and quantify the effectiveness of inert-gas suppressants"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired HTML",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Design objective, not a reported limit."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-OBJ-FLEX-02",
+   "revision": "r1",
+   "state": "active",
+   "kind": "objective",
+   "statement": "Suppression was studied in the Flame Extinguishment Experiment (FLEX) through dilution of the chamber atmosphere with carbon dioxide and helium, both of which suppress fire.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-CHALLENGE",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Background",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "Suppression was studied in the Flame Extinguishment Experiment"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in official API capture",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Challenge background description of the approach."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-P-SAFFIRE-GROWTH-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "observed_result",
+   "statement": "The first three Saffire experiments had limited-sized fires and examined ignition and spread over similar materials. Results showed that flames spread quickly and achieved a steady size and burn rate, unlike here on Earth where flames tend to continue to grow. Scientists also learned that the size of the spacecraft had more effect on the fire than anticipated.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-R31",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "paragraph on Saffire I-III",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "Results showed that flames spread quickly"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentences",
+    "method": "text match in acquired HTML",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Institutional summary covering Saffire I, II and III together; it does not separate flights or give materials, flows, rates or sizes."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-P-PRESSURE-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "observed_result",
+   "statement": "Results on flame spread in microgravity can be used to establish the rate of heat release in a spacecraft and show that reducing pressure slows down that spread.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-R15",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Saffire paragraph",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "show that reducing pressure slows down that spread"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired HTML",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "The page cites references 4-5 for this sentence; those papers were not acquired, so materials, oxygen levels, pressures and magnitudes are not inspected.",
+    "Direction only; no rate change is stated."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-P-HAZARD-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "observed_result",
+   "statement": "Practical scale fires ranging from 1.5 to 3.2 kW were tested in unmanned spacecraft with free air volumes of 17 to 19 cubic meters. Despite these fires, the temperature only increased significantly very near to the fire itself. However, the ambient concentrations of carbon monoxide and carbon dioxide rose significantly with the PMMA tests exceeding the 1-hour carbon dioxide limit and the 24-hour carbon monoxide limit.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-S-CAL",
+      "revision": "r1"
+     },
+     "pdfPage": 6,
+     "printedPage": "6",
+     "section": "Conclusion",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "Practical scale fires ranging from 1.5 to 3.2 kW"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentences",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Covers the Saffire IV-VI tests in the paper's Table 1; the exposure limits named are not given numerically in this passage.",
+    "The same conclusion states further work is needed to extend these results to partial gravity."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-D-SAME-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "observed_result",
+   "statement": "Results from the ISS experiment show that smoke particles vary in morphology and average diameter, however, they are not significantly different from smoke particles generated in equivalent experiments performed in normal gravity.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-R09",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Abstract",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "not significantly different from smoke particles generated in equivalent experiments"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired HTML abstract",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Abstract only: the statistical test, materials and size metric behind 'not significantly different' are not inspected.",
+    "Smoke from oxidative pyrolysis (heated samples), not flaming fires."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-D-SAME-02",
+   "revision": "r1",
+   "state": "active",
+   "kind": "observed_result",
+   "statement": "The two spacecraft smoke detectors did not successfully detect every type of smoke, which demonstrates that the next generation of spacecraft fire detectors must be improved and tested against smoke from relevant space materials.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-R09",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Abstract",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "did not successfully detect every type of smoke"
+    },
+    {
+     "source": {
+      "id": "SRC-R10",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "news text",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "Because not all of the particles were consistently detected"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence; R10 links the paper to SAME",
+    "method": "text match in acquired HTML",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Which detector missed which smoke type is not in the abstract.",
+    "SRC-R10 reports the same study: one lineage, not two confirmations."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-D-ALARM-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "observed_result",
+   "statement": "The smoke from the fire event was readily detected by an ionization detector and a light scattering system but a typical alarm threshold was only achieved at 981 seconds. By this time most of the hazardous gas release had occurred.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-S-CAL",
+      "revision": "r1"
+     },
+     "pdfPage": 6,
+     "printedPage": "6",
+     "section": "Conclusion",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "a typical alarm threshold was only achieved at 981 seconds"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentences",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "The sentence does not name which burn event or which threshold value; the clock origin of 981 s is not stated in this passage.",
+    "Not a detector certification or a general alarm-delay value."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-S-FLEX-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "observed_result",
+   "statement": "A new phenomenon where a hot flame extinction leads to a low-temperature, “cool-flame” burning in microgravity has been observed for the first time. These cool flames produce partially oxidized fuel and potentially re-ignite to hot flames posing fire safety concerns in spacecraft environments.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-R14",
+      "revision": "r1"
+     },
+     "pdfPage": 14,
+     "printedPage": "14",
+     "section": "Conclusions",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "a hot flame extinction leads to a low-temperature"
+    },
+    {
+     "source": {
+      "id": "SRC-NAV-S",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Discovery of steadily burning cool flames",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "A heptane fuel droplet appeared to extinguish, but actually continued to burn without a visible flame"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentences (R14 p.14); NAV-S gives the heptane-droplet example",
+    "method": "text match in acquired PDF and HTML",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Liquid fuel droplets (n-alkanes, e.g. heptane) in FLEX chamber atmospheres; not solid materials or cabin fires.",
+    "SRC-NAV-S and SRC-R14 describe the same FLEX lineage."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-S-FLEX-02",
+   "revision": "r1",
+   "state": "active",
+   "kind": "observed_result",
+   "statement": "A wide range of conditions were investigated: 13% < O2 < 30% 5% < CO2 < 75% 5% < He < 45% 1 < D0 < 4.5 mm. Diffusive extinction due to water absorption, and radiative extinction were observed.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-R14",
+      "revision": "r1"
+     },
+     "pdfPage": 4,
+     "printedPage": "4",
+     "section": "Methanol Droplet Combustion",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "Diffusive extinction due to water absorption, and radiative extinction were observed"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact slide text (bullet layout flattened)",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Methanol droplets only. The ranges are separate marginal ranges; the slide does not list which combinations were tested.",
+    "The same slide states a methanol-droplet limiting oxygen index; IGNIS does not reuse it as a solid-material or cabin limit."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-M-VSOURCE-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "published_model_result",
+   "statement": "In the model, a mass generation rate (MGR) and a heat addition rate (HAR) are applied to the Saffire outlet, which has a surface area of 50 cm2, to apply heat and combustion products into the domain.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-S-VI",
+      "revision": "r1"
+     },
+     "pdfPage": 3,
+     "printedPage": "3",
+     "section": "III. Modeling",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "a mass generation rate (MGR) and a heat addition rate (HAR) are applied to the Saffire outlet"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Methods statement: the fire is a prescribed source in this transport model, not a predicted burning process."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-M-VNORM-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "published_model_result",
+   "statement": "For example, in event 6, the six remote sensors increased on average 2230 ppm of CO2 at steady state (~1500 s), which gives a total mass production from the SFU of 54.4 g. However, when integrating the MGR curve with RS3 acting as the outlet sensor, it only provided 29.9 g of CO2. Hence, a scaling factor (SF) of 1.82 was utilized in the MGR curve.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-S-V",
+      "revision": "r1"
+     },
+     "pdfPage": 6,
+     "printedPage": "6",
+     "section": "Modeling (combustion products)",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "a scaling factor (SF) of 1.82 was utilized in the MGR curve"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentences",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Saffire V event 6 (a Saffire V numbering; not Saffire VI event 6).",
+    "The integration window of the 29.9 g proxy total is not stated in this passage."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-M-VIALIGN-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "published_model_result",
+   "statement": "This average value was used for the initial cabin CO2 concentration for the event 5 simulation, and then the prediction curves were increased or decreased after the simulation to match the initial experimental values. This method was used consistently for event 6 and 8 as well.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-S-VI",
+      "revision": "r1"
+     },
+     "pdfPage": 7,
+     "printedPage": "7",
+     "section": "IV. Results and Discussion",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "the prediction curves were increased or decreased after the simulation to match the initial experimental values"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentences",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "The passage describes an additive shift of each curve to its sensor's initial value; per-sensor shift values are not tabulated."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-M-SIBAL-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "published_model_result",
+   "statement": "An excellent agreement is realized once the curves reached steady state. This is expected since the CO2 added to the cabin from the MGR (46.5 g) was close to the average CO2 rise predicted from the six remote sensors (46.8 g). However, the rise in the curve is underpredicted by the model at all locations.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-S-VI",
+      "revision": "r1"
+     },
+     "pdfPage": 7,
+     "printedPage": "7",
+     "section": "IV. Results and Discussion",
+     "tableOrFigure": "Figure 6",
+     "rowOrCell": null,
+     "textAnchor": "the CO2 added to the cabin from the MGR (46.5 g)"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentences",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Saffire VI event 5 (SIBAL fabric burn). The authors themselves say steady-state agreement is expected from the source total."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-M-VI6MASS-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "published_model_result",
+   "statement": "The average increase in the RS data was 8164 ppm, representing a 128.1 g increase in CO2. This matches well with the total input from the MGR of 127.8 g.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-S-VI",
+      "revision": "r1"
+     },
+     "pdfPage": 9,
+     "printedPage": "9",
+     "section": "IV. Results and Discussion (two-sided PMMA)",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "representing a 128.1 g increase in CO2"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentences; the preceding sentence identifies Figure 8 as the event-6 two-sided PMMA burn",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Saffire VI event 6, two-sided PMMA. A close integrated total does not establish an accurate transient response."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-M-HAR-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "published_model_result",
+   "statement": "Integrating the heat addition rate for this event gave a total energy addition of 497 kJ.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-S-VI",
+      "revision": "r1"
+     },
+     "pdfPage": 9,
+     "printedPage": "9",
+     "section": "IV. Results and Discussion (two-sided PMMA)",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "a total energy addition of 497 kJ"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentence",
+    "method": "text match in acquired PDF",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Heat addition rate is the sensible heat the flow unit adds to the cabin model (S-VI p.3, Figure 3), not chemical heat release."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-O-CAL-VI3-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "observed_result",
+   "statement": "Table 2. Saffire IV-VI Heat release and increase of carbon oxides. VI-3, 2-sided PMMA: burn duration 780 s; Oxygen Consumption Calorimetry peak heat release 3080 W; total heat release 1280 kJ.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-S-CAL",
+      "revision": "r1"
+     },
+     "pdfPage": 6,
+     "printedPage": "6",
+     "section": "Results",
+     "tableOrFigure": "Table 2",
+     "rowOrCell": "VI-3",
+     "textAnchor": "VI-3 2-sided PMMA 780 3080 1280"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "Table 2 row VI-3 with its column headings",
+    "method": "text extraction plus rendered-table visual check (empty Fuel Consumption cells)",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Statement is a row transcription with headings, not running prose.",
+    "S-CAL numbers this burn VI-3; S-VI Table 1 calls the two-sided 1.0 cm PMMA burn event 6. The match is by material and configuration, not by the numeric suffix."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  },
+  {
+   "id": "AS-CTX-MOON-01",
+   "revision": "r1",
+   "state": "active",
+   "kind": "hypothesis",
+   "statement": "To facilitate spacesuit use, an atmosphere with increased oxygen and reduced pressure compared to Earth’s is expected within the planned Moon Base and pressurized rovers. Flammability is highly dependent on oxygen concentration, and air flow is also important in microgravity.",
+   "sourceLocators": [
+    {
+     "source": {
+      "id": "SRC-CHALLENGE",
+      "revision": "r1"
+     },
+     "pdfPage": null,
+     "printedPage": null,
+     "section": "Background",
+     "tableOrFigure": null,
+     "rowOrCell": null,
+     "textAnchor": "an atmosphere with increased oxygen and reduced pressure"
+    }
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T12:30:00Z",
+    "scope": "exact sentences",
+    "method": "text match in official API capture",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   },
+   "qualifications": [
+    "Planning expectation stated in the challenge, not a measured result or an approved habitat atmosphere."
+   ],
+   "conflictIds": [],
+   "lineageRefs": []
+  }
+ ]
+}

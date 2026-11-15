@@ -1,0 +1,376 @@
+{
+ "schemaVersion": "ignis-registry-1",
+ "families": [
+  {
+   "id": "FAM-BASS",
+   "displayName": "BASS (Burning and Suppression of Solids)"
+  },
+  {
+   "id": "FAM-SAFFIRE",
+   "displayName": "Saffire (Spacecraft Fire Safety Demonstration)"
+  },
+  {
+   "id": "FAM-SAME",
+   "displayName": "SAME (Smoke and Aerosol Measurement Experiment)"
+  },
+  {
+   "id": "FAM-FLEX",
+   "displayName": "FLEX (Flame Extinguishment Experiment)"
+  }
+ ],
+ "records": [
+  {
+   "id": "INV-BASS",
+   "revision": "r1",
+   "displayName": "BASS",
+   "familyId": "FAM-BASS",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "prevention",
+    "suppression"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-BASS-01",
+    "AS-OBJ-BASS-02",
+    "AS-CTX-SOLIDS-01"
+   ],
+   "findingIds": [],
+   "eventIds": [],
+   "apparatusRefs": [],
+   "coverage": "profile_only",
+   "sourceRefs": [
+    {
+     "id": "SRC-NR02",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-R15",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-CHALLENGE",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Solid-fuel burning and extinction in microgravity (ISS).",
+   "depthNote": "Objectives only in this release; no BASS result has been curated."
+  },
+  {
+   "id": "INV-BASS-II",
+   "revision": "r1",
+   "displayName": "BASS-II",
+   "familyId": "FAM-BASS",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "prevention"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-BASSII-01",
+    "AS-CTX-SOLIDS-01"
+   ],
+   "findingIds": [],
+   "eventIds": [],
+   "apparatusRefs": [],
+   "coverage": "profile_only",
+   "sourceRefs": [
+    {
+     "id": "SRC-R15",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-CHALLENGE",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Whether solid materials burn as well in microgravity as in normal gravity.",
+   "depthNote": "Objective only in this release. Row-level BASS-II records are not included (they need re-derivation from original files and the preparation-reuse ruling)."
+  },
+  {
+   "id": "INV-SAFFIRE-I",
+   "revision": "r1",
+   "displayName": "Saffire I",
+   "familyId": "FAM-SAFFIRE",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "prevention"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-SAFFIRE-01",
+    "AS-CTX-SOLIDS-01"
+   ],
+   "findingIds": [
+    "FD-P-SAFFIRE-GROWTH-01"
+   ],
+   "eventIds": [],
+   "apparatusRefs": [],
+   "coverage": "reviewed_findings",
+   "sourceRefs": [
+    {
+     "id": "SRC-R31",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-R15",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Spacecraft-scale fire growth in an uncrewed Cygnus vehicle.",
+   "depthNote": "Family-level summary statements only; no flight-specific values."
+  },
+  {
+   "id": "INV-SAFFIRE-II",
+   "revision": "r1",
+   "displayName": "Saffire II",
+   "familyId": "FAM-SAFFIRE",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "prevention"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-SAFFIRE-01",
+    "AS-CTX-SOLIDS-01"
+   ],
+   "findingIds": [
+    "FD-P-SAFFIRE-GROWTH-01"
+   ],
+   "eventIds": [],
+   "apparatusRefs": [],
+   "coverage": "reviewed_findings",
+   "sourceRefs": [
+    {
+     "id": "SRC-R31",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-R15",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Spacecraft-scale fire growth in an uncrewed Cygnus vehicle.",
+   "depthNote": "Family-level summary statements only; no flight-specific values."
+  },
+  {
+   "id": "INV-SAFFIRE-III",
+   "revision": "r1",
+   "displayName": "Saffire III",
+   "familyId": "FAM-SAFFIRE",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "prevention"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-SAFFIRE-01",
+    "AS-CTX-SOLIDS-01"
+   ],
+   "findingIds": [
+    "FD-P-SAFFIRE-GROWTH-01"
+   ],
+   "eventIds": [],
+   "apparatusRefs": [],
+   "coverage": "reviewed_findings",
+   "sourceRefs": [
+    {
+     "id": "SRC-R31",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-R15",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Spacecraft-scale fire growth in an uncrewed Cygnus vehicle.",
+   "depthNote": "Family-level summary statements only; no flight-specific values."
+  },
+  {
+   "id": "INV-SAFFIRE-V",
+   "revision": "r1",
+   "displayName": "Saffire V",
+   "familyId": "FAM-SAFFIRE",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "prevention",
+    "detection"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-SAFFIRE-01"
+   ],
+   "findingIds": [
+    "FD-M-V-NORM-01",
+    "FD-P-HAZARD-01"
+   ],
+   "eventIds": [
+    "EV-SV-6"
+   ],
+   "apparatusRefs": [],
+   "coverage": "structured_observations",
+   "sourceRefs": [
+    {
+     "id": "SRC-S-V",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-S-CAL",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Spacecraft-scale burns with a published cabin transport model.",
+   "depthNote": "Published model source normalization (T2) with source-reported totals; raw series not acquired."
+  },
+  {
+   "id": "INV-SAFFIRE-VI",
+   "revision": "r1",
+   "displayName": "Saffire VI",
+   "familyId": "FAM-SAFFIRE",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "prevention",
+    "detection"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-SAFFIRE-01"
+   ],
+   "findingIds": [
+    "FD-M-VI-SOURCE-01",
+    "FD-M-VI-ALIGN-01",
+    "FD-M-SIBAL-01",
+    "FD-M-VI-MASS-01",
+    "FD-M-HEAT-01",
+    "FD-M-CAL-01",
+    "FD-P-HAZARD-01",
+    "FD-D-ALARM-01"
+   ],
+   "eventIds": [
+    "EV-SVI-5",
+    "EV-SVI-6"
+   ],
+   "apparatusRefs": [],
+   "coverage": "structured_observations",
+   "sourceRefs": [
+    {
+     "id": "SRC-S-VI",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-S-CAL",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Burns at reduced pressure and elevated oxygen, with calorimetry and a published cabin transport model.",
+   "depthNote": "Initial alignment (T1), heat-quantity check (T4) and source-reported totals; synchronized series not acquired."
+  },
+  {
+   "id": "INV-SAME",
+   "revision": "r1",
+   "displayName": "SAME",
+   "familyId": "FAM-SAME",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "detection"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-SAME-01",
+    "AS-OBJ-SAME-02",
+    "AS-OBJ-SAMEDET-01"
+   ],
+   "findingIds": [
+    "FD-D-SAME-01",
+    "FD-D-SAME-02"
+   ],
+   "eventIds": [],
+   "apparatusRefs": [],
+   "coverage": "reviewed_findings",
+   "sourceRefs": [
+    {
+     "id": "SRC-NAV-D",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-R09",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-R10",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Smoke particles from heated spacecraft materials and two spacecraft smoke detectors.",
+   "depthNote": "Abstract-level results (Yang et al. 2018); the full paper and data files were not acquired."
+  },
+  {
+   "id": "INV-SAME-R",
+   "revision": "r1",
+   "displayName": "SAME-R",
+   "familyId": "FAM-SAME",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "detection"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-SAMEDET-01"
+   ],
+   "findingIds": [],
+   "eventIds": [],
+   "apparatusRefs": [],
+   "coverage": "profile_only",
+   "sourceRefs": [
+    {
+     "id": "SRC-CHALLENGE",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Reflight of the smoke and aerosol measurement experiment.",
+   "depthNote": "Named by the challenge; no SAME-R source or result acquired. SAME findings are not copied here."
+  },
+  {
+   "id": "INV-FLEX",
+   "revision": "r1",
+   "displayName": "FLEX",
+   "familyId": "FAM-FLEX",
+   "nasaInvestigationId": null,
+   "psiUri": null,
+   "safetyAreas": [
+    "suppression"
+   ],
+   "objectiveAssertionIds": [
+    "AS-OBJ-FLEX-01",
+    "AS-OBJ-FLEX-02"
+   ],
+   "findingIds": [
+    "FD-S-FLEX-01",
+    "FD-S-FLEX-02"
+   ],
+   "eventIds": [],
+   "apparatusRefs": [],
+   "coverage": "reviewed_findings",
+   "sourceRefs": [
+    {
+     "id": "SRC-R14",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-NAV-S",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-NR02",
+     "revision": "r1"
+    },
+    {
+     "id": "SRC-CHALLENGE",
+     "revision": "r1"
+    }
+   ],
+   "summary": "Droplet flame extinction by inert-gas dilution; cool-flame discovery.",
+   "depthNote": "Presentation and institutional summaries; test tables not acquired."
+  }
+ ]
+}

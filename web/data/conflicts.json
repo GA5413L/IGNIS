@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "ignis-registry-1",
+  "note": "No open source conflict is admitted for the records in this release. Numbering differences (S-CAL VI-3 vs S-VI event 6) are recorded as a material/configuration match on EV-SVI-6, not as a conflict.",
+  "records": []
+}

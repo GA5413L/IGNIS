@@ -1,0 +1,1736 @@
+{
+  "schemaVersion": "ignis-investigation-atlas-1",
+  "snapshotDate": "2026-11-15",
+  "title": "Acquired NASA PSI investigation atlas",
+  "counts": {
+    "profiles": 24,
+    "profilesWithExperimentalCsv": 20,
+    "profilesWithoutExperimentalCsv": 4,
+    "experimentalCsvFiles": 22,
+    "experimentalCsvDataRecords": 2009,
+    "experimentalCsvBlankDataRecords": 861,
+    "experimentalCsvParsedDataRecords": 2870,
+    "acquiredAnalyzedWorkbooks": 1
+  },
+  "countMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials.",
+  "boundaries": [
+    "Profiles contain source-stated PSI catalog metadata, not newly reviewed experimental findings.",
+    "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials.",
+    "Inventory covers the acquired experimental-table CSVs and one separately acquired analyzed workbook; full investigation archives were not acquired.",
+    "An app investigation link is navigation only; it does not join observations or certify cross-source comparability.",
+    "Missing metadata remains null. PSI-10 has no stated license in the acquired record; no license is inferred from other PSI records.",
+    "The 24-profile snapshot is not an exhaustive NASA or combustion-literature inventory."
+  ],
+  "inventoryScope": "All experimental-table entries in these 24 acquired PSI metadata records, plus one separately audited PSI-101 analyzed workbook. Other archive files are outside this acquired inventory.",
+  "reviewStatement": "AI-assisted source inspection and deterministic checks; no independent human review is claimed.",
+  "records": [
+    {
+      "id": "PSI-10",
+      "accession": "PSI-10",
+      "title": "Advanced Combustion via Microgravity Experiments / Flame Design",
+      "acronym": "ACME/Flame Design",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-10",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-10",
+      "doi": "10.60555/w4zy-bt45",
+      "doiUrl": "https://doi.org/10.60555/w4zy-bt45",
+      "license": {
+        "status": "not_reported",
+        "identifier": null,
+        "name": null,
+        "url": null
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-10.record.json",
+        "sha256": "a20756e7acf67f0046a21a3bce9bfca7f142cd5350350c0dad29997cf8fe28db",
+        "recordVersion": 1,
+        "acquiredAtUtc": "2026-11-14T22:03:20.618476+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The primary objectives of this flight experiment are:\nA. Obtain soot-inception limits of quasi-steady normal and inverse spherical diffusion flames as functions of flow rate, Zst, amount of inert (N2 or CO2), and pressure for C2H4 and CH4 flames. Identify the corresponding temperatures in hot regions. Obtain similar limits and temperatures for inverse and normal coflow flames.\nB. Obtain detailed measurements in quasi-steady normal and inverse spherical diffusion flames for C2H4 and CH4. Determine the effects of flow rate, Zst, amount of N2, and pressure on flame temperature, size, color, and soot volume fraction. Evaluate the possible existence of steady flames.\nC. Obtain extinction limits as functions of Zst, amount of N2, and pressure for normal and inverse spherical C2H4 and CH4 flames. Identify the corresponding temperatures in hot regions. Identify the presence of radiative or kinetic extinction. Evaluate whether pseudo-flammability limits can be obtained for these flames.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-10-experimental-table-1",
+          "fileName": "PSI-10_Experimental table_Flame Design_Normal Flame.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-10_Experimental table_Flame Design_Normal Flame.csv",
+          "sha256": "4a663292bd3f65201943cc71bd661a70383639276a9176f64105b285bf0b6deb",
+          "bytes": 26933,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:03:28.632261+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Flame Type",
+            "Day",
+            "Fuel",
+            "Test",
+            "Xfuel",
+            "mfuel (mg/s)",
+            "mN2 (mg/s)",
+            "mtot (mg/s)",
+            "XO2 (init)",
+            "XO2 (final)",
+            "pinit (atm)",
+            "pfinal (atm)",
+            "pmean (atm)",
+            "mean Zst",
+            "Tad (K)"
+          ],
+          "columnCount": 15,
+          "dataRecordCount": 207,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 207,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        },
+        {
+          "id": "PSI-10-experimental-table-2",
+          "fileName": "PSI-10_Experimental table_Flame Design_Inverse Flame.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-10_Experimental table_Flame Design_Inverse Flame.csv",
+          "sha256": "97933ee9ae0b9ebc6b948a67485a0fe2f8218f753253a4f2be93c40d374c44e4",
+          "bytes": 17314,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:03:36.515492+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Flame Type",
+            "Day",
+            "Test",
+            "XO2",
+            "mO2 (mg/s)",
+            "mN2 (mg/s)",
+            "mtot (mg/s)",
+            "XC2H4 initial",
+            "XC2H4 final",
+            "pinit (atm)",
+            "pfinal (atm)",
+            "pmean (atm)",
+            "mean Zst",
+            "Tad (K)"
+          ],
+          "columnCount": 14,
+          "dataRecordCount": 120,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 120,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-20",
+      "accession": "PSI-20",
+      "title": "Advanced Combustion via Microgravity Experiments - Burning Rate Emulator",
+      "acronym": "ACME BRE",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-20",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-20",
+      "doi": "10.60555/vb93-3y72",
+      "doiUrl": "https://doi.org/10.60555/vb93-3y72",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-20.record.json",
+        "sha256": "ea118e19d02785f54d246406aacea93878053ff95ddd5bdca44bd29c09a753d1",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:03:42.018458+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The BRE flight program seeks to establish the burning conditions in a quiescent microgravity ambient in terms of material properties.\nThe specific flight objectives are as follows.\n  1. Observe burning behavior in long-duration microgravity for CH4/N2 and C2H4/N2mixtures on porous circular burners of 25  and 50 mm diameter. Consider O2/N2 ambients with various pressures and ambient O2 concentrations and pressures. NASA - considered atmosphere for human space missions will be examined: 14.7 psia, 21 % oxygen: 10.2 psia, 26.5 %; and 8.2 psia, 34 % oxygen. Emphasize fuel conditions that can be related to a diverse range of condensed fuels.\n  2. Consider the conditions of Objective 1 for ambients of O2/CO2 (desired).\n  3. Consider the conditions of Objectives 1 – 2 for extinction limits.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-20-experimental-table-1",
+          "fileName": "PSI-20_Experimental table_ACME BRE.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-20_Experimental table_ACME BRE.csv",
+          "sha256": "4aa5d3f98708ceacced5c620d46858b9965f8d4d941b203229f46467d53e5ab7",
+          "bytes": 1113,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:03:50.527835+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Year",
+            "Month",
+            "Date",
+            "Burner Size (mm)",
+            "Fuel Bottle",
+            "Oxygen Conc (percent)",
+            "Flames Ignited",
+            "Notes"
+          ],
+          "columnCount": 8,
+          "dataRecordCount": 18,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 18,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-21",
+      "accession": "PSI-21",
+      "title": "Advanced Combustion via Microgravity Experiments / Coflow Laminar Diffusion Flame",
+      "acronym": "ACME CLD Flame",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-21",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-21",
+      "doi": "10.60555/23e1-9950",
+      "doiUrl": "https://doi.org/10.60555/23e1-9950",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-21.record.json",
+        "sha256": "99a5e58119a9c01ec1b57dfe03d696fb8d05b494a3658338b0f2abb077a72ac5",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:03:58.520910+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "In order to provide the experimental data needed to allow rigorous testing of computational models at the extremes of the fuel dilution spectrum, we have the following objectives:\nA) Characterize the behavior of weak coflow diffusion flames of methane and ethylene, as a function of velocity and fuel dilution, through measurement of flame shape, lift-off heights, temperatures and extinction limits.\nB) Characterize the sooting tendencies of diffusion flames with long residence times, as a function of velocity and fuel dilution, through measurement of flame shape, gas temperatures in the soot-free portion of the flame, soot luminosity, soot temperatures, and soot volume fractions.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-21-experimental-table-1",
+          "fileName": "PSI-21_Experimental table_CLD Flame.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-21_Experimental table_CLD Flame.csv",
+          "sha256": "9fafbc5b3dddaf715ce8025ed9154ce297803f7b69a935f077ec26c8249e44c0",
+          "bytes": 2454,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:04:06.627404+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Test Type",
+            "Test Day",
+            "Fuel MFC",
+            "N2 MFC",
+            "Fuel Bottle",
+            "Fuel conc. Range",
+            "Flames ignited",
+            "Notes"
+          ],
+          "columnCount": 8,
+          "dataRecordCount": 32,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 32,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-22",
+      "accession": "PSI-22",
+      "title": "Advanced Combustion via Microgravity Experiments Electric-Field Effects on Laminar Diffusion Flames",
+      "acronym": "ACME E-FIELD Flames",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-22",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-22",
+      "doi": "10.60555/se5a-8c73",
+      "doiUrl": "https://doi.org/10.60555/se5a-8c73",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-22.record.json",
+        "sha256": "a491519f60b91c9eb2272e651846103f34006867fb74535911e8c18448e48a09",
+        "recordVersion": 7,
+        "acquiredAtUtc": "2026-11-14T22:04:12.691160+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The objective of this investigation is to better understand the relationship between electric field voltage and chemi-ion current, analyze the dynamic response of flames to electric field changes, evaluate soot formation, and characterize stabilized near-limit lifted flames.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-22-experimental-table-1",
+          "fileName": "PSI-22_Experimental table_ACME E-FIELD Flames.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-22_Experimental table_ACME E-FIELD Flames.csv",
+          "sha256": "69090c357b83ae38d161d29001d1d32b40fd77b13324ca6585ee990cdceef524",
+          "bytes": 2475,
+          "fileVersion": 2,
+          "acquiredAtUtc": "2026-11-14T22:04:21.454950+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Test Type",
+            "Test Day",
+            "Year",
+            "Month",
+            "Date",
+            "Mesh Polarity",
+            "Fuel Bottle",
+            "Fuel Conc",
+            "Flames Ignited",
+            "Notes"
+          ],
+          "columnCount": 10,
+          "dataRecordCount": 32,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 32,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-23",
+      "accession": "PSI-23",
+      "title": "Advanced Combustion via Microgravity Experiments-Structure and Response of Spherical Diffusion Flames",
+      "acronym": "ACME s-Flame",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-23",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-23",
+      "doi": "10.60555/k57n-p030",
+      "doiUrl": "https://doi.org/10.60555/k57n-p030",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-23.record.json",
+        "sha256": "a89bd634a661e724b9bc766a8f217bc0c76c816f0db973991847bce6b53802d7",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:04:35.432155+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "A series of experiments is proposed with the following specific objectives, in both soot-free and sooty flames, to compare with detailed computational simulation to assess transport properties and detailed chemical kinetics (including chemiluminescence):\n    Objective A. Measure and characterize the transient structure (such as temperature and species distribution) of diffusion flames established at initially non-steady, spherical flame structures for mixtures of different H2/CH4/diluent ratios   (soot-free) and different C2H4/diluent ratios (sooty), for different flow rates.\n    Objective B. Determine the quasi-steady convective/chemical-kinetic extinction limits (low system Damköhler numbers) and radiative/chemical-kinetic extinction limits (high system Damköhler numbers) for mixtures of different H2/CH4/diluent ratios (soot-free) and different C2H4/diluent ratios (sooty).\n    Objective C. Determine the existence (for different Zeldovich number, Ze), onset (as a function Da), and nature (i.e. mode, frequency, amplitude) of pulsating instabilities theoretically predicted to occur in transient spherical diffusion flames using fuel/diluent mixtures that are above a critical Lewis number.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-23-experimental-table-1",
+          "fileName": "PSI-23_Experimental table_ACME s-Flame.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-23_Experimental table_ACME s-Flame.csv",
+          "sha256": "16cd10f50bd2e962887c8eb4077e5a9b3e790c78de8e0361c0b77e19300be7cf",
+          "bytes": 2456,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:04:44.985981+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Test Type",
+            "Test Day*",
+            "Year",
+            "Month",
+            "Date",
+            "Atmosphere*",
+            "Fuel Bottle",
+            "Flames Ignited*",
+            "Notes"
+          ],
+          "columnCount": 9,
+          "dataRecordCount": 18,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 18,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-25",
+      "accession": "PSI-25",
+      "title": "Burning and Suppression of Solids - II",
+      "acronym": "BASS-II",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-25",
+      "doi": "10.60555/4qc4-de67",
+      "doiUrl": "https://doi.org/10.60555/4qc4-de67",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": "INV-BASS-II",
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-25.record.json",
+        "sha256": "b9234754db5da651ad27d888af082b889d07210b018e543369662f065b4ec2da",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:02:48.736499+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "BASS-II results contribute to the combustion computational models used in the design of fire detection and suppression systems in microgravity and on Earth.\nObjectives Include:\n  1) Study the ignition, flame growth, flame spread, and extinction limits for solid fuels burning in low-velocity forced flows in microgravity.\n  2) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test #1 method, ground-based microgravity tests, and actual material flammability in microgravity.\n  3) Provide SoFIE PIs with preliminary data to refine Science Requirements.\n  4)  Practical, realistic (thicker) fuels in typical geometries will be examined, including slabs, cylinders, and spherical sections.\n\nThe primary variables include:\n     • Forced flow velocity (speed and direction)\n     • Ambient oxygen concentration (via working volume nitrogen vitiation)\n     • Sample geometry (rods, spherical section, slabs, films, and fabric sheets",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-25-experimental-table-1",
+          "fileName": "PSI-25_Experimental table_BASS-II.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-25_Experimental table_BASS-II.csv",
+          "sha256": "71e792bf6b5fb5ea620c5dd70fbbac05515992e12aefcf5dff47312caa48c042",
+          "bytes": 16590,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:04:52.660341+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "PI",
+            "Test #",
+            "Date",
+            "GMT",
+            "Sample #",
+            "Fuel Sample Material",
+            "Flow restrictor",
+            "Fan display",
+            "Air display",
+            "Radiometer gain   (1000   250   50   10)",
+            "Total Frames Shot",
+            "Calibrated  initial O2 % by vol ",
+            "Calibrated final O2 % by vol",
+            "Initial CO2 % by vol",
+            "Final CO2 % by vol",
+            "Initial CO (ppm)",
+            "Final CO (ppm)"
+          ],
+          "columnCount": 17,
+          "dataRecordCount": 129,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 129,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-26",
+      "accession": "PSI-26",
+      "title": "Burning and Suppression of Solids",
+      "acronym": "BASS",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-26",
+      "doi": "10.60555/58h4-dy80",
+      "doiUrl": "https://doi.org/10.60555/58h4-dy80",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": "INV-BASS",
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-26.record.json",
+        "sha256": "9dee45d44bb736178db270a07c9ee8f98ac02ee810189ab518271fd4720c0533",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:04:58.256409+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The two main objectives for BASS are to:\n    1.) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test#1 method, ground-based microgravity tests, and actual material flammability in microgravity. The relation between these can be investigated by observing flames burning for the longer times available in flight. Practical, realistic (thicker) fuels in typical geometries will be examined, including wake flames which have characteristics of a fire burning behind another object (for example, a fire burning in tight area which may not be easily accessible).\n    2.) Assess the effectiveness of an inert, gaseous extinguishing agent (similar to that used on ISS) in putting out flames over different materials, geometries, preheating, and flow.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-26-experimental-table-1",
+          "fileName": "PSI-26_Experimental table_BASS.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-26_Experimental table_BASS.csv",
+          "sha256": "ccfc3c54d948b64a1c5d2596a63c7c8019e51df0c91a1d62f039f48fa28c300f",
+          "bytes": 4726,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:05:07.251918+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Date",
+            "GMT",
+            "As Run Test #",
+            "Test #",
+            "Sample #",
+            "Fuel Sample Material"
+          ],
+          "columnCount": 6,
+          "dataRecordCount": 122,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 122,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-39",
+      "accession": "PSI-39",
+      "title": "Cool Flames Investigation",
+      "acronym": "CFI",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-39",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-39",
+      "doi": "10.60555/m6pj-a914",
+      "doiUrl": "https://doi.org/10.60555/m6pj-a914",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-39.record.json",
+        "sha256": "ab2501bbe6200dabd012e7bf199e79426f8d19eb484c2af421183bb61b558d35",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:05:16.550114+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The objectives of this investigation are to:\n    1) Examine the combustion behavior of n-dodecane and mixtures of n-dodecane/iso-dodecane at pressures ranging from 0.25 atm to 5 atm.\n    2) Analyze the effects of helium dilution on cool flame behavior.\n    3) Examine the behavior of combustion characteristics.\n    4) Investigate the relationship between droplet size, pressure, and flame extinction, and (5) understand the consequence of soot formation during cool flame combustion.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-39-experimental-table-1",
+          "fileName": "PSI-39_Experimental table_CFI.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-39_Experimental table_CFI.csv",
+          "sha256": "fb898e28762353aa132c16b886dbd207a024b1dd3c9bed5928d70d8036d2ec7e",
+          "bytes": 7792,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:05:26.126759+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Flex Number",
+            "Test Date",
+            "Local Time",
+            "CIR ",
+            "Pressure",
+            "Oxygen",
+            "Nitrogen",
+            "Helium",
+            "Fiber",
+            "Fuel "
+          ],
+          "columnCount": 10,
+          "dataRecordCount": 87,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 87,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-47",
+      "accession": "PSI-47",
+      "title": "Dust and Aerosol Measurement Feasibility Test / Dust and Aerosol Measurement Feasibility Test-2",
+      "acronym": "DAFT / DAFT-2",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-47",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-47",
+      "doi": "10.60555/ztgj-d202",
+      "doiUrl": "https://doi.org/10.60555/ztgj-d202",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-47.record.json",
+        "sha256": "60ff7a7d0ef34c3043dda4133f277045ba72addb1fb2fc2e9f02e0550d0eb389",
+        "recordVersion": 5,
+        "acquiredAtUtc": "2026-11-14T22:05:30.616260+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The focus of DAFT / DAFT-2 was to mitigate the risk for the Smoke Aerosol Measurement Experiment (SAME). SAME relied on a commercially available condensate nuclei counter, the TSI P-Trak,  to quantify smoke aerosols in a microgravity environment, however there were concerns that th P-Trak would not be reliable in microgravity as it relies on gravity to recycle isopropyl alcohol used in the measurement process.\nDAFT / DAFT-2 tests that a modified P-Trak particulate counter would be accurate in microgravity.\n\nSummarized objectives include:\n    1) Demonstrate the Functionality of the Modified TSI P-Trak in Microgravity\n    2) Compare the TSI P-Trak Performance against the DustTrak control\n    3) Create and Analyze Aerosol Standards in Microgravity\n    4) Ensure the reliability of future aerosol experiments",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-47-experimental-table-1",
+          "fileName": "PSI-47_Experimental table_DAFT.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-47_Experimental table_DAFT.csv",
+          "sha256": "d9d1a436c6e7bbc410b433e04575fe7dedaff763b5237d688089929b7393b5c0",
+          "bytes": 518,
+          "fileVersion": 2,
+          "acquiredAtUtc": "2026-11-14T22:05:39.224779+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Session Name",
+            "Actual Day",
+            "Hardware Description",
+            "Sample Material",
+            "Sampled Location"
+          ],
+          "columnCount": 5,
+          "dataRecordCount": 2,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 2,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-60",
+      "accession": "PSI-60",
+      "title": "Computational and Experimental Analysis of SPICE Data Sets",
+      "acronym": null,
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-60",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-60",
+      "doi": "10.60555/mzjm-yv57",
+      "doiUrl": "https://doi.org/10.60555/mzjm-yv57",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-60.record.json",
+        "sha256": "cc7a61fee3ea20466b58462bdf57af6648dea0a99d8c4936828a471cbfa73051",
+        "recordVersion": 1,
+        "acquiredAtUtc": "2026-11-14T22:05:42.433125+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "This ground investigation  sought to increase understanding of the issues that control the large discrepancy between soot formation in 1g and in 0g flames.  The objective of this investigation was to integrate computational and experimental methods to derive temperature distributions and soot volume fractions from the Smoke Point in Coflow Experiment (SPICE) data available in PSI. By analyzing over 1600 raw DSLR images and incorporating advanced soot models, the study sought to improve understanding of soot formation, oxidation, radiative re-absorption, and aggregate growth in heavily sooting flames. The work further aimed to reconcile microgravity and normal gravity flame behavior, identify key physical and chemical processes influencing smoke point development, and provide a framework for evaluating model parameter sensitivity.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "none_listed_in_acquired_record",
+      "experimentalTables": [],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-62",
+      "accession": "PSI-62",
+      "title": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography",
+      "acronym": null,
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-62",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-62",
+      "doi": "10.60555/e9xp-ex83",
+      "doiUrl": "https://doi.org/10.60555/e9xp-ex83",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-62.record.json",
+        "sha256": "e4325a65cecdbbc8104502ddbf4d8cec42c463e8e8bc9d61d92b939614cff444",
+        "recordVersion": 1,
+        "acquiredAtUtc": "2026-11-14T22:05:47.064458+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The objective of this research was to develop and validate new flamelet generated manifold (FGM) modeling techniques for concurrent flame spread in microgravity. Concurrent flame spread presented one of the greatest modeling challenges in combustion science due to the intricate coupling between heat transfer, mass transport, and chemical kinetics near the solid-vapor interface. Traditional modeling strategies often relied on hybridized turbulence and chemistry models that were not fully consistent and failed to capture important intermediate reaction pathways.\nTo overcome these shortcomings, this PSI grant advanced the use of an unsteady flamelet generated manifold (UFGM) framework that reduced the complexity of reacting systems by mapping them into lower-dimensional manifolds. The research aimed to leverage this methodology to simulate solid fuel combustion processes with high fidelity, using the NASA Burning and Suppression of Solids (BASS and BASS-II) experiments as benchmarks. Ultimately, the long-term goal was to enable accurate prediction of flammability limits for spacecraft materials and to provide a tool that could also serve as a subgrid-scale model in large-eddy simulations of fires, supporting spacecraft safety and hazard mitigation.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "none_listed_in_acquired_record",
+      "experimentalTables": [],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-68",
+      "accession": "PSI-68",
+      "title": "Flame Extinguishment Experiment - 2",
+      "acronym": "FLEX-2",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-68",
+      "doi": "10.60555/byp8-h018",
+      "doiUrl": "https://doi.org/10.60555/byp8-h018",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-68.record.json",
+        "sha256": "de041dc1dc8b093e8f168b36d3b06cab257b4d75ffb24ff21754b8af4256ebcf",
+        "recordVersion": 6,
+        "acquiredAtUtc": "2026-11-14T22:05:59.774292+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The primary goal of the FLEX-2 flight experiments is to extend the results of FLEX-1 to fuels and environmental conditions that mimic real combustor conditions, as well as, provide benchmark experimental data on bi-component droplet combustion over a wide range of initial conditions in order to validate numerical simulations and to develop new theoretical models.\n\nDetailed experimental objectives can be further itemized as:\n  1. Investigate the role of liquid-phase mixing on the burning characteristics of bi-component fuel droplets.\n  2. Examine the steady and unsteady liquid and gas-phase phenomena in pure fuel combustion.\n  3. Study flame extinction mechanisms and their boundaries.\n  4. Analyze the soot formation process, including soot volume fraction soot-shell dynamics.\n  5. Determine the influence of droplet interactions on the flammability limits and extinction behavior of droplet arrays.\n  6. Validate theoretical models of droplet combustion through comprehensive experimental data collection in microgravity environments.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-68-experimental-table-1",
+          "fileName": "PSI-68_Experimental table_Flex2.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-68_Experimental table_Flex2.csv",
+          "sha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+          "bytes": 1029,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:06:09.353704+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Sample (Fuel Type)",
+            "Initial Droplet Diameter (mm)",
+            "Ambient Gas Mixture ",
+            "Oxygen Mole Fraction",
+            "Ambient Pressure (atm)",
+            " Ambient Temperature (C)",
+            "Flow Velocity (cm/s)"
+          ],
+          "columnCount": 7,
+          "dataRecordCount": 8,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 8,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-69",
+      "accession": "PSI-69",
+      "title": "Flame Extinguishment Experiment",
+      "acronym": "FLEX",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-69",
+      "doi": "10.60555/mbq8-0451",
+      "doiUrl": "https://doi.org/10.60555/mbq8-0451",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": "INV-FLEX",
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-69.record.json",
+        "sha256": "a2d8ec5d0e9ad1060f6ecc7a850598634cc5519c373ae70462bf76c31fc8731c",
+        "recordVersion": 5,
+        "acquiredAtUtc": "2026-11-14T22:06:16.625696+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The FLEX (Flame Extinguishment Experiment) investigation aims to map the flammability limits of liquid fuels in microgravity environments, measure the effectiveness of various gaseous fire suppressants such as CO2, He, and SF6, and develop reliable predictive models for combustion limits under reduced gravity conditions. The mission seeks to validate and improve simplified models by incorporating detailed chemical reactions, heat transfer, and material movement, using both space-based data and extensive ground-based tests. Key flight experiment goals include obtaining high-resolution measurements of droplet burning rates, flame extinction behavior, heat radiation, soot levels, and temperature profiles, while systematically analyzing the effects of different ambient conditions and suppressant concentrations. These investigations are essential for advancing the fundamental understanding of combustion processes in microgravity and enhancing fire safety protocols for future space missions.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-69-experimental-table-1",
+          "fileName": "PSI-69_Experimental table_FLEX.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-69_Experimental table_FLEX.csv",
+          "sha256": "37c88ce8ae9391b7544ff630a45ce87543d04d317cdbfbed104fe7d5c27e1b96",
+          "bytes": 24776,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:06:25.937167+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "cp1252",
+          "header": [
+            "FLEX Test #",
+            "FLEX Identifier",
+            "Test Date",
+            "Test GMT",
+            "Fuel",
+            "Ambient pressure; mmHg",
+            "O initial ambient composition; mole fraction",
+            "N initial ambient composition; mole fraction",
+            "CO initial ambient composition; mole fraction",
+            "He initial ambient composition; mole fraction",
+            "Droplet initial diameter; mm",
+            "Visible flame extinction diameter; mm",
+            "Burning rate; mm",
+            "Burn time; s",
+            "Test end"
+          ],
+          "columnCount": 15,
+          "dataRecordCount": 274,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 274,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-98",
+      "accession": "PSI-98",
+      "title": "Spacecraft Fire Safety Experiment-I",
+      "acronym": "SAFFIRE-I",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-98",
+      "doi": "10.60555/0t15-1z43",
+      "doiUrl": "https://doi.org/10.60555/0t15-1z43",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": "INV-SAFFIRE-I",
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-98.record.json",
+        "sha256": "501b5f625733e29c0c6ff0c12b3de1a3e960a159a8c8f8a21ba5c5803afe0570",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:06:30.025238+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The objectives of this investigation were to:\n(1) determine how rapidly a large scale fire grows in low-gravity and (2) investigate the low-g flammability limits compared to those obtained in NASA’s normal\ngravity material flammability screening test.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-98-experimental-table-1",
+          "fileName": "PSI-98_Experimental table_SAFFIRE-1.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-98_Experimental table_SAFFIRE-1.csv",
+          "sha256": "c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d",
+          "bytes": 469,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:06:39.631354+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Sample Number ",
+            "Material",
+            "Sample Thickness (cm)",
+            "Sample Length (cm)",
+            "Sample Width (cm)",
+            "Air Flow (cm/s)",
+            "Percent O2",
+            "Ignition Power (W)",
+            "Ignition Time (s)",
+            "Burn Time (s)",
+            "Flow Direction ",
+            "Camera 1",
+            "Camera 2"
+          ],
+          "columnCount": 13,
+          "dataRecordCount": 4,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 4,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-99",
+      "accession": "PSI-99",
+      "title": "Spacecraft Fire Experiment-II",
+      "acronym": "SAFFIRE-II",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-99",
+      "doi": "10.60555/2chp-m469",
+      "doiUrl": "https://doi.org/10.60555/2chp-m469",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": "INV-SAFFIRE-II",
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-99.record.json",
+        "sha256": "2c042a6bd82fa6b437cae61490d54ea91f890a52282bc5949b4a0119bcbf6633",
+        "recordVersion": 5,
+        "acquiredAtUtc": "2026-11-14T22:06:44.419070+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The objectives of SAFFIRE-II are to determine how rapidly a large scale fire grows in low-gravity and to investigate the low-g flammability limits compared to those obtained in NASA’s normal gravity material flammability screening test.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-99-experimental-table-1",
+          "fileName": "PSI-99_Experimental table_SAFFIRE-2.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-99_Experimental table_SAFFIRE-2.csv",
+          "sha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+          "bytes": 1973,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:06:53.194215+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Sample Number",
+            "Material",
+            "Samle Thickness ",
+            "Sample Length ",
+            "Sample Width (cm)",
+            "Air Flow (cm/s)",
+            "Percent O2 (Note 1)",
+            "Ignition Power (W)",
+            "Ignition Time (s)",
+            "Burn Time (s)",
+            "Flow Direction",
+            "?-g Burn Length",
+            "?-g Spread Length",
+            "1-g Burn Length",
+            "1-g Spread Rate",
+            "Camera 1",
+            "Camera 2"
+          ],
+          "columnCount": 17,
+          "dataRecordCount": 15,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 15,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-100",
+      "accession": "PSI-100",
+      "title": "Spacecraft Fire Experiment-III",
+      "acronym": "SAFFIRE-III",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-100",
+      "doi": "10.60555/040q-4h36",
+      "doiUrl": "https://doi.org/10.60555/040q-4h36",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": "INV-SAFFIRE-III",
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-100.record.json",
+        "sha256": "9c836955a28ff129b2f239f9499e06f4ca52ba58f7a03d384a7bd0528c8bbe10",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:06:58.190584+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The objectives of this investigation were to:\n(1) determine how rapidly a large scale fire grows in low-gravity and (2) investigate the low-g flammability limits compared to those obtained in NASA’s normal gravity material flammability screening test.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-100-experimental-table-1",
+          "fileName": "PSI-100_Experimental table_SAFFIRE-3.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-100_Experimental table_SAFFIRE-3.csv",
+          "sha256": "4d3c717ec20dd0247db670b2784a9fd7d746788bc54a936f80693e48eb8cd117",
+          "bytes": 239,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:07:07.536458+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Sample Number ",
+            "Material",
+            "Sample Thickness",
+            "Sample Length",
+            "Sample Width",
+            "Air Flow ",
+            "Direction",
+            "Camera 1",
+            "Camera 2"
+          ],
+          "columnCount": 9,
+          "dataRecordCount": 2,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 2,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-101",
+      "accession": "PSI-101",
+      "title": "Smoke Aerosol Measurement Experiment-Reflight",
+      "acronym": "SAME-R",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-101",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-101",
+      "doi": "10.60555/2np7-jv14",
+      "doiUrl": "https://doi.org/10.60555/2np7-jv14",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": "INV-SAME-R",
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-101.record.json",
+        "sha256": "e0aa75d015705a5943b51dbb4a8ba52751a35e4cafc2307d9201d77ebed711a5",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:07:13.742216+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "Similar to the original SAME investigation, the primary objective of the SAME-R investigation was to quantify the sizes that the liquid smoke particulate achieves in low gravity and to relate the droplet size distribution to the smoke generation and smoke transport conditions in the experiment. One of the problems encountered during the SAME investigation was that after the thermal precipitators were returned to the ground, it was found that all the TEM grids were severely contaminated with some unidentified foreign particles, making these grids unusable although some of them showed shapes of certain types of smoke particles. Based on that experience the SAME-R investigation employed several modification covering new materials, extended operating conditions, and diagnostic equipments.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-101-experimental-table-1",
+          "fileName": "PSI-101_Experimental table_SAME-R.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-101_Experimental table_SAME-R.csv",
+          "sha256": "87164b7dc9168a4273c159f7a9f23699afbd06ad97b77974377e79b9bf8a3bef",
+          "bytes": 5674,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:07:23.968226+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Sample Type",
+            "SAME Test #",
+            "Description",
+            "Date",
+            "Inlet velocity (cm/s)",
+            "Rt/R0",
+            "Duration (sec)",
+            "Primary aging time (sec)",
+            "Primary mixing time (sec)",
+            "Net aging time (sec)"
+          ],
+          "columnCount": 10,
+          "dataRecordCount": 109,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 109,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": [
+        {
+          "id": "PSI-101-analyzed-results-workbook",
+          "fileName": "PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx",
+          "path": "_raw/lab_completion_2026-11-15/detection/PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx",
+          "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218",
+          "bytes": 4061669,
+          "fileVersion": 1,
+          "investigationRecordVersion": 4,
+          "psiResourceId": "65e737ee8e263688e9f9200c",
+          "category": "Analyzed Data",
+          "subcategory": "Reduced Gravity",
+          "acquiredAtUtc": "2026-11-14T23:06:48.178364+00:00",
+          "relatedAccessions": [
+            "PSI-101",
+            "PSI-102"
+          ],
+          "relationMeaning": "Workbook contains SAME and SAME-R records; recorded once under the PSI-101 accession from which it was acquired.",
+          "inspectionMethod": "Read stored XLSX ZIP/XML values; no recalculation, macro execution or external-link access.",
+          "worksheetCount": 43,
+          "worksheets": [
+            {
+              "name": "DBP",
+              "dimension": "A1:CI43"
+            },
+            {
+              "name": "Pyrell R&T plots",
+              "dimension": "A1:CJ45"
+            },
+            {
+              "name": "Pyrell V plots",
+              "dimension": "A1:CI78"
+            },
+            {
+              "name": "Lampwick R&T Plots",
+              "dimension": "A1:CJ60"
+            },
+            {
+              "name": "Lampwick V Plots",
+              "dimension": "A1:CI60"
+            },
+            {
+              "name": "Silicone R&T plots",
+              "dimension": "A1:CJ97"
+            },
+            {
+              "name": "Silicone V plots",
+              "dimension": "A1:CI73"
+            },
+            {
+              "name": "ICES 2012 Paper data table",
+              "dimension": "C2:T28"
+            },
+            {
+              "name": "AIAA 2012 Paper data table",
+              "dimension": "C2:T18"
+            },
+            {
+              "name": "Teflon R&T plots",
+              "dimension": "A1:CJ83"
+            },
+            {
+              "name": "Teflon V plots",
+              "dimension": "A1:CI58"
+            },
+            {
+              "name": "Kapton R&T plots",
+              "dimension": "A1:CJ95"
+            },
+            {
+              "name": "Kapton V plots",
+              "dimension": "A1:CI70"
+            },
+            {
+              "name": "IAASS Paper data table",
+              "dimension": "C2:T17"
+            },
+            {
+              "name": "2012 ICESpaper Plots",
+              "dimension": "B4:AA42"
+            },
+            {
+              "name": "Material Sort",
+              "dimension": "A1:CI188"
+            },
+            {
+              "name": "Reduced data sheet",
+              "dimension": "A1:U177"
+            },
+            {
+              "name": "Reduced Data with ISS Det",
+              "dimension": "A1:CO177"
+            },
+            {
+              "name": "REduced data mass weighted",
+              "dimension": "A1:CQ177"
+            },
+            {
+              "name": "REduced data MPASS",
+              "dimension": "A1:CN177"
+            },
+            {
+              "name": "Reduced Data with STS Det",
+              "dimension": "A1:CO177"
+            },
+            {
+              "name": "Combined Rslts Copy this sheet",
+              "dimension": "A1:CQ188"
+            },
+            {
+              "name": "Mass loss plots",
+              "dimension": "A1:T43"
+            },
+            {
+              "name": "D~T(C)",
+              "dimension": "A1"
+            },
+            {
+              "name": "3-tests Compar.",
+              "dimension": "A1:CW166"
+            },
+            {
+              "name": "Flight-ground plot ",
+              "dimension": "A1:T39"
+            },
+            {
+              "name": "Drum 8-2012",
+              "dimension": "A1:CD159"
+            },
+            {
+              "name": "Gnd Verif. 8-2012",
+              "dimension": "A1:CC68"
+            },
+            {
+              "name": "DFischer data run number",
+              "dimension": "A1:P88"
+            },
+            {
+              "name": "SAME R Results",
+              "dimension": "A1:CP174"
+            },
+            {
+              "name": "SAME1 Flight Tests 8-27-09",
+              "dimension": "A1:BV99"
+            },
+            {
+              "name": "SAME Ground Test Results",
+              "dimension": "A1:BA80"
+            },
+            {
+              "name": "Material Sort 02122013",
+              "dimension": "A1:CN168"
+            },
+            {
+              "name": "Flow and Temp plots",
+              "dimension": "H2"
+            },
+            {
+              "name": "detection June 14",
+              "dimension": "A1:DA295"
+            },
+            {
+              "name": "detection Mar 14",
+              "dimension": "A1:CZ295"
+            },
+            {
+              "name": "Dust Trak flow data",
+              "dimension": "A4:G48"
+            },
+            {
+              "name": "Ground weight loss",
+              "dimension": "A1:CD66"
+            },
+            {
+              "name": "DTrakratio plots",
+              "dimension": "A1"
+            },
+            {
+              "name": "DFischer data row number 112013",
+              "dimension": "C1:K88"
+            },
+            {
+              "name": "Moment Comparisons Jan 14 (2)",
+              "dimension": "A1:CQ178"
+            },
+            {
+              "name": "Moment Comparisons unagedJan 21",
+              "dimension": "A1:GC178"
+            },
+            {
+              "name": "Moment Comparisons  aged Jan 21",
+              "dimension": "A1:ET178"
+            }
+          ],
+          "materialSortRecount": {
+            "flightMarkedRecords": 154,
+            "sourceFlightCodeCounts": {
+              "1": 45,
+              "2": 109
+            },
+            "sourceFlightCodeLabels": {
+              "1": "SAME",
+              "2": "SAME-R"
+            },
+            "materialRecordCounts": {
+              "DBP": 20,
+              "Kapton": 36,
+              "Lampwick": 26,
+              "Pyrell": 20,
+              "Silicone": 29,
+              "Teflon": 23
+            },
+            "meaning": "Flight-marked Material Sort rows, including baseline/aged/reburn and reference records; not independent burns or validated detector-performance observations."
+          },
+          "auditSource": {
+            "path": "_raw/lab_completion_2026-11-15/detection/workbook_audit.json",
+            "sha256": "24ceb97b3b51a36cf06ae5192ccb13cbd04f4c0a70ba6b6e0c99079528f888e4"
+          },
+          "cautions": [
+            "SAME-R CSV and workbook each have 109 campaign rows but do not have identical material/test-label sets. No observation join is made.",
+            "Workbook cached errors and missing cells remain unresolved; stored values were not recalculated.",
+            "The 20 DBP reference records are not solid-fuel specimens."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PSI-102",
+      "accession": "PSI-102",
+      "title": "Smoke and Aerosol Measurement Experiment",
+      "acronym": "SAME",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-102",
+      "doi": "10.60555/gd4k-8h62",
+      "doiUrl": "https://doi.org/10.60555/gd4k-8h62",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": "INV-SAME",
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-102.record.json",
+        "sha256": "fe221f1380ad3317f70b559a3213c4e00ef3676b40838a49cb5b3cba89dea5ba",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:07:30.529936+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "One of the major goals of this investigation was to quantify the sizes that the liquid smoke particulate achieves in low gravity and to relate the droplet size distribution to the smoke generation and smoke transport conditions in the experiment. A numerical code was to be developed to predict the smoke droplet growth as a function of the fuel pyrolysis rate, the thermodynamic properties of the pyrolysis vapor, and the flow environment.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-102-experimental-table-1",
+          "fileName": "PSI-102_Experimental table_SAME.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-102_Experimental table_SAME.csv",
+          "sha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+          "bytes": 331,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:07:39.263270+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Sample #",
+            "Sample Material  ",
+            "Air Flow (cm/s)",
+            "Weight loss rate (mg/min)",
+            "Aging Duration (minutes)"
+          ],
+          "columnCount": 5,
+          "dataRecordCount": 8,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 8,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-106",
+      "accession": "PSI-106",
+      "title": "Structure and Liftoff In Combustion Experiment",
+      "acronym": "SLICE",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-106",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-106",
+      "doi": "10.60555/pm12-rg61",
+      "doiUrl": "https://doi.org/10.60555/pm12-rg61",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-106.record.json",
+        "sha256": "f705b2e04bd00d05f3c74ae55391c340b5a08d60efa8193e66b7c4e2518d9d5d",
+        "recordVersion": 3,
+        "acquiredAtUtc": "2026-11-14T22:07:54.796455+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "Objective: The objective of this investigation is to better understand the structure and stability of laminar diffusion flames in microgravity.\n\nSpecific objectives of this investigation were:\n1. To investigate the structure of laminar diffusion flames in microgravity to understand the stabilizing mechanisms at the flames base.\n2. Determine the liftoff velocity limits for different fuels and burner diameters.\n3. Evaluate the impact of fuel dilution with nitrogen on soot formation and flame stability.\n4. Quantify the effects of microgravity on flame length and radiative heat loss compared to normal gravity conditions.\n5. Validate numerical models for flame dynamics, soot production, and thermal radiation in non-premixed flames.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-106-experimental-table-1",
+          "fileName": "PSI-106_Experimental table_Slice.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-106_Experimental table_Slice.csv",
+          "sha256": "89ef980810ca6d9aa8be817b42e36cd2adff23f5e9058361b5a33d18b4363f4d",
+          "bytes": 734,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:08:03.897112+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Test Date",
+            "Fuel Type"
+          ],
+          "columnCount": 2,
+          "dataRecordCount": 12,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 12,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-107",
+      "accession": "PSI-107",
+      "title": "Smoke Point In Co-flow Experiment",
+      "acronym": "SPICE",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-107",
+      "doi": "10.60555/9kbh-e962",
+      "doiUrl": "https://doi.org/10.60555/9kbh-e962",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-107.record.json",
+        "sha256": "f31081deb2b079373a0cbc98ad8483d87856aeca1aa6946ce31acff6cefcfbf2",
+        "recordVersion": 4,
+        "acquiredAtUtc": "2026-11-14T22:08:09.834221+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The objective of SPICE is to better understand the complex process of combustion by observing flames in a microgravity environment aboard the International Space Station (ISS) and analogous ground experiments.\n\nSpecific objectives were:\n(1) Identify the laminar smoke-point properties of non-buoyant jet diffusion flames under various co-flow conditions in microgravity.\n(2) Determine the effects of burner diameter and co-flow velocity on the luminous flame lengths and smoke points.\n(3) Quantify the sooting propensity of different fuels, such as ethylene, propane, and propylene mixtures.\n(4) Validate the correlation between luminous flame shape and residence time under microgravity conditions.\n(5) Investigate the impact of air and fuel flow rate variations on smoke point phenomena in space.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-107-experimental-table-1",
+          "fileName": "PSI-107_Experimental table_Spice.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-107_Experimental table_Spice.csv",
+          "sha256": "fb0d7e60cf5367afb429089e9901d27288f78038efd26c8de1db4fbe04117136",
+          "bytes": 31205,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:08:20.366829+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "GMT date",
+            "GMT ignition",
+            "GMT  Flame Off ",
+            "Fuel",
+            "Nozzle (mm)",
+            "Fuel Rate (sccm)",
+            "Fuel Rate (mg/s)",
+            "HC Fuel Rate (mg/s)",
+            "Air Rate (cm/s)"
+          ],
+          "columnCount": 9,
+          "dataRecordCount": 469,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 469,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-115",
+      "accession": "PSI-115",
+      "title": "Utilization of the Smoke Aerosol Measurement Experiment Data for Advanced Modeling and Simulation of Smoke Generation in Micro-Gravity",
+      "acronym": null,
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-115",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-115",
+      "doi": "10.60555/q0v5-1v28",
+      "doiUrl": "https://doi.org/10.60555/q0v5-1v28",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-115.record.json",
+        "sha256": "9c5b463fbe8fe8ed034229cbabd6c498f48ca9bb636196084ed2046eb2e41484",
+        "recordVersion": 3,
+        "acquiredAtUtc": "2026-11-14T22:08:25.316527+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The objective of this investigation was to use numerical simulation to explore the influence of gravity on pyrolysis smoke growth from a fundamental perspective. The intention of this effort is to quantify the differences between microgravity and Earth gravity smoke, and to identify the fluid dynamic mechanisms that cause the differences.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "none_listed_in_acquired_record",
+      "experimentalTables": [],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-117",
+      "accession": "PSI-117",
+      "title": "Effect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis",
+      "acronym": null,
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-117",
+      "doi": "10.60555/gz0q-b577",
+      "doiUrl": "https://doi.org/10.60555/gz0q-b577",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-117.record.json",
+        "sha256": "13e50b67d851dcf8bfc09103055995a17d89174589080d7103fa54ef1e02a794",
+        "recordVersion": 2,
+        "acquiredAtUtc": "2026-11-14T22:08:31.258248+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "The objective of this ground investigation was to use flight data obtained from PSI through NASA’s Flame Extinguishment Experiment (FLEX) to quantify how externally imposed thermal and convective perturbations regulated the dynamics and ultimate fate of already established droplet cool flames, and to explain run-to-run variability by isolating the roles of deliberate heating and unintentional drift-induced convection. Focusing on both small and large droplets, the work mapped stability windows for ignition, sustained oscillation, transitions to hot ignition and warm-flame behavior, and extinction under microgravity. By leveraging and extending the FLEX data in the PSI, this study produced reusable models and sensitivity analyses that coupled low-temperature chemistry with transport and radiative effects.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "none_listed_in_acquired_record",
+      "experimentalTables": [],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-142",
+      "accession": "PSI-142",
+      "title": "Quantitative Studies of Cool Flame Transitions at Radiation / Stretch Extinction Using Counterflow Flames",
+      "acronym": null,
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-142",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-142",
+      "doi": "10.60555/80qf-vj95",
+      "doiUrl": "https://doi.org/10.60555/80qf-vj95",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-142.record.json",
+        "sha256": "c55ab5d3140025e16ef25ac37a99158d510c2e3c170c04dabc8993bd548a3506",
+        "recordVersion": 2,
+        "acquiredAtUtc": "2026-11-14T22:08:36.465144+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "By using the Flame Extinguishment (FLEX) experimental data from the Physical Sciences Informatics (PSI) system of combustion science, the purpose of this grant was to conduct new simulations and ground-based experiments using ozone-sensitized counterflow flames to:\n    1) Develop a new diagram of the flammability limits of diffusional cool flames affected by radiation, diffusion, and convection.\n    2) Bridge the knowledge gap between the flammability limits and extinction limits of hot flames and cool flames.\n    3) Verify the phenomena observed on the ISS flame extinguishment experiments.\n    4) Obtain new, quantitative data of extinction limit, flame temperature, and species distribution for the validation of kinetic and radiation models involving cool flames.\n    5) Extend the cool flame experiments from the original ISS droplet experiments to a more general ground-based combustion system involving radiation, diffusion, convection, and low-temperature chemistry while maintaining a one-dimensional geometry.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-142-experimental-table-1",
+          "fileName": "PSI-142_Experimental table_Data Summary Table.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-142_Experimental table_Data Summary Table.csv",
+          "sha256": "c66d135b0053590d239f06b9e8627d826e3d726b8443fd2cbccc37484b6a8e7f",
+          "bytes": 727,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:08:45.705377+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Data ID",
+            "Data Description",
+            "Reference Publication Link",
+            "Figure ID in Reference"
+          ],
+          "columnCount": 4,
+          "dataRecordCount": 8,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 8,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    },
+    {
+      "id": "PSI-159",
+      "accession": "PSI-159",
+      "title": "Advanced Combustion via Microgravity Experiments / Cool Flames Investigation with Gases",
+      "acronym": "ACME CFI-G",
+      "publicUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+      "publicApiUrl": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-159",
+      "doi": "10.60555/cyt1-kh64",
+      "doiUrl": "https://doi.org/10.60555/cyt1-kh64",
+      "license": {
+        "status": "stated",
+        "identifier": "CC0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "url": "https://spdx.org/licenses/CC0-1.0.html"
+      },
+      "appInvestigationId": null,
+      "source": {
+        "path": "_raw/psi_2026-11-15/PSI-159.record.json",
+        "sha256": "e01abe2caa309753a9bee1b0c3c79dec194a2a7300d0d13541e0dcf25e3b0ea5",
+        "recordVersion": 1,
+        "acquiredAtUtc": "2026-11-14T22:08:55.414461+00:00"
+      },
+      "metadata": {
+        "role": "source_stated_catalog_metadata",
+        "objective": "1. Plan and support flight testing on the International Space Station (ISS).\n2. Determine the conditions for which cool diffusion flames occur for propane, n-butane, and n-pentane; normal and inverse flames; and a broad range of Zst, Tad, and fluent flow rate.\n3. Support the flight tests with advanced CFD simulations.\n4. Identify or develop a chemical kinetics mechanism that yields good agreement between the CFD predictions and the ISS measurements.\n5. Disseminate the results as widely as possible.",
+        "description": null,
+        "statementMeaning": "Verbatim PSI catalog fields; objectives describe intended work, not proof that results or predictions were achieved."
+      },
+      "experimentalTableStatus": "acquired",
+      "experimentalTables": [
+        {
+          "id": "PSI-159-experimental-table-1",
+          "fileName": "PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+          "sha256": "d95a621c3fbd27d204dd32ed29fa17d68f2b779d6a523cde8479ed7ebaa5251a",
+          "bytes": 22166,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:09:04.863890+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Flame Type",
+            "Day",
+            "Fuel",
+            "Test",
+            "Cool flame?",
+            " XO2 before test",
+            "XO2  after test",
+            "approx p (bar)",
+            "Xf",
+            "mHC (mg/s)",
+            "TFP",
+            "Tad (K)",
+            "Zst",
+            "Hot ignition",
+            "burn time (sec)",
+            "Self-ext or flow term",
+            "Peak burner T (C )",
+            "Comments"
+          ],
+          "columnCount": 18,
+          "dataRecordCount": 179,
+          "blankDataRecordCount": 0,
+          "parsedDataRecordCount": 179,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        },
+        {
+          "id": "PSI-159-experimental-table-2",
+          "fileName": "PSI-159_Experimental table_CFI-G_Inverse Flames.csv",
+          "path": "_raw/psi_2026-11-15/tables/PSI-159_Experimental table_CFI-G_Inverse Flames.csv",
+          "sha256": "d4d44f8b9896936728748e34d1b6ad0812032a92fa5289599b708c138e3a9b39",
+          "bytes": 39422,
+          "fileVersion": 1,
+          "acquiredAtUtc": "2026-11-14T22:09:14.915996+00:00",
+          "catalogField": "experimentalTable",
+          "acquisitionStatus": "acquired_and_recounted",
+          "encoding": "utf-8-sig",
+          "header": [
+            "Flame Type",
+            "Day",
+            "Fuel",
+            "Test",
+            "Xf  before test",
+            "Xf  after test",
+            "approx p (bar)",
+            "XO2",
+            "HC burnrate (mg/s)",
+            "O2 flow rate (mg/s)",
+            "TFP",
+            "Tad (K)",
+            "Zst",
+            "Hot ignition",
+            "burn time (sec)",
+            "Self -ext or flow term",
+            "Peak burner Temp (C)",
+            "Peak burner temp (K)",
+            "Color",
+            "Comments"
+          ],
+          "columnCount": 20,
+          "dataRecordCount": 154,
+          "blankDataRecordCount": 861,
+          "parsedDataRecordCount": 1015,
+          "recordCountMeaning": "Nonblank CSV records after the first header record, including source summaries and notes. Not a count of burns, specimens, observations or independent trials."
+        }
+      ],
+      "analyzedWorkbooks": []
+    }
+  ],
+  "verification": {
+    "algorithm": "SHA-256",
+    "checkedRawFileCount": 55,
+    "pinnedRootInputs": [
+      {
+        "path": "_raw/psi_2026-11-15/acquisition_log.json",
+        "sha256": "58320d5155a3fc80233255e2db7b7c7d7afa3719632cc9da174971530797bb5e"
+      },
+      {
+        "path": "_raw/psi_2026-11-15/tables_manifest.json",
+        "sha256": "c4686f17d01e76201555f56fadc49408b9a6d5999a86f3ee903f7e357b1a9409"
+      },
+      {
+        "path": "_raw/lab_completion_2026-11-15/detection/workbook_acquisition.json",
+        "sha256": "25a06dc22ae83a0455df8171293ea231e7f7ef0498485d280c28264b8b47cf55"
+      },
+      {
+        "path": "_raw/lab_completion_2026-11-15/detection/workbook_audit.json",
+        "sha256": "24ceb97b3b51a36cf06ae5192ccb13cbd04f4c0a70ba6b6e0c99079528f888e4"
+      },
+      {
+        "path": "_raw/lab_completion_2026-11-15/detection/PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx",
+        "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218"
+      },
+      {
+        "path": "_raw/lab_2026-11-15/detection/SAFF2026_20260001992.pdf",
+        "sha256": "59315478dbf26b833238df7166cf2a4649f4731f51fc01f8fc0eef602966d80d"
+      },
+      {
+        "path": "_raw/lab_2026-11-15/detection/SAFF2026_record.json",
+        "sha256": "0be9f2f15a334d8c51e61c728a59f846f0e4712856d7005e5ad2f6438cfeb03c"
+      },
+      {
+        "path": "_raw/lab_2026-11-15/detection/acquisition_log.json",
+        "sha256": "01bef0efa52c8ee7ce007ca8db5d4ebd3cbe96b58b9e7db1467dc08280aefd4a"
+      },
+      {
+        "path": "_raw/event_2026-11-14/S-CAL_ICES-2024-365.pdf",
+        "sha256": "7f875da1d6abeeeeac64aeba67d3f160074cf98430e714fe7606b34b37e0aa59"
+      }
+    ],
+    "psiRecordsAndCsvHashes": "Every acquired record and CSV is checked against the pinned PSI acquisition log.",
+    "requiredFieldsValidated": true,
+    "networkUsed": false,
+    "appLinkValidation": "Eight fixed navigation IDs checked against the current local investigation registry; registry scientific content is not imported.",
+    "generatorPath": "web/scripts/curate-atlas.py"
+  }
+}

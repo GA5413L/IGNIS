@@ -1,5 +1,18 @@
 # Implementation gate: GO / NO-GO handoff for the first authorized development session
 
+## Current governing gate — 7 November 2026 PKT
+
+**NO-GO for application development.** The user authorized the [contract closure and build handoff](../IGNIS_Contract_Closure_and_Build_Handoff.md), not an application. **Its section 10 supplies the current G1–G7, dependency order, 23-hour effort assumption and cut order.** This section and that handoff supersede conflicting requirements in the historical checklist below, `competition_readiness.md` and `implementation_blueprint.md`.
+
+- Build starts only after the applicable 14 Nov 09:00 event start, an asset-specific permitted preparation path, the remaining current gates, and an explicit user instruction. No reply, fresh folder or retyping is an eligibility exemption.
+- The full challenge is already available. Recheck the announced 13 Nov guides/resources; do not wait for an obsolete 28 Oct release.
+- Saffire is the principal path. Implement the typed assessment/templates and applicable acceptance cases before the single UI/export, then ordered live AI and broader navigation. The rod-first M1 below is **historical**, not an additional prerequisite. NIST UI and rod controls are optional.
+- A permitted pinned source can be verified from its acquired bytes. Redownload only if needed for identity, changes, access or the ruling; never fabricate missing synchronized series.
+- The typed form remains a useful failure fallback. Demonstrated live interpretation is required for the complete SI-powered function; the older optional-AI wording is superseded.
+- Record assistant versus external review honestly. Independent tasks/participants are needed for the corresponding evaluation claims, not invented as completed prerequisites for an event build. Historical evaluation protocols remain unchanged and unrun.
+
+## Historical checklist — 22 October 2026 (not current build requirements)
+
 **Written 22 Oct 2026 (local). Decision today: NO-GO.**
 - This is a checklist, **not** permission to build.
 - It supersedes the "next authorized implementation step" in `competition_readiness.md` §0. Where the build order differs from `implementation_blueprint.md` §4, this file governs (D-029).
@@ -8,7 +21,7 @@
 | # | Condition | Status 22 Oct | How it is shown |
 |---|---|---|---|
 | G1 | It is **14 Nov 2026, 09:00 local** (the user's event) or later | ✘ | clock |
-| G2 | The organizer ruling is recorded verbatim. If there is no reply by 14 Nov, that is recorded and the **re-derive path** is chosen: re-download and re-transcribe during the event, no pre-event files copied | ✘ (Email A unsent) | `competition_rules.md` U1/U2; `DECISIONS.md` |
+| G2 | Record the asset-specific organizer ruling and required disclosure. Re-derivation is an alternative only if organizers permit it with the disclosed preparation; no reply leaves eligibility unresolved | ✘ (no ruling established on 7 Nov) | current assessment §3 and §12; `DECISIONS.md` D-032 |
 | G3 | The user explicitly instructs the assistant to start building | ✘ | the user's message |
 | G4 | The 28 Oct challenge statement has been read. Each stated requirement is listed with how IGNIS will meet it, or why it won't: interactive, SI-powered, summarize, **rank**, interpret, breadth, and any mandated data | ✘ (not released) | a decision in `DECISIONS.md` |
 | G5 | The source PDFs have been re-downloaded and their hashes checked; any change is recorded | ✘ | `manifests/data_sources.csv` |

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "ignis-registry-1",
+  "records": [
+    {"id": "PM-SV24", "revision": "r1", "displayName": "Saffire V cabin transport model (Niehaus et al., ICES-2024-310)", "status": "published_representation",
+     "runRef": null, "parentModelRef": null, "investigationRef": {"id": "INV-SAFFIRE-V", "revision": "r1"},
+     "predictedQuantityIds": ["Q-CO2-REMOTE-CONC"], "predictedQuantitiesReviewed": false,
+     "suppliedObservationIds": ["OBS-SV6-PROXY-TOTAL", "OBS-SV6-REMOTE-TOTAL", "OBS-SV6-SCALE"],
+     "useRecordIds": ["USE-SV24-PROXY", "USE-SV24-NORM"], "assumptionAssertionIds": ["AS-M-VNORM-01"], "artifactRefs": [],
+     "historyGaps": ["Source-generation window and clock for the 29.9 g proxy integral", "Raw RS3 and remote-sensor series", "Complete parameter/tuning history", "Model input deck and output files"]},
+    {"id": "PM-SVI25", "revision": "r1", "displayName": "Saffire VI cabin transport model (Niehaus et al., ICES-2025-156)", "status": "published_representation",
+     "runRef": null, "parentModelRef": null, "investigationRef": {"id": "INV-SAFFIRE-VI", "revision": "r1"},
+     "predictedQuantityIds": ["Q-CO2-REMOTE-CONC", "Q-RS-TEMPERATURE"], "predictedQuantitiesReviewed": true,
+     "suppliedObservationIds": ["OBS-SVI5-SOURCE-TOTAL", "OBS-SVI6-SOURCE-TOTAL", "OBS-SVI6-HAR-TOTAL", "OBS-SVI5-INIT-CO2"],
+     "useRecordIds": ["USE-SVI25-SOURCE", "USE-SVI25-HAR", "USE-SVI25-INIT"], "assumptionAssertionIds": ["AS-M-VSOURCE-01", "AS-M-VIALIGN-01"], "artifactRefs": [],
+     "historyGaps": ["Synchronized measured and modelled series", "Per-sensor alignment offsets", "Calibration history of the 150 W/(m2 K) heat transfer coefficient", "Model input deck and output files"],
+     "predictedQuantitiesNote": "The model applies MGR and HAR as prescribed fire sources (S-VI p.3); it outputs cabin concentration and temperature responses, not burning or chemical heat release."}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "ignis-registry-1",
+  "catalogId": "ignis-catalog",
+  "revision": "2026-11-15.r2",
+  "files": ["sources.json", "investigations.json", "assertions.json", "entities.json", "events.json", "observations.json", "physical-models.json", "observation-uses.json", "applicability-contracts.json", "findings.json", "conflicts.json", "transfer-methods.json"],
+  "createdDuring": "Core registry created during the NASA Space Apps 2026 event window on 14 Nov 2026, from sources acquired 12:10-12:25 UTC that day. Revision r2 on 15 Nov corrects acquisition status and qualifies the 981 s passage. The separately versioned investigation atlas, condition cases and detector readings retain their own later acquisition provenance; they are not silently added as core model-assessment findings.",
+  "reviewStatement": "All records are assistant-checked against event-time acquired bytes. No independent human review has taken place.",
+  "unacquiredSources": [
+    {"label": "Proceedings of the Combustion Institute 2024 article 105358 (pressure/oxygen flame spread; DOI 10.1016/j.proci.2024.105358)", "observation": "The core registry acquisition returned a publisher redirect page (2,725 bytes), not article text", "effect": "No pressure/oxygen-equivalence finding is asserted from this article. Seven atmosphere cases instead retain their separately acquired 2026 Saffire Table 1 provenance."}
+  ],
+  "omittedOptionalModules": ["NIST/MaCFP T3 artifact inspection", "Rod-history control", "Published transfer-method candidates", "Optional synthesis call"]
+}

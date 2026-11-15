@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="IGNIS local seven-slide research briefing. Original graphics from curated NASA source data; AI-assisted preparation. No live AI or independent predictive-validation claim.">
+  <meta name="author" content="Team Emberfall; prepared with AI assistance from Claude Code and OpenAI Codex">
+  <title>IGNIS · NASA fire evidence, made reviewable · 7-slide briefing</title>
+  <style>
+    :root { color-scheme: light; --paper:#f6f6f1; --ink:#172e33; --teal:#102d32; --muted:#526366; --line:#d6dfdb; --orange:#b93815; --sage:#b6d0b9; --soft:#e9f0e9; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:#dce2de; color:var(--ink); font-family:Arial, Helvetica, sans-serif; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    a { color:inherit; text-underline-offset:.16em; }
+    button { font:inherit; }
+    .screen-tools { max-width:1536px; margin:24px auto 18px; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; font-size:14px; color:var(--muted); }
+    .screen-tools strong { color:var(--ink); letter-spacing:.12em; }
+    .screen-tools button { border:1px solid var(--teal); border-radius:5px; padding:10px 15px; background:var(--teal); color:var(--paper); cursor:pointer; }
+    .deck { display:grid; justify-content:center; gap:28px; padding-bottom:32px; }
+    .slide { width:min(calc(100vw - 48px), 1536px); aspect-ratio:16 / 9; position:relative; container-type:inline-size; background:var(--paper); box-shadow:0 8px 30px #102d3214; overflow:hidden; break-after:page; page-break-after:always; }
+    .slide:last-child { break-after:auto; page-break-after:auto; }
+    .inside { position:absolute; inset:0; padding:3.35cqw 4.7cqw 2.45cqw; display:flex; flex-direction:column; }
+    .dark { background:var(--teal); color:var(--paper); }
+    .topline { display:flex; align-items:center; justify-content:space-between; gap:2cqw; font-size:.95cqw; line-height:1.3; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .wordmark { display:flex; align-items:center; gap:.7cqw; letter-spacing:.2em; }
+    .wordmark::before { content:""; width:.75cqw; height:.75cqw; background:var(--orange); border-radius:50%; }
+    .section-label { color:var(--muted); font-size:.9cqw; letter-spacing:.1em; font-weight:400; }
+    .dark .section-label { color:#b7ccc3; }
+    h1,h2,h3,p { margin:0; }
+    h1 { font-size:5.15cqw; line-height:1.02; letter-spacing:-.055em; font-weight:600; }
+    h2 { font-size:3.3cqw; line-height:1.08; letter-spacing:-.045em; font-weight:600; margin:2.1cqw 0 1.1cqw; }
+    h3 { font-size:1.7cqw; line-height:1.2; letter-spacing:-.02em; }
+    .serif { font-family:Georgia, 'Times New Roman', serif; font-style:italic; font-weight:400; }
+    .accent { color:var(--orange); }
+    .dark .serif { color:var(--sage); }
+    .lead { font-size:1.48cqw; line-height:1.55; color:var(--muted); max-width:74cqw; }
+    .dark .lead { color:#ccdbd5; }
+    .eyebrow { font-size:.92cqw; text-transform:uppercase; letter-spacing:.13em; font-weight:700; color:#46736c; }
+    .dark .eyebrow { color:var(--sage); }
+    .foot { margin-top:auto; padding-top:1.05cqw; display:flex; align-items:flex-end; justify-content:space-between; gap:1.8cqw; border-top:1px solid var(--line); color:var(--muted); font-size:.97cqw; line-height:1.45; }
+    .foot .source { max-width:82cqw; }
+    .foot .page { flex-shrink:0; letter-spacing:.06em; font-size:1cqw; white-space:nowrap; }
+    .dark .foot { border-color:#39565a; color:#b7ccc3; }
+    .hero-grid { display:grid; grid-template-columns:1.25fr .8fr; gap:6cqw; align-items:center; flex:1; padding:1.4cqw 0 2.1cqw; }
+    .hero-grid h1 { margin:1.3cqw 0 1.5cqw; }
+    .hero-grid .lead { max-width:44cqw; font-size:1.6cqw; }
+    .team { margin-top:2cqw; font-size:1.12cqw; color:#ccdbd5; line-height:1.5; }
+    .team strong { color:var(--paper); }
+    .hero-flow { border-left:1px solid #39565a; padding-left:2.8cqw; }
+    .flow-step { display:flex; gap:1.3cqw; padding:1.45cqw 0; border-bottom:1px solid #39565a; }
+    .flow-step:last-child { border-bottom:0; }
+    .flow-step .number { color:var(--sage); font-size:.9cqw; padding-top:.35cqw; }
+    .flow-step strong { display:block; font-size:1.8cqw; font-weight:500; letter-spacing:-.02em; }
+    .flow-step small { display:block; font-size:1.02cqw; color:#b7ccc3; margin-top:.5cqw; line-height:1.5; }
+    .workflow { display:grid; grid-template-columns:repeat(4,1fr); gap:1.4cqw; margin:2.15cqw 0 1.8cqw; }
+    .workflow-card { padding:1.35cqw 1.3cqw 1.5cqw; border-top:3px solid var(--orange); background:#fff; min-height:13.3cqw; }
+    .workflow-card .step { font-size:.95cqw; color:var(--orange); letter-spacing:.08em; margin-bottom:1.3cqw; }
+    .workflow-card h3 { margin-bottom:.75cqw; }
+    .workflow-card p { font-size:1.15cqw; line-height:1.55; color:var(--muted); }
+    .inventory { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5cqw; border-top:1px solid var(--line); padding-top:1.45cqw; margin-bottom:1.5cqw; }
+    .inventory strong { font-size:2.7cqw; font-weight:500; letter-spacing:-.04em; margin-right:.6cqw; }
+    .inventory span { font-size:1.15cqw; }
+    .inventory small { display:block; font-size:.97cqw; line-height:1.5; color:var(--muted); margin-top:.5cqw; }
+    .condition-layout { display:grid; grid-template-columns:1.85fr 1fr; gap:2.1cqw; align-items:start; margin-top:1.35cqw; }
+    .chart { display:block; width:100%; height:auto; }
+    .plot-wrap { background:#fff; border:1px solid var(--line); padding:1cqw .6cqw .6cqw; border-radius:.5cqw; }
+    .chart text { font-family:Arial, Helvetica, sans-serif; fill:var(--muted); }
+    .chart .gridline { fill:none; stroke:#d6dfdb; stroke-dasharray:3 5; stroke-width:1; }
+    .chart .axis { fill:none; stroke:#859b92; stroke-width:1.5; }
+    .chart .axis-text { font-size:18px; }
+    .chart .point-label { fill:var(--ink); font-size:17px; font-weight:600; }
+    .chart .axis-title { fill:var(--ink); font-size:19px; }
+    .plot-legend { display:flex; flex-wrap:wrap; gap:.5cqw 1.3cqw; padding:.6cqw .7cqw .2cqw; font-size:.92cqw; color:var(--muted); }
+    .plot-legend span { display:inline-flex; align-items:center; gap:.35cqw; }
+    .plot-legend i { display:inline-block; width:.6cqw; height:.6cqw; }
+    .dot { background:var(--orange); border-radius:50%; }
+    .square { border:2px solid #1f7168; }
+    .diamond { transform:rotate(45deg); background:#7a8256; }
+    .triangle { background:var(--ink); clip-path:polygon(50% 0,100% 100%,0 100%); }
+    .condition-detail { padding:1.1cqw 0 0; }
+    .condition-detail h3 { margin:.8cqw 0 1.2cqw; font-size:2cqw; }
+    .condition-values { display:flex; gap:1.4cqw; padding:1.2cqw 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .condition-values strong { font-size:2.8cqw; font-weight:500; letter-spacing:-.05em; }
+    .condition-values span { display:block; font-size:1cqw; color:var(--muted); margin-top:.25cqw; }
+    .condition-detail p { font-size:1.1cqw; line-height:1.6; margin-top:1.05cqw; }
+    .condition-detail .conflict { background:#f2e6db; border-left:3px solid var(--orange); padding:.9cqw 1cqw; }
+    .fine { font-size:1cqw; color:var(--muted); line-height:1.5; }
+    .detector-top { display:flex; gap:1.4cqw; margin:1.45cqw 0; font-size:1.05cqw; }
+    .chip { padding:.6cqw .9cqw; border:1px solid var(--line); border-radius:3px; background:#fff; }
+    .chip.primary { background:var(--teal); border-color:var(--teal); color:var(--paper); }
+    .detector-layout { display:grid; grid-template-columns:1.9fr 1fr; gap:2.6cqw; align-items:center; }
+    .detector-chart { background:#fff; border:1px solid var(--line); padding:1cqw; border-radius:.5cqw; }
+    .detector-chart svg { width:100%; display:block; }
+    .detector-chart text { font-family:Arial, Helvetica, sans-serif; fill:var(--ink); }
+    .denominator-note { padding:1.5cqw 0; }
+    .denominator-note h3 { font-size:2.05cqw; margin-bottom:1cqw; }
+    .denominator-note p { font-size:1.16cqw; line-height:1.6; color:var(--muted); }
+    .denominator-note .cell { display:inline-block; margin-top:1.25cqw; padding:.8cqw 1cqw; border:1px dashed var(--orange); font-family:Consolas, monospace; color:var(--orange); font-size:1.2cqw; }
+    .detector-bottom { font-size:1.14cqw; line-height:1.5; margin-top:1.25cqw; padding-top:1cqw; border-top:1px solid var(--line); }
+    .revision-header { display:flex; justify-content:space-between; align-items:center; margin:1.2cqw 0 .9cqw; font-size:1.02cqw; }
+    .revision-grid { display:grid; grid-template-columns:1fr 4cqw 1fr; align-items:stretch; gap:1cqw; }
+    .revision-card { padding:1.4cqw 1.6cqw; border:1px solid var(--line); background:#fff; border-radius:.5cqw; }
+    .revision-card h3 { margin:.75cqw 0 1cqw; max-width:31cqw; font-size:1.95cqw; }
+    .revision-card .result { display:inline-block; font-size:1.05cqw; padding:.45cqw .65cqw; background:var(--soft); color:#23574a; font-weight:700; }
+    .revision-card.changed { border-top:3px solid var(--orange); }
+    .revision-card.changed .result { background:#f2e6db; color:#8f341c; }
+    .revision-card p { font-size:1.12cqw; line-height:1.5; margin-top:.8cqw; color:var(--muted); }
+    .revision-arrow { display:grid; place-items:center; font-size:2.8cqw; font-weight:400; color:var(--orange); }
+    .normalization { display:grid; grid-template-columns:1fr 1.5fr; gap:2.5cqw; padding:1.3cqw 0; margin-top:1.35cqw; border-top:1px solid var(--line); }
+    .normalization .values { display:flex; gap:1.1cqw; align-items:flex-start; }
+    .normalization strong { display:block; font-size:2cqw; font-weight:500; white-space:nowrap; }
+    .normalization small { display:block; font-size:.95cqw; color:var(--muted); margin-top:.5cqw; }
+    .normalization p { font-size:1.1cqw; line-height:1.55; }
+    .reuse-layout { display:grid; grid-template-columns:1.1fr 1fr; gap:4cqw; margin:2cqw 0 1.5cqw; }
+    .artifact-list { display:grid; gap:1cqw; }
+    .artifact { display:flex; gap:1.1cqw; align-items:flex-start; border-bottom:1px solid #39565a; padding:.6cqw 0 1.25cqw; }
+    .artifact .file-icon { flex-shrink:0; border:1px solid #718c80; color:var(--sage); font-family:Consolas, monospace; font-size:1.2cqw; padding:.65cqw .5cqw; }
+    .artifact h3 { font-size:1.7cqw; font-weight:500; margin-bottom:.45cqw; }
+    .artifact p { color:#b7ccc3; font-size:1.08cqw; line-height:1.5; }
+    .contribution { padding:1.3cqw 1.8cqw; background:#193b3f; border-left:3px solid var(--sage); }
+    .contribution h3 { font-size:2.4cqw; line-height:1.2; margin:.85cqw 0 1.4cqw; font-weight:500; }
+    .contribution p { color:#ccdbd5; font-size:1.15cqw; line-height:1.6; }
+    .research-question { border-top:1px solid #39565a; padding-top:1.1cqw; margin-top:.5cqw; font-size:1.12cqw; line-height:1.6; color:#ccdbd5; }
+    .research-question strong { color:var(--sage); }
+    .disclosure-grid { display:grid; grid-template-columns:1.12fr 1fr; gap:4.2cqw; margin:1.75cqw 0 1.35cqw; }
+    .status-list { display:grid; gap:0; }
+    .status-row { display:flex; justify-content:space-between; gap:1.2cqw; align-items:center; padding:1.15cqw 0; border-bottom:1px solid var(--line); font-size:1.2cqw; }
+    .status-row strong { font-size:.95cqw; color:var(--orange); letter-spacing:.04em; text-align:right; }
+    .credits h3 { margin-bottom:1cqw; font-size:1.7cqw; }
+    .credits p { font-size:1.12cqw; line-height:1.58; margin-bottom:1cqw; }
+    .credits .quiet { color:var(--muted); font-size:1cqw; }
+    .closing { font-size:1.4cqw; font-weight:600; letter-spacing:-.01em; padding:1.15cqw 1.4cqw; background:var(--soft); line-height:1.45; }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print {
+      @page { size:16in 9in; margin:0; }
+      html,body { margin:0; padding:0; background:var(--paper); }
+      .screen-tools { display:none !important; }
+      .deck { display:block; padding:0; margin:0; }
+      .slide { width:16in; height:9in; aspect-ratio:auto; box-shadow:none; margin:0; border:0; break-inside:avoid; page-break-inside:avoid; }
+      a { text-decoration:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="screen-tools" aria-label="Presentation controls">
+    <span><strong>IGNIS</strong> &nbsp; Local briefing · 7 slides · 15 November 2026</span>
+    <button type="button" onclick="window.print()">Print / save PDF</button>
+  </div>
+  <main class="deck" aria-label="Seven-slide IGNIS briefing">
+
+    <section class="slide dark" id="slide-1" aria-labelledby="title-1">
+      <div class="inside">
+        <div class="topline"><span class="wordmark">IGNIS</span><span class="section-label">NASA fire evidence · Research workbench</span></div>
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Flame in Freefall · Space Apps 2026</p>
+            <h1 id="title-1">What does this<br>NASA result<br><span class="serif">support?</span></h1>
+            <p class="lead">From a source measurement to a comparison someone else can review.</p>
+            <p class="team"><strong>Team Emberfall</strong> · IGNIS is the working product title<br>Local presentation · 15 November 2026</p>
+          </div>
+          <div class="hero-flow" aria-label="Original workflow diagram">
+            <p class="eyebrow">The working path</p>
+            <div class="flow-step"><span class="number">01</span><div><strong>Ask a question</strong><small>State the quantity and intended claim.</small></div></div>
+            <div class="flow-step"><span class="number">02</span><div><strong>Inspect the evidence</strong><small>Keep conditions, source cells and missing data.</small></div></div>
+            <div class="flow-step"><span class="number">03</span><div><strong>Specify a comparison</strong><small>Make requirements and assumptions visible.</small></div></div>
+            <div class="flow-step"><span class="number">04</span><div><strong>Revise and export</strong><small>Carry the changed reasoning into review.</small></div></div>
+          </div>
+        </div>
+        <footer class="foot"><span class="source">Challenge: <a href="https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/">Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data</a></span><span class="page">01 / 07</span></footer>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-2" aria-labelledby="title-2">
+      <div class="inside">
+        <div class="topline"><span class="wordmark">IGNIS</span><span class="section-label">The researcher's workflow</span></div>
+        <h2 id="title-2">Keep the experiment<br>attached to the answer.</h2>
+        <p class="lead">A material name or nearby atmosphere alone cannot establish what a comparison means.</p>
+        <div class="workflow">
+          <article class="workflow-card"><p class="step">01 · DISCOVER</p><h3>Find a relevant source</h3><p>Atlas profiles lead to acquired tables, workbooks and publication records.</p></article>
+          <article class="workflow-card"><p class="step">02 · INSPECT</p><h3>Keep the context</h3><p>Material, burning sides, pressure, oxygen and unresolved source conflicts.</p></article>
+          <article class="workflow-card"><p class="step">03 · ANALYZE</p><h3>Name the measurement</h3><p>A detector channel needs its units, finite denominator and missing cells.</p></article>
+          <article class="workflow-card"><p class="step">04 · REVIEW</p><h3>Follow the claim</h3><p>Comparison requirements, revisions and provenance travel together in exports.</p></article>
+        </div>
+        <div class="inventory" aria-label="Curated artifact inventory">
+          <div><strong>24</strong><span>PSI investigation profiles</span><small>Source-stated catalog metadata</small></div>
+          <div><strong>22</strong><span>acquired CSV tables</span><small>Artifact counts, not independent burns</small></div>
+          <div><strong>1</strong><span>analyzed SAME workbook</span><small>Source cells support the detector workspace</small></div>
+        </div>
+        <footer class="foot"><span class="source">NASA PSI accession inventory: <code>investigation-atlas.json</code> · Example: <a href="https://psi.nasa.gov/physci/repo/data/investigations/PSI-101">PSI-101, record version 4</a> · Prevention / Detection / Suppression</span><span class="page">02 / 07</span></footer>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-3" aria-labelledby="title-3">
+      <div class="inside">
+        <div class="topline"><span class="wordmark">IGNIS</span><span class="section-label">Condition explorer · Source coordinates</span></div>
+        <h2 id="title-3">A real condition, with its limits intact.</h2>
+        <p class="lead">Seven versioned Saffire cases. Compare atmosphere gaps within a material / burning-sides cohort.</p>
+        <div class="condition-layout">
+          <div class="plot-wrap">
+            <svg class="chart" viewBox="0 0 820 420" role="img" aria-labelledby="conditions-title conditions-desc">
+              <title id="conditions-title">Seven Saffire oxygen and pressure coordinates from 2026 Table 1</title>
+              <desc id="conditions-desc">Oxygen is mole percent on the horizontal axis; pressure is kPa on the vertical axis. IV-2, PMMA two-sided: 22 and 100. V-3, PMMA one-sided: 26 and 74.5. VI-3, PMMA two-sided: 30 and 54.4. VI-4, PMMA one-sided: 29 and 55. IV-1, SIBAL two-sided: 23 and 98. V-2, cotton two-sided: 28 and 74.1. VI-2, SIBAL two-sided: 31 and 54.1. Points are descriptive coordinates, with no fitted trend or safety ranking.</desc>
+              <g aria-hidden="true">
+                <text class="axis-title" x="80" y="30">Pressure (kPa)</text>
+                <path class="gridline" d="M80 87.2727H728 M80 223.6364H728 M80 360H728 M80 60V360 M296 60V360 M512 60V360 M728 60V360"/>
+                <path class="axis" d="M80 60V360H728"/>
+                <text class="axis-text" x="62" y="93" text-anchor="end">100</text><text class="axis-text" x="62" y="230" text-anchor="end">75</text><text class="axis-text" x="62" y="366" text-anchor="end">50</text>
+                <text class="axis-text" x="80" y="389" text-anchor="middle">20</text><text class="axis-text" x="296" y="389" text-anchor="middle">24</text><text class="axis-text" x="512" y="389" text-anchor="middle">28</text><text class="axis-text" x="728" y="389" text-anchor="middle">32</text>
+                <text class="axis-title" x="404" y="416" text-anchor="middle">Oxygen (mole%)</text>
+                <circle data-case="SAFFIRE-IV-2" data-oxygen="22" data-pressure="100" cx="188" cy="87.2727" r="8" fill="#b93815"/>
+                <text class="point-label" x="159" y="64">IV-2</text>
+                <rect data-case="SAFFIRE-V-3" data-oxygen="26" data-pressure="74.5" x="396" y="218.3636" width="16" height="16" fill="white" stroke="#1f7168" stroke-width="3"/>
+                <text class="point-label" x="374" y="204">V-3</text>
+                <circle cx="620" cy="336" r="16" fill="#f2e6db" stroke="#b93815" stroke-width="1.5"/>
+                <circle data-case="SAFFIRE-VI-3" data-oxygen="30" data-pressure="54.4" cx="620" cy="336" r="8" fill="#b93815"/>
+                <text class="point-label" x="620" y="299" text-anchor="middle" style="fill:#b93815">VI-3</text>
+                <rect data-case="SAFFIRE-VI-4" data-oxygen="29" data-pressure="55" x="558" y="324.7273" width="16" height="16" fill="white" stroke="#1f7168" stroke-width="3"/>
+                <text class="point-label" x="531" y="309" text-anchor="end">VI-4</text>
+                <path data-case="SAFFIRE-IV-1" data-oxygen="23" data-pressure="98" d="M242 87.1818L253 98.1818L242 109.1818L231 98.1818Z" fill="#7a8256"/>
+                <text class="point-label" x="263" y="104">IV-1</text>
+                <path data-case="SAFFIRE-V-2" data-oxygen="28" data-pressure="74.1" d="M512 216.5455L523 238.5455H501Z" fill="#172e33"/>
+                <text class="point-label" x="533" y="234">V-2</text>
+                <path data-case="SAFFIRE-VI-2" data-oxygen="31" data-pressure="54.1" d="M674 326.6364L685 337.6364L674 348.6364L663 337.6364Z" fill="#7a8256"/>
+                <text class="point-label" x="697" y="326">VI-2</text>
+              </g>
+            </svg>
+            <div class="plot-legend" aria-label="Material and burning-sides legend"><span><i class="dot"></i>PMMA · 2 sides</span><span><i class="square"></i>PMMA · 1 side</span><span><i class="diamond"></i>SIBAL · 2 sides</span><span><i class="triangle"></i>Cotton · 2 sides</span></div>
+          </div>
+          <aside class="condition-detail">
+            <p class="eyebrow">Selected case · VI-3</p>
+            <h3>Two-sided PMMA<br>in microgravity</h3>
+            <div class="condition-values"><div><strong>30</strong><span>mole% oxygen</span></div><div><strong>54.4</strong><span>kPa pressure</span></div></div>
+            <p>Original source strings:<br><strong>0.30</strong> mole fraction · <strong>544 mbar</strong></p>
+            <p class="conflict"><strong>Flow conflict retained.</strong><br>Opposed in 2026; concurrent in the five cases listed in 2024.</p>
+            <p class="fine">Coordinate proximity alone does not establish physical equivalence or lunar transfer.</p>
+          </aside>
+        </div>
+        <footer class="foot"><span class="source"><a href="https://ntrs.nasa.gov/citations/20260001992">ICES-2026-577, Table 1, PDF p. 6</a> · Earlier flow context: <a href="https://ntrs.nasa.gov/citations/20240002981">ICES-2024-365, Table 1</a> · Original graphic from <code>condition-cases.json</code></span><span class="page">03 / 07</span></footer>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-4" aria-labelledby="title-4">
+      <div class="inside">
+        <div class="topline"><span class="wordmark">IGNIS</span><span class="section-label">Paired audit · Cohort sensitivity</span></div>
+        <h2 id="title-4">A pooled pattern can change.</h2>
+        <p class="lead">Two recorded channels, independently declared cutoffs, and the exact same source rows.</p>
+        <div class="detector-top"><span class="chip primary">A: AW scatter · B: AV obscuration · 2 V each</span><span class="chip">133 joint finite / 134 selected</span><span class="chip">DBP references excluded</span></div>
+        <div class="detector-layout">
+          <div class="detector-chart">
+            <svg viewBox="0 0 830 320" role="img" aria-labelledby="detector-title detector-desc">
+              <title id="detector-title">At-or-above fraction difference changes sign by flight</title>
+              <desc id="detector-desc">A fraction minus B fraction at the two declared cutoffs: pooled 70/133, flight 1 minus 6/25, flight 2 plus 76/108. Different measurement operators; no detector ranking or alarm outcome is established.</desc>
+              <g aria-hidden="true">
+                <path d="M150 30V260 M290 30V260 M570 30V260 M710 30V260" fill="none" stroke="#d6dfdb"/>
+                <path d="M430 30V260" fill="none" stroke="#b93815" stroke-dasharray="5 5"/>
+                <text x="20" y="66" font-size="23">Pooled</text><path d="M430 60H577.368421" fill="none" stroke="#1f7168" stroke-width="6"/><circle cx="577.368421" cy="60" r="9" fill="#1f7168"/><text x="815" y="66" text-anchor="end" font-size="23">+70/133</text>
+                <text x="20" y="151" font-size="23">Flight 1</text><path d="M430 145H362.8" fill="none" stroke="#1f7168" stroke-width="6"/><circle cx="362.8" cy="145" r="9" fill="#1f7168"/><text x="815" y="151" text-anchor="end" font-size="23">−6/25</text>
+                <text x="20" y="236" font-size="23">Flight 2</text><path d="M430 230H627.037037" fill="none" stroke="#1f7168" stroke-width="6"/><circle cx="627.037037" cy="230" r="9" fill="#1f7168"/><text x="815" y="236" text-anchor="end" font-size="23">+76/108</text>
+                <text x="150" y="282" text-anchor="middle" font-size="19">−1</text><text x="430" y="282" text-anchor="middle" font-size="19">0</text><text x="710" y="282" text-anchor="middle" font-size="19">+1</text><text x="430" y="310" text-anchor="middle" font-size="19">A at/above fraction − B at/above fraction</text>
+              </g>
+            </svg>
+          </div>
+          <aside class="denominator-note">
+            <p class="eyebrow">An actionable research check</p><h3>Inspect the flight<br>and instrument context.</h3>
+            <p>Equal voltage cutoffs do not make the two measurement operators equivalent.</p>
+            <span class="cell">Fan-field filter → −6/25</span><p style="margin-top:1cqw">Requiring recorded “n” excludes 109 unrecorded flight-2 rows. Blank is not a diagnosed failure.</p>
+          </aside>
+        </div>
+        <p class="detector-bottom"><strong>Bounded result:</strong> population and measurement context change interpretation. Not an alarm-performance, causal or detector-superiority claim.</p>
+        <footer class="foot"><span class="source"><a href="https://doi.org/10.60555/2np7-jv14">NASA PSI-101 · DOI 10.60555/2np7-jv14</a> · Workbook file v1 · <code>Material Sort</code>, A / AV / AW<br>Exact row/cell pairing, missingness and exclusions retained · <code>pairedDetector.ts</code></span><span class="page">04 / 07</span></footer>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-5" aria-labelledby="title-5">
+      <div class="inside">
+        <div class="topline"><span class="wordmark">IGNIS</span><span class="section-label">Model comparison · Revision history</span></div>
+        <h2 id="title-5">Change the question.<br>Preserve the reasoning.</h2>
+        <div class="revision-header"><span>Same published transport model: <strong>PM-SVI25</strong></span><span class="fine">Original diagram of implemented W1 → W3 revision</span></div>
+        <div class="revision-grid">
+          <article class="revision-card"><p class="eyebrow">W1 · Later remote response</p><h3>What tests its later<br>CO₂ response?</h3><span class="result">Conditional comparison specified</span><p>Requires synchronized model and measurement series. Initial alignment remains conditioning.</p></article>
+          <div class="revision-arrow" aria-hidden="true">→</div>
+          <article class="revision-card changed"><p class="eyebrow">W3 · Changed requested claim</p><h3>Did it independently predict<br>chemical heat release?</h3><span class="result">Unsupported for this transport model</span><p>The model stays fixed. The earlier remote-response comparison remains available.</p></article>
+        </div>
+        <div class="normalization">
+          <div><p class="eyebrow" style="margin-bottom:.7cqw">W2 · Source-total normalization</p><div class="values"><div><strong>29.9 g</strong><small>proxy total</small></div><div><strong>1.82</strong><small>reported factor</small></div><div><strong>54.4 g</strong><small>remote-inferred target</small></div></div></div>
+          <p><strong>Useful arithmetic; a conditioned source total.</strong><br>The normalization target cannot independently validate that same total. A later spatial or transient response remains a separate comparison.</p>
+        </div>
+        <footer class="foot"><span class="source">W1/W3: <a href="https://ntrs.nasa.gov/citations/20250002675">ICES-2025-156</a>, contract A-001 · W2: <a href="https://ntrs.nasa.gov/citations/20240008602">ICES-2024-310, p. 6</a> · Quantitative comparison awaits the required series.</span><span class="page">05 / 07</span></footer>
+      </div>
+    </section>
+
+    <section class="slide dark" id="slide-6" aria-labelledby="title-6">
+      <div class="inside">
+        <div class="topline"><span class="wordmark">IGNIS</span><span class="section-label">Contribution · Researcher reuse</span></div>
+        <h2 id="title-6">Make the comparison<br><span class="serif">portable.</span></h2>
+        <p class="lead">Local artifacts that a researcher—or a future NASA collaborator—can inspect and reuse.</p>
+        <div class="reuse-layout">
+          <div class="artifact-list">
+            <article class="artifact"><span class="file-icon" aria-hidden="true">{ }</span><div><h3>Curated records</h3><p>Atlas metadata, original condition strings and detector cell values with source identifiers.</p></div></article>
+            <article class="artifact"><span class="file-icon" aria-hidden="true">#</span><div><h3>Reproducible curation</h3><p>Source hashes, explicit transformations and scripts tied to the pinned input files.</p></div></article>
+            <article class="artifact"><span class="file-icon" aria-hidden="true">↗</span><div><h3>Reopen and recheck</h3><p>Portable recipes compare source, method and result fingerprints. Assessment JSON retains original results.</p></div></article>
+          </div>
+          <aside class="contribution"><p class="eyebrow">The focused contribution</p><h3>A connected path<br>from source cell<br>to revised claim.</h3><p>Exact selections travel into briefs and exports. Cohort sensitivity and source/method rechecks keep measurement meaning and conditional model use visible.</p></aside>
+        </div>
+        <p class="research-question"><strong>The research frontier:</strong> does this workflow improve answer correctness and reviewability over an equally informed spreadsheet? That comparison remains to be measured.</p>
+        <footer class="foot"><span class="source">Local provenance: <code>ATLAS_DATA_PROVENANCE.md</code> · <code>DETECTOR_DATA_PROVENANCE.md</code><br>Prior-art scope: <code>COMPETITIVE_COMPARISON_AFTER_BUILD_2026-11-15.md</code> · Reuse proposal; no adoption or superiority claim.</span><span class="page">06 / 07</span></footer>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-7" aria-labelledby="title-7">
+      <div class="inside">
+        <div class="topline"><span class="wordmark">IGNIS</span><span class="section-label">Limits · Credits · Next evidence</span></div>
+        <h2 id="title-7">Useful now. Explicit about what follows.</h2>
+        <p class="lead">Implemented features support source inspection and deterministic comparison reasoning.</p>
+        <div class="disclosure-grid">
+          <div>
+            <p class="eyebrow">Disclosure at this presentation handoff</p>
+            <div class="status-list">
+              <div class="status-row"><span>Live runtime AI</span><strong>NOT RUN</strong></div>
+              <div class="status-row"><span>Independent scientific review</span><strong>PENDING</strong></div>
+              <div class="status-row"><span>Quantitative predictive validation</span><strong>NOT ESTABLISHED</strong></div>
+              <div class="status-row"><span>Public release / signed-out access</span><strong>NOT VERIFIED</strong></div>
+            </div>
+            <p class="fine" style="margin-top:1cqw">No accepted live interpretation configuration. No interface-test result or operational safety verdict is asserted in this deck.</p>
+          </div>
+          <div class="credits">
+            <h3>Team Emberfall · IGNIS working title</h3>
+            <p><strong>NASA PSI and NTRS</strong> supply the cited measurements and publications. All deck graphics are original source-data displays.</p>
+            <p><strong>Claude Code and OpenAI Codex</strong> assisted research, curation, design, implementation and presentation. AI agents are tools, not registered team members or independent reviewers.</p>
+            <p class="quiet">Pre-event preparation is disclosed in the submission package. Registered member credits and the final product name await owner confirmation.</p>
+          </div>
+        </div>
+        <p class="closing">Next evidence: independent researcher tasks and the missing synchronized series for quantitative model comparison.</p>
+        <footer class="foot"><span class="source">Source and AI/preparation disclosure: <code>SUBMISSION_PACKAGE_2026-11-15.md</code> · <a href="https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/">Official challenge</a><br>Local artifact · no public project URL asserted · no NASA endorsement</span><span class="page">07 / 07</span></footer>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

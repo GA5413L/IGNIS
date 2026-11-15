@@ -1,0 +1,985 @@
+{
+ "schemaVersion": "ignis-registry-1",
+ "note": "Contracts bind generic templates (T1, T2, T4, descriptive totals) to reviewed records. The engine evaluates predicates and branches; it never branches on a mission name. Critical predicate rule: any contradicted -> 'contradicted' branch; else any unknown -> 'unknown' branch; else 'satisfied' branch. Non-critical predicates add missing requirements only. Amendment A-001 (14 Nov 2026): the later-response plan uses route conditional_model_candidate with outcome specified_conditional_comparison.",
+ "records": [
+  {
+   "id": "AC-SVI25-T1-LATER",
+   "revision": "r1",
+   "templateKey": "T1",
+   "permittedUse": "Specify a comparison of the later remote CO2 response of the published Saffire VI transport model",
+   "selector": {
+    "modelId": "PM-SVI25",
+    "quantityIds": [
+     "Q-CO2-REMOTE-CONC"
+    ],
+    "requestedClaims": [
+     "conditional_response",
+     "comparison",
+     "description",
+     "unspecified"
+    ],
+    "temporalScopes": [
+     "subsequent",
+     "whole_record",
+     "unspecified"
+    ],
+    "eventIds": null
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-VI-ALIGN-01",
+     "revision": "r1"
+    },
+    {
+     "id": "FD-M-VI-SOURCE-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-T1-ADDITIVE",
+     "description": "The documented initial alignment is a constant additive shift to each sensor's initial value",
+     "scope": "calculation",
+     "operation": "transform_supported",
+     "fieldIds": [],
+     "argument": {
+      "useId": "USE-SVI25-INIT",
+      "transform": "additive_offset_to_initial_values"
+     },
+     "sourceAssertionIds": [
+      "AS-M-VIALIGN-01"
+     ],
+     "criticalForThisUse": true
+    },
+    {
+     "id": "PR-T1-SERIES",
+     "description": "Synchronized measured and modelled remote CO2 series are acquired (needed only for numerical scoring)",
+     "scope": "calculation",
+     "operation": "asset_matched",
+     "fieldIds": [],
+     "argument": {
+      "observationIds": [
+       "OBS-SVI-RS-CO2-SERIES",
+       "OBS-SVI-MODEL-CO2-SERIES"
+      ]
+     },
+     "sourceAssertionIds": [],
+     "criticalForThisUse": false
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "conditional_model_candidate",
+     "outcome": "specified_conditional_comparison",
+     "executionKind": "specification",
+     "text": "Compare the later remote CO2 response, conditional on the fire source supplied to the model and on the documented initial alignment. Because each curve was shifted additively to its sensor's initial value, the aligned residual equals the response-change residual (T1): the comparison tests change after the start, not the initial agreement."
+    },
+    "unknown": {
+     "route": "conditional_model_candidate",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "The alignment transform is not documented well enough to apply the additive identity; the comparison specification stays unresolved until it is."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "incompatible_requested_claim",
+     "executionKind": "specification",
+     "text": "The documented alignment is not a constant additive shift, so the T1 identity does not apply to this comparison."
+    }
+   },
+   "derivations": [
+    {
+     "id": "DV-T1-IDENTITY",
+     "operationKey": "t1_identity",
+     "inputs": {},
+     "label": "T1 additive-alignment identity"
+    }
+   ],
+   "permittedConclusionTemplate": "Conditional response comparison under a documented additive initial alignment.",
+   "forbiddenClaims": [
+    "Initial agreement counts as predictive success",
+    "The model is validated",
+    "Any RMSE or score (no synchronized series acquired)",
+    "The model predicts burning"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "contract binding to S-VI p.3 and p.7",
+    "method": "manual binding against located passages; T1 algebra from the master specification",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  },
+  {
+   "id": "AC-SVI25-T1-SCORE",
+   "revision": "r1",
+   "templateKey": "T1",
+   "permittedUse": "Numerically score the later remote CO2 response",
+   "selector": {
+    "modelId": "PM-SVI25",
+    "quantityIds": [
+     "Q-CO2-REMOTE-CONC"
+    ],
+    "requestedClaims": [
+     "conditional_response",
+     "comparison",
+     "unspecified"
+    ],
+    "temporalScopes": [
+     "subsequent",
+     "whole_record",
+     "unspecified"
+    ],
+    "eventIds": null
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-VI-ALIGN-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-SCORE-SERIES",
+     "description": "Synchronized measured and modelled remote CO2 series, clocks and an approved window are acquired",
+     "scope": "calculation",
+     "operation": "asset_matched",
+     "fieldIds": [],
+     "argument": {
+      "observationIds": [
+       "OBS-SVI-RS-CO2-SERIES",
+       "OBS-SVI-MODEL-CO2-SERIES"
+      ]
+     },
+     "sourceAssertionIds": [],
+     "criticalForThisUse": true
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "conditional_model_candidate",
+     "outcome": "specified_conditional_comparison",
+     "executionKind": "specification",
+     "text": "Series are available; a numerical residual could be computed under T1."
+    },
+    "unknown": {
+     "route": "no_supported_route",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "Numerical scoring is not possible yet: the synchronized measured and modelled series, their clocks and an approved window have not been acquired. IGNIS computes no residual and draws no curve."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "The acquired series do not match; scoring is unresolved."
+    }
+   },
+   "derivations": [],
+   "permittedConclusionTemplate": "Numerical scoring awaits matched series.",
+   "forbiddenClaims": [
+    "A residual, RMSE or accuracy percentage"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "asset availability",
+    "method": "registry asset state",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  },
+  {
+   "id": "AC-SVI25-T1-INITIAL",
+   "revision": "r1",
+   "templateKey": "T1",
+   "permittedUse": "Treat initial agreement of the remote CO2 response as an independent prediction",
+   "selector": {
+    "modelId": "PM-SVI25",
+    "quantityIds": [
+     "Q-CO2-REMOTE-CONC"
+    ],
+    "requestedClaims": [
+     "independent_prediction"
+    ],
+    "temporalScopes": [
+     "initial",
+     "whole_record",
+     "unspecified"
+    ],
+    "eventIds": null
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-VI-ALIGN-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-NO-INIT-ALIGN",
+     "description": "No documented use of the measured initial values to set or shift the model's initial response",
+     "scope": "calculation",
+     "operation": "no_documented_use",
+     "fieldIds": [],
+     "argument": {
+      "useId": "USE-SVI25-INIT"
+     },
+     "sourceAssertionIds": [
+      "AS-M-VIALIGN-01"
+     ],
+     "criticalForThisUse": true
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "direct",
+     "outcome": "descriptive_consistency_check",
+     "executionKind": "specification",
+     "text": "No initial conditioning is documented."
+    },
+    "unknown": {
+     "route": "no_supported_route",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "Whether the initial values were used by the model is unresolved, so an independent-initial-prediction claim cannot be assessed."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "incompatible_requested_claim",
+     "executionKind": "specification",
+     "text": "Initial agreement cannot count as an independent prediction: the initial cabin CO2 was set from the sensor mean and the curves were shifted after simulation to match each sensor's initial value (S-VI p.7). Initial agreement is imposed."
+    }
+   },
+   "derivations": [],
+   "permittedConclusionTemplate": "Initial agreement is imposed by alignment.",
+   "forbiddenClaims": [
+    "Initial r = 0 counts as a predictive success"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "S-VI p.7",
+    "method": "manual binding",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  },
+  {
+   "id": "AC-SVI25-SOURCE-INDEP",
+   "revision": "r1",
+   "templateKey": "T1",
+   "permittedUse": "Treat the later remote CO2 response as an independent prediction of the fire",
+   "selector": {
+    "modelId": "PM-SVI25",
+    "quantityIds": [
+     "Q-CO2-REMOTE-CONC"
+    ],
+    "requestedClaims": [
+     "independent_prediction"
+    ],
+    "temporalScopes": [
+     "subsequent"
+    ],
+    "eventIds": null
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-VI-SOURCE-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-NO-SOURCE-INPUT",
+     "description": "The fire source is predicted by the model rather than supplied from measurements",
+     "scope": "calculation",
+     "operation": "no_documented_use",
+     "fieldIds": [],
+     "argument": {
+      "useId": "USE-SVI25-SOURCE"
+     },
+     "sourceAssertionIds": [
+      "AS-M-VSOURCE-01"
+     ],
+     "criticalForThisUse": true
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "direct",
+     "outcome": "descriptive_consistency_check",
+     "executionKind": "specification",
+     "text": "No prescribed source is documented."
+    },
+    "unknown": {
+     "route": "no_supported_route",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "How the fire source entered the model is unresolved."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "incompatible_requested_claim",
+     "executionKind": "specification",
+     "text": "The later response is conditional on the fire source supplied to the model (MGR and HAR applied at the flow-unit outlet, S-VI p.3); it is not an independent prediction of the fire. A conditional comparison of the later response remains available."
+    }
+   },
+   "derivations": [],
+   "permittedConclusionTemplate": "Later response is conditional on the supplied source.",
+   "forbiddenClaims": [
+    "The model independently predicted the fire"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "S-VI p.3",
+    "method": "manual binding",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  },
+  {
+   "id": "AC-SVI25-T4-BURNING",
+   "revision": "r1",
+   "templateKey": "T4",
+   "permittedUse": "Assess the published transport model as a predictor of chemical heat release from burning",
+   "selector": {
+    "modelId": "PM-SVI25",
+    "quantityIds": [
+     "Q-HEAT-CHEMICAL-RELEASE"
+    ],
+    "requestedClaims": [
+     "independent_prediction",
+     "comparison",
+     "conditional_response",
+     "description",
+     "unspecified"
+    ],
+    "temporalScopes": null,
+    "eventIds": null
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-VI-SOURCE-01",
+     "revision": "r1"
+    },
+    {
+     "id": "FD-M-HEAT-01",
+     "revision": "r1"
+    },
+    {
+     "id": "FD-M-CAL-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-PREDICTS-CHEM",
+     "description": "The model predicts chemical heat release",
+     "scope": "calculation",
+     "operation": "model_predicts",
+     "fieldIds": [],
+     "argument": {
+      "modelId": "PM-SVI25",
+      "quantityId": "Q-HEAT-CHEMICAL-RELEASE"
+     },
+     "sourceAssertionIds": [
+      "AS-M-VSOURCE-01"
+     ],
+     "criticalForThisUse": true
+    },
+    {
+     "id": "PR-HEAT-OPERATOR",
+     "description": "The model's heat quantity (HAR integral) and calorimetry measure the same quantity",
+     "scope": "calculation",
+     "operation": "operator_compatible",
+     "fieldIds": [],
+     "argument": {
+      "quantityA": "Q-HEAT-SENSIBLE-CABIN",
+      "quantityB": "Q-HEAT-CHEMICAL-RELEASE"
+     },
+     "sourceAssertionIds": [
+      "AS-M-HAR-01",
+      "AS-O-CAL-VI3-01"
+     ],
+     "criticalForThisUse": false
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "conditional_model_candidate",
+     "outcome": "specified_conditional_comparison",
+     "executionKind": "specification",
+     "text": "The model predicts chemical heat release."
+    },
+    "unknown": {
+     "route": "no_supported_route",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "Whether the model predicts chemical heat release is not established in the reviewed records."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "incompatible_requested_claim",
+     "executionKind": "specification",
+     "text": "This transport model receives the fire as prescribed MGR and HAR sources (S-VI p.3); it does not predict burning or chemical heat release. Its {obs:OBS-SVI6-HAR-TOTAL} is sensible heat added to the cabin, not oxygen-consumption calorimetry ({obs:OBS-SVI6-CAL-THR}, S-CAL Table 2): the units match but the quantities do not, so their ratio is not an accuracy or efficiency. A burning prediction would need a model that predicts burning, compared against a matched calorimetry definition, boundary and window."
+    }
+   },
+   "derivations": [],
+   "permittedConclusionTemplate": "Different physical quantity; useful alternative is the conditional remote-response comparison.",
+   "forbiddenClaims": [
+    "497/1280 is a heat-release accuracy or efficiency",
+    "Same kJ unit means the same quantity",
+    "The transport model predicts burning"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "S-VI p.3, p.9; S-CAL Table 2",
+    "method": "manual binding with rendered-table check",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  },
+  {
+   "id": "AC-SVI25-SIBAL-TOTAL",
+   "revision": "r1",
+   "templateKey": "DESCRIPTIVE_TOTALS",
+   "permittedUse": "Descriptively compare the source-input and remote-inferred CO2 totals for the SIBAL burn",
+   "selector": {
+    "modelId": "PM-SVI25",
+    "quantityIds": [
+     "Q-CO2-SOURCE-TOTAL",
+     "Q-CO2-REMOTE-CONC"
+    ],
+    "requestedClaims": [
+     "description",
+     "comparison",
+     "conditional_response",
+     "independent_prediction",
+     "unspecified"
+    ],
+    "temporalScopes": null,
+    "eventIds": [
+     "EV-SVI-5"
+    ]
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-SIBAL-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-SIBAL-POS",
+     "description": "The remote-inferred total is a positive reported value",
+     "scope": "calculation",
+     "operation": "positive_value",
+     "fieldIds": [],
+     "argument": {
+      "observationId": "OBS-SVI5-REMOTE-TOTAL"
+     },
+     "sourceAssertionIds": [
+      "AS-M-SIBAL-01"
+     ],
+     "criticalForThisUse": true
+    },
+    {
+     "id": "PR-SIBAL-SAMEQ",
+     "description": "Both totals are the same quantity (CO2 mass)",
+     "scope": "calculation",
+     "operation": "same_measurand",
+     "fieldIds": [],
+     "argument": {
+      "observationIds": [
+       "OBS-SVI5-SOURCE-TOTAL",
+       "OBS-SVI5-REMOTE-TOTAL"
+      ]
+     },
+     "sourceAssertionIds": [
+      "AS-M-SIBAL-01"
+     ],
+     "criticalForThisUse": true
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "direct",
+     "outcome": "descriptive_consistency_check",
+     "executionKind": "source_arithmetic",
+     "text": "The source-input total ({obs:OBS-SVI5-SOURCE-TOTAL}) and the remote-inferred total ({obs:OBS-SVI5-REMOTE-TOTAL}) differ by {dv:DV-SIBAL-DIFF} ({dv:DV-SIBAL-REL} relative to the remote total). The authors note steady-state agreement is expected from the source total and report that the model underpredicts the rise at all locations, so a close total says nothing by itself about the transient response."
+    },
+    "unknown": {
+     "route": "no_supported_route",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "A required total is missing."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "incompatible_requested_claim",
+     "executionKind": "specification",
+     "text": "The totals are not the same quantity."
+    }
+   },
+   "derivations": [
+    {
+     "id": "DV-SIBAL-DIFF",
+     "operationKey": "difference",
+     "inputs": {
+      "a": "OBS-SVI5-REMOTE-TOTAL",
+      "b": "OBS-SVI5-SOURCE-TOTAL"
+     },
+     "label": "source total minus remote-inferred total"
+    },
+    {
+     "id": "DV-SIBAL-REL",
+     "operationKey": "relative_difference_pct",
+     "inputs": {
+      "a": "OBS-SVI5-REMOTE-TOTAL",
+      "b": "OBS-SVI5-SOURCE-TOTAL"
+     },
+     "label": "relative to the remote-inferred total"
+    }
+   ],
+   "permittedConclusionTemplate": "Descriptive closeness of integrated totals only.",
+   "forbiddenClaims": [
+    "Accurate transient dynamics from a close total",
+    "A new independent campaign"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "S-VI p.7",
+    "method": "manual binding",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  },
+  {
+   "id": "AC-SVI25-EV6-TOTAL",
+   "revision": "r1",
+   "templateKey": "DESCRIPTIVE_TOTALS",
+   "permittedUse": "Descriptively compare the source-input and remote-inferred CO2 totals for the two-sided PMMA burn",
+   "selector": {
+    "modelId": "PM-SVI25",
+    "quantityIds": [
+     "Q-CO2-SOURCE-TOTAL",
+     "Q-CO2-REMOTE-CONC"
+    ],
+    "requestedClaims": [
+     "description",
+     "comparison",
+     "conditional_response",
+     "independent_prediction",
+     "unspecified"
+    ],
+    "temporalScopes": null,
+    "eventIds": [
+     "EV-SVI-6"
+    ]
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-VI-MASS-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-EV6-POS",
+     "description": "The remote-inferred total is a positive reported value",
+     "scope": "calculation",
+     "operation": "positive_value",
+     "fieldIds": [],
+     "argument": {
+      "observationId": "OBS-SVI6-REMOTE-TOTAL"
+     },
+     "sourceAssertionIds": [
+      "AS-M-VI6MASS-01"
+     ],
+     "criticalForThisUse": true
+    },
+    {
+     "id": "PR-EV6-SAMEQ",
+     "description": "Both totals are the same quantity (CO2 mass)",
+     "scope": "calculation",
+     "operation": "same_measurand",
+     "fieldIds": [],
+     "argument": {
+      "observationIds": [
+       "OBS-SVI6-SOURCE-TOTAL",
+       "OBS-SVI6-REMOTE-TOTAL"
+      ]
+     },
+     "sourceAssertionIds": [
+      "AS-M-VI6MASS-01"
+     ],
+     "criticalForThisUse": true
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "direct",
+     "outcome": "descriptive_consistency_check",
+     "executionKind": "source_arithmetic",
+     "text": "The source-input total ({obs:OBS-SVI6-SOURCE-TOTAL}) and the remote-inferred total ({obs:OBS-SVI6-REMOTE-TOTAL}) differ by {dv:DV-EV6-DIFF} ({dv:DV-EV6-REL} relative to the remote total). This is an integrated-total check only; it does not establish an accurate transient response."
+    },
+    "unknown": {
+     "route": "no_supported_route",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "A required total is missing."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "incompatible_requested_claim",
+     "executionKind": "specification",
+     "text": "The totals are not the same quantity."
+    }
+   },
+   "derivations": [
+    {
+     "id": "DV-EV6-DIFF",
+     "operationKey": "difference",
+     "inputs": {
+      "a": "OBS-SVI6-REMOTE-TOTAL",
+      "b": "OBS-SVI6-SOURCE-TOTAL"
+     },
+     "label": "source total minus remote-inferred total"
+    },
+    {
+     "id": "DV-EV6-REL",
+     "operationKey": "relative_difference_pct",
+     "inputs": {
+      "a": "OBS-SVI6-REMOTE-TOTAL",
+      "b": "OBS-SVI6-SOURCE-TOTAL"
+     },
+     "label": "relative to the remote-inferred total"
+    }
+   ],
+   "permittedConclusionTemplate": "Descriptive closeness of integrated totals only.",
+   "forbiddenClaims": [
+    "Accurate transient dynamics from a close total"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "S-VI p.9",
+    "method": "manual binding",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  },
+  {
+   "id": "AC-SV24-T2-CHECK",
+   "revision": "r1",
+   "templateKey": "T2",
+   "permittedUse": "Check the published source normalization arithmetic for Saffire V event 6",
+   "selector": {
+    "modelId": "PM-SV24",
+    "quantityIds": [
+     "Q-CO2-SOURCE-TOTAL",
+     "Q-CO2-REMOTE-CONC"
+    ],
+    "requestedClaims": [
+     "description",
+     "comparison",
+     "independent_prediction",
+     "conditional_response",
+     "unspecified"
+    ],
+    "temporalScopes": null,
+    "eventIds": null
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-V-NORM-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-T2-POS",
+     "description": "The unscaled source total M0 is positive",
+     "scope": "calculation",
+     "operation": "positive_value",
+     "fieldIds": [],
+     "argument": {
+      "observationId": "OBS-SV6-PROXY-TOTAL"
+     },
+     "sourceAssertionIds": [
+      "AS-M-VNORM-01"
+     ],
+     "criticalForThisUse": true
+    },
+    {
+     "id": "PR-T2-SAMEQ",
+     "description": "M0 and the target total M* are the same quantity (CO2 mass)",
+     "scope": "calculation",
+     "operation": "same_measurand",
+     "fieldIds": [],
+     "argument": {
+      "observationIds": [
+       "OBS-SV6-PROXY-TOTAL",
+       "OBS-SV6-REMOTE-TOTAL"
+      ]
+     },
+     "sourceAssertionIds": [
+      "AS-M-VNORM-01"
+     ],
+     "criticalForThisUse": true
+    },
+    {
+     "id": "PR-T2-WINDOW",
+     "description": "The integration window W of the source total is stated",
+     "scope": "calculation",
+     "operation": "window_defined",
+     "fieldIds": [],
+     "argument": {
+      "observationId": "OBS-SV6-PROXY-TOTAL"
+     },
+     "sourceAssertionIds": [],
+     "criticalForThisUse": false
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "direct",
+     "outcome": "descriptive_consistency_check",
+     "executionKind": "source_arithmetic",
+     "text": "The reported factor is consistent with the reported totals: M*/M0 = {dv:DV-T2-RATIO}, and M0 × reported factor = {dv:DV-T2-PRODUCT}, {dv:DV-T2-RESID} from M*. The arithmetic uses already-rounded published numbers; that small difference is a rounding effect, not a model error."
+    },
+    "unknown": {
+     "route": "no_supported_route",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "A required total is missing or not positive, so no scale is computed."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "incompatible_requested_claim",
+     "executionKind": "specification",
+     "text": "The totals are not the same species/basis, so a normalization ratio is not meaningful."
+    }
+   },
+   "derivations": [
+    {
+     "id": "DV-T2-RATIO",
+     "operationKey": "ratio",
+     "inputs": {
+      "numerator": "OBS-SV6-REMOTE-TOTAL",
+      "denominator": "OBS-SV6-PROXY-TOTAL"
+     },
+     "label": "s = M* / M0"
+    },
+    {
+     "id": "DV-T2-PRODUCT",
+     "operationKey": "product",
+     "inputs": {
+      "a": "OBS-SV6-PROXY-TOTAL",
+      "b": "OBS-SV6-SCALE"
+     },
+     "label": "M0 × reported scale"
+    },
+    {
+     "id": "DV-T2-RESID",
+     "operationKey": "difference_of_derivation",
+     "inputs": {
+      "derivation": "DV-T2-PRODUCT",
+      "b": "OBS-SV6-REMOTE-TOTAL"
+     },
+     "label": "(M0 × reported scale) − M*"
+    }
+   ],
+   "permittedConclusionTemplate": "Descriptive arithmetic check of a published normalization.",
+   "forbiddenClaims": [
+    "The 0.018 g difference is a physical or model error",
+    "Every downstream cabin output is forced to match"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "S-V p.6",
+    "method": "manual binding",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  },
+  {
+   "id": "AC-SV24-T2-INDEP",
+   "revision": "r1",
+   "templateKey": "T2",
+   "permittedUse": "Treat agreement with the normalized CO2 total as an independent prediction of that total",
+   "selector": {
+    "modelId": "PM-SV24",
+    "quantityIds": [
+     "Q-CO2-SOURCE-TOTAL",
+     "Q-CO2-REMOTE-CONC"
+    ],
+    "requestedClaims": [
+     "independent_prediction"
+    ],
+    "temporalScopes": null,
+    "eventIds": null
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-V-NORM-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-T2-NO-NORM",
+     "description": "The target total was not used to scale the source",
+     "scope": "calculation",
+     "operation": "no_documented_use",
+     "fieldIds": [],
+     "argument": {
+      "useId": "USE-SV24-NORM"
+     },
+     "sourceAssertionIds": [
+      "AS-M-VNORM-01"
+     ],
+     "criticalForThisUse": true
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "direct",
+     "outcome": "descriptive_consistency_check",
+     "executionKind": "specification",
+     "text": "No normalization is documented."
+    },
+    "unknown": {
+     "route": "no_supported_route",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "Whether the target total was used is unresolved."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "incompatible_requested_claim",
+     "executionKind": "specification",
+     "text": "The source total was conditioned on the target: the remote-inferred {obs:OBS-SV6-REMOTE-TOTAL} set the {obs:OBS-SV6-SCALE} scaling of the source curve (S-V p.6). Agreement with that total is not an independent prediction of it."
+    }
+   },
+   "derivations": [],
+   "permittedConclusionTemplate": "Normalized total is conditioned, not predicted.",
+   "forbiddenClaims": [
+    "The total CO2 was independently predicted"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "S-V p.6",
+    "method": "manual binding",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  },
+  {
+   "id": "AC-SV24-T2-LATER",
+   "revision": "r1",
+   "templateKey": "T2",
+   "permittedUse": "Specify what can still be compared after source normalization (spatial and transient remote response)",
+   "selector": {
+    "modelId": "PM-SV24",
+    "quantityIds": [
+     "Q-CO2-SOURCE-TOTAL",
+     "Q-CO2-REMOTE-CONC"
+    ],
+    "requestedClaims": [
+     "independent_prediction",
+     "conditional_response",
+     "comparison",
+     "unspecified"
+    ],
+    "temporalScopes": null,
+    "eventIds": null
+   },
+   "findingRefs": [
+    {
+     "id": "FD-M-V-NORM-01",
+     "revision": "r1"
+    }
+   ],
+   "requirements": [
+    {
+     "id": "PR-T2L-NORM",
+     "description": "The normalization use is documented, so its conditioning can be stated",
+     "scope": "calculation",
+     "operation": "documented_use",
+     "fieldIds": [],
+     "argument": {
+      "useId": "USE-SV24-NORM"
+     },
+     "sourceAssertionIds": [
+      "AS-M-VNORM-01"
+     ],
+     "criticalForThisUse": true
+    },
+    {
+     "id": "PR-T2L-WINDOW",
+     "description": "Source-generation window and clock for replay",
+     "scope": "calculation",
+     "operation": "window_defined",
+     "fieldIds": [],
+     "argument": {
+      "observationId": "OBS-SV6-PROXY-TOTAL"
+     },
+     "sourceAssertionIds": [],
+     "criticalForThisUse": false
+    }
+   ],
+   "branches": {
+    "satisfied": {
+     "route": "conditional_model_candidate",
+     "outcome": "specified_conditional_comparison",
+     "executionKind": "specification",
+     "text": "Spatial and transient remote-sensor comparisons remain useful, conditional on the normalized source. Normalization fixes the source integral, not every downstream sensor response. RS3 served as the source proxy, so leaving RS3 out of a comparison does not create a held-out source."
+    },
+    "unknown": {
+     "route": "conditional_model_candidate",
+     "outcome": "unresolved_requirement",
+     "executionKind": "specification",
+     "text": "The normalization use is not documented well enough to state the conditioning."
+    },
+    "contradicted": {
+     "route": "no_supported_route",
+     "outcome": "incompatible_requested_claim",
+     "executionKind": "specification",
+     "text": "The documented use contradicts this comparison."
+    }
+   },
+   "derivations": [],
+   "permittedConclusionTemplate": "Conditional spatial/transient comparison specification.",
+   "forbiddenClaims": [
+    "Excluding RS3 creates an independent held-out test",
+    "Normalization forces every sensor to match"
+   ],
+   "review": {
+    "level": "assistant_checked",
+    "reviewerLabel": "Claude (Opus 5.5) in Claude Code, IGNIS event build",
+    "reviewedAt": "2026-11-14T13:00:00Z",
+    "scope": "S-V p.5-6",
+    "method": "manual binding",
+    "inheritedFrom": null,
+    "independentOfDesign": false
+   }
+  }
+ ]
+}

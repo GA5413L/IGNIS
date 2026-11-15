@@ -1,0 +1,700 @@
+{
+  "schemaVersion": "ignis-condition-cases-1",
+  "snapshotDate": "2026-11-15",
+  "title": "Saffire published atmosphere conditions",
+  "caseCount": 7,
+  "source": {
+    "id": "SRC-SAFFIRE-2026-T1",
+    "title": "Heat and Smoke Emission from Tests on the Saffire VI Experiment",
+    "version": "ICES-2026-577",
+    "publicUrl": "https://ntrs.nasa.gov/citations/20260001992",
+    "pdfUrl": "https://ntrs.nasa.gov/api/citations/20260001992/downloads/ICES%20Saffire%202026%2005%2004%20b.pdf",
+    "path": "_raw/lab_2026-11-15/detection/SAFF2026_20260001992.pdf",
+    "sha256": "59315478dbf26b833238df7166cf2a4649f4731f51fc01f8fc0eef602966d80d",
+    "pdfPage": 6,
+    "printedPage": 6,
+    "table": "Table 1",
+    "tableTitle": "Sample materials and test data",
+    "acquiredAtUtc": "2026-11-14T20:51:03.775747+00:00",
+    "distributionDate": "2026-07-16T04:00:00.0000000+00:00",
+    "metadataPath": "_raw/lab_2026-11-15/detection/SAFF2026_record.json",
+    "metadataSha256": "0be9f2f15a334d8c51e61c728a59f846f0e4712856d7005e5ad2f6438cfeb03c",
+    "inspectionStatus": "Full PDF acquired; PDF page 6 table image personally inspected and text extraction cross-checked by AI research agent.",
+    "transcriptionMethod": "Manual table transcription of printed strings; no plotted-figure digitization."
+  },
+  "flowConflict": {
+    "id": "SAFFIRE-2024-2026-FLOW-DIRECTION",
+    "status": "unresolved_publication_conflict",
+    "canonicalSourceStatement": "2026 Table 1 caption: opposed flow, 20 cm/s, all seven cases.",
+    "earlierSourceStatement": "2024 Table 1: Concurrent, 20 cm/s, its five listed cases.",
+    "effect": "Preserve source-specific descriptions; do not infer or display flow equivalence. Canonical pressure/oxygen values come only from the 2026 table.",
+    "reportPath": "web/docs/lab/05_detection_completion_2026-11-15.md"
+  },
+  "earlierSourceContext": [
+    {
+      "id": "SRC-SAFFIRE-2024-T1-CONTEXT",
+      "role": "conflict_context_only_not_canonical_condition_values",
+      "title": "Preliminary Results from the Saffire VI Experiment",
+      "version": "ICES-2024-365",
+      "publicUrl": "https://ntrs.nasa.gov/citations/20240002981",
+      "path": "_raw/event_2026-11-14/S-CAL_ICES-2024-365.pdf",
+      "sha256": "7f875da1d6abeeeeac64aeba67d3f160074cf98430e714fe7606b34b37e0aa59",
+      "pdfPage": 3,
+      "table": "Table 1",
+      "flowDirectionOriginal": "Concurrent",
+      "nominalFlowCmS": 20,
+      "caseIds": [
+        "SAFFIRE-IV-1",
+        "SAFFIRE-V-2",
+        "SAFFIRE-VI-2",
+        "SAFFIRE-VI-3",
+        "SAFFIRE-VI-4"
+      ],
+      "conditionVersionNote": "Several pressure and oxygen values differ from the 2026 table; these earlier numerical values are not imported into this condition dataset."
+    }
+  ],
+  "boundaries": [
+    "Seven source-reported cases from ICES-2026-577 Table 1 only; other publication versions are not merged into the canonical conditions.",
+    "Pressure and oxygen coordinate differences describe condition proximity only, not physical equivalence, safety, flammability or predicted response.",
+    "Coordinate gaps may be compared only within a matching material and number-of-burning-sides cohort. That gate is necessary for this display, not sufficient for physical transfer.",
+    "The 2026 opposed-flow caption and 2024 concurrent-flow row conflict. Flow equivalence is unresolved; nominal 20 cm/s is not a complete velocity history.",
+    "These are low-Earth-orbit microgravity spacecraft experiments, not lunar-gravity burns or a lunar external atmosphere.",
+    "Oxygen partial pressure is derived arithmetic, not a separately measured quantity or an equivalence rule.",
+    "Shared flights, apparatus and measurement ancestry mean the cases must not be treated as independent replicates.",
+    "No response prediction, safety threshold, burn probability, uncertainty percentage or Moon-similarity scalar is supplied."
+  ],
+  "comparisonPolicy": {
+    "allowedUse": "atmosphere_coordinates_only",
+    "requiredCohortFields": [
+      "material",
+      "sidesBurning"
+    ],
+    "coordinateUnits": {
+      "oxygenPercent": "mole percentage points",
+      "pressureKPa": "kPa"
+    },
+    "differenceConvention": "case coordinate minus user-specified target coordinate, shown separately for oxygen and pressure",
+    "scalarScoreProvided": false,
+    "physicalTransferEstablished": false,
+    "unreportedOrUnresolvedRequirements": [
+      "Flow-direction conflict and complete velocity history",
+      "Target gravity and platform, confinement, orientation, geometry and mounting",
+      "Material formulation, thickness, thermal properties and specimen history",
+      "Ignition, preheating and observation time window",
+      "Outcome definition, measurement operator and uncertainty",
+      "Gas mixture constituents, source rounding and measurement uncertainty",
+      "Shared campaign, apparatus and calibration ancestry"
+    ]
+  },
+  "cohorts": [
+    {
+      "id": "PMMA-2",
+      "material": "PMMA",
+      "sidesBurning": 2,
+      "caseIds": [
+        "SAFFIRE-IV-2",
+        "SAFFIRE-VI-3"
+      ],
+      "caseCount": 2,
+      "use": "atmosphere_coordinates_only"
+    },
+    {
+      "id": "PMMA-1",
+      "material": "PMMA",
+      "sidesBurning": 1,
+      "caseIds": [
+        "SAFFIRE-V-3",
+        "SAFFIRE-VI-4"
+      ],
+      "caseCount": 2,
+      "use": "atmosphere_coordinates_only"
+    },
+    {
+      "id": "SIBAL-2",
+      "material": "SIBAL",
+      "sidesBurning": 2,
+      "caseIds": [
+        "SAFFIRE-IV-1",
+        "SAFFIRE-VI-2"
+      ],
+      "caseCount": 2,
+      "use": "atmosphere_coordinates_only"
+    },
+    {
+      "id": "Cotton-2",
+      "material": "Cotton",
+      "sidesBurning": 2,
+      "caseIds": [
+        "SAFFIRE-V-2"
+      ],
+      "caseCount": 1,
+      "use": "atmosphere_coordinates_only"
+    }
+  ],
+  "cases": [
+    {
+      "id": "SAFFIRE-IV-2",
+      "flight": "IV",
+      "sample": "IV-2",
+      "material": "PMMA",
+      "sidesBurning": 2,
+      "cohortId": "PMMA-2",
+      "oxygenMoleFraction": 0.22,
+      "oxygenPercent": 22.0,
+      "pressureKPa": 100.0,
+      "oxygenPartialPressureKPa": 22.0,
+      "nominalFlowCmS": 20,
+      "nominalFlowDirection": "opposed (2026 caption)",
+      "flowEquivalenceStatus": "unresolved_publication_conflict",
+      "initialFlowDurationS": 535,
+      "ignitionDurationS": 60,
+      "freeVolumeM3": 17.9,
+      "sourceId": "SRC-SAFFIRE-2026-T1",
+      "pdfPage": 6,
+      "platform": "Cygnus spacecraft, low Earth orbit",
+      "gravityRegime": "microgravity",
+      "geometry": {
+        "widthCm": 40,
+        "lengthCm": 18,
+        "thicknessMm": 10,
+        "thicknessStatus": "reported_in_table_caption"
+      },
+      "thermalHistory": {
+        "preheatMinutes": 10,
+        "preheatDescription": "low ignitor power",
+        "status": "reported_in_table_caption",
+        "specimenPriorHistory": "not_established_by_this_table"
+      },
+      "flowHistory": {
+        "status": "partial_source_context",
+        "note": "The table gives duration of initial flow; nominal 20 cm/s is not asserted for the entire experiment.",
+        "reportedChange": null
+      },
+      "original": {
+        "flightSample": "IV-2",
+        "material": "PMMA",
+        "sidesBurning": "2",
+        "pressureMbar": "1000",
+        "oxygenMoleFraction": "0.22",
+        "freeVolumeM3": "17.9",
+        "ignitionDurationS": "60",
+        "initialFlowDurationS": "535",
+        "nominalFlow": "20 cm/s opposed flow",
+        "widthCm": "40",
+        "lengthCm": "18",
+        "thicknessMm": "10",
+        "preheatMinutes": "10"
+      },
+      "conversions": {
+        "pressureKPa": {
+          "operation": "pressureMbar * 0.1",
+          "factor": 0.1,
+          "value": 100.0
+        },
+        "oxygenPercent": {
+          "operation": "oxygenMoleFraction * 100",
+          "factor": 100,
+          "value": 22.0,
+          "basis": "mole percent"
+        },
+        "oxygenPartialPressureKPa": {
+          "operation": "oxygenMoleFraction * pressureKPa",
+          "value": 22.0,
+          "status": "derived_arithmetic_not_separately_measured"
+        }
+      },
+      "transferStatus": "not_assessed"
+    },
+    {
+      "id": "SAFFIRE-V-3",
+      "flight": "V",
+      "sample": "V-3",
+      "material": "PMMA",
+      "sidesBurning": 1,
+      "cohortId": "PMMA-1",
+      "oxygenMoleFraction": 0.26,
+      "oxygenPercent": 26.0,
+      "pressureKPa": 74.5,
+      "oxygenPartialPressureKPa": 19.37,
+      "nominalFlowCmS": 20,
+      "nominalFlowDirection": "opposed (2026 caption)",
+      "flowEquivalenceStatus": "unresolved_publication_conflict",
+      "initialFlowDurationS": 480,
+      "ignitionDurationS": 120,
+      "freeVolumeM3": 19.0,
+      "sourceId": "SRC-SAFFIRE-2026-T1",
+      "pdfPage": 6,
+      "platform": "Cygnus spacecraft, low Earth orbit",
+      "gravityRegime": "microgravity",
+      "geometry": {
+        "widthCm": 40,
+        "lengthCm": 18,
+        "thicknessMm": 5,
+        "thicknessStatus": "reported_in_table_caption"
+      },
+      "thermalHistory": {
+        "preheatMinutes": 10,
+        "preheatDescription": "low ignitor power",
+        "status": "reported_in_table_caption",
+        "specimenPriorHistory": "not_established_by_this_table"
+      },
+      "flowHistory": {
+        "status": "partial_source_context",
+        "note": "The table gives duration of initial flow; nominal 20 cm/s is not asserted for the entire experiment.",
+        "reportedChange": null
+      },
+      "original": {
+        "flightSample": "V-3",
+        "material": "PMMA",
+        "sidesBurning": "1",
+        "pressureMbar": "745",
+        "oxygenMoleFraction": "0.26",
+        "freeVolumeM3": "19",
+        "ignitionDurationS": "120",
+        "initialFlowDurationS": "480",
+        "nominalFlow": "20 cm/s opposed flow",
+        "widthCm": "40",
+        "lengthCm": "18",
+        "thicknessMm": "5",
+        "preheatMinutes": "10"
+      },
+      "conversions": {
+        "pressureKPa": {
+          "operation": "pressureMbar * 0.1",
+          "factor": 0.1,
+          "value": 74.5
+        },
+        "oxygenPercent": {
+          "operation": "oxygenMoleFraction * 100",
+          "factor": 100,
+          "value": 26.0,
+          "basis": "mole percent"
+        },
+        "oxygenPartialPressureKPa": {
+          "operation": "oxygenMoleFraction * pressureKPa",
+          "value": 19.37,
+          "status": "derived_arithmetic_not_separately_measured"
+        }
+      },
+      "transferStatus": "not_assessed"
+    },
+    {
+      "id": "SAFFIRE-VI-3",
+      "flight": "VI",
+      "sample": "VI-3",
+      "material": "PMMA",
+      "sidesBurning": 2,
+      "cohortId": "PMMA-2",
+      "oxygenMoleFraction": 0.3,
+      "oxygenPercent": 30.0,
+      "pressureKPa": 54.4,
+      "oxygenPartialPressureKPa": 16.32,
+      "nominalFlowCmS": 20,
+      "nominalFlowDirection": "opposed (2026 caption)",
+      "flowEquivalenceStatus": "unresolved_publication_conflict",
+      "initialFlowDurationS": 480,
+      "ignitionDurationS": 60,
+      "freeVolumeM3": 16.7,
+      "sourceId": "SRC-SAFFIRE-2026-T1",
+      "pdfPage": 6,
+      "platform": "Cygnus spacecraft, low Earth orbit",
+      "gravityRegime": "microgravity",
+      "geometry": {
+        "widthCm": 40,
+        "lengthCm": 18,
+        "thicknessMm": 10,
+        "thicknessStatus": "reported_in_table_caption"
+      },
+      "thermalHistory": {
+        "preheatMinutes": 10,
+        "preheatDescription": "low ignitor power",
+        "status": "reported_in_table_caption",
+        "specimenPriorHistory": "not_established_by_this_table"
+      },
+      "flowHistory": {
+        "status": "partial_source_context",
+        "note": "The table gives duration of initial flow; nominal 20 cm/s is not asserted for the entire experiment.",
+        "reportedChange": {
+          "atSeconds": 480,
+          "toCmS": 5,
+          "pdfPage": 6,
+          "sourceDescription": "Narrative reports flow reduction and end of flame tracking."
+        }
+      },
+      "original": {
+        "flightSample": "VI-3",
+        "material": "PMMA",
+        "sidesBurning": "2",
+        "pressureMbar": "544",
+        "oxygenMoleFraction": "0.30",
+        "freeVolumeM3": "16.7",
+        "ignitionDurationS": "60",
+        "initialFlowDurationS": "480",
+        "nominalFlow": "20 cm/s opposed flow",
+        "widthCm": "40",
+        "lengthCm": "18",
+        "thicknessMm": "10",
+        "preheatMinutes": "10"
+      },
+      "conversions": {
+        "pressureKPa": {
+          "operation": "pressureMbar * 0.1",
+          "factor": 0.1,
+          "value": 54.4
+        },
+        "oxygenPercent": {
+          "operation": "oxygenMoleFraction * 100",
+          "factor": 100,
+          "value": 30.0,
+          "basis": "mole percent"
+        },
+        "oxygenPartialPressureKPa": {
+          "operation": "oxygenMoleFraction * pressureKPa",
+          "value": 16.32,
+          "status": "derived_arithmetic_not_separately_measured"
+        }
+      },
+      "transferStatus": "not_assessed"
+    },
+    {
+      "id": "SAFFIRE-VI-4",
+      "flight": "VI",
+      "sample": "VI-4",
+      "material": "PMMA",
+      "sidesBurning": 1,
+      "cohortId": "PMMA-1",
+      "oxygenMoleFraction": 0.29,
+      "oxygenPercent": 29.0,
+      "pressureKPa": 55.0,
+      "oxygenPartialPressureKPa": 15.95,
+      "nominalFlowCmS": 20,
+      "nominalFlowDirection": "opposed (2026 caption)",
+      "flowEquivalenceStatus": "unresolved_publication_conflict",
+      "initialFlowDurationS": 900,
+      "ignitionDurationS": 120,
+      "freeVolumeM3": 16.7,
+      "sourceId": "SRC-SAFFIRE-2026-T1",
+      "pdfPage": 6,
+      "platform": "Cygnus spacecraft, low Earth orbit",
+      "gravityRegime": "microgravity",
+      "geometry": {
+        "widthCm": 40,
+        "lengthCm": 18,
+        "thicknessMm": 5,
+        "thicknessStatus": "reported_in_table_caption"
+      },
+      "thermalHistory": {
+        "preheatMinutes": 10,
+        "preheatDescription": "low ignitor power",
+        "status": "reported_in_table_caption",
+        "specimenPriorHistory": "not_established_by_this_table"
+      },
+      "flowHistory": {
+        "status": "partial_source_context",
+        "note": "The table gives duration of initial flow; nominal 20 cm/s is not asserted for the entire experiment.",
+        "reportedChange": null
+      },
+      "original": {
+        "flightSample": "VI-4",
+        "material": "PMMA",
+        "sidesBurning": "1",
+        "pressureMbar": "550",
+        "oxygenMoleFraction": "0.29",
+        "freeVolumeM3": "16.7",
+        "ignitionDurationS": "120",
+        "initialFlowDurationS": "900",
+        "nominalFlow": "20 cm/s opposed flow",
+        "widthCm": "40",
+        "lengthCm": "18",
+        "thicknessMm": "5",
+        "preheatMinutes": "10"
+      },
+      "conversions": {
+        "pressureKPa": {
+          "operation": "pressureMbar * 0.1",
+          "factor": 0.1,
+          "value": 55.0
+        },
+        "oxygenPercent": {
+          "operation": "oxygenMoleFraction * 100",
+          "factor": 100,
+          "value": 29.0,
+          "basis": "mole percent"
+        },
+        "oxygenPartialPressureKPa": {
+          "operation": "oxygenMoleFraction * pressureKPa",
+          "value": 15.95,
+          "status": "derived_arithmetic_not_separately_measured"
+        }
+      },
+      "transferStatus": "not_assessed"
+    },
+    {
+      "id": "SAFFIRE-IV-1",
+      "flight": "IV",
+      "sample": "IV-1",
+      "material": "SIBAL",
+      "sidesBurning": 2,
+      "cohortId": "SIBAL-2",
+      "oxygenMoleFraction": 0.23,
+      "oxygenPercent": 23.0,
+      "pressureKPa": 98.0,
+      "oxygenPartialPressureKPa": 22.54,
+      "nominalFlowCmS": 20,
+      "nominalFlowDirection": "opposed (2026 caption)",
+      "flowEquivalenceStatus": "unresolved_publication_conflict",
+      "initialFlowDurationS": 200,
+      "ignitionDurationS": 8,
+      "freeVolumeM3": 17.9,
+      "sourceId": "SRC-SAFFIRE-2026-T1",
+      "pdfPage": 6,
+      "platform": "Cygnus spacecraft, low Earth orbit",
+      "gravityRegime": "microgravity",
+      "geometry": {
+        "widthCm": 40,
+        "lengthCm": 50,
+        "thicknessMm": null,
+        "thicknessStatus": "not_reported_in_table_caption"
+      },
+      "thermalHistory": {
+        "preheatMinutes": null,
+        "preheatDescription": null,
+        "status": "not_reported_in_table_caption",
+        "specimenPriorHistory": "not_established_by_this_table"
+      },
+      "flowHistory": {
+        "status": "partial_source_context",
+        "note": "The table gives duration of initial flow; nominal 20 cm/s is not asserted for the entire experiment.",
+        "reportedChange": null
+      },
+      "original": {
+        "flightSample": "IV-1",
+        "material": "SIBAL",
+        "sidesBurning": "2",
+        "pressureMbar": "980",
+        "oxygenMoleFraction": "0.23",
+        "freeVolumeM3": "17.9",
+        "ignitionDurationS": "8",
+        "initialFlowDurationS": "200",
+        "nominalFlow": "20 cm/s opposed flow",
+        "widthCm": "40",
+        "lengthCm": "50",
+        "thicknessMm": null,
+        "preheatMinutes": null
+      },
+      "conversions": {
+        "pressureKPa": {
+          "operation": "pressureMbar * 0.1",
+          "factor": 0.1,
+          "value": 98.0
+        },
+        "oxygenPercent": {
+          "operation": "oxygenMoleFraction * 100",
+          "factor": 100,
+          "value": 23.0,
+          "basis": "mole percent"
+        },
+        "oxygenPartialPressureKPa": {
+          "operation": "oxygenMoleFraction * pressureKPa",
+          "value": 22.54,
+          "status": "derived_arithmetic_not_separately_measured"
+        }
+      },
+      "transferStatus": "not_assessed"
+    },
+    {
+      "id": "SAFFIRE-V-2",
+      "flight": "V",
+      "sample": "V-2",
+      "material": "Cotton",
+      "sidesBurning": 2,
+      "cohortId": "Cotton-2",
+      "oxygenMoleFraction": 0.28,
+      "oxygenPercent": 28.0,
+      "pressureKPa": 74.1,
+      "oxygenPartialPressureKPa": 20.748,
+      "nominalFlowCmS": 20,
+      "nominalFlowDirection": "opposed (2026 caption)",
+      "flowEquivalenceStatus": "unresolved_publication_conflict",
+      "initialFlowDurationS": 200,
+      "ignitionDurationS": 8,
+      "freeVolumeM3": 19.0,
+      "sourceId": "SRC-SAFFIRE-2026-T1",
+      "pdfPage": 6,
+      "platform": "Cygnus spacecraft, low Earth orbit",
+      "gravityRegime": "microgravity",
+      "geometry": {
+        "widthCm": 40,
+        "lengthCm": 50,
+        "thicknessMm": null,
+        "thicknessStatus": "not_reported_in_table_caption"
+      },
+      "thermalHistory": {
+        "preheatMinutes": null,
+        "preheatDescription": null,
+        "status": "not_reported_in_table_caption",
+        "specimenPriorHistory": "not_established_by_this_table"
+      },
+      "flowHistory": {
+        "status": "partial_source_context",
+        "note": "The table gives duration of initial flow; nominal 20 cm/s is not asserted for the entire experiment.",
+        "reportedChange": null
+      },
+      "original": {
+        "flightSample": "V-2",
+        "material": "Cotton",
+        "sidesBurning": "2",
+        "pressureMbar": "741",
+        "oxygenMoleFraction": "0.28",
+        "freeVolumeM3": "19",
+        "ignitionDurationS": "8",
+        "initialFlowDurationS": "200",
+        "nominalFlow": "20 cm/s opposed flow",
+        "widthCm": "40",
+        "lengthCm": "50",
+        "thicknessMm": null,
+        "preheatMinutes": null
+      },
+      "conversions": {
+        "pressureKPa": {
+          "operation": "pressureMbar * 0.1",
+          "factor": 0.1,
+          "value": 74.1
+        },
+        "oxygenPercent": {
+          "operation": "oxygenMoleFraction * 100",
+          "factor": 100,
+          "value": 28.0,
+          "basis": "mole percent"
+        },
+        "oxygenPartialPressureKPa": {
+          "operation": "oxygenMoleFraction * pressureKPa",
+          "value": 20.748,
+          "status": "derived_arithmetic_not_separately_measured"
+        }
+      },
+      "transferStatus": "not_assessed"
+    },
+    {
+      "id": "SAFFIRE-VI-2",
+      "flight": "VI",
+      "sample": "VI-2",
+      "material": "SIBAL",
+      "sidesBurning": 2,
+      "cohortId": "SIBAL-2",
+      "oxygenMoleFraction": 0.31,
+      "oxygenPercent": 31.0,
+      "pressureKPa": 54.1,
+      "oxygenPartialPressureKPa": 16.771,
+      "nominalFlowCmS": 20,
+      "nominalFlowDirection": "opposed (2026 caption)",
+      "flowEquivalenceStatus": "unresolved_publication_conflict",
+      "initialFlowDurationS": 300,
+      "ignitionDurationS": 8,
+      "freeVolumeM3": 16.7,
+      "sourceId": "SRC-SAFFIRE-2026-T1",
+      "pdfPage": 6,
+      "platform": "Cygnus spacecraft, low Earth orbit",
+      "gravityRegime": "microgravity",
+      "geometry": {
+        "widthCm": 40,
+        "lengthCm": 50,
+        "thicknessMm": null,
+        "thicknessStatus": "not_reported_in_table_caption"
+      },
+      "thermalHistory": {
+        "preheatMinutes": null,
+        "preheatDescription": null,
+        "status": "not_reported_in_table_caption",
+        "specimenPriorHistory": "not_established_by_this_table"
+      },
+      "flowHistory": {
+        "status": "partial_source_context",
+        "note": "The table gives duration of initial flow; nominal 20 cm/s is not asserted for the entire experiment.",
+        "reportedChange": null
+      },
+      "original": {
+        "flightSample": "VI-2",
+        "material": "SIBAL",
+        "sidesBurning": "2",
+        "pressureMbar": "541",
+        "oxygenMoleFraction": "0.31",
+        "freeVolumeM3": "16.7",
+        "ignitionDurationS": "8",
+        "initialFlowDurationS": "300",
+        "nominalFlow": "20 cm/s opposed flow",
+        "widthCm": "40",
+        "lengthCm": "50",
+        "thicknessMm": null,
+        "preheatMinutes": null
+      },
+      "conversions": {
+        "pressureKPa": {
+          "operation": "pressureMbar * 0.1",
+          "factor": 0.1,
+          "value": 54.1
+        },
+        "oxygenPercent": {
+          "operation": "oxygenMoleFraction * 100",
+          "factor": 100,
+          "value": 31.0,
+          "basis": "mole percent"
+        },
+        "oxygenPartialPressureKPa": {
+          "operation": "oxygenMoleFraction * pressureKPa",
+          "value": 16.771,
+          "status": "derived_arithmetic_not_separately_measured"
+        }
+      },
+      "transferStatus": "not_assessed"
+    }
+  ],
+  "reviewStatement": "AI-assisted primary-page transcription and arithmetic checks; no independent human review or physical model validation is claimed.",
+  "verification": {
+    "algorithm": "SHA-256",
+    "checkedRawFileCount": 55,
+    "pinnedRootInputs": [
+      {
+        "path": "_raw/psi_2026-11-15/acquisition_log.json",
+        "sha256": "58320d5155a3fc80233255e2db7b7c7d7afa3719632cc9da174971530797bb5e"
+      },
+      {
+        "path": "_raw/psi_2026-11-15/tables_manifest.json",
+        "sha256": "c4686f17d01e76201555f56fadc49408b9a6d5999a86f3ee903f7e357b1a9409"
+      },
+      {
+        "path": "_raw/lab_completion_2026-11-15/detection/workbook_acquisition.json",
+        "sha256": "25a06dc22ae83a0455df8171293ea231e7f7ef0498485d280c28264b8b47cf55"
+      },
+      {
+        "path": "_raw/lab_completion_2026-11-15/detection/workbook_audit.json",
+        "sha256": "24ceb97b3b51a36cf06ae5192ccb13cbd04f4c0a70ba6b6e0c99079528f888e4"
+      },
+      {
+        "path": "_raw/lab_completion_2026-11-15/detection/PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx",
+        "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218"
+      },
+      {
+        "path": "_raw/lab_2026-11-15/detection/SAFF2026_20260001992.pdf",
+        "sha256": "59315478dbf26b833238df7166cf2a4649f4731f51fc01f8fc0eef602966d80d"
+      },
+      {
+        "path": "_raw/lab_2026-11-15/detection/SAFF2026_record.json",
+        "sha256": "0be9f2f15a334d8c51e61c728a59f846f0e4712856d7005e5ad2f6438cfeb03c"
+      },
+      {
+        "path": "_raw/lab_2026-11-15/detection/acquisition_log.json",
+        "sha256": "01bef0efa52c8ee7ce007ca8db5d4ebd3cbe96b58b9e7db1467dc08280aefd4a"
+      },
+      {
+        "path": "_raw/event_2026-11-14/S-CAL_ICES-2024-365.pdf",
+        "sha256": "7f875da1d6abeeeeac64aeba67d3f160074cf98430e714fe7606b34b37e0aa59"
+      }
+    ],
+    "psiRecordsAndCsvHashes": "Every acquired record and CSV is checked against the pinned PSI acquisition log.",
+    "requiredFieldsValidated": true,
+    "networkUsed": false,
+    "appLinkValidation": "Eight fixed navigation IDs checked against the current local investigation registry; registry scientific content is not imported.",
+    "generatorPath": "web/scripts/curate-atlas.py"
+  }
+}

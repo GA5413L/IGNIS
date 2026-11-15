@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "ignis-registry-1",
+  "note": "No published transfer method was acquired in this event build (the pressure/oxygen and concurrent thin-fuel papers are behind publisher access). The route remains NOT_IMPLEMENTED rather than inferred from memory.",
+  "records": []
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "ignis-registry-1",
+  "records": [
+    {"id": "EV-SV-6", "revision": "r1", "investigationRef": {"id": "INV-SAFFIRE-V", "revision": "r1"}, "sourceLabels": ["S-V event 6"],
+     "specimenRefs": [], "campaignRef": null, "parentBurnRef": null, "conditions": {}, "protocolAssertionIds": ["AS-M-VNORM-01"], "lineageRefs": [],
+     "sourceLocators": [{"source": {"id": "SRC-S-V", "revision": "r1"}, "pdfPage": 6, "printedPage": "6", "section": null, "tableOrFigure": null, "rowOrCell": null, "textAnchor": "in event 6, the six remote sensors"}],
+     "note": "Saffire V numbering. Material and conditions of this event are not curated in this release."},
+    {"id": "EV-SVI-5", "revision": "r1", "investigationRef": {"id": "INV-SAFFIRE-VI", "revision": "r1"}, "sourceLabels": ["S-VI event 5"],
+     "specimenRefs": [], "campaignRef": null, "parentBurnRef": null,
+     "conditions": {
+       "material": {"state": "known", "value": "SIBAL fabric, 40 cm wide x 50 cm long", "unit": null, "basis": null, "originalText": "SIBAL fabric Burn: 40 cm wide × 50 cm long, concurrent flow, 31.0% O2 at 54.1 kPa", "originalUnit": null, "uncertaintyText": null, "reason": null, "evidence": [{"source": {"id": "SRC-S-VI", "revision": "r1"}, "pdfPage": 4, "printedPage": "4", "section": null, "tableOrFigure": "Table 1", "rowOrCell": "event 5", "textAnchor": "SIBAL fabric Burn"}]},
+       "oxygen": {"state": "known", "value": 31.0, "unit": "%", "basis": "oxygen percentage as printed (mole/volume basis not stated)", "originalText": "31.0% O2", "originalUnit": "%", "uncertaintyText": null, "reason": null, "evidence": [{"source": {"id": "SRC-S-VI", "revision": "r1"}, "pdfPage": 4, "printedPage": "4", "section": null, "tableOrFigure": "Table 1", "rowOrCell": "event 5", "textAnchor": "31.0% O2 at 54.1 kPa"}]},
+       "pressure": {"state": "known", "value": 54.1, "unit": "kPa", "basis": "absolute (as printed)", "originalText": "54.1 kPa", "originalUnit": "kPa", "uncertaintyText": null, "reason": null, "evidence": [{"source": {"id": "SRC-S-VI", "revision": "r1"}, "pdfPage": 4, "printedPage": "4", "section": null, "tableOrFigure": "Table 1", "rowOrCell": "event 5", "textAnchor": "31.0% O2 at 54.1 kPa"}]},
+       "flow": {"state": "known", "value": "concurrent", "unit": null, "basis": null, "originalText": "concurrent flow", "originalUnit": null, "uncertaintyText": null, "reason": null, "evidence": []}
+     },
+     "protocolAssertionIds": ["AS-M-VIALIGN-01"], "lineageRefs": [],
+     "sourceLocators": [{"source": {"id": "SRC-S-VI", "revision": "r1"}, "pdfPage": 4, "printedPage": "4", "section": null, "tableOrFigure": "Table 1", "rowOrCell": "event 5", "textAnchor": "SIBAL fabric"}]},
+    {"id": "EV-SVI-6", "revision": "r1", "investigationRef": {"id": "INV-SAFFIRE-VI", "revision": "r1"}, "sourceLabels": ["S-VI event 6", "S-CAL VI-3"],
+     "specimenRefs": [], "campaignRef": null, "parentBurnRef": null,
+     "conditions": {
+       "material": {"state": "known", "value": "PMMA 40 cm x 18 cm x 1.0 cm, two-sided flame spread", "unit": null, "basis": null, "originalText": "PMMA Burn: 40 cm wide × 18 cm long × 1.0 cm thick two-sided flame spread, concurrent flow, 30.3% O2 at 54.6 kPa", "originalUnit": null, "uncertaintyText": null, "reason": null, "evidence": [{"source": {"id": "SRC-S-VI", "revision": "r1"}, "pdfPage": 4, "printedPage": "4", "section": null, "tableOrFigure": "Table 1", "rowOrCell": "event 6", "textAnchor": "two-sided flame spread"}]},
+       "oxygen": {"state": "known", "value": 30.3, "unit": "%", "basis": "oxygen percentage as printed (mole/volume basis not stated)", "originalText": "30.3% O2", "originalUnit": "%", "uncertaintyText": null, "reason": null, "evidence": [{"source": {"id": "SRC-S-VI", "revision": "r1"}, "pdfPage": 4, "printedPage": "4", "section": null, "tableOrFigure": "Table 1", "rowOrCell": "event 6", "textAnchor": "30.3% O2 at 54.6 kPa"}]},
+       "pressure": {"state": "known", "value": 54.6, "unit": "kPa", "basis": "absolute (as printed)", "originalText": "54.6 kPa", "originalUnit": "kPa", "uncertaintyText": null, "reason": null, "evidence": [{"source": {"id": "SRC-S-VI", "revision": "r1"}, "pdfPage": 4, "printedPage": "4", "section": null, "tableOrFigure": "Table 1", "rowOrCell": "event 6", "textAnchor": "30.3% O2 at 54.6 kPa"}]},
+       "flow": {"state": "known", "value": "concurrent", "unit": null, "basis": null, "originalText": "concurrent flow", "originalUnit": null, "uncertaintyText": null, "reason": null, "evidence": []}
+     },
+     "protocolAssertionIds": ["AS-M-VIALIGN-01"], "lineageRefs": [],
+     "sourceLocators": [{"source": {"id": "SRC-S-VI", "revision": "r1"}, "pdfPage": 4, "printedPage": "4", "section": null, "tableOrFigure": "Table 1", "rowOrCell": "event 6", "textAnchor": "two-sided flame spread"},
+                        {"source": {"id": "SRC-S-CAL", "revision": "r1"}, "pdfPage": 6, "printedPage": "6", "section": null, "tableOrFigure": "Table 2", "rowOrCell": "VI-3", "textAnchor": "VI-3 2-sided PMMA"}],
+     "note": "S-CAL VI-3 and S-VI event 6 are matched by material and configuration (two-sided PMMA); the numeric suffixes are different numbering schemes."}
+  ]
+}

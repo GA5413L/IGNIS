@@ -1,0 +1,7 @@
+# Preserve each curated file's existing bytes, including its own line endings.
+web/data/*.json -text
+web/src/data/*.json -text
+web/package*.json text eol=lf
+
+*.png binary
+*.pdf binary
